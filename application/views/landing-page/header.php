@@ -66,6 +66,21 @@
 <![endif]-->
 </head>
 
+<style>
+    .header-nav:hover {
+        background-color: rgba(0, 0, 0, .76);
+    }
+
+    .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
+        background-color: rgba(0, 0, 0, .76);
+    }
+
+    .button-trace {
+        color: orange;
+        border: 2px solid orange;
+    }
+</style>
+
 <body>
     <div id="wrapper">
         <!-- preloader -->
@@ -86,7 +101,7 @@
                         <nav id="menuzord-right" class="menuzord default no-bg">
                             <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html">
                                 <img class="logo-default" src="<?= base_url('assets/') ?>images/logo-wide-white.png" alt="">
-                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo-wide.png" alt="">
+                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo-wide-white.png" alt="">
                             </a>
                             <ul class="menuzord-menu">
                                 <li class="active"><a href="#home">Home</a>
@@ -118,7 +133,7 @@
                                         <li><a href="">Daftar</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#trace" style="color: orange; border: 2px solid orange;">Trace Study</a>
+                                <li class=""><a href="#trace" class="button-trace">Trace Study</a>
                                 </li>
                             </ul>
                         </nav>
