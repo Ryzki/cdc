@@ -90,7 +90,6 @@
         z-index: 990;
         padding-top: 10px;
         padding-bottom: 10px;
-        position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
