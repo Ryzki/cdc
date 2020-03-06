@@ -1,7 +1,7 @@
         <!-- Start main-content -->
         <div class="main-content">
             <!-- Section: home -->
-            <section id="home" class="divider">
+            <section id="home" class="divider" style="height: 762px;">
                 <div class="container-fluid p-0">
 
                     <!-- START REVOLUTION SLIDER 5.0.7 -->
@@ -110,7 +110,7 @@
                                             hide_onleave: true,
                                             hide_delay: 200,
                                             hide_delay_mobile: 1200,
-                                            tmp: '<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
+                                            // tmp: '<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
                                             left: {
                                                 h_align: "left",
                                                 v_align: "center",
@@ -124,22 +124,22 @@
                                                 v_offset: 0
                                             }
                                         },
-                                        bullets: {
-                                            enable: true,
-                                            hide_onmobile: true,
-                                            hide_under: 600,
-                                            style: "metis",
-                                            hide_onleave: true,
-                                            hide_delay: 200,
-                                            hide_delay_mobile: 1200,
-                                            direction: "horizontal",
-                                            h_align: "center",
-                                            v_align: "bottom",
-                                            h_offset: 0,
-                                            v_offset: 30,
-                                            space: 5,
-                                            tmp: '<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
-                                        }
+                                        // bullets: {
+                                        //     enable: true,
+                                        //     hide_onmobile: true,
+                                        //     hide_under: 600,
+                                        //     style: "metis",
+                                        //     hide_onleave: true,
+                                        //     hide_delay: 200,
+                                        //     hide_delay_mobile: 1200,
+                                        //     direction: "horizontal",
+                                        //     h_align: "center",
+                                        //     v_align: "bottom",
+                                        //     h_offset: 0,
+                                        //     v_offset: 30,
+                                        //     space: 5,
+                                        //     tmp: '<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
+                                        // }
                                     },
                                     viewPort: {
                                         enable: true,
@@ -178,6 +178,18 @@
                         }); /*ready*/
                     </script>
                     <!-- END REVOLUTION SLIDER -->
+                </div>
+            </section>
+
+            <section class="little-menu" style="margin-top: -20px;">
+                <div class="container" style="padding-right: 15px; padding-left: 15px; padding-top:0px; padding-bottom:0px; margin-right: auto; margin-left: auto;">
+                    <div class="little-menu-container">
+                        <ul>
+                            <li><a href="#">HEADLINE</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">EVENT</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 

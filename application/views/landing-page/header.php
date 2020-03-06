@@ -69,6 +69,11 @@
 <style>
     .header-nav:hover {
         background-color: rgba(0, 0, 0, .76);
+        color: #FFF;
+    }
+
+    .header.header-floating .sticky-wrapper:not(.is-sticky) .header-nav.navbar-sticky .menuzord-menu>li:not(.active):not(:hover)>a {
+        color: #888;
     }
 
     .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
@@ -76,8 +81,60 @@
     }
 
     .button-trace {
-        color: orange;
+        color: white !important;
         border: 2px solid orange;
+        background-color: orange;
+    }
+
+    .little-menu {
+        z-index: 990;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, .45);
+        transition: all .2s;
+    }
+
+    .little-menu:hover {
+        background-color: rgba(0, 0, 0, .90);
+    }
+
+    .little-menu a {
+        color: #FFF;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: Roboto, sans-serif;
+        letter-spacing: .25em;
+    }
+
+    .little-menu a:hover {
+        color: orange;
+        transition: all .2s;
+    }
+
+    .little-menu ul {
+        text-align: center;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .little-menu li {
+        display: inline-block;
+        border-left: solid 1px #fff;
+    }
+
+    .little-menu li:first-child {
+        border-left: none;
+    }
+
+    .little-menu-container {
+        width: 100%;
+        height: 20px;
     }
 </style>
 
@@ -100,10 +157,10 @@
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default no-bg">
                             <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html">
-                                <img class="logo-default" src="<?= base_url('assets/') ?>images/logo-wide-white.png" alt="">
-                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo-wide-white.png" alt="">
+                                <img class="logo-default" src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt="">
+                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt="">
                             </a>
-                            <ul class="menuzord-menu">
+                            <ul class="menuzord-menu" style="color: #888">
                                 <li class="active"><a href="#home">Home</a>
                                 </li>
                                 <li class=""><a href="#about">About</a>
