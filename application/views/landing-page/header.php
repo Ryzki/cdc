@@ -159,6 +159,7 @@
     .job-vacancy-box:hover,
     .job-vacancy-box:focus {
         visibility: visible;
+        transition: all 0.2s;
         /* overflow-y: scroll; */
     }
 

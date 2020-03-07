@@ -172,7 +172,7 @@
                 <div class="section-content">
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
-                            <h2 class="mt-0 mt-sm-30 line-height-1 line-bottom-edu">Job <span class="text-theme-colored3">Vacancy</span></h2>
+                            <h3 class="mt-0 mt-sm-30 mb-20 line-height-1 text-center pb-5">JOB <span class="text-theme-colored3">VACANCY</span></h3>
                             <div class="row job-vacancy-box">
                                 <div class="col-sm-12 col-md-12 job-vacancy-list">
 
@@ -181,7 +181,7 @@
                                         <div class="p-15 p-sm-15 mb-10 bg-light">
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
+                                                    <h5 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h5>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12">
                                                     <small class="pull-right">Due-Date : 10-Desember-2020</small>
@@ -298,6 +298,10 @@
 
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <h3 class="mt-0 mb-20 text-center line-height-1">NEW<span class="text-theme-colored3">S</span></h3>
                         </div>
                         <!-- <div class="col-sm-6 col-md-6">
                             <img src="http://placehold.it/547x467" alt="about">
@@ -313,346 +317,17 @@
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-center line-height-1 mt-0">Why<span class="text-theme-colored3"> Choose</span> Us</h2>
+                            <h2 class="text-center line-height-1 mt-0">Our<span class="text-theme-colored3"> Video</span> Tour</h2>
                             <p class="text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                         </div>
                     </div>
                 </div>
                 <div class="section-content">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3 class="mt-0 mb-0 pt-15 pb-15 text-white text-center bg-theme-colored">Get A Free Registration</h3>
-                            <div class="p-20 bg-gray-lighter form-boxshadow">
-                                <!-- Appilication Form Start-->
-                                <form id="reservation_form" name="reservation_form" class="reservation-form mt-10" method="post" action="includes/reservation.php">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group mb-20">
-                                                <input placeholder="Enter Name" type="text" id="reservation_name" name="reservation_name" required="" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group mb-20">
-                                                <input placeholder="Email" type="text" id="reservation_email" name="reservation_email" class="form-control" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group mb-20">
-                                                <input placeholder="Phone" type="text" id="reservation_phone" name="reservation_phone" class="form-control" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group mb-20">
-                                                <div class="styled-select mt-0">
-                                                    <select id="person_select" name="person_select" class="form-control" required>
-                                                        <option value="">Courses</option>
-                                                        <option value="1 Person">Software Engineering</option>
-                                                        <option value="2 Person">Computer Traning</option>
-                                                        <option value="3 Person">Development Studies</option>
-                                                        <option value="Family Pack">Chemical Engineering</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group mb-20">
-                                                <input name="Date" class="form-control required date-picker" type="text" placeholder="Date" aria-required="true">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <textarea placeholder="Enter Message" rows="1" class="form-control required" name="form_message" id="form_message" aria-required="true"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group mb-0 mt-10">
-                                                <input name="form_botcheck" class="form-control" type="hidden" value="">
-                                                <button type="submit" class="btn btn-theme-colored btn-lg btn-block" data-loading-text="Please wait...">Submit Request</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- Application Form End-->
-
-                                <!-- Application Form Validation Start-->
-                                <script>
-                                    $("#reservation_form").validate({
-                                        submitHandler: function(form) {
-                                            var form_btn = $(form).find('button[type="submit"]');
-                                            var form_result_div = '#form-result';
-                                            $(form_result_div).remove();
-                                            form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                                            var form_btn_old_msg = form_btn.html();
-                                            form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                                            $(form).ajaxSubmit({
-                                                dataType: 'json',
-                                                success: function(data) {
-                                                    if (data.status == 'true') {
-                                                        $(form).find('.form-control').val('');
-                                                    }
-                                                    form_btn.prop('disabled', false).html(form_btn_old_msg);
-                                                    $(form_result_div).html(data.message).fadeIn('slow');
-                                                    setTimeout(function() {
-                                                        $(form_result_div).fadeOut('slow')
-                                                    }, 6000);
-                                                }
-                                            });
-                                        }
-                                    });
-                                </script>
-                                <!-- Application Form Validation Start -->
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-desktop font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">Best Lab</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-users font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">Best Teachers</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-building-o font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">Best Library</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-book font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">All Courses</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-university font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">Debate Club</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 col-md-4">
-                                    <div class="icon-box-new bg-white text-center clearfix m-0 pr-20 pl-20 pt-40 pb-20 mb-40">
-                                        <a href="#" class="icon icon-circled icon-md flip mb-20">
-                                            <i class="fa fa-futbol-o font-32 text-white"></i>
-                                        </a>
-                                        <a href="#">
-                                            <h3 class="icon-box-title mt-5 mb-15 letter-space-1 line-height-1">Play Ground</h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Testimonial  -->
-        <section>
-            <div class="container-fluid pt-0 pb-0">
-                <div class="section-content">
-                    <div class="row equal-height">
-                        <div class="col-md-6 bg-img-cover hidden-sm hidden-xs p-0" data-bg-img="http://placehold.it/1920x1280">
-                        </div>
-                        <div class="col-sm-6 col-md-6">
-                            <h2 class="mt-100 mb-30 mt-xs-20 line-height-1 text-center">Course List</h2>
-                            <div class="table-responsive price-table-new font-18">
-                                <table class="table table-bordered text-center mb-100">
-                                    <!-- On cells (`td` or `th`) -->
-                                    <thead>
-                                        <tr class="tag-field bg-theme-colored text-white">
-                                            <th class="text-center">Course Cycle</th>
-                                            <th class="text-center">Course Programme</th>
-                                            <th class="text-center">Credit Hours</th>
-                                        </tr>
-                                    </thead>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="">Bachelor Programme</td>
-                                        <td class="">190-230</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">2</td>
-                                        <td class="">Master</td>
-                                        <td class="">60-90-120</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">3</td>
-                                        <td class="">PhD / Doctorate</td>
-                                        <td class=""></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td class="">Prep Course</td>
-                                        <td class="">6 months</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">5</td>
-                                        <td class="">Language Course</td>
-                                        <td class="">6 months</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">6</td>
-                                        <td class="">Short Course</td>
-                                        <td class=""></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section:   -->
-        <section>
-            <div class="container-fluid pt-0 pb-0">
-                <div class="section-content">
-                    <div class="row equal-height">
-                        <div class="col-sm-6 col-md-6">
-                            <h2 class="mt-100 mb-30 text-center">Bachelor Degree Academic Calendar</h2>
-                            <table class="table table-striped table-schedule mb-100">
-                                <thead>
-                                    <tr class="bg-theme-colored">
-                                        <th>Date</th>
-                                        <th>Schedule</th>
-                                        <th>Venue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>January 2nd to January 11th</td>
-                                        <td><strong>Registration</strong></td>
-                                        <td>Room1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January 6th to January 15th</td>
-                                        <td><strong>Admission</strong></td>
-                                        <td>Admission Room</td>
-                                    </tr>
-                                    <tr>
-                                        <td>January 25th</td>
-                                        <td><strong>Orientation</strong></td>
-                                        <td>Auditorium</td>
-                                    </tr>
-                                    <tr>
-                                        <td>February 2nd</td>
-                                        <td>Start Class</td>
-                                        <td>Academic Room</td>
-                                    </tr>
-                                    <tr>
-                                        <td>February 2nd</td>
-                                        <td>End Class</td>
-                                        <td>Academic Room</td>
-                                    </tr>
-                                    <tr>
-                                        <td>March 26th</td>
-                                        <td>Result Publish</td>
-                                        <td>Admission Room</td>
-                                    </tr>
-                                    <tr>
-                                        <td>April 18th</td>
-                                        <td><strong>Transcript Day</strong></td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-md-6 bg-img-cover hidden-sm hidden-xs p-0" data-bg-img="http://placehold.it/1920x855">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: -->
-        <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
-            <div class="container pt-100 pb-100">
-                <div class="section-title">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-white text-center line-height-1 mt-0">Our Success</h2>
-                            <p class="text-white-f2 text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                                    <div class="funfact">
-                                        <i class="pe-7s-notebook text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                                        <div class="ml-60">
-                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="280" data-animation-duration="2000">0</h2>
-                                            <div class="clearfix"></div>
-                                            <h5 class="text-white-f2">Courses</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                                    <div class="funfact">
-                                        <i class="pe-7s-users text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                                        <div class="ml-60">
-                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="15K" data-animation-duration="2500">0</h2>
-                                            <div class="clearfix"></div>
-                                            <h5 class="text-white-f2">Students</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <div class="funfact">
-                                        <i class="pe-7s-study text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                                        <div class="ml-60">
-                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="10K" data-animation-duration="3000">0</h2>
-                                            <div class="clearfix"></div>
-                                            <h5 class="text-white-f2">Graduate Students</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                                    <div class="funfact">
-                                        <i class="pe-7s-cup text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                                        <div class="ml-60">
-                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="189" data-animation-duration="3000">0</h2>
-                                            <div class="clearfix"></div>
-                                            <h5 class="text-white-f2">Awards</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section: -->
         <section>
@@ -660,8 +335,7 @@
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                            <h2 class="text-center line-height-1 mt-0">Popular <span class="text-theme-colored3">Courses</span> </h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus hic suscipit doloremque deleniti ipsa quia dolor laborum natus tenetur, excepturi?</p>
+                            <h2 class="text-center line-height-1 mt-0">Activity <span class="text-theme-colored3">Galery</span> </h2>
                         </div>
                     </div>
                 </div>
@@ -671,11 +345,10 @@
                             <div class="horizontal-tab-centered">
                                 <div class="text-center">
                                     <ul class="nav nav-pills mb-10">
-                                        <li class="active"> <a href="#tab-20" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>Faculty of Arts</a> </li>
-                                        <li class=""> <a href="#tab-21" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Faculty of Commerce</a> </li>
-                                        <li class=""> <a href="#tab-22" data-toggle="tab" aria-expanded="true"> <i class="fa fa-book"></i>Faculty of Science</a> </li>
-                                        <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>Postgraduate</a> </li>
-                                        <li class=""> <a href="#tab-24" data-toggle="tab" aria-expanded="false"> <i class="fa fa-university" aria-hidden="true"></i>Research Higher Degree</a> </li>
+                                        <li class="active"> <a href="#tab-20" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>Training Softskill</a> </li>
+                                        <li class=""> <a href="#tab-21" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Psikotest</a> </li>
+                                        <li class=""> <a href="#tab-22" data-toggle="tab" aria-expanded="true"> <i class="fa fa-book"></i>Job Fair</a> </li>
+                                        <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>MoU Yazaki</a> </li>
                                     </ul>
                                 </div>
                                 <div class="panel-body p-0">
@@ -1249,46 +922,63 @@
             </div>
         </section>
 
-        <!-- Divider: -->
-        <section class="divider parallax layer-overlay overlay-dark-8 text-center" data-bg-img="http://placehold.it/1920x1125" data-parallax-ratio="0.7">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h2 class="mt-0 text-white">Unlimited Support &amp; Easily Customizable</h2>
-                        <h4 class="text-white">Subscribe to Connect with us</h4>
-
-                        <!-- Mailchimp Subscription Form-->
-                        <form id="mailchimp-subscription-form3" class="newsletter-form mt-30">
-                            <label for="mce-EMAIL"></label>
-                            <div class="input-group">
-                                <input type="email" id="mce-EMAIL" data-height="50px" class="form-control input-lg" placeholder="Your Email" name="EMAIL" value="">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-colored btn-theme-colored btn-lg m-0" data-height="50px"><i class="fa fa-paper-plane-o font-20" aria-hidden="true"></i>
-                                    </button>
-                                </span>
+        <!-- Section: -->
+        <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
+            <div class="container pt-100 pb-100">
+                <div class="section-title">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="text-white text-center line-height-1 mt-0">Our Success</h2>
+                            <p class="text-white-f2 text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                    <div class="funfact">
+                                        <i class="pe-7s-notebook text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                                        <div class="ml-60">
+                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="280" data-animation-duration="2000">0</h2>
+                                            <div class="clearfix"></div>
+                                            <h5 class="text-white-f2">Courses</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                                    <div class="funfact">
+                                        <i class="pe-7s-users text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                                        <div class="ml-60">
+                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="15K" data-animation-duration="2500">0</h2>
+                                            <div class="clearfix"></div>
+                                            <h5 class="text-white-f2">Students</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <div class="funfact">
+                                        <i class="pe-7s-study text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                                        <div class="ml-60">
+                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="10K" data-animation-duration="3000">0</h2>
+                                            <div class="clearfix"></div>
+                                            <h5 class="text-white-f2">Graduate Students</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                                    <div class="funfact">
+                                        <i class="pe-7s-cup text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                                        <div class="ml-60">
+                                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="189" data-animation-duration="3000">0</h2>
+                                            <div class="clearfix"></div>
+                                            <h5 class="text-white-f2">Awards</h5>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
-
-                        <!-- Mailchimp Subscription Form Validation-->
-                        <script>
-                            $('#mailchimp-subscription-form3').ajaxChimp({
-                                callback: mailChimpCallBack,
-                                url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-                            });
-
-                            function mailChimpCallBack(resp) {
-                                // Hide any previous response text
-                                var $mailchimpform = $('#mailchimp-subscription-form3'),
-                                    $response = '';
-                                $mailchimpform.children(".alert").remove();
-                                if (resp.result === 'success') {
-                                    $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                                } else if (resp.result === 'error') {
-                                    $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                                }
-                                $mailchimpform.prepend($response);
-                            }
-                        </script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1296,92 +986,41 @@
 
         <!-- Section:  -->
         <section>
-            <div class="container pb-sm-70">
+            <div class="container pt-30 pb-30">
                 <div class="section-title text-center">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                            <h2 class="mt-0 line-height-1">Faculty <span class="text-theme-colored3">Members</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Acque quidem eaque, amet doloribus, error inventore, quisquam totam magni cumque.</p>
+                            <h2 class="mt-0 line-height-1">JOIN <span class="text-theme-colored3">WITH US</span></h2>
                         </div>
                     </div>
                 </div>
                 <div class="section-content text-center">
                     <div class="row">
-                        <div class="col-sm-6 col-md-3 mb-sm-30">
-                            <div class="team-member bg-light pt-10 pb-15">
-                                <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="pt-10 pb-10 bg-theme-colored2">
-                                        <h4 class="mt-0 mb-0 text-white">Jone doe</h4>
-                                        <h6 class="mt-0 mb-0 text-white">Manager</h6>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <?php
+                                for ($i = 0; $i < 12; $i++) { ?>
+                                    <div class="col-sm-6 col-md-2 mb-sm-30 p-0">
+                                        <div class="team-member bg-light">
+                                            <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="p-15 pb-0">Lorem ipsum dolor sit amet cing, consectetur adipisi. Vel consectetur.</p>
-                                    <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-15 mb-0">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
+                                <?php }
+                                ?>
                             </div>
+
                         </div>
-                        <div class="col-sm-6 col-md-3 mb-sm-30">
-                            <div class="team-member bg-light pt-10 pb-15">
-                                <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="pt-10 pb-10 bg-theme-colored">
-                                        <h4 class="mt-0 mb-0 text-white">Jone doe</h4>
-                                        <h6 class="mt-0 mb-0 text-white">Manager</h6>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-12 mb-sm-30 p-0">
+                                    <div class="team-member bg-light">
+                                        <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
+                                        </div>
                                     </div>
-                                    <p class="p-15 pb-0">Lorem ipsum dolor sit amet cing, consectetur adipisi. Vel consectetur.</p>
-                                    <ul class="styled-icons icon-theme-colored3 icon-circled icon-dark icon-sm mt-15 mb-0">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mb-sm-30">
-                            <div class="team-member bg-light pt-10 pb-15">
-                                <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="pt-10 pb-10 bg-theme-colored3">
-                                        <h4 class="mt-0 mb-0 text-white">Jone doe</h4>
-                                        <h6 class="mt-0 mb-0 text-white">Manager</h6>
-                                    </div>
-                                    <p class="p-15 pb-0">Lorem ipsum dolor sit amet cing, consectetur adipisi. Vel consectetur.</p>
-                                    <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-15 mb-0">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-3 mb-sm-30">
-                            <div class="team-member bg-light pt-10 pb-15">
-                                <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
-                                </div>
-                                <div class="info">
-                                    <div class="pt-10 pb-10 bg-theme-colored">
-                                        <h4 class="mt-0 mb-0 text-white">Jone doe</h4>
-                                        <h6 class="mt-0 mb-0 text-white">Manager</h6>
-                                    </div>
-                                    <p class="p-15 pb-0">Lorem ipsum dolor sit amet cing, consectetur adipisi. Vel consectetur.</p>
-                                    <ul class="styled-icons icon-theme-colored2 icon-circled icon-dark icon-sm mt-15 mb-0">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1390,11 +1029,11 @@
 
         <!-- Section: blog -->
         <section id="blog" class="bg-silver-light">
-            <div class="container pb-70">
-                <div class="section-title text-center">
+            <div class="container p-0">
+                <div class="section-title text-center mt-30">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                            <h2 class="mt-0 line-height-1 text-center">Latest <span class="text-theme-colored3">News</span></h2>
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="display: inline-block">
+                            <h2 class="mt-0 line-height-1 text-left">Our <span class="text-theme-colored3">Partner</span></h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Acque quidem eaque, amet doloribus, error inventore, quisquam totam magni cumque.</p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
                 <div class="row border-bottom-black">
                     <div class="col-sm-6 col-md-3">
                         <div class="widget dark">
-                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/logo-wide-white.png">
+                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/logo-unikama-1.png">
                             <p>203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
                             <ul class="mt-5">
                                 <li class="m-0 pl-0 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">123-456-789</a> </li>
@@ -61,7 +61,7 @@
                 <div class="container pt-10 pb-0">
                     <div class="row">
                         <div class="col-md-6 sm-text-center">
-                            <p class="font-13 text-black-777 m-0">Copyright &copy;2017 ThemeMascot. All Rights Reserved</p>
+                            <p class="font-13 text-black-777 m-0">Copyright &copy;2020. All Rights Reserved</p>
                         </div>
                         <div class="col-md-6 text-right flip sm-text-center">
                             <div class="widget no-border m-0">
