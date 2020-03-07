@@ -68,7 +68,19 @@
 
 <style>
     .header-nav:hover {
-        background-color: rgba(0, 0, 0, .76);
+        background-color: rgba(0, 0, 0, .90);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-nav:hover .menuzord-menu>li:not(.active)>a {
+        color: #FFF !important;
+    }
+
+    .header.header-floating .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header.header-floating .sticky-wrapper .header-nav.navbar-sticky .menuzord-menu>li>a {
         color: #FFF;
     }
 
@@ -77,7 +89,7 @@
     }
 
     .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
-        background-color: rgba(0, 0, 0, .76);
+        background-color: rgba(0, 0, 0, .90);
     }
 
     .button-trace {
@@ -104,10 +116,11 @@
 
     .little-menu a {
         color: #FFF;
-        margin-left: 10px;
+        margin-left: 15px;
         margin-right: 10px;
         font-family: Roboto, sans-serif;
         letter-spacing: .25em;
+        text-transform: uppercase;
     }
 
     .little-menu a:hover {
@@ -134,6 +147,35 @@
     .little-menu-container {
         width: 100%;
         height: 20px;
+    }
+
+    .job-vacancy-box {
+        overflow-y: auto;
+        visibility: hidden;
+        height: 400px;
+    }
+
+    .job-vacancy-list,
+    .job-vacancy-box:hover,
+    .job-vacancy-box:focus {
+        visibility: visible;
+        /* overflow-y: scroll; */
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        transition: all 0.2s;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #f45661;
     }
 </style>
 
