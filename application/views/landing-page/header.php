@@ -189,6 +189,15 @@
         box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
     }
+
+    .btn-blue {
+        background-color: #0d5189;
+        color: #FFF !important;
+    }
+
+    .btn-blue:hover {
+        background-color: #0c406c;
+    }
 </style>
 
 <body>

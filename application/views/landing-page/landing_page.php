@@ -196,7 +196,7 @@
                                 <!-- END VACANCY -->
                             <?php } ?>
 
-                            <button class="btn btn-xs pull-right btn-success mr-15">More Vacancies...</button>
+                            <button class="btn btn-xs pull-right btn-blue mr-15">More Vacancies...</button>
                         </div>
                     </div>
                 </div>
@@ -237,11 +237,14 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <h2 class="text-center line-height-1 mt-0">Our<span class="text-theme-colored3"> Video</span> Tour</h2>
-                            <p class="text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            <!-- <p class="text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> -->
                         </div>
                     </div>
                 </div>
                 <div class="section-content">
+                    <div class="fluid-video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oIDqz2BrVec" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
