@@ -168,145 +168,64 @@
 
         <!-- Section: About  -->
         <section id="about">
-            <div class="pb-30 pb-sm-90 pt-30 ml-30 mr-30">
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6">
-                            <h3 class="mt-0 mt-sm-30 mb-20 line-height-1 text-center pb-5">JOB <span class="text-theme-colored3">VACANCY</span></h3>
-                            <div class="row job-vacancy-box">
-                                <div class="col-sm-12 col-md-12 job-vacancy-list">
+            <div class="row">
+                <div class="section-box col-sm-12 col-md-8 pb-10 pb-sm-90 pt-30 pl-40" style="background-color: #ffffff">
+                    <h3 class="mt-0 mt-sm-30 mb-20 line-height-1 text-center pb-5">JOB <span class="text-theme-colored3">VACANCY</span> <span class="label label-success">New</span></h3>
+                    <div class="row job-vacancy-box">
+                        <div class="col-sm-12 col-md-12 job-vacancy-list">
 
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h5 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h5>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
+                            <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                <!-- VACANCY -->
+                                <div class="services-details clearfix">
+                                    <div class="p-15 p-sm-15 mb-10 bg-light">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <h5 class="mt-0 mb-0 line-height-1 sm-text-center"><span class="label label-danger">#<?= $i ?></span> <a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h5>
                                             </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
+                                            <div class="col-md-6 col-sm-12">
+                                                <small class="pull-right">Due-Date : 10-Desember-2020</small>
+                                            </div>
+                                        </div>
+                                        <ul class="list-inline mt-5 mb-0 clearfix">
+                                            <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
+                                            <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
+                                            <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Read More</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- END VACANCY -->
+                            <?php } ?>
+
+                            <button class="btn btn-xs pull-right btn-success mr-15">More Vacancies...</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-box col-md-4 pb-30 pb-sm-90 pt-30 pr-40" style="background-color: #f5f5f5">
+                    <h3 class="mt-0 mb-20 text-center line-height-1">NEW<span class="text-theme-colored3">S</span></h3>
+                    <div class="bxslider bx-nav-top" data-minslides="5">
+
+                        <?php for ($i = 1; $i <= 10; $i++) { ?>
+                            <div class="event-media-box">
+                                <div class="event media mt-0 no-bg no-border">
+                                    <div class="event-date media-left text-center flip bg-theme-colored pl-10">
+                                        <ul class="mt-15 mt-sm-30">
+                                            <li class="font-20 text-white font-weight-600">2<?= $i ?></li>
+                                            <li class="font-14 text-uppercase text-white">Feb</li>
+                                        </ul>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Gear up for giving</a></h4>
+                                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
                                         </div>
                                     </div>
-                                    <!-- END VACANCY -->
-
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- END VACANCY -->
-
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- END VACANCY -->
-
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- END VACANCY -->
-
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- END VACANCY -->
-
-                                    <!-- VACANCY -->
-                                    <div class="services-details clearfix">
-                                        <div class="p-15 p-sm-15 mb-10 bg-light">
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <h4 class="mt-0 mb-0 line-height-1 sm-text-center"><a href="#">PT. JATIM AUTOCOMP INDONESIA</a></h4>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <small class="pull-right">Due-Date : 10-Desember-2020</small>
-                                                </div>
-                                            </div>
-                                            <ul class="list-inline mt-5 mb-0 clearfix">
-                                                <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Position : <span class="font-weight-700">Junior Developer, Senior Developer, Supervisor A, Supervisor B</span></li>
-                                                <!-- <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li> -->
-                                                <a class="btn btn-dark btn-theme-colored3 btn-sm text-uppercase mt-0 pull-right" href="#">Apply Now</a>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- END VACANCY -->
-
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-sm-12 col-md-6">
-                            <h3 class="mt-0 mb-20 text-center line-height-1">NEW<span class="text-theme-colored3">S</span></h3>
-                        </div>
-                        <!-- <div class="col-sm-6 col-md-6">
-                            <img src="http://placehold.it/547x467" alt="about">
-                        </div> -->
+                        <?php } ?>
                     </div>
+                    <!-- <button class="btn btn-xs pull-right btn-primary mr-15">Read More</button> -->
                 </div>
             </div>
         </section>
@@ -1031,153 +950,153 @@
 
         <section>
             <!-- Students Join 1 Area Start Here -->
-        <div class="students-join1-area">
-            <div class="container">
-                <div class="students-join1-wrapper">
-                    <div class="students-join1-left">
-                        <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
-                            <ul class="ri-grid-list">
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                                </li>
-                            </ul>
+            <div class="students-join1-area">
+                <div class="container">
+                    <div class="students-join1-wrapper">
+                        <div class="students-join1-left">
+                            <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
+                                <ul class="ri-grid-list">
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="students-join1-right">
-                        <div>
-                            <h2>Join<span> 29,12,093</span> Students.</h2>
-                            <a href="#" class="join-now-btn">Join Now</a>
+                        <div class="students-join1-right">
+                            <div>
+                                <h2>Join<span> 29,12,093</span> Students.</h2>
+                                <a href="#" class="join-now-btn">Join Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Students Join 1 Area End Here -->
-        <!-- Brand Area Start Here -->
-        <div class="brand-area">
-            <div class="container">
-                <div class="rc-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false" data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4" data-r-small-nav="false" data-r-small-dots="false" data-r-medium="4" data-r-medium-nav="false" data-r-medium-dots="false" data-r-large="4" data-r-large-nav="false" data-r-large-dots="false">
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
-                    </div>
-                    <div class="brand-area-box">
-                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
+            <!-- Students Join 1 Area End Here -->
+            <!-- Brand Area Start Here -->
+            <div class="brand-area">
+                <div class="container">
+                    <div class="rc-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false" data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4" data-r-small-nav="false" data-r-small-dots="false" data-r-medium="4" data-r-medium-nav="false" data-r-medium-dots="false" data-r-large="4" data-r-large-nav="false" data-r-large-dots="false">
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
+                        </div>
+                        <div class="brand-area-box">
+                            <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Brand Area End Here -->
+            <!-- Brand Area End Here -->
         </section>
 
         <!-- Section: blog -->

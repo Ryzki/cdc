@@ -151,9 +151,9 @@
     }
 
     .job-vacancy-box {
-        overflow-y: auto;
+        /* overflow-y: auto; */
         visibility: hidden;
-        height: 400px;
+        /* height: 400px; */
     }
 
     .job-vacancy-list,
@@ -177,7 +177,17 @@
         transition: all 0.2s;
         -webkit-border-radius: 10px;
         border-radius: 10px;
-        background: #f45661;
+        background: orange;
+    }
+
+    .section-box {
+        height: 570px;
+    }
+
+    .event-media-box {
+        background-color: #FFF;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
     }
 </style>
 
