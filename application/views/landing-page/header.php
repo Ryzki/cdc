@@ -25,6 +25,7 @@
     <link href="<?= base_url('assets/') ?>css/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/') ?>css/animate.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/') ?>css/css-plugin-collections.css" rel="stylesheet" />
+    <link href="<?= base_url('assets/') ?>css/css-add.css" rel="stylesheet" />
     <!-- CSS | menuzord megamenu skins -->
     <link href="<?= base_url('assets/') ?>css/menuzord-megamenu.css" rel="stylesheet" />
     <link id="menuzord-menu-skins" href="<?= base_url('assets/') ?>css/menuzord-skins/menuzord-boxed.css" rel="stylesheet" />

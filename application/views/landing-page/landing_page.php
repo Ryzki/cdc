@@ -1002,7 +1002,7 @@
                                 for ($i = 0; $i < 12; $i++) { ?>
                                     <div class="col-sm-6 col-md-2 mb-sm-30 p-0">
                                         <div class="team-member bg-light">
-                                            <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
+                                            <div class="thumb"><img class="img-fullwidth" src="<?= base_url('assets/') ?>images/cowok2.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -1025,6 +1025,159 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+
+
+        <section>
+            <!-- Students Join 1 Area Start Here -->
+        <div class="students-join1-area">
+            <div class="container">
+                <div class="students-join1-wrapper">
+                    <div class="students-join1-left">
+                        <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
+                            <ul class="ri-grid-list">
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="students-join1-right">
+                        <div>
+                            <h2>Join<span> 29,12,093</span> Students.</h2>
+                            <a href="#" class="join-now-btn">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Students Join 1 Area End Here -->
+        <!-- Brand Area Start Here -->
+        <div class="brand-area">
+            <div class="container">
+                <div class="rc-carousel" data-loop="true" data-items="4" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false" data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4" data-r-small-nav="false" data-r-small-dots="false" data-r-medium="4" data-r-medium-nav="false" data-r-medium-dots="false" data-r-large="4" data-r-large-nav="false" data-r-large-dots="false">
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/1.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/2.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/3.jpg" alt="brand"></a>
+                    </div>
+                    <div class="brand-area-box">
+                        <a href="#"><img src="<?= base_url('assets/') ?>images/brand/4.jpg" alt="brand"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand Area End Here -->
         </section>
 
         <!-- Section: blog -->
