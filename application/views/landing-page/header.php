@@ -11,7 +11,7 @@
     <meta name="author" content="ThemeMascot" />
 
     <!-- Page Title -->
-    <title>Career Development Center - UNIKAMA</title>
+    <title>CDC | UNIKAMA</title>
 
     <!-- Favicon and Touch Icons -->
     <link href="<?= base_url('assets/') ?>images/favicon.png" rel="shortcut icon" type="image/png">

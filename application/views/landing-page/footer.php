@@ -5,11 +5,11 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="widget dark">
                             <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/logo-unikama-1.png">
-                            <p>203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+                            <p>Jl. S.Supriadi No.48 Malang Jawa Timur, Indonesia</p>
                             <ul class="mt-5">
-                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">123-456-789</a> </li>
-                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">contact@yourdomain.com</a> </li>
-                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="#">www.yourdomain.com</a> </li>
+                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">(+62)341-801488</a> </li>
+                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">email@unikama.ac.id</a> </li>
+                                <li class="m-0 pl-0 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="#">www.unikama.ac.id</a> </li>
                             </ul>
                         </div>
                     </div>
