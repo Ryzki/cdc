@@ -99,6 +99,7 @@
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+    
 
         </body>
 
