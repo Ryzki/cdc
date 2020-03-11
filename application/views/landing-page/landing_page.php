@@ -517,26 +517,24 @@
 
         <!-- Section: Mission -->
         <section class="bg-silver-light">
-            <div class="container pb-70 pb-sm-60">
-                <div class="section-title">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-center line-height-1 mt-0">Our<span class="text-theme-colored3"> Video</span> Tour</h2>
-                            <!-- <p class="text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <div class="fluid-video-wrapper">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oIDqz2BrVec" frameborder="0" allowfullscreen></iframe>
-                    </div>
+            <!-- <div class="container pb-0 pb-sm-60"> -->
+                <!-- Video Area Start Here -->
+        <div class="video-area overlay-video bg-common-style" style="background-image: url('<?= base_url('assets/') ?>images/cdc_unikama.jpg');">
+            <div class="container">
+                <div class="video-content">
+                    <h2 class="video-title">Watch Our Activity</h2>
+                    <p class="video-sub-title">"Kehidupan yang besar dimulai dari mimpi yang besar" ~ Agus Salim</p>
+                    <a class="play-btn popup-youtube wow bounceInUp" data-wow-duration="2s" data-wow-delay=".1s" href="http://www.youtube.com/watch?v=1iIZeIy7TqM"><i class="fa fa-play" aria-hidden="true"></i></a>
                 </div>
             </div>
+        </div>
+        <!-- Video Area End Here -->
+            <!-- </div> -->
         </section>
 
 
+        
 
-        <!-- Section: -->
         <section>
             <div class="container">
                 <div class="section-title text-center">
@@ -552,573 +550,25 @@
                             <div class="horizontal-tab-centered">
                                 <div class="text-center">
                                     <ul class="nav nav-pills mb-10">
-                                        <li class="active"> <a href="#tab-20" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>Training Softskill</a> </li>
+                                        <li class=""> <a href="#tab-20" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>Training Softskill</a> </li>
                                         <li class=""> <a href="#tab-21" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Psikotest</a> </li>
                                         <li class=""> <a href="#tab-22" data-toggle="tab" aria-expanded="true"> <i class="fa fa-book"></i>Job Fair</a> </li>
-                                        <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>MoU Yazaki</a> </li>
+                                        <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>MoU</a> </li>
                                     </ul>
                                 </div>
                                 <div class="panel-body p-0">
-                                    <div class="tab-content p-0">
-                                        <div class="tab-pane fade active in" id="tab-20">
-                                            <div class="row">
-                                                <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                                                    <div class="services mb-xs-30">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Anthropology</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left xs-pull-left  sm-pull-none sm-text-center">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right sm-pull-none xs-pull-right sm-text-center mt-sm-10 mt-xs-0">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                                                    <div class="services mb-xs-30">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Philosophy</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
-                                                    <div class="services mb-xs-30">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Public Policy</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left xs-pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right xs-pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-                                                    <div class="services">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Sociology</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left xs-pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right xs-pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-21">
-                                            <div class="row">
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Accounting</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Finance and Tax</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">School of Management</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-22">
-                                            <div class="row">
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Biochemistry</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Physics</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Chemistry</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Mathematics</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-23">
-                                            <div class="row">
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Molecular Imaging</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">1.5 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Bioinformatics</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">1.5 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Data Science</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">2 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">50</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3 col-md-3 col-lg-3">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/260x170">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Mineral Resources</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">2 Years</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">50</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-24">
-                                            <div class="row">
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Plant Biology</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">48 weeks</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">Geology</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40 weeks</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-md-4 col-lg-4">
-                                                    <div class="services mb-sm-50">
-                                                        <div class="thumb">
-                                                            <img class="img-fullwidth" alt="" src="http://placehold.it/357x234">
-                                                        </div>
-                                                        <div class="services-details clearfix">
-                                                            <div class="p-20 p-sm-15 bg-lighter">
-                                                                <h4 class="mt-0 line-height-1"><a href="#">School of Management</a></h4>
-                                                                <ul class="list-inline text-theme-colored2 pull-left">
-                                                                    <li>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                    </li>
-                                                                </ul>
-                                                                <div class="course-price bg-theme-colored3 pull-right">
-                                                                    <span class="text-white">$200</span>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <ul class="list-inline mt-15 mb-10 clearfix">
-                                                                    <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
-                                                                    <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                                                </ul>
-                                                                <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div>
+                                        <div class="owl-carousel-4col" data-dots="true" data-nav="true">
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/2.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/3.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/4.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/2.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/3.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/4.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt=""></div>
+                                          <div class="item"><img src="<?= base_url('assets/') ?>images/gallery/2.jpg" alt=""></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1129,8 +579,67 @@
             </div>
         </section>
 
+
         <!-- Section: -->
-        <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
+    <section data-bg-img="<?= base_url('assets/') ?>images/bg6.jpg">
+      <div class="container-fluid p-0">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 bg-theme-colored">              
+              <h3 class="text-center line-height-1 text-white mt-100 mb-15 mt-sm-0 pt-sm-100">Our Client's Say</h3>
+              <div class="owl-carousel-1col pr-150 pl-150 pr-sm-50 pl-sm-50 pb-90" data-dots="true">
+                <div class="item">
+                  <div class="testimonial-wrapper text-center">
+                    <div class="content">
+                      <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
+                      <a class="mt-20 mb-15 display-block" href="#">
+                        <img alt="" src="<?= base_url('assets/') ?>images/s1.jpg" class="img-circle">
+                      </a>
+                      <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
+                      <h4 class="service-box-title font-weight-800 text-white-f3">Corvin Adams</h4>
+                      <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">web Desinger (ceo)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="testimonial-wrapper text-center">
+                    <div class="content">
+                      <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
+                      <a class="mt-20 mb-15 display-block" href="#">
+                        <img alt="" src="<?= base_url('assets/') ?>images/s2.jpg" class="img-circle">
+                      </a>
+                      <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
+                      <h4 class="service-box-title font-weight-800 text-white-f3">Jhon Doe</h4>
+                      <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">Web Developer (Maneger)</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="testimonial-wrapper text-center">
+                    <div class="content">
+                      <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
+                      <a class="mt-20 mb-15 display-block" href="#">
+                        <img alt="" src="<?= base_url('assets/') ?>images/s1.jpg" class="img-circle">
+                      </a>
+                      <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
+                      <h4 class="service-box-title font-weight-800 text-white-f3">Corvin Adams</h4>
+                      <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">Web Desinger (QC)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section:  -->
+
+
+        
+        <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="<?= base_url('assets/') ?>images/malang.jpg" data-parallax-ratio="0.7">
             <div class="container pt-100 pb-100">
                 <div class="section-title">
                     <div class="row">
@@ -1380,75 +889,6 @@
         </section>
 
         <!-- Section: blog -->
-        <section id="blog" class="bg-silver-light">
-            <div class="container p-0">
-                <div class="section-title text-center mt-30">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12" style="display: inline-block">
-                            <h2 class="mt-0 line-height-1 text-left">Our <span class="text-theme-colored3">Partner</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Acque quidem eaque, amet doloribus, error inventore, quisquam totam magni cumque.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <article class="post clearfix maxwidth600 mb-30 border-1px">
-                                <div class="entry-header-new mb-0">
-                                    <div class="post-thumb thumb"><img src="http://placehold.it/360x250" alt="" class="img-responsive img-fullwidth">
-                                    </div>
-                                    <div class="blog-overlay"></div>
-                                </div>
-                                <div class="bg-white pt-30 pr-20 pl-20 pb-30 text-center">
-                                    <h3 class="entry-title mt-0 pt-0"><a class="text-theme-colored" href="#">The Celebration</a></h3>
-                                    <ul class="list-inline entry-date font-13 mt-5">
-                                        <li><i class="fa fa-clock-o mr-5 text-theme-colored"></i> Dec - 21 </li>
-                                        <li><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 121 King Street, Melbourne </li>
-                                    </ul>
-                                    <p class="mt-10">Lorem ipsum dolor sit amet. Reiciendis impedit expedita sit deleniti culpa nam fuga neque similique corporis.</p>
-                                    <a class="btn btn-theme-colored btn-lg btn-flat mt-0 text-white mt-10" href="#">Read more <i class="fa fa-angle-double-right text-theme-colored2"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <article class="post clearfix maxwidth600 mb-30 border-1px">
-                                <div class="entry-header-new mb-0">
-                                    <div class="post-thumb thumb"><img src="http://placehold.it/360x250" alt="" class="img-responsive img-fullwidth">
-                                    </div>
-                                    <div class="blog-overlay"></div>
-                                </div>
-                                <div class="bg-white pt-30 pr-20 pl-20 pb-30 text-center">
-                                    <h3 class="entry-title mt-0 pt-0"><a class="text-theme-colored" href="#">The Celebration</a></h3>
-                                    <ul class="list-inline entry-date font-13 mt-5">
-                                        <li><i class="fa fa-clock-o mr-5 text-theme-colored"></i> Dec - 21 </li>
-                                        <li><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 121 King Street, Melbourne </li>
-                                    </ul>
-                                    <p class="mt-10">Lorem ipsum dolor sit amet. Reiciendis impedit expedita sit deleniti culpa nam fuga neque similique corporis.</p>
-                                    <a class="btn btn-theme-colored btn-lg btn-flat mt-0 text-white mt-10" href="#">Read more <i class="fa fa-angle-double-right text-theme-colored2"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <article class="post clearfix maxwidth600 mb-30 border-1px">
-                                <div class="entry-header-new mb-0">
-                                    <div class="post-thumb thumb"><img src="http://placehold.it/360x250" alt="" class="img-responsive img-fullwidth">
-                                    </div>
-                                    <div class="blog-overlay"></div>
-                                </div>
-                                <div class="bg-white pt-30 pr-20 pl-20 pb-30 text-center">
-                                    <h3 class="entry-title mt-0 pt-0"><a class="text-theme-colored" href="#">The Celebration</a></h3>
-                                    <ul class="list-inline entry-date font-13 mt-5">
-                                        <li><i class="fa fa-clock-o mr-5 text-theme-colored"></i> Dec - 21 </li>
-                                        <li><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 121 King Street, Melbourne </li>
-                                    </ul>
-                                    <p class="mt-10">Lorem ipsum dolor sit amet. Reiciendis impedit expedita sit deleniti culpa nam fuga neque similique corporis.</p>
-                                    <a class="btn btn-theme-colored btn-lg btn-flat mt-0 text-white mt-10" href="#">Read more <i class="fa fa-angle-double-right text-theme-colored2"></i></a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         </div>
         <!-- end main-content -->

@@ -59,6 +59,7 @@
     <script src="<?= base_url('assets/') ?>js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
