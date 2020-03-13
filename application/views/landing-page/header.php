@@ -58,6 +58,11 @@
     <!-- Revolution Slider 5.x SCRIPTS -->
     <script src="<?= base_url('assets/') ?>js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="<?= base_url('assets/') ?>js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/') ?>css/style.css" />
+    <script type="text/javascript" src="<?= base_url('assets/') ?>js/modernizr.custom.26633.js"></script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="<?= base_url('assets/') ?>css/fallback.css" />
+    </noscript>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

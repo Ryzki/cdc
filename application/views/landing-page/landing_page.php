@@ -700,51 +700,6 @@
             </div>
         </section>
 
-        <!-- Section:  -->
-        <section>
-            <div class="container pt-30 pb-30">
-                <div class="section-title text-center">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                            <h2 class="mt-0 line-height-1">JOIN <span class="text-theme-colored3">WITH US</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content text-center">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="row">
-                                <?php
-                                for ($i = 0; $i < 12; $i++) { ?>
-                                    <div class="col-sm-6 col-md-2 mb-sm-30 p-0">
-                                        <div class="team-member bg-light">
-                                            <div class="thumb"><img class="img-fullwidth" src="<?= base_url('assets/') ?>images/cowok2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php }
-                                ?>
-                            </div>
-
-                        </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <div class="col-sm-6 col-md-12 mb-sm-30 p-0">
-                                    <div class="team-member bg-light">
-                                        <div class="thumb"><img class="img-fullwidth" src="http://placehold.it/260x270" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
         <section>
             <!-- Students Join 1 Area Start Here -->
             <div class="students-join1-area">
@@ -854,8 +809,8 @@
                         </div>
                         <div class="students-join1-right">
                             <div>
-                                <h2>Join<span> 29,12,093</span> Students.</h2>
-                                <a href="#" class="join-now-btn">Join Now</a>
+                              <h2><span> 29,122,093</span> <br> Students.</h2>
+                              <a href="#" class="join-now-btn">Join With Us</a>
                             </div>
                         </div>
                     </div>
@@ -865,7 +820,7 @@
 
             <!-- Caraousel -->
         <section>
-          <div class="container pb-0">
+          <div class="container">
             <h2 class="text-center line-height-1 mt-0">Our<span class="text-theme-colored3"> Partner</span></h2>
             <div class="row">
               <div class="col-md-12">

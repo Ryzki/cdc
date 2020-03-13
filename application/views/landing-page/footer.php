@@ -79,7 +79,7 @@
                 </div>
             </div>
         </footer>
-        <a class="scrollToTop" href="#"><i class="flaticon-seo-transport-3"></i></a>
+        <a class="scrollToTop" href="#" style="background-color: transparent"><i class="flaticon-seo-transport-3"></i></a>
         </div>
         <!-- end wrapper -->
 
@@ -99,7 +99,28 @@
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
         <script src="<?= base_url('assets/') ?>js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
-    
+        <script src="<?= base_url('assets/') ?>js/wow.min.js"></script>
+        <script src="<?= base_url('assets/') ?>js/jquery.meanmenu.min.js" type="text/javascript"></script>
+        <script src="<?= base_url('assets/') ?>js/jquery.scrollUp.min.js" type="text/javascript"></script>
+        <script src="<?= base_url('assets/') ?>js/main.js" type="text/javascript"></script>
+        <script src="<?= base_url('assets/') ?>js/jquery.gridrotator.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+
+                $('#ri-grid').gridrotator({
+                    w320: {
+                        rows: 3,
+                        columns: 4
+                    },
+                    w240: {
+                        rows: 3,
+                        columns: 3
+                    }
+                });
+
+            });
+        </script>
+
 
         </body>
 
