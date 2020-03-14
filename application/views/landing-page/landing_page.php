@@ -201,34 +201,28 @@
             </div>
         </section>
 <section style="background-color: #e2e2e2;">
-    <div class="container">
-                <div class="section-title text-center">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                            <h2 class="text-center line-height-1 mt-0">Activity <span class="text-theme-colored3">Galery</span> </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-content">
+    <div class="container" style="padding-top: 40px;padding-bottom: 30px;">
+                
+                <div class="section-content text-center">
                     <div class="row mtli-row-clearfix">
                         <div class="col-md-3">
                             <div class="horizontal-tab-centered">
-                                <button class="btn btn-primary btn-flat" style="padding: 60px;">Satu</button>                 
+                                <button class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</button>              
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="horizontal-tab-centered">
-                                <button class="btn btn-warning btn-flat" style="padding: 60px;">dua</button>                 
+                                <button class="btn btn-warning btn-flat" style="padding: 20px;"><i class="fa fa-graduation-cap fa-5x"></i><br>JobSeeker</button>              
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="horizontal-tab-centered">
-                                <button class="btn btn-success btn-flat" style="padding: 60px;">tiga</button>                 
+                                <button class="btn btn-success btn-flat" style="padding: 20px;"><i class="fa fa-leanpub fa-5x"></i><br>Magang</button>              
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="horizontal-tab-centered">
-                                <button class="btn btn-danger btn-flat" style="padding: 60px;">empat</button>                 
+                                <button class="btn btn-danger btn-flat" style="padding: 20px;"><i class="fa fa-wechat fa-5x"></i><br>Konseling</button>              
                             </div>
                         </div>
                     </div>
