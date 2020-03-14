@@ -97,7 +97,7 @@
                                 jsFileLocation: "js/revolution-slider/js/",
                                 sliderLayout: "fullwidth",
                                 dottedOverlay: "none",
-                                delay: 9000,
+                                delay: 3000,
                                 navigation: {
                                     keyboardNavigation: "on",
                                     keyboard_direction: "horizontal",
