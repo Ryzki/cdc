@@ -22,27 +22,45 @@
 
       <!-- Section: Job Apply Form -->
       <section class="divider">
-          <div class="container">
+          <div class="container-fluid pt-60">
               <div class="row">
-                  <div class="col-md-10 col-md-push-1">
+                  <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Rektor Rektor Universitas Kanjuruhan Malang</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 2 of 18</h3>
                           <hr>
-                          <h4>Sambutan</h4>
-                          <p class="text-justify">Alumni Universitas Kanjuruhan Malang (UNIKAMA) yang kami banggakan, Apa kabar? semoga selalu dalam lindungan Tuhan Yang Maha Esa dan diberkahi segala aktivitasnya. Mohon maaf untuk mengganggu aktivitas dan waktunya beberapa saat. Saat ini UNIKAMA melalui Career Development Center (CDC) sedang terus meningkatkan hubungan dengan para Alumni, termasuk melalui Studi Penelusuran Alumni (Tracer Study) layaknya yang dilakukan universitas-universitas terkemuka di dunia. UNIKAMA dapat menjadi perguruan tinggi yang unggul dan mencapai status world class university tentunya dengan dukungan para Alumni yang kami banggakan. Oleh karenanya, diharapkan kesediaan para alumni UNIKAMA untuk bekerjasama mengisi kuesioner Tracer Study ini. Kuesioner ini ditujukan untuk alumni Program S1 yang lulus mulai tahun 2015. Studi ini bertujuan untuk mengetahui masa transisi dari dunia kampus menuju dunia kerja dan menganalisis tingkat kompetensi yang diperoleh pada saat pendidikan dan aplikasinya di dunia kerja. Studi ini juga akan menggali informasi terkait dengan proses dan kondisi pembelajaran di UNIKAMA dan akan digunakan untuk memberikan feedback bagi penyempurnaan kurikulum program studi di UNIKAMA. Hasil dari studi ini akan menjadi data berharga bagi UNIKAMA yang akan digunakan sebagai masukan untuk berbagai upaya dan program pengembangan UNIKAMA, termasuk diantaranya akreditasi universitas dan program studi. UNIKAMA dapat menjamin kerahasiaan informasi yang diberikan. Atas perhatian dan partisipasinya disampaikan terima kasih. Salam dan doa kami dari Almamater untuk kesuksesan Anda semua para Alumni UNIKAMA.<br><br>
-
-
-
-                              Mengetahui,<br>
-                              Rektor Universitas Kanjuruhan Malang<br>
-                              <strong>Dr. Pieter Sahertian. M.Si</strong><br>
-                              NIK. 298601102
-
-                          </p>
-                          <div class="form-group">
-                              <!-- <input name="form_botcheck" class="form-control" type="check" value="" /> -->
-                              <a href="<?= base_url('tracer/ask1') ?>" type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Selanjutnya</a>
-                          </div>
+                          <p>Kapan anda mulai mencari pekerjaan ? Mohon pekerjaan sambilan tidak dimasukkan</p>
+                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask2') ?>" method="post" enctype="multipart/form-data">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <hr>
+                                      <div class="form-group">
+                                          <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
+                                          <div class="radio">
+                                              <label>
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1">
+                                                  Kira-kira bulan sebelum lulus
+                                              </label>
+                                          </div>
+                                          <div class="radio">
+                                              <label>
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
+                                                  Kira-kira bulan setelah lulus
+                                              </label>
+                                          </div>
+                                          <div class="radio">
+                                              <label>
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja3" value="3">
+                                                  Saya tidak mencari kerja
+                                              </label>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                                  <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Selanjutnya</button>
+                              </div>
+                          </form>
                           <!-- Job Form Validation-->
                           <!-- <script type="text/javascript">
                               $("#job_apply_form").validate({
