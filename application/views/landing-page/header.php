@@ -248,7 +248,7 @@
                                 </li>
                                 <li class=""><a href="JobDetil/all">Lowongan Kerja</a>
                                 </li>
-                                <li class=""><a href="#konseling">Hubungi Kami</a>
+                                <li class=""><a href="Welcome/contact">Hubungi Kami</a>
                                 </li>
                                 <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
                                 </li>
