@@ -254,7 +254,7 @@
                       <div class="event-details p-15 mt-20">
                         <h4 class="media-heading text-uppercase font-weight-500">PT. PERTAMINA (PERSERO) TBK</h4>
                         <p>Pertamina merupakan Badan Usaha Milik Negara yang bergerak dalam bisnis Oil&Gas mengundang putra-putri.</p>
-                        <a href="index.php/JobDetil" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
+                        <a href="JobDetil" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
                       </div>
                     </div>
                     <div class="col-sm-4">
