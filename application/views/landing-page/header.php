@@ -258,7 +258,7 @@
                                         <li><a href="">Daftar</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#trace" class="button-trace">Trace Study</a>
+                                <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Trace Study</a>
                                 </li>
                             </ul>
                         </nav>
