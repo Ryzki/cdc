@@ -246,7 +246,7 @@
                                 </li>
                                 <li class=""><a href="#konseling">Artikel</a>
                                 </li>
-                                <li class=""><a href="#konseling">Lowongan Kerja</a>
+                                <li class=""><a href="JobDetil/all">Lowongan Kerja</a>
                                 </li>
                                 <li class=""><a href="#konseling">Hubungi Kami</a>
                                 </li>
