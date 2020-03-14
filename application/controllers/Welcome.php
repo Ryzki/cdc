@@ -8,9 +8,6 @@ class Welcome extends CI_Controller
 		$this->load->view('landing-page/header');
 		$this->load->view('landing-page/landing_page');
 		$this->load->view('landing-page/footer');
-	}
-	public function tracer()
-	{
-		echo "aaaaa";
+		// echo "aaaa";
 	}
 }
