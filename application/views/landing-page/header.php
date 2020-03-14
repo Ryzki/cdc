@@ -244,7 +244,7 @@
                                         <li><a href="">Pelatihan Pusat Karir</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#konseling">Artikel</a>
+                                <li class=""><a href="Welcome/blog">Artikel</a>
                                 </li>
                                 <li class=""><a href="JobDetil/all">Lowongan Kerja</a>
                                 </li>

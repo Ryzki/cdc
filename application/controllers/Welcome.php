@@ -18,4 +18,20 @@ class Welcome extends CI_Controller
 		$this->load->view('landing-page/footer');
 		
 	}
+
+	public function blog()
+	{
+		$this->load->view('tracer/header');
+		$this->load->view('landing-page/blog');
+		$this->load->view('landing-page/footer');
+		
+	}
+
+	public function blogDetil()
+	{
+		$this->load->view('tracer/header');
+		$this->load->view('landing-page/blogDetil');
+		$this->load->view('landing-page/footer');
+		
+	}
 }
