@@ -15,43 +15,52 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="widget dark">
-                            <h4 class="widget-title">Useful Links</h4>
+                            <h4 class="widget-title">Sitemaps</h4>
                             <ul class="list-border">
-                                <li><a href="index-mp-layout1.html">Home</a></li>
-                                <li><a href="page-about1.html">About us</a></li>
-                                <li><a href="shortcode-sitemap.html">Sitemap</a></li>
-                                <li><a href="page-faq-style1.html">Faq's</a></li>
-                                <li><a href="page-contact1.html">Contact</a></li>
+                                <li><a href="https://unikama.ac.id" target="_blank">Home</a></li>
+                                <li><a href="https://ristekdikti.go.id" target="_blank">About</a></li>
+                                <li><a href="https://lppm.unikama.ac.id" target="_blank">Magang</a></li>
+                                <li><a href="https://mhs.unikama.ac.id" target="_blank">Tracer</a></li>
+                                <li><a href="https://infopmb.unikama.ac.id" target="_blank">Magang</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <div class="widget dark mb-30">
-                            <h4 class="widget-title line-bottom">Twitter Feed</h4>
-                            <div class="twitter-feed list-border clearfix" data-username="Envato" data-count="2"></div>
+                        <div class="widget dark">
+                            <h4 class="widget-title">Tautan Penting</h4>
+                            <ul class="list-border">
+                                <li><a href="https://unikama.ac.id" target="_blank">Unikama Official</a></li>
+                                <li><a href="https://ristekdikti.go.id" target="_blank">Kemenristek Dikti</a></li>
+                                <li><a href="https://lppm.unikama.ac.id" target="_blank">LPPM Unikama</a></li>
+                                <li><a href="https://mhs.unikama.ac.id" target="_blank">Kemahasiswaan</a></li>
+                                <li><a href="https://infopmb.unikama.ac.id" target="_blank">Info PMB</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="widget dark">
-                            <h4 class="widget-title">Opening Hours</h4>
+                            <h4 class="widget-title">Galeri Aktivitas</h4>
                             <div class="opening-hours">
-                                <ul class="list-border">
-                                    <li class="clearfix"> <span> Mon - Tues : </span>
-                                        <div class="value pull-right flip"> 6.00 am - 10.00 pm </div>
-                                    </li>
-                                    <li class="clearfix text-white"> <span> Wednes - Thurs :</span>
-                                        <div class="value pull-right flip"> 8.00 am - 6.00 pm </div>
-                                    </li>
-                                    <li class="clearfix"> <span> Fri : </span>
-                                        <div class="value pull-right flip"> 3.00 pm - 8.00 pm </div>
-                                    </li>
-                                    <li class="clearfix"> <span> Sun : </span>
-                                        <div class="value pull-right flip"> Closed </div>
-                                    </li>
-                                    <li class="clearfix"> <span> Sat : </span>
-                                        <div class="value pull-right flip"> 10.00 am - 2.00 pm </div>
-                                    </li>
-                                </ul>
+                                <div class="row">
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
+                                    </div>
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
+                                    </div>
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/3.jpg">
+                                    </div>
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/4.jpg">
+                                    </div>
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
+                                    </div>
+                                    <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +70,7 @@
                 <div class="container pt-10 pb-0">
                     <div class="row">
                         <div class="col-md-6 sm-text-center">
-                            <p class="font-13 text-black-777 m-0">Copyright &copy;2020. All Rights Reserved</p>
+                            <p class="font-13 text-black-777 m-0">Hak Cipta © 2020 Unikama Career & Development Center. Hak cipta dilindungi oleh undang-undang. Powered by SCM </p>
                         </div>
                         <div class="col-md-6 text-right flip sm-text-center">
                             <div class="widget no-border m-0">

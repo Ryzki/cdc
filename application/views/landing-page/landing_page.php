@@ -886,7 +886,7 @@
             <!-- Caraousel -->
         <section>
           <div class="container">
-            <h2 class="text-center line-height-1 mt-0">Our<span class="text-theme-colored3"> Partner</span></h2>
+            <h2 class="text-center line-height-1 mt-0" style="margin-bottom: 30px;">Our<span class="text-theme-colored3"> Partner</span></h2>
             <div class="row">
               <div class="col-md-12">
                 <div class="owl-carousel-6col" data-dots="true" data-nav="true">
