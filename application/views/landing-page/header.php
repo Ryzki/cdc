@@ -238,27 +238,19 @@
                                         <li><a href="">Struktur</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#magang">Magang</a>
+                                <li class=""><a href="#career">Pelatihan</a>
                                     <ul class="dropdown">
-                                        <li><a href="">Informasi</a></li>
-                                        <li><a href="">Daftar</a></li>
+                                        <li><a href="">Softskills</a></li>
+                                        <li><a href="">Pelatihan Pusat Karir</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#career">Career Information</a>
-                                    <ul class="dropdown">
-                                        <li><a href="">Informasi</a></li>
-                                        <li><a href="">Daftar</a></li>
-                                    </ul>
+                                <li class=""><a href="#konseling">Artikel</a>
                                 </li>
-                                <li class=""><a href="#konseling">Konseling Karir</a>
+                                <li class=""><a href="#konseling">Lowongan Kerja</a>
                                 </li>
-                                <li class=""><a href="#perusahaan">Perusahaan</a>
-                                    <ul class="dropdown">
-                                        <li><a href="">Informasi</a></li>
-                                        <li><a href="">Daftar</a></li>
-                                    </ul>
+                                <li class=""><a href="#konseling">Hubungi Kami</a>
                                 </li>
-                                <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Trace Study</a>
+                                <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
                                 </li>
                             </ul>
                         </nav>
