@@ -11,10 +11,10 @@
     <meta name="author" content="ThemeMascot" />
 
     <!-- Page Title -->
-    <title>CDC | UNIKAMA</title>
+    <title>PPK | Universitas Kanjuruhan Malang</title>
 
     <!-- Favicon and Touch Icons -->
-    <link href="<?= base_url('assets/') ?>images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="icon" href="<?= base_url('assets/') ?>images/favicon.png" type="image/x-icon">
     <link href="<?= base_url('assets/') ?>images/apple-touch-icon.png" rel="icon">
     <link href="<?= base_url('assets/') ?>images/apple-touch-icon-72x72.png" rel="icon" sizes="72x72">
     <link href="<?= base_url('assets/') ?>images/apple-touch-icon-114x114.png" rel="icon" sizes="114x114">
