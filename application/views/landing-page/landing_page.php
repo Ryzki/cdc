@@ -97,7 +97,7 @@
                                 jsFileLocation: "js/revolution-slider/js/",
                                 sliderLayout: "fullwidth",
                                 dottedOverlay: "none",
-                                delay: 9000,
+                                delay: 3000,
                                 navigation: {
                                     keyboardNavigation: "on",
                                     keyboard_direction: "horizontal",
@@ -132,26 +132,25 @@
                                             v_offset: 0
                                         }
                                     },
-                                    // bullets: {
-                                    //     enable: true,
-                                    //     hide_onmobile: true,
-                                    //     hide_under: 600,
-                                    //     style: "metis",
-                                    //     hide_onleave: true,
-                                    //     hide_delay: 200,
-                                    //     hide_delay_mobile: 1200,
-                                    //     direction: "horizontal",
-                                    //     h_align: "center",
-                                    //     v_align: "bottom",
-                                    //     h_offset: 0,
-                                    //     v_offset: 30,
-                                    //     space: 5,
-                                    //     tmp: '<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
-                                    // }
+                                    bullets: {
+                                        enable: true,
+                                        hide_onmobile: true,
+                                        hide_under: 600,
+                                        style: "metis",
+                                        hide_onleave: true,
+                                        hide_delay: 200,
+                                        hide_delay_mobile: 1200,
+                                        direction: "horizontal",
+                                        h_align: "center",
+                                        v_align: "bottom",
+                                        h_offset: 0,
+                                        v_offset: 30,
+                                        space: 5,
+                                        tmp: '<span class="tp-bullet-img-wrap"><span class="tp-bullet-image"></span></span>'
+                                    }
                                 },
                                 viewPort: {
                                     enable: true,
-                                    outof: "pause",
                                     visible_area: "80%"
                                 },
                                 responsiveLevels: [1240, 1024, 778, 480],
