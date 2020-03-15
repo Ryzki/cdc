@@ -22,14 +22,14 @@
 
       <!-- Section: Job Apply Form -->
       <section class="divider">
-          <div class="container-fluid">
+          <div class="container-fluid pt-60">
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 2 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 4 of 18</h3>
                           <hr>
-                          <p>Kapan anda mulai mencari pekerjaan ? Mohon pekerjaan sambilan tidak dimasukkan</p>
-                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask2') ?>" method="post" enctype="multipart/form-data">
+                          <p>Berapa bulan waktu yang dihabiskan (sebelum dan sesudah kelulusan) untuk memeroleh pekerjaan pertama ?</p>
+                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask4') ?>" method="post" enctype="multipart/form-data">
                               <div class="row">
                                   <div class="col-sm-12">
                                       <hr>
@@ -45,12 +45,6 @@
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
                                                   Kira-kira <input id="input2" type="number" style="width: 54px;"> bulan setelah lulus
-                                              </label>
-                                          </div>
-                                          <div class="radio">
-                                              <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja3" value="3">
-                                                  Saya tidak mencari kerja
                                               </label>
                                           </div>
                                       </div>
