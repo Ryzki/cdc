@@ -207,7 +207,7 @@
                     <div class="row mtli-row-clearfix">
                         <div class="col-md-3">
                             <div class="horizontal-tab-centered">
-                                <button class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</button>              
+                                <a href="Login/perusahaan" class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</a>              
                             </div>
                         </div>
                         <div class="col-md-3">
