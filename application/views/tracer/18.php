@@ -49,7 +49,7 @@
                                     </tr>
                                         <tr id="group1" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <td>
-                                            <input name="group1" type="radio" id="radio_31" value="1" class="with-gap radio-col-pink" />
+                                            <input name="group1" type="radio" id="radio_31" value="1" class="with-gap radio-col-pink" required/>
                                         </td>
                                         <td>
                                             <input name="group1" type="radio" id="radio_32" value="2" class="with-gap radio-col-purple" />
@@ -69,7 +69,7 @@
                                     
                                     <tr id="group2" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <td>
-                                            <input name="group2" type="radio" id="radio_36" value="1" class="with-gap radio-col-pink" />
+                                            <input name="group2" type="radio" id="radio_36" value="1" class="with-gap radio-col-pink" required/>
                                         </td>
                                         <td>
                                             <input name="group2" type="radio" id="radio_37" value="2" class="with-gap radio-col-purple" />
@@ -88,7 +88,7 @@
                                     <tr id="group3" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                        <td><input name="group3" type="radio" id="radio_41" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group3" type="radio" id="radio_41" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_41"></label></td>
                                         <td><input name="group3" type="radio" id="radio_42" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_42"></label></td>
@@ -107,7 +107,7 @@
                                     <tr id="group4" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                        <td><input name="group4" type="radio" id="radio_46" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group4" type="radio" id="radio_46" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_46"></label></td>
                                         <td><input name="group4" type="radio" id="radio_47" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_47"></label></td>
@@ -126,7 +126,7 @@
                                     <tr id="group5" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                        <td><input name="group5" type="radio" id="radio_51" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group5" type="radio" id="radio_51" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_51"></label></td>
                                         <td><input name="group5" type="radio" id="radio_52" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_52"></label></td>
@@ -145,7 +145,7 @@
                                     <tr id="group6" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group6" type="radio" id="radio_56" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group6" type="radio" id="radio_56" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_56"></label></td>
                                         <td><input name="group6" type="radio" id="radio_57" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_57"></label></td>
@@ -164,7 +164,7 @@
                                     <tr id="group7" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group7" type="radio" id="radio_61" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group7" type="radio" id="radio_61" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_61"></label></td>
                                         <td><input name="group7" type="radio" id="radio_62" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_62"></label></td>
@@ -183,7 +183,7 @@
                                     <tr id="group8" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group8" type="radio" id="radio_66" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group8" type="radio" id="radio_66" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_66"></label></td>
                                         <td><input name="group8" type="radio" id="radio_67" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_67"></label></td>
@@ -202,7 +202,7 @@
                                     <tr id="group9" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group9" type="radio" id="radio_71" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group9" type="radio" id="radio_71" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_71"></label></td>
                                         <td><input name="group9" type="radio" id="radio_72" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_72"></label></td>
@@ -221,7 +221,7 @@
                                     <tr id="group10" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group10" type="radio" id="radio_76" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group10" type="radio" id="radio_76" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_76"></label></td>
                                         <td><input name="group10" type="radio" id="radio_77" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_77"></label></td>
@@ -240,7 +240,7 @@
                                     <tr id="group11" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group11" type="radio" id="radio_81" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group11" type="radio" id="radio_81" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_81"></label></td>
                                         <td><input name="group11" type="radio" id="radio_82" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_82"></label></td>
@@ -259,7 +259,7 @@
                                     <tr id="group12" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group12" type="radio" id="radio_86" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group12" type="radio" id="radio_86" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_86"></label></td>
                                         <td><input name="group12" type="radio" id="radio_87" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_87"></label></td>
@@ -278,7 +278,7 @@
                                     <tr id="group13" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group13" type="radio" id="radio_91" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group13" type="radio" id="radio_91" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_91"></label></td>
                                         <td><input name="group13" type="radio" id="radio_92" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_92"></label></td>
@@ -297,7 +297,7 @@
                                     <tr id="group14" class="text-center" style="border-bottom:dashed 1px gray;">
                                         <!--<div class="input-group">-->
                                         <!--<div class="demo-radio-button">-->
-                                        <td><input name="group14" type="radio" id="radio_96" value="1" class="with-gap radio-col-pink" />
+                                        <td><input name="group14" type="radio" id="radio_96" value="1" class="with-gap radio-col-pink" required/>
                                         <label for="radio_96"></label></td>
                                         <td><input name="group14" type="radio" id="radio_97" value="2" class="with-gap radio-col-purple" />
                                         <label for="radio_97"></label></td>
@@ -316,7 +316,7 @@
                                     <tr id="group15" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group15" type="radio" id="radio_101" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group15" type="radio" id="radio_101" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_101"></label></td>
                                     <td><input name="group15" type="radio" id="radio_102" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_102"></label></td>
@@ -335,7 +335,7 @@
                                     <tr id="group16" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group16" type="radio" id="radio_106" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group16" type="radio" id="radio_106" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_106"></label></td>
                                     <td><input name="group16" type="radio" id="radio_107" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_107"></label></td>
@@ -354,7 +354,7 @@
                                     <tr id="group17" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group17" type="radio" id="radio_111" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group17" type="radio" id="radio_111" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_111"></label></td>
                                     <td><input name="group17" type="radio" id="radio_112" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_112"></label></td>
@@ -373,7 +373,7 @@
                                     <tr id="group18" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group18" type="radio" id="radio_116" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group18" type="radio" id="radio_116" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_116"></label></td>
                                     <td><input name="group18" type="radio" id="radio_117" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_117"></label></td>
@@ -392,7 +392,7 @@
                                     <tr id="group19" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group19" type="radio" id="radio_121" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group19" type="radio" id="radio_121" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_121"></label></td>
                                     <td><input name="group19" type="radio" id="radio_122" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_122"></label></td>
@@ -411,7 +411,7 @@
                                     <tr id="group20" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group20" type="radio" id="radio_126" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group20" type="radio" id="radio_126" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_126"></label></td>
                                     <td><input name="group20" type="radio" id="radio_127" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_127"></label></td>
@@ -430,7 +430,7 @@
                                     <tr id="group21" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group21" type="radio" id="radio_131" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group21" type="radio" id="radio_131" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_131"></label></td>
                                     <td><input name="group21" type="radio" id="radio_132" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_132"></label></td>
@@ -449,7 +449,7 @@
                                     <tr id="group22" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group22" type="radio" id="radio_136" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group22" type="radio" id="radio_136" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_136"></label></td>
                                     <td><input name="group22" type="radio" id="radio_137" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_137"></label></td>
@@ -468,7 +468,7 @@
                                     <tr id="group23" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group23" type="radio" id="radio_141" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group23" type="radio" id="radio_141" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_141"></label></td>
                                     <td><input name="group23" type="radio" id="radio_142" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_142"></label></td>
@@ -487,7 +487,7 @@
                                     <tr id="group24" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group24" type="radio" id="radio_146" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group24" type="radio" id="radio_146" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_146"></label></td>
                                     <td><input name="group24" type="radio" id="radio_147" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_147"></label></td>
@@ -506,7 +506,7 @@
                                     <tr id="group25" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group25" type="radio" id="radio_151" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group25" type="radio" id="radio_151" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_151"></label></td>
                                     <td><input name="group25" type="radio" id="radio_152" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_152"></label></td>
@@ -525,7 +525,7 @@
                                     <tr id="group26" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group26" type="radio" id="radio_156" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group26" type="radio" id="radio_156" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_156"></label></td>
                                     <td><input name="group26" type="radio" id="radio_157" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_157"></label></td>
@@ -544,7 +544,7 @@
                                     <tr id="group27" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group27" type="radio" id="radio_161" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group27" type="radio" id="radio_161" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_161"></label></td>
                                     <td><input name="group27" type="radio" id="radio_162" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_162"></label></td>
@@ -563,7 +563,7 @@
                                     <tr id="group28" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group28" type="radio" id="radio_166" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group28" type="radio" id="radio_166" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_166"></label></td>
                                     <td><input name="group28" type="radio" id="radio_167" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_167"></label></td>
@@ -582,7 +582,7 @@
                                     <tr id="group29" class="text-center" style="border-bottom:dashed 1px gray;">
                                     <!--<div class="input-group">-->
                                     <!--<div class="demo-radio-button">-->
-                                    <td><input name="group29" type="radio" id="radio_171" value="1" class="with-gap radio-col-pink" />
+                                    <td><input name="group29" type="radio" id="radio_171" value="1" class="with-gap radio-col-pink" required/>
                                     <label for="radio_171"></label></td>
                                     <td><input name="group29" type="radio" id="radio_172" value="2" class="with-gap radio-col-purple" />
                                     <label for="radio_172"></label></td>

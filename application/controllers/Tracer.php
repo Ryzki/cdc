@@ -154,6 +154,16 @@ class Tracer extends CI_Controller
     public function ask9()
     {
         if (!empty($_REQUEST)) {
+            $f901 = $this->input->post("f901");
+            $f902 = $this->input->post("f902");
+            $f903 = $this->input->post("f903");
+            $f904 = $this->input->post("f904");
+            $f905 = $this->input->post("f905");
+            $input = $this->input->post("input");
+            if (empty($f901) && empty($f902) && empty($f903) && empty($f904) && empty($f905) && empty($input)) {
+                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
+                redirect("tracer/ask9");
+            }
             echo "PROSES";
             redirect(base_url('tracer/ask10'));
         } else {
@@ -231,6 +241,24 @@ class Tracer extends CI_Controller
     public function ask16()
     {
         if (!empty($_REQUEST)) {
+            $f1601 = $this->input->post("f1601");
+            $f1602 = $this->input->post("f1602");
+            $f1603 = $this->input->post("f1603");
+            $f1604 = $this->input->post("f1604");
+            $f1605 = $this->input->post("f1605");
+            $f1606 = $this->input->post("f1606");
+            $f1607 = $this->input->post("f1607");
+            $f1608 = $this->input->post("f1608");
+            $f1609 = $this->input->post("f1609");
+            $f1610 = $this->input->post("f1610");
+            $f1611 = $this->input->post("f1611");
+            $f1612 = $this->input->post("f1612");
+            $f1613 = $this->input->post("f1613");
+            $input = $this->input->post("input");
+            if (empty($f1601) && empty($f1602) && empty($f1603) && empty($f1604) && empty($f1605) && empty($f1606) && empty($f1607) && empty($f1608) && empty($f1609) && empty($f1610) && empty($f1611) && empty($f1612) && empty($f1613) && empty($input)) {
+                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
+                redirect("tracer/ask16");
+            }
             echo "PROSES";
             redirect(base_url('tracer/ask17'));
         } else {

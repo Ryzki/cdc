@@ -37,7 +37,7 @@
                                           <div class="col-md-6 col-sm-12">
                                               <div class="input-group">
                                                   <span class="input-group-addon" style="border:0px">Rp.</span>
-                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka">
+                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka" required>
                                                   <span class="input-group-addon" style="border:0px">.00</span>
                                               </div>
                                           </div>
@@ -51,7 +51,7 @@
                                           <div class="col-md-6 col-sm-12">
                                               <div class="input-group">
                                                   <span class="input-group-addon" style="border:0px">Rp.</span>
-                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka">
+                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka" required>
                                                   <span class="input-group-addon" style="border:0px">.00</span>
                                               </div>
                                           </div>
@@ -65,7 +65,7 @@
                                           <div class="col-md-6 col-sm-12">
                                               <div class="input-group">
                                                   <span class="input-group-addon" style="border:0px">Rp.</span>
-                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka">
+                                                  <input type="text" class="form-control text-right" placeholder="isi dengan angka" required>
                                                   <span class="input-group-addon" style="border:0px">.00</span>
                                               </div>
                                           </div>

@@ -28,6 +28,7 @@
                       <div class="border-1px p-30 mb-0">
                           <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 9 of 18</h3>
                           <hr>
+                          <?= $this->session->flashdata('message') ?>
                           <p>Bagaimana anda menggambarkan situasi anda saat ini? Jawaban bisa lebih dari satu</p>
                           <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask9') ?>" method="post" enctype="multipart/form-data">
                               <div class="row">
@@ -36,31 +37,31 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="">
+                                                  <input type="checkbox" value="1" name="f901">
                                                   Saya masih belajar/melanjutkan kuliah profesi atau pascasarjana
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="">
+                                                  <input type="checkbox" value="1" name="f902">
                                                   Saya menikah
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="">
+                                                  <input type="checkbox" value="1" name="f903">
                                                   Saya sibuk dengan keluarga dan anak-anak
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="">
+                                                  <input type="checkbox" value="1" name="f904">
                                                   Saya sekarang sedang mencari pekerjaan
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="" id="check-lainnya">
+                                                  <input type="checkbox" value="1" name="f905" id="check-lainnya">
                                                   Lainnya
                                               </label>
                                           </div>

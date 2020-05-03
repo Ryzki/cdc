@@ -36,7 +36,7 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1">
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
                                                   Sangat Erat
                                               </label>
                                           </div>
