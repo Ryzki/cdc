@@ -1,0 +1,46 @@
+<?php
+
+class B_m_user extends CI_Model
+{
+    public function getLoginData($user, $pass)
+    {
+        $u = $user;
+        $p = $pass;
+
+        $userdata = $this->db->get_where('user', ['username' => $u])->row_array();
+        if ($userdata) {
+            if (password_verify($p, $userdata['password'])) {
+                $sess_data = [
+                    'logged_in' => TRUE,
+                    'username' => $userdata['username'],
+                    'password' => $userdata['password'],
+                    'level' => $userdata['level'],
+                ];
+                $this->session->set_userdata($sess_data);
+                redirect('backend/dashboard/profile');
+            }
+        }
+
+        // if (count($userdata->result()) > 0) {
+        //     foreach ($userdata->result() as $qck) {
+        //         foreach ($userdata->result() as $ck) {
+        //             $sess_data['logged_in'] = TRUE;
+        //             $sess_data['username'] = $ck->username;
+        //             $sess_data['password'] = $ck->password;
+        //             $sess_data['level'] = $ck->level;
+        //             $this->session->set_userdata($sess_data);
+        //         }
+        //         redirect('administrator/dashboard');
+        //     }
+        // }
+        else {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+            redirect('backend/login');
+        }
+    }
+}
