@@ -26,42 +26,36 @@
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 14 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 15 of 18</h3>
                           <hr>
-                          <p>Sebutkan sumber dana dalam pembiayaan kuliah ?</p>
-                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask14') ?>" method="post" enctype="multipart/form-data">
+                          <p>Tingkat Pendidikan apa yang paling tepat / sesuai untuk pekerjaan anda saat ini ?</p>
+                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask15') ?>" method="post" enctype="multipart/form-data">
                               <div class="row">
                                   <div class="col-sm-12">
                                       <div class="form-group">
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1">
-                                                  Sangat Erat
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  Setingkat lebih tinggi
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
-                                                  Erat
+                                                  Tingkat yang sama
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="3">
-                                                  Cukup Erat
+                                                  Setingkat lebih rendah
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
-                                                  Kurang Erat
-                                              </label>
-                                          </div>
-                                          <div class="radio">
-                                              <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
-                                                  Tidak Sama Sekali
+                                                  Tidak perlu pendidikan tinggi
                                               </label>
                                           </div>
                                       </div>

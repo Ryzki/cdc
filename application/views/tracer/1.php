@@ -37,7 +37,7 @@
                                           <label>Perkuliahan <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan1" value="1">
+                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -73,7 +73,7 @@
                                           <label>Demonstrasi <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi1" value="1">
+                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -109,7 +109,7 @@
                                           <label>Partisipasi dalam proyek riset <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi1" value="1">
+                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -145,7 +145,7 @@
                                           <label>Magang <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang1" value="1">
+                                                  <input type="radio" name="opMagang" id="rbMagang1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -181,7 +181,7 @@
                                           <label>Praktikum <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum1" value="1">
+                                                  <input type="radio" name="opPraktikum" id="rbPraktikum1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -217,7 +217,7 @@
                                           <label>Kerja Lapangan <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan1" value="1">
+                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
@@ -253,7 +253,7 @@
                                           <label>Diskusi <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi1" value="1">
+                                                  <input type="radio" name="opDiskusi" id="rbDiskusi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>

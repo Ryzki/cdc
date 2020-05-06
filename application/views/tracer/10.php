@@ -26,36 +26,36 @@
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 11 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 10 of 18</h3>
                           <hr>
-                          <p>Apa jenis perusahaan/instansi/institusi tempat anda bekerja sekarang ?</p>
-                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask11') ?>" method="post" enctype="multipart/form-data">
+                          <p>Apakah anda aktif mencari pekerjaan dalam 4 minggu terakhir?pilihlah satu jawaban</p>
+                          <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask10') ?>" method="post" enctype="multipart/form-data">
                               <div class="row">
                                   <div class="col-sm-12">
                                       <div class="form-group">
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1">
-                                                  Instansi pemerintah (termasuk BUMN)
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  Tidak
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
-                                                  Organisasi non-profit/Lembaga Swadaya Masyarakat
+                                                  Tidak, tapi saya sedang menunggu hasil lamaran
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="3">
-                                                  Perusahaan swasta
+                                                  Ya, saya akan mulai bekerja dalam 2 minggu ke depan
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
                                                   <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
-                                                  Wiraswasta/perusahaan sendiri
+                                                  Ya, saya belum pasti akan bekerja dalam 2 minggu ke depan
                                               </label>
                                           </div>
                                           <div class="radio">

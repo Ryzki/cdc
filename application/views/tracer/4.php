@@ -22,7 +22,7 @@
 
       <!-- Section: Job Apply Form -->
       <section class="divider">
-          <div class="container-fluid pt-60">
+          <div class="container-fluid">
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
@@ -37,7 +37,7 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1">
+                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
                                                   Kira-kira <input id="input1" type="number" style="width: 54px;"> bulan sebelum lulus
                                               </label>
                                           </div>
