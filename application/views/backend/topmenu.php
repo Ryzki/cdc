@@ -779,7 +779,7 @@
                                         <td>Logo yang digunakan saat ini</td>
                                         <td>
                                             ​<picture>
-                                                <source srcset="..." type="image/svg+xml">
+
                                                 <img src="<?= base_url('assets') ?>/images/logo-unikama-1.png" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
                                         </td>
