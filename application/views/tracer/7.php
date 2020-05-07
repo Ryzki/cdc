@@ -34,7 +34,7 @@
                                   <div class="col-sm-12">
                                       <div class="form-group pl-20">
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
-                                          <label><input id="input1" type="number" style="width: 54px;" required> perusahaan/instansi/institusi
+                                          <label><input id="input1" name="f7a" type="number" style="width: 54px;" required> perusahaan/instansi/institusi
                                           </label>
                                       </div>
                                   </div>

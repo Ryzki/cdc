@@ -43,78 +43,78 @@
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1602">
+                                                  <input type="checkbox" value="2" name="f1602">
                                                   Saya belum mendapatkan pekerjaan yang lebih sesuai
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1603">
+                                                  <input type="checkbox" value="3" name="f1603">
                                                   Di pekerjaan ini saya memeroleh prospek karir yang baik
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1604">
+                                                  <input type="checkbox" value="4" name="f1604">
                                                   Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1605">
+                                                  <input type="checkbox" value="5" name="f1605">
                                                   Saya dipromosikan ke posisi yang kurang berhubungan dengan pendidikan saya dibanding posisi sebelumnya
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1606">
+                                                  <input type="checkbox" value="6" name="f1606">
                                                   Saya dapat memeroleh pendapatan yang lebih tinggi dipekerjaan ini
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1607">
+                                                  <input type="checkbox" value="7" name="f1607">
                                                   Pekerjaan saya saat ini lebih aman/terjamin/secure
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1608">
+                                                  <input type="checkbox" value="8" name="f1608">
                                                   Pekerjaan saya saat ini lebih menarik
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1609">
+                                                  <input type="checkbox" value="9" name="f1609">
                                                   Pekerjaan saya saat ini lebih memungkinkan saya mengambil pekerjaan tambahan/jadwal yang flesibel dll.
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1610">
+                                                  <input type="checkbox" value="10" name="f1610">
                                                   Pekerjaan saya saat ini lokasinya lebih dekat dari rumah saya
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1611">
+                                                  <input type="checkbox" value="11" name="f1611">
                                                   Pekerjaan saya saati ini dapat lebih menjamin kebutuhan keluarga saya
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1612">
+                                                  <input type="checkbox" value="12" name="f1612">
                                                   Pada awal meneliti karir ini, saya harus menerima pekerjaan yang tidak berhubungan dengan pendidikan saya
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f1613" id="check-lainnya">
+                                                  <input type="checkbox" value="13" name="f1613" id="check-lainnya">
                                                   Lainnya
                                               </label>
                                           </div>
                                           <div class="form-line">
-                                              <input type="text" class="form-control input-lainnya" name="input" placeholder="jika ada lainnya sebutkan" style="display: none;">
+                                              <input type="text" class="form-control input-lainnya" name="f1614" placeholder="jika ada lainnya sebutkan" style="display: none;">
                                           </div>
                                       </div>
                                   </div>

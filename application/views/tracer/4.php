@@ -37,14 +37,14 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
-                                                  Kira-kira <input id="input1" type="number" style="width: 54px;"> bulan sebelum lulus
+                                                  <input type="radio" name="f501" id="rbCariKerja1" value="1" required>
+                                                  Kira-kira <input id="input1" name="f502" type="number" style="width: 54px;"> bulan sebelum lulus
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
-                                                  Kira-kira <input id="input2" type="number" style="width: 54px;"> bulan setelah lulus
+                                                  <input type="radio" name="f501" id="rbCariKerja2" value="2">
+                                                  Kira-kira <input id="input2" name="f503" type="number" style="width: 54px;"> bulan setelah lulus
                                               </label>
                                           </div>
                                       </div>

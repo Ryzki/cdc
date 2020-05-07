@@ -36,25 +36,25 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  <input type="radio" name="f15" id="rbCariKerja1" value="1" required>
                                                   Setingkat lebih tinggi
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
+                                                  <input type="radio" name="f15" id="rbCariKerja2" value="2">
                                                   Tingkat yang sama
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="3">
+                                                  <input type="radio" name="f15" id="rbCariKerja2" value="3">
                                                   Setingkat lebih rendah
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
+                                                  <input type="radio" name="f15" id="rbCariKerja2" value="4">
                                                   Tidak perlu pendidikan tinggi
                                               </label>
                                           </div>

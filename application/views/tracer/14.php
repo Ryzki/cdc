@@ -36,31 +36,31 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  <input type="radio" name="f14" id="rbCariKerja1" value="1" required>
                                                   Sangat Erat
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
+                                                  <input type="radio" name="f14" id="rbCariKerja2" value="2">
                                                   Erat
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="3">
+                                                  <input type="radio" name="f14" id="rbCariKerja2" value="3">
                                                   Cukup Erat
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
+                                                  <input type="radio" name="f14" id="rbCariKerja2" value="4">
                                                   Kurang Erat
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
+                                                  <input type="radio" name="f14" id="rbCariKerja2" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>

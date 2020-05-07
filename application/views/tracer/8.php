@@ -36,13 +36,13 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  <input type="radio" name="f8" id="rbCariKerja1" value="1" required>
                                                   Ya
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
+                                                  <input type="radio" name="f8" id="rbCariKerja2" value="2">
                                                   Tidak
                                               </label>
                                           </div>

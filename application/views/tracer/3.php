@@ -126,7 +126,7 @@
                                               </label>
                                           </div>
                                           <div class="form-line">
-                                              <input type="text" class="form-control input-lainnya" name="input" placeholder="jika ada lainnya sebutkan" style="display: none;">
+                                              <input type="text" class="form-control input-lainnya" name="f416" placeholder="jika ada lainnya sebutkan" style="display: none;">
                                           </div>
                                       </div>
                                   </div>

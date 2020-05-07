@@ -37,31 +37,31 @@
                                           <label>Perkuliahan <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan1" value="1" required>
+                                                  <input type="radio" name="f21" id="rbPerkuliahan1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan2" value="2">
+                                                  <input type="radio" name="f21" id="rbPerkuliahan2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan3" value="3">
+                                                  <input type="radio" name="f21" id="rbPerkuliahan3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan4" value="4">
+                                                  <input type="radio" name="f21" id="rbPerkuliahan4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPerkuliahan" id="rbPerkuliahan5" value="5">
+                                                  <input type="radio" name="f21" id="rbPerkuliahan5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -73,31 +73,31 @@
                                           <label>Demonstrasi <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi1" value="1" required>
+                                                  <input type="radio" name="f22" id="rbDemonstrasi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi2" value="2">
+                                                  <input type="radio" name="f22" id="rbDemonstrasi2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi3" value="3">
+                                                  <input type="radio" name="f22" id="rbDemonstrasi3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi4" value="4">
+                                                  <input type="radio" name="f22" id="rbDemonstrasi4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDemonstrasi" id="rbDemonstrasi5" value="5">
+                                                  <input type="radio" name="f22" id="rbDemonstrasi5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -109,31 +109,31 @@
                                           <label>Partisipasi dalam proyek riset <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi1" value="1" required>
+                                                  <input type="radio" name="f23" id="rbPartisipasi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi2" value="2">
+                                                  <input type="radio" name="f23" id="rbPartisipasi2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi3" value="3">
+                                                  <input type="radio" name="f23" id="rbPartisipasi3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi4" value="4">
+                                                  <input type="radio" name="f23" id="rbPartisipasi4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPartisipasi" id="rbPartisipasi5" value="5">
+                                                  <input type="radio" name="f23" id="rbPartisipasi5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -145,31 +145,31 @@
                                           <label>Magang <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang1" value="1" required>
+                                                  <input type="radio" name="f24" id="rbMagang1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang2" value="2">
+                                                  <input type="radio" name="f24" id="rbMagang2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang3" value="3">
+                                                  <input type="radio" name="f24" id="rbMagang3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang4" value="4">
+                                                  <input type="radio" name="f24" id="rbMagang4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opMagang" id="rbMagang5" value="5">
+                                                  <input type="radio" name="f24" id="rbMagang5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -181,31 +181,31 @@
                                           <label>Praktikum <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum1" value="1" required>
+                                                  <input type="radio" name="f25" id="rbPraktikum1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum2" value="2">
+                                                  <input type="radio" name="f25" id="rbPraktikum2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum3" value="3">
+                                                  <input type="radio" name="f25" id="rbPraktikum3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum4" value="4">
+                                                  <input type="radio" name="f25" id="rbPraktikum4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opPraktikum" id="rbPraktikum5" value="5">
+                                                  <input type="radio" name="f25" id="rbPraktikum5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -217,31 +217,31 @@
                                           <label>Kerja Lapangan <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan1" value="1" required>
+                                                  <input type="radio" name="f26" id="rbKerjaLapangan1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan2" value="2">
+                                                  <input type="radio" name="f26" id="rbKerjaLapangan2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan3" value="3">
+                                                  <input type="radio" name="f26" id="rbKerjaLapangan3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan4" value="4">
+                                                  <input type="radio" name="f26" id="rbKerjaLapangan4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opKerjaLapangan" id="rbKerjaLapangan5" value="5">
+                                                  <input type="radio" name="f26" id="rbKerjaLapangan5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>
@@ -253,31 +253,31 @@
                                           <label>Diskusi <small>*</small> <?= form_error('opPerkuliahan', '<small class="text-danger"><i>', '</i></small>') ?></label>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi1" value="1" required>
+                                                  <input type="radio" name="f27" id="rbDiskusi1" value="1" required>
                                                   Sangat Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi2" value="2">
+                                                  <input type="radio" name="f27" id="rbDiskusi2" value="2">
                                                   Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi3" value="3">
+                                                  <input type="radio" name="f27" id="rbDiskusi3" value="3">
                                                   Cukup Besar
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi4" value="4">
+                                                  <input type="radio" name="f27" id="rbDiskusi4" value="4">
                                                   Kurang
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opDiskusi" id="rbDiskusi5" value="5">
+                                                  <input type="radio" name="f27" id="rbDiskusi5" value="5">
                                                   Tidak Sama Sekali
                                               </label>
                                           </div>

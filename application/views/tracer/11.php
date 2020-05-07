@@ -36,36 +36,36 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja1" value="1" required>
+                                                  <input type="radio" name="f1101" id="rbCariKerja1" value="1" required>
                                                   Instansi pemerintah (termasuk BUMN)
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="2">
+                                                  <input type="radio" name="f1101" id="rbCariKerja2" value="2">
                                                   Organisasi non-profit/Lembaga Swadaya Masyarakat
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="3">
+                                                  <input type="radio" name="f1101" id="rbCariKerja2" value="3">
                                                   Perusahaan swasta
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="4">
+                                                  <input type="radio" name="f1101" id="rbCariKerja2" value="4">
                                                   Wiraswasta/perusahaan sendiri
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="opCariKerja" id="rbCariKerja2" value="5">
+                                                  <input type="radio" name="f1101" id="rbCariKerja2" value="5">
                                                   Lainnya
                                               </label>
                                           </div>
                                           <div class="form-line">
-                                              <input type="text" class="form-control input-lainnya" name="input" placeholder="jika ada lainnya sebutkan" style="display: none;">
+                                              <input type="text" class="form-control input-lainnya" name="f1102" placeholder="jika ada lainnya sebutkan" style="display: none;">
                                           </div>
                                       </div>
                                   </div>

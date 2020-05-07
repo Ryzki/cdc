@@ -43,30 +43,30 @@
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f902">
+                                                  <input type="checkbox" value="2" name="f902">
                                                   Saya menikah
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f903">
+                                                  <input type="checkbox" value="3" name="f903">
                                                   Saya sibuk dengan keluarga dan anak-anak
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f904">
+                                                  <input type="checkbox" value="4" name="f904">
                                                   Saya sekarang sedang mencari pekerjaan
                                               </label>
                                           </div>
                                           <div class="checkbox">
                                               <label>
-                                                  <input type="checkbox" value="1" name="f905" id="check-lainnya">
+                                                  <input type="checkbox" value="5" name="f905" id="check-lainnya">
                                                   Lainnya
                                               </label>
                                           </div>
                                           <div class="form-line">
-                                              <input type="text" class="form-control input-lainnya" name="input" placeholder="jika ada lainnya sebutkan" style="display: none;">
+                                              <input type="text" class="form-control input-lainnya" name="f906" placeholder="jika ada lainnya sebutkan" style="display: none;">
                                           </div>
                                       </div>
                                   </div>
