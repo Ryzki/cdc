@@ -37,15 +37,15 @@
                             <div class="collapse" id="navbar-dashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="../dashboards/dashboard.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/profile') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> H </span>
                                             <span class="sidenav-normal"> Header </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/lowongan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> L </span>
-                                            <span class="sidenav-normal"> Loker Area </span>
+                                            <span class="sidenav-normal"> Lowongan Area </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
