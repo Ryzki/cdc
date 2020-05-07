@@ -35,6 +35,7 @@ class Dashboard extends CI_Controller
         }
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
+        $this->load->view('backend/topmenu');
         $this->load->view('backend/footer');
     }
 
