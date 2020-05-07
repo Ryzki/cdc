@@ -8,6 +8,7 @@ class Tracer extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('tracer_model');
+        $this->load->library('session');
     }
 
     public function index()
@@ -28,13 +29,24 @@ class Tracer extends CI_Controller
 
     public function sambutan()
     {
-        $this->load->view('tracer/header');
-        $this->load->view('tracer/main');
-        $this->load->view('tracer/footer');
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+            var_dump($data);
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/main');
+            $this->load->view('tracer/footer');
+        } else {
+            redirect(base_url('tracer'));
+        }
     }
 
     public function ask_wajib() //Question 1
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
         if (!empty($_REQUEST)) {
             $this->tracer_model->insert_data();
             redirect(base_url('tracer/ask1'));
@@ -47,8 +59,14 @@ class Tracer extends CI_Controller
 
     public function ask1() //Question 2
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_2();
             redirect(base_url('tracer/ask2'));
         } else {
             $this->load->view('tracer/header');
@@ -59,8 +77,14 @@ class Tracer extends CI_Controller
 
     public function ask2() //Question 3
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_3();
             redirect(base_url('tracer/ask3'));
         } else {
             $this->load->view('tracer/header');
@@ -71,6 +95,12 @@ class Tracer extends CI_Controller
 
     public function ask3() //Question 4
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
             $f401 = $this->input->post("f401");
             $f402 = $this->input->post("f402");
@@ -92,7 +122,7 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask3");
             }
-            echo "PROSES";
+            $this->tracer_model->update_question_4();
             redirect(base_url('tracer/ask5'));
         } else {
             $this->load->view('tracer/header');
@@ -103,8 +133,14 @@ class Tracer extends CI_Controller
 
     public function ask5() //Question 5
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_5();
             redirect(base_url('tracer/ask6'));
         } else {
             $this->load->view('tracer/header');
@@ -115,8 +151,14 @@ class Tracer extends CI_Controller
 
     public function ask6() //Question 6
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_6();
             redirect(base_url('tracer/ask7'));
         } else {
             $this->load->view('tracer/header');
@@ -127,8 +169,14 @@ class Tracer extends CI_Controller
 
     public function ask7() //Question 7
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_7();
             redirect(base_url('tracer/ask9'));
         } else {
             $this->load->view('tracer/header');
@@ -139,6 +187,12 @@ class Tracer extends CI_Controller
 
     public function ask9() //Question 8
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
             $f901 = $this->input->post("f901");
             $f902 = $this->input->post("f902");
@@ -150,7 +204,7 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask9");
             }
-            echo "PROSES";
+            $this->tracer_model->update_question_8();
             redirect(base_url('tracer/ask10'));
         } else {
             $this->load->view('tracer/header');
@@ -161,9 +215,15 @@ class Tracer extends CI_Controller
 
     public function ask10() //Question 9
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask11'));
+            $this->tracer_model->update_question_9();
+            // redirect(base_url('tracer/ask11'));
         } else {
             $this->load->view('tracer/header');
             $this->load->view('tracer/10');
@@ -173,8 +233,14 @@ class Tracer extends CI_Controller
 
     public function ask11() //Question 10
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_10();
             redirect(base_url('tracer/ask16'));
         } else {
             $this->load->view('tracer/header');
@@ -185,6 +251,12 @@ class Tracer extends CI_Controller
 
     public function ask16() //Question 11
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
             $f1601 = $this->input->post("f1601");
             $f1602 = $this->input->post("f1602");
@@ -204,7 +276,7 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask16");
             }
-            echo "PROSES";
+            $this->tracer_model->update_question_11();
             redirect(base_url('tracer/ask17'));
         } else {
             $this->load->view('tracer/header');
@@ -215,8 +287,14 @@ class Tracer extends CI_Controller
 
     public function ask17() //Question 12
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_12();
             redirect(base_url('tracer/ask18'));
         } else {
             $this->load->view('tracer/header');
@@ -227,8 +305,14 @@ class Tracer extends CI_Controller
 
     public function ask18() //Question 13
     {
+        if ($this->session->userdata('logged_in')) {
+            $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
+        } else {
+            redirect(base_url('tracer'));
+        }
+
         if (!empty($_REQUEST)) {
-            echo "PROSES";
+            $this->tracer_model->update_question_13();
             redirect(base_url('tracer/finish'));
         } else {
             $this->load->view('tracer/header');
@@ -237,70 +321,70 @@ class Tracer extends CI_Controller
         }
     }
 
-    public function ask4()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask5'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/4');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask8()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask9'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/8');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask12()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask13'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/12');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask13()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask14'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/13');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask14()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask15'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/14');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask15()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask16'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/15');
-            $this->load->view('tracer/footer');
-        }
-    }
+    // public function ask4()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask5'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/4');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
+    // public function ask8()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask9'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/8');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
+    // public function ask12()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask13'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/12');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
+    // public function ask13()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask14'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/13');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
+    // public function ask14()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask15'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/14');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
+    // public function ask15()
+    // {
+    //     if (!empty($_REQUEST)) {
+    //         echo "PROSES";
+    //         redirect(base_url('tracer/ask16'));
+    //     } else {
+    //         $this->load->view('tracer/header');
+    //         $this->load->view('tracer/15');
+    //         $this->load->view('tracer/footer');
+    //     }
+    // }
 }
