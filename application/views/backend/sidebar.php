@@ -49,15 +49,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/agenda') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> A </span>
                                             <span class="sidenav-normal"> Agenda Area </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> S </span>
-                                            <span class="sidenav-normal"> Slide Menu </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
