@@ -26,7 +26,7 @@
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 1 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 2</h3>
                           <hr>
                           <p>Menurut anda seberapa besar penekanan pada metode pembelajaran dibawah ini dilaksanakan di program studi anda ?</p>
                           <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask1') ?>" method="post" enctype="multipart/form-data">

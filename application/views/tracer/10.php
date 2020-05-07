@@ -26,7 +26,7 @@
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 10 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 9</h3>
                           <hr>
                           <p>Apakah anda aktif mencari pekerjaan dalam 4 minggu terakhir?pilihlah satu jawaban</p>
                           <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask10') ?>" method="post" enctype="multipart/form-data">
