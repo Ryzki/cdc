@@ -177,7 +177,7 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="../widgets.html">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/logout') ?>">
                                 <i class="ni ni-lock-circle-open text-black"></i>
                                 <span class="nav-link-text">Logout</span>
                             </a>

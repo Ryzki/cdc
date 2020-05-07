@@ -2,6 +2,21 @@
 
 class Backend_user_model extends CI_Model
 {
+    // function __construct()
+    // {
+    //     parent::__construct();
+
+    //     if (!isset($this->session->userdata['username'])) {
+    //         $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    //             Anda belum login!
+    //             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    //               <span aria-hidden="true">&times;</span>
+    //             </button>
+    //           </div>');
+    //         redirect('backend/dashboard/login');
+    //     }
+    // }
+
     public function getLoginData($user, $pass)
     {
         $u = $user;
