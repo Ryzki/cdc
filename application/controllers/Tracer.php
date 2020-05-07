@@ -7,38 +7,46 @@ class Tracer extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('tracer_model');
     }
+
     public function index()
     {
-        // echo "aaaaa";
+        $this->form_validation->set_rules('npm', 'NPM', 'trim|required');
+        $this->form_validation->set_rules('phone', 'Phone', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Login Page | Tracer Study';
+            // $this->load->view('tracer/header');
+            $this->load->view('tracer/login', $data);
+            // $this->load->view('tracer/footer');
+        } else {
+            $this->tracer_model->login();
+        }
+    }
+
+    public function sambutan()
+    {
         $this->load->view('tracer/header');
         $this->load->view('tracer/main');
         $this->load->view('tracer/footer');
     }
-    public function ask1()
-    {
-        // $this->form_validation->set_rules('opPerkuliahan', 'opPerkuliahan', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opDemonstrasi', 'opDemonstrasi', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opPartisipasi', 'opPartisipasi', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opMagang', 'opMagang', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opPraktikum', 'opPraktikum', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opKerjaLapangan', 'opKerjaLapangan', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
-        // $this->form_validation->set_rules('opDiskusi', 'opDiskusi', 'required', [
-        //     'required' => 'field is required.'
-        // ]);
 
+    public function ask_wajib() //Question 1
+    {
+        if (!empty($_REQUEST)) {
+            $this->tracer_model->insert_data();
+            redirect(base_url('tracer/ask1'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/ask_wajib');
+            $this->load->view('tracer/footer');
+        }
+    }
+
+    public function ask1() //Question 2
+    {
         if (!empty($_REQUEST)) {
             echo "PROSES";
             redirect(base_url('tracer/ask2'));
@@ -47,14 +55,9 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/1');
             $this->load->view('tracer/footer');
         }
-
-
-        // if ($this->form_validation->run() == TRUE) {
-        //     redirect(base_url('tracer/ask2'));
-        // } else {
-        // }
     }
-    public function ask2()
+
+    public function ask2() //Question 3
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
@@ -65,7 +68,8 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/footer');
         }
     }
-    public function ask3()
+
+    public function ask3() //Question 4
     {
         if (!empty($_REQUEST)) {
             $f401 = $this->input->post("f401");
@@ -89,25 +93,15 @@ class Tracer extends CI_Controller
                 redirect("tracer/ask3");
             }
             echo "PROSES";
-            redirect(base_url('tracer/ask4'));
+            redirect(base_url('tracer/ask5'));
         } else {
             $this->load->view('tracer/header');
             $this->load->view('tracer/3');
             $this->load->view('tracer/footer');
         }
     }
-    public function ask4()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask5'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/4');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask5()
+
+    public function ask5() //Question 5
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
@@ -118,7 +112,8 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/footer');
         }
     }
-    public function ask6()
+
+    public function ask6() //Question 6
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
@@ -129,29 +124,20 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/footer');
         }
     }
-    public function ask7()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask8'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/7');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask8()
+
+    public function ask7() //Question 7
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
             redirect(base_url('tracer/ask9'));
         } else {
             $this->load->view('tracer/header');
-            $this->load->view('tracer/8');
+            $this->load->view('tracer/7');
             $this->load->view('tracer/footer');
         }
     }
-    public function ask9()
+
+    public function ask9() //Question 8
     {
         if (!empty($_REQUEST)) {
             $f901 = $this->input->post("f901");
@@ -172,7 +158,8 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/footer');
         }
     }
-    public function ask10()
+
+    public function ask10() //Question 9
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
@@ -183,14 +170,92 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/footer');
         }
     }
-    public function ask11()
+
+    public function ask11() //Question 10
     {
         if (!empty($_REQUEST)) {
             echo "PROSES";
-            redirect(base_url('tracer/ask12'));
+            redirect(base_url('tracer/ask16'));
         } else {
             $this->load->view('tracer/header');
             $this->load->view('tracer/11');
+            $this->load->view('tracer/footer');
+        }
+    }
+
+    public function ask16() //Question 11
+    {
+        if (!empty($_REQUEST)) {
+            $f1601 = $this->input->post("f1601");
+            $f1602 = $this->input->post("f1602");
+            $f1603 = $this->input->post("f1603");
+            $f1604 = $this->input->post("f1604");
+            $f1605 = $this->input->post("f1605");
+            $f1606 = $this->input->post("f1606");
+            $f1607 = $this->input->post("f1607");
+            $f1608 = $this->input->post("f1608");
+            $f1609 = $this->input->post("f1609");
+            $f1610 = $this->input->post("f1610");
+            $f1611 = $this->input->post("f1611");
+            $f1612 = $this->input->post("f1612");
+            $f1613 = $this->input->post("f1613");
+            $input = $this->input->post("input");
+            if (empty($f1601) && empty($f1602) && empty($f1603) && empty($f1604) && empty($f1605) && empty($f1606) && empty($f1607) && empty($f1608) && empty($f1609) && empty($f1610) && empty($f1611) && empty($f1612) && empty($f1613) && empty($input)) {
+                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
+                redirect("tracer/ask16");
+            }
+            echo "PROSES";
+            redirect(base_url('tracer/ask17'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/16');
+            $this->load->view('tracer/footer');
+        }
+    }
+
+    public function ask17() //Question 12
+    {
+        if (!empty($_REQUEST)) {
+            echo "PROSES";
+            redirect(base_url('tracer/ask18'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/17');
+            $this->load->view('tracer/footer');
+        }
+    }
+
+    public function ask18() //Question 13
+    {
+        if (!empty($_REQUEST)) {
+            echo "PROSES";
+            redirect(base_url('tracer/finish'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/18');
+            $this->load->view('tracer/footer');
+        }
+    }
+
+    public function ask4()
+    {
+        if (!empty($_REQUEST)) {
+            echo "PROSES";
+            redirect(base_url('tracer/ask5'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/4');
+            $this->load->view('tracer/footer');
+        }
+    }
+    public function ask8()
+    {
+        if (!empty($_REQUEST)) {
+            echo "PROSES";
+            redirect(base_url('tracer/ask9'));
+        } else {
+            $this->load->view('tracer/header');
+            $this->load->view('tracer/8');
             $this->load->view('tracer/footer');
         }
     }
@@ -235,57 +300,6 @@ class Tracer extends CI_Controller
         } else {
             $this->load->view('tracer/header');
             $this->load->view('tracer/15');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask16()
-    {
-        if (!empty($_REQUEST)) {
-            $f1601 = $this->input->post("f1601");
-            $f1602 = $this->input->post("f1602");
-            $f1603 = $this->input->post("f1603");
-            $f1604 = $this->input->post("f1604");
-            $f1605 = $this->input->post("f1605");
-            $f1606 = $this->input->post("f1606");
-            $f1607 = $this->input->post("f1607");
-            $f1608 = $this->input->post("f1608");
-            $f1609 = $this->input->post("f1609");
-            $f1610 = $this->input->post("f1610");
-            $f1611 = $this->input->post("f1611");
-            $f1612 = $this->input->post("f1612");
-            $f1613 = $this->input->post("f1613");
-            $input = $this->input->post("input");
-            if (empty($f1601) && empty($f1602) && empty($f1603) && empty($f1604) && empty($f1605) && empty($f1606) && empty($f1607) && empty($f1608) && empty($f1609) && empty($f1610) && empty($f1611) && empty($f1612) && empty($f1613) && empty($input)) {
-                $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
-                redirect("tracer/ask16");
-            }
-            echo "PROSES";
-            redirect(base_url('tracer/ask17'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/16');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask17()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/ask18'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/17');
-            $this->load->view('tracer/footer');
-        }
-    }
-    public function ask18()
-    {
-        if (!empty($_REQUEST)) {
-            echo "PROSES";
-            redirect(base_url('tracer/finish'));
-        } else {
-            $this->load->view('tracer/header');
-            $this->load->view('tracer/18');
             $this->load->view('tracer/footer');
         }
     }

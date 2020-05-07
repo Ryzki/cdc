@@ -26,7 +26,7 @@
               <div class="row">
                   <div class="col-md-8 col-md-push-2">
                       <div class="border-1px p-30 mb-0">
-                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 3 of 18</h3>
+                          <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 4</h3>
                           <hr>
                           <?= $this->session->flashdata('message') ?>
                           <p>Bagaimana anda mencari pekerjaan tersebut ? Jawaban bisa lebih dari satu</p>

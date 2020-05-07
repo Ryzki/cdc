@@ -41,7 +41,7 @@
                           </p>
                           <div class="form-group">
                               <!-- <input name="form_botcheck" class="form-control" type="check" value="" /> -->
-                              <a href="<?= base_url('tracer/ask1') ?>" type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Selanjutnya</a>
+                              <a href="<?= base_url('tracer/ask_wajib') ?>" type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Selanjutnya</a>
                           </div>
                           <!-- Job Form Validation-->
                           <!-- <script type="text/javascript">
