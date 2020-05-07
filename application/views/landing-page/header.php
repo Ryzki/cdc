@@ -236,6 +236,7 @@
                                         <li><a href="">Profile</a></li>
                                         <li><a href="">Visi & Misi</a></li>
                                         <li><a href="">Struktur</a></li>
+                                        <li><a href="<?= base_url('backend/dashboard/login') ?>">Login</a></li>
                                     </ul>
                                 </li>
                                 <li class=""><a href="#career">Pelatihan</a>

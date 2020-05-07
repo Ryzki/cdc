@@ -27,7 +27,7 @@
     <!-- Navbar -->
     <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= base_url('') ?>">
                 <img src="<?= base_url('assets_backend') ?>/img/brand/white.png">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
                 <div class="navbar-collapse-header">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                            <a href="../dashboards/dashboard.html">
+                            <a href="<?= base_url('') ?>">
                                 <img src="<?= base_url('assets_backend') ?>/img/brand/blue.png">
                             </a>
                         </div>
@@ -149,7 +149,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <input class="form-control" name="username" placeholder="Email" type="email">
+                                        <input class="form-control" name="username" placeholder="agus@gmail.com" type="email">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -157,7 +157,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
-                                        <input class="form-control" name="password" placeholder="Password" type="password">
+                                        <input class="form-control" name="password" placeholder="admin" type="password">
                                     </div>
                                 </div>
                                 <!-- <div class="custom-control custom-control-alternative custom-checkbox">
@@ -177,7 +177,7 @@
                             <a href="#" class="text-light"><small>Forgot password?</small></a>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#" class="text-light"><small>Create new account</small></a>
+                            <a href="<?= base_url('') ?>" class="text-light"><small>Halaman Depan</small></a>
                         </div>
                     </div>
                 </div>
