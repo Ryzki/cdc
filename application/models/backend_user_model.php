@@ -1,6 +1,6 @@
 <?php
 
-class B_m_user extends CI_Model
+class Backend_user_model extends CI_Model
 {
     public function getLoginData($user, $pass)
     {

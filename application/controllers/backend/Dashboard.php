@@ -18,9 +18,7 @@ class Dashboard extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            // $this->load->model('b_m_user');
-
-            $cek = $this->b_m_user->getLoginData($username, $password);
+            $cek = $this->backend_user_model->getLoginData($username, $password);
         }
     }
 

@@ -24,22 +24,76 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
+                            <a class="nav-link" href="../widgets.html">
                                 <i class="ni ni-shop text-primary"></i>
                                 <span class="nav-link-text">Dashboards</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
+                                <i class="ni ni-app text-red"></i>
+                                <span class="nav-link-text">Website CDC</span>
                             </a>
                             <div class="collapse" id="navbar-dashboards">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="../dashboards/dashboard.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> D </span>
-                                            <span class="sidenav-normal"> Dashboard </span>
+                                            <span class="sidenav-mini-icon"> H </span>
+                                            <span class="sidenav-normal"> Header </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> L </span>
+                                            <span class="sidenav-normal"> Loker Area </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="../dashboards/alternative.html" class="nav-link">
                                             <span class="sidenav-mini-icon"> A </span>
-                                            <span class="sidenav-normal"> Alternative </span>
+                                            <span class="sidenav-normal"> Agenda Area </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> S </span>
+                                            <span class="sidenav-normal"> Slide Menu </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> V </span>
+                                            <span class="sidenav-normal"> Video Area </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> G </span>
+                                            <span class="sidenav-normal"> Galeri Gambar </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> T </span>
+                                            <span class="sidenav-normal"> Testimoni Alumni </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> A </span>
+                                            <span class="sidenav-normal"> Info Pencapaian </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> P </span>
+                                            <span class="sidenav-normal"> Partner Kampus </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                            <span class="sidenav-mini-icon"> F </span>
+                                            <span class="sidenav-normal"> Footer </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -47,194 +101,39 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
-                                <i class="ni ni-ungroup text-orange"></i>
-                                <span class="nav-link-text">Examples</span>
+                                <i class="ni ni-hat-3 text-black"></i>
+                                <span class="nav-link-text">Tracer Study</span>
                             </a>
                             <div class="collapse" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
                                         <a href="pricing.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> P </span>
-                                            <span class="sidenav-normal"> Pricing </span>
+                                            <span class="sidenav-mini-icon"> S </span>
+                                            <span class="sidenav-normal"> Sambutan </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="login.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> L </span>
-                                            <span class="sidenav-normal"> Login </span>
+                                            <span class="sidenav-mini-icon"> P </span>
+                                            <span class="sidenav-normal"> Program Studi </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="register.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> R </span>
-                                            <span class="sidenav-normal"> Register </span>
+                                            <span class="sidenav-mini-icon"> A </span>
+                                            <span class="sidenav-normal"> Alumni </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="lock.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> L </span>
-                                            <span class="sidenav-normal"> Lock </span>
+                                            <span class="sidenav-mini-icon"> G </span>
+                                            <span class="sidenav-normal"> Grafik </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="timeline.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> T </span>
-                                            <span class="sidenav-normal"> Timeline </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="profile.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> P </span>
-                                            <span class="sidenav-normal"> Profile </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="rtl-support.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> RP </span>
-                                            <span class="sidenav-normal"> RTL Support </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-components">
-                                <i class="ni ni-ui-04 text-info"></i>
-                                <span class="nav-link-text">Components</span>
-                            </a>
-                            <div class="collapse" id="navbar-components">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="../components/buttons.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> B </span>
-                                            <span class="sidenav-normal"> Buttons </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../components/cards.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> C </span>
-                                            <span class="sidenav-normal"> Cards </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../components/grid.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> G </span>
-                                            <span class="sidenav-normal"> Grid </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../components/notifications.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> N </span>
-                                            <span class="sidenav-normal"> Notifications </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../components/icons.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> I </span>
-                                            <span class="sidenav-normal"> Icons </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../components/typography.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> T </span>
-                                            <span class="sidenav-normal"> Typography </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#navbar-multilevel" class="nav-link" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-multilevel">
-                                            <span class="sidenav-mini-icon"> M </span>
-                                            <span class="sidenav-normal"> Multi level </span>
-                                        </a>
-                                        <div class="collapse show" id="navbar-multilevel" style="">
-                                            <ul class="nav nav-sm flex-column">
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">Third level menu</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">Just another link</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#!" class="nav-link ">One last link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
-                                <i class="ni ni-single-copy-04 text-pink"></i>
-                                <span class="nav-link-text">Forms</span>
-                            </a>
-                            <div class="collapse" id="navbar-forms">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="../forms/elements.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> E </span>
-                                            <span class="sidenav-normal"> Elements </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../forms/components.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> C </span>
-                                            <span class="sidenav-normal"> Components </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../forms/validation.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> V </span>
-                                            <span class="sidenav-normal"> Validation </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
-                                <i class="ni ni-align-left-2 text-default"></i>
-                                <span class="nav-link-text">Tables</span>
-                            </a>
-                            <div class="collapse" id="navbar-tables">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="../tables/tables.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> T </span>
-                                            <span class="sidenav-normal"> Tables </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../tables/sortable.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> S </span>
-                                            <span class="sidenav-normal"> Sortable </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../tables/datatables.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> D </span>
-                                            <span class="sidenav-normal"> Datatables </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="ni ni-map-big text-primary"></i>
-                                <span class="nav-link-text">Maps</span>
-                            </a>
-                            <div class="collapse" id="navbar-maps">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="../maps/google.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> G </span>
-                                            <span class="sidenav-normal"> Google </span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="../maps/vector.html" class="nav-link">
-                                            <span class="sidenav-mini-icon"> V </span>
-                                            <span class="sidenav-normal"> Vector </span>
+                                            <span class="sidenav-mini-icon"> R </span>
+                                            <span class="sidenav-normal"> Laporan Dikti </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -242,54 +141,45 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../widgets.html">
-                                <i class="ni ni-archive-2 text-green"></i>
-                                <span class="nav-link-text">Widgets</span>
+                                <i class="ni ni-building text-green"></i>
+                                <span class="nav-link-text">Mitra Perusahaan</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../charts.html">
-                                <i class="ni ni-chart-pie-35 text-info"></i>
-                                <span class="nav-link-text">Charts</span>
+                            <a class="nav-link" href="../widgets.html">
+                                <i class="ni ni-badge text-orange"></i>
+                                <span class="nav-link-text">Job Seeker</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../calendar.html">
-                                <i class="ni ni-calendar-grid-58 text-red"></i>
-                                <span class="nav-link-text">Calendar</span>
+                            <a class="nav-link" href="../widgets.html">
+                                <i class="ni ni-book-bookmark text-blue"></i>
+                                <span class="nav-link-text">Magang</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../widgets.html">
+                                <i class="ni ni-chat-round text-green"></i>
+                                <span class="nav-link-text">Konseling</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../widgets.html">
+                                <i class="ni ni-single-02 text-purple"></i>
+                                <span class="nav-link-text">Users</span>
                             </a>
                         </li>
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
                     <!-- Heading -->
-                    <h6 class="navbar-heading p-0 text-muted">
-                        <span class="docs-normal">Documentation</span>
-                        <span class="docs-mini">D</span>
-                    </h6>
+
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../docs/getting-started/overview.html" target="_blank">
-                                <i class="ni ni-spaceship"></i>
-                                <span class="nav-link-text">Getting started</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../docs/foundation/colors.html" target="_blank">
-                                <i class="ni ni-palette"></i>
-                                <span class="nav-link-text">Foundation</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../docs/components/alerts.html" target="_blank">
-                                <i class="ni ni-ui-04"></i>
-                                <span class="nav-link-text">Components</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../docs/plugins/charts.html" target="_blank">
-                                <i class="ni ni-chart-pie-35"></i>
-                                <span class="nav-link-text">Plugins</span>
+                            <a class="nav-link" href="../widgets.html">
+                                <i class="ni ni-lock-circle-open text-black"></i>
+                                <span class="nav-link-text">Logout</span>
                             </a>
                         </li>
                     </ul>
