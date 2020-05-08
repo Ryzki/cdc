@@ -67,7 +67,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/testimoni') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> T </span>
                                             <span class="sidenav-normal"> Testimoni Alumni </span>
                                         </a>
