@@ -55,7 +55,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/video') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> V </span>
                                             <span class="sidenav-normal"> Video Area </span>
                                         </a>
