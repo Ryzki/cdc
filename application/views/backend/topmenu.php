@@ -761,7 +761,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-primary" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website.
                         </div>
                         <!-- Card body -->
@@ -781,6 +781,66 @@
                                             ​<picture>
 
                                                 <img src="<?= base_url('assets') ?>/images/logo-unikama-1.png" class="img-fluid img-thumbnail" alt="Logo">
+                                            </picture>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-wrapper">
+                <!-- Form controls -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <h3 class="mb-0">Gambar Slider</h3>
+                    </div>
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i>
+                            <strong>Slide Show : </strong> Silahkan upload gambar untuk digunakan untuk slide show di halaman Website.
+                        </div>
+                        <!-- Card body -->
+                        <div class="card-body">
+                            <form>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                                    <label class="custom-file-label" for="customFileLang"></label>
+                                    <!-- <button type="button" class="btn btn-sm btn-primary">Upload</button> -->
+                                </div>
+                            </form>
+                            <div class="mt-3">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>Slide-1</td>
+                                        <td>
+                                            ​<picture>
+                                                <img src="<?= base_url('assets') ?>/images/slide/a.jpg" class="img-fluid img-thumbnail" alt="slide">
+                                            </picture>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Slide-2</td>
+                                        <td>
+                                            ​<picture>
+
+                                                <img src="<?= base_url('assets') ?>/images/slide/b.jpg" class="img-fluid img-thumbnail" alt="slide">
+                                            </picture>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Slide-3</td>
+                                        <td>
+                                            ​<picture>
+
+                                                <img src="<?= base_url('assets') ?>/images/slide/c.jpg" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
                                         </td>
                                     </tr>
