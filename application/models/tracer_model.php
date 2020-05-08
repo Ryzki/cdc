@@ -80,6 +80,13 @@ class Tracer_model extends CI_Model
             'f1303' => $this->input->post('f1303'),
         );
         $this->db->insert('tbl_tracer', $data);
+
+        $npm = $this->session->userdata('npm');
+        $data_update = array(
+            'status' => '1',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_2()
@@ -96,6 +103,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '2',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_3()
@@ -108,6 +121,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '3',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_4()
@@ -133,6 +152,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '4',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_5()
@@ -143,6 +168,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '5',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_6()
@@ -153,6 +184,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '6',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_7()
@@ -163,6 +200,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '7',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_8()
@@ -178,6 +221,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '8',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_9()
@@ -189,6 +238,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '9',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
 
         if ($this->input->post('f1001') !== "1") {
             redirect('tracer/ask17');
@@ -206,6 +261,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '10',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_11()
@@ -229,6 +290,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '11',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 
     public function update_question_12()
@@ -267,6 +334,12 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '12',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
     public function update_question_13()
     {
@@ -304,5 +377,11 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '13',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
     }
 }
