@@ -767,10 +767,10 @@
                         <!-- Card body -->
                         <div class="card-body">
                             <form>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFileLang" lang="en">
-                                    <label class="custom-file-label" for="customFileLang"></label>
-                                    <!-- <button type="button" class="btn btn-sm btn-primary">Upload</button> -->
+                                <div class="form-group">
+                                    <label>Upload Logo</label>
+                                    <input type="file" class="form-control" id="customFileLang" lang="en">
+                                    <button type="submit" class="btn btn-primary btn-sm mt-3">Upload</button>
                                 </div>
                             </form>
                             <div class="mt-3">
@@ -782,6 +782,11 @@
 
                                                 <img src="<?= base_url('assets') ?>/images/logo-unikama-1.png" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
+                                        </td>
+                                        <td class="table-actions">
+                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 </table>
@@ -810,10 +815,11 @@
                         <!-- Card body -->
                         <div class="card-body">
                             <form>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFileLang" lang="en">
-                                    <label class="custom-file-label" for="customFileLang"></label>
-                                    <!-- <button type="button" class="btn btn-sm btn-primary">Upload</button> -->
+                                <div class="form-group">
+                                    <label>Upload Gambar</label>
+                                    <input type="file" class="form-control" id="customFileLang" lang="en">
+                                    <!-- <label class="custom-file-label" for="customFileLang"></label> -->
+                                    <button type="button" class="btn btn-sm btn-primary mt-3">Upload</button>
                                 </div>
                             </form>
                             <div class="mt-3">
@@ -825,6 +831,11 @@
                                                 <img src="<?= base_url('assets') ?>/images/slide/a.jpg" class="img-fluid img-thumbnail" alt="slide">
                                             </picture>
                                         </td>
+                                        <td class="table-actions">
+                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Slide-2</td>
@@ -834,6 +845,11 @@
                                                 <img src="<?= base_url('assets') ?>/images/slide/b.jpg" class="img-fluid img-thumbnail" alt="slide">
                                             </picture>
                                         </td>
+                                        <td class="table-actions">
+                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Slide-3</td>
@@ -842,6 +858,11 @@
 
                                                 <img src="<?= base_url('assets') ?>/images/slide/c.jpg" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
+                                        </td>
+                                        <td class="table-actions">
+                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 </table>

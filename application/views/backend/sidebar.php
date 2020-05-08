@@ -61,7 +61,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/galeri') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> G </span>
                                             <span class="sidenav-normal"> Galeri Gambar </span>
                                         </a>
