@@ -101,7 +101,7 @@
                             <div class="collapse" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="pricing.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/sambutan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> S </span>
                                             <span class="sidenav-normal"> Sambutan </span>
                                         </a>

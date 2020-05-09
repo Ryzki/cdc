@@ -37,6 +37,10 @@
 <script src="<?= base_url('assets_backend') ?>/js/argon.min5438.js?v=1.2.0"></script>
 <!-- Demo JS - remove this in your project -->
 <script src="<?= base_url('assets_backend') ?>/js/demo.min.js"></script>
+<!-- CKeditor -->
+<script src="<?= base_url('assets_backend') ?>/ckeditor/ckeditor.js"></script>
+<script src="<?= base_url('assets_backend') ?>/js/admin.js"></script>
+<script src="<?= base_url('assets_backend') ?>/js/editors.js"></script>
 
 </body>
 
