@@ -266,8 +266,14 @@ class Tracer_model extends CI_Model
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
 
+        if ($this->input->post('f1001') !== "1") {
+            $status = '17';
+        } else {
+            $status = '10';
+        }
+
         $data_update = array(
-            'status' => '10',
+            'status' => $status,
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
