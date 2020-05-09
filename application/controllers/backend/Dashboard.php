@@ -72,6 +72,126 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/agenda');
         $this->load->view('backend/footer');
     }
+
+    public function video()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/video');
+        $this->load->view('backend/footer');
+    }
+
+    public function galeri()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/galeri');
+        $this->load->view('backend/footer');
+    }
+
+    public function testimoni()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/testimoni');
+        $this->load->view('backend/footer');
+    }
+
+    public function achievement()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/achievement');
+        $this->load->view('backend/footer');
+    }
+
+    public function partner()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/partner');
+        $this->load->view('backend/footer');
+    }
+
+    public function footer()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/footer_area');
+        $this->load->view('backend/footer');
+    }
+
+    public function sambutan()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/sambutan');
+        $this->load->view('backend/footer');
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();

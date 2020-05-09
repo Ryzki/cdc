@@ -5,7 +5,7 @@
             <!-- Brand -->
             <div class="sidenav-header  d-flex  align-items-center">
                 <a class="navbar-brand" href="../dashboards/dashboard.html">
-                    <img src="<?= base_url('assets_backend') ?>/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" class="navbar-brand-img" alt="...">
                 </a>
                 <div class=" ml-auto ">
                     <!-- Sidenav toggler -->
@@ -24,7 +24,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../widgets.html">
+                            <a class="nav-link" href="#">
                                 <i class="ni ni-shop text-primary"></i>
                                 <span class="nav-link-text">Dashboards</span>
                             </a>
@@ -55,37 +55,37 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/video') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> V </span>
                                             <span class="sidenav-normal"> Video Area </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/galeri') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> G </span>
                                             <span class="sidenav-normal"> Galeri Gambar </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/testimoni') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> T </span>
                                             <span class="sidenav-normal"> Testimoni Alumni </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/achievement') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> A </span>
                                             <span class="sidenav-normal"> Info Pencapaian </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/partner') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> P </span>
                                             <span class="sidenav-normal"> Partner Kampus </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../dashboards/alternative.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/footer') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> F </span>
                                             <span class="sidenav-normal"> Footer </span>
                                         </a>
@@ -101,7 +101,7 @@
                             <div class="collapse" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="pricing.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/sambutan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> S </span>
                                             <span class="sidenav-normal"> Sambutan </span>
                                         </a>
