@@ -101,6 +101,12 @@
                             <div class="collapse" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/kodept') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> K </span>
+                                            <span class="sidenav-normal"> Kode PT </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="<?= base_url('backend/dashboard/sambutan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> S </span>
                                             <span class="sidenav-normal"> Sambutan </span>
@@ -125,7 +131,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="timeline.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/laporan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> R </span>
                                             <span class="sidenav-normal"> Laporan Dikti </span>
                                         </a>
