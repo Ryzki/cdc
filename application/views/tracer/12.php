@@ -97,9 +97,9 @@
 
   <script>
       $(document).ready(function() {
-          $("input:radio[name='opCariKerja']").change(function() {
+          $("input:radio[name='f1201']").change(function() {
               $(".input-lainnya").hide()
-              if ($(this).val() == "5") {
+              if ($(this).val() == "7") {
                   $(".input-lainnya").show();
               }
           });

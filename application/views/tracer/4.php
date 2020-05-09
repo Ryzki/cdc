@@ -67,7 +67,7 @@
       $(document).ready(function() {
           $("#input1").hide();
           $("#input2").hide();
-          $("input:radio[name='opCariKerja']").change(function() {
+          $("input:radio[name='f501']").change(function() {
               //   alert("aaa");
               $("#input1, #input2").hide()
               if ($(this).val() == "1") {
