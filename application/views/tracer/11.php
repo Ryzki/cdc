@@ -85,7 +85,7 @@
 
   <script>
       $(document).ready(function() {
-          $("input:radio[name='opCariKerja']").change(function() {
+          $("input:radio[name='f1101']").change(function() {
               $(".input-lainnya").hide()
               if ($(this).val() == "5") {
                   $(".input-lainnya").show();
