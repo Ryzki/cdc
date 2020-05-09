@@ -11,7 +11,7 @@
     <meta name="author" content="ThemeMascot" />
 
     <!-- Page Title -->
-    <title>Study School College & University Template</title>
+    <title><?= $title ?></title>
 
     <!-- Favicon and Touch Icons -->
     <link href="<?= base_url('assets/') ?>images/favicon.png" rel="shortcut icon" type="image/png">
@@ -68,14 +68,14 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="index-mp-layout1.html"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
+                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
                             <ul class="menuzord-menu">
                                 <li class="active"><a href="#home">Home</a>
                                 </li>
-                                <li><a href="#">Features</a>
+                                <!-- <li><a href="#">Features</a>
                                 </li>
                                 <li><a href="#">Pages</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Blog</a></li> -->
                             </ul>
                         </nav>
                     </div>

@@ -31,8 +31,9 @@ class Tracer extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
-            var_dump($data);
-            $this->load->view('tracer/header');
+            // var_dump($data);
+            $data['title'] = 'Sambutan | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/main');
             $this->load->view('tracer/footer');
         } else {
@@ -51,7 +52,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->insert_data();
             redirect(base_url('tracer/ask1'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 1 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/ask_wajib');
             $this->load->view('tracer/footer');
         }
@@ -69,7 +71,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_2();
             redirect(base_url('tracer/ask2'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 2 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/1');
             $this->load->view('tracer/footer');
         }
@@ -87,7 +90,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_3();
             redirect(base_url('tracer/ask3'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 3 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/2');
             $this->load->view('tracer/footer');
         }
@@ -125,7 +129,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_4();
             redirect(base_url('tracer/ask5'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 4 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/3');
             $this->load->view('tracer/footer');
         }
@@ -143,7 +148,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_5();
             redirect(base_url('tracer/ask6'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 5 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/5');
             $this->load->view('tracer/footer');
         }
@@ -161,7 +167,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_6();
             redirect(base_url('tracer/ask7'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 6 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/6');
             $this->load->view('tracer/footer');
         }
@@ -179,7 +186,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_7();
             redirect(base_url('tracer/ask9'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 7 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/7');
             $this->load->view('tracer/footer');
         }
@@ -207,7 +215,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_8();
             redirect(base_url('tracer/ask10'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 8 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/9');
             $this->load->view('tracer/footer');
         }
@@ -225,7 +234,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_9();
             // redirect(base_url('tracer/ask11'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 9 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/10');
             $this->load->view('tracer/footer');
         }
@@ -243,7 +253,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_10();
             redirect(base_url('tracer/ask16'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 10 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/11');
             $this->load->view('tracer/footer');
         }
@@ -279,7 +290,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_11();
             redirect(base_url('tracer/ask17'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 11 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/16');
             $this->load->view('tracer/footer');
         }
@@ -297,7 +309,8 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_12();
             redirect(base_url('tracer/ask18'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 12 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/17');
             $this->load->view('tracer/footer');
         }
@@ -315,10 +328,19 @@ class Tracer extends CI_Controller
             $this->tracer_model->update_question_13();
             redirect(base_url('tracer/finish'));
         } else {
-            $this->load->view('tracer/header');
+            $data['title'] = 'Question 13 | Tracer Study';
+            $this->load->view('tracer/header', $data);
             $this->load->view('tracer/18');
             $this->load->view('tracer/footer');
         }
+    }
+
+    public function finish()
+    {
+        $data['title'] = 'Finish | Tracer Study';
+        $this->load->view('tracer/header', $data);
+        $this->load->view('tracer/finish');
+        $this->load->view('tracer/footer');
     }
 
     // public function ask4()
