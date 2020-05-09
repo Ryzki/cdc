@@ -243,6 +243,23 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function analisa()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/analisa');
+        $this->load->view('backend/footer');
+    }
+
     public function laporan()
     {
         if (!isset($this->session->userdata['username'])) {

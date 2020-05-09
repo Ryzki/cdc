@@ -42,6 +42,9 @@
 <script src="<?= base_url('assets_backend') ?>/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
 <script src="<?= base_url('assets_backend') ?>/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
 <script src="<?= base_url('assets_backend') ?>/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+<!-- Optional JS -->
+<script src="<?= base_url('assets_backend') ?>/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="<?= base_url('assets_backend') ?>/vendor/chart.js/dist/Chart.extension.js"></script>
 <!-- Argon JS -->
 <script src="<?= base_url('assets_backend') ?>/js/argon.min5438.js?v=1.2.0"></script>
 <!-- Demo JS - remove this in your project -->

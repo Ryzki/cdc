@@ -125,15 +125,15 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="lock.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/analisa') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> G </span>
-                                            <span class="sidenav-normal"> Grafik </span>
+                                            <span class="sidenav-normal"> Analisa Tracer </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="<?= base_url('backend/dashboard/laporan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> R </span>
-                                            <span class="sidenav-normal"> Laporan Dikti </span>
+                                            <span class="sidenav-normal"> Laporan Tracer </span>
                                         </a>
                                     </li>
                                 </ul>
