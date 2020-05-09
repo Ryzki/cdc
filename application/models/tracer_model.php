@@ -62,7 +62,7 @@ class Tracer_model extends CI_Model
     {
         $data = array(
             'npm' => $this->session->userdata('npm'),
-            'kode_pt' => $this->session->userdata('kode_pt'),
+            'kode_pt' => '071050', //Kode PT UNIKAMA
             'tahun_lulus' => $this->session->userdata('tahun_lulus'),
             'kode_prodi' => $this->session->userdata('kode_prodi'),
             'nama' => $this->session->userdata('nama'),
