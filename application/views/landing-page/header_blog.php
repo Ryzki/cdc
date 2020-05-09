@@ -68,9 +68,9 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
+                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="<?= base_url() ?>"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
                             <ul class="menuzord-menu" style="color: #888">
-                                <li><a href="#home">Home</a>
+                                <li><a href="<?= base_url() ?>">Home</a>
                                 </li>
                                 <li class=""><a href="#about">About</a>
                                     <ul class="dropdown">

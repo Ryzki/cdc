@@ -3,12 +3,12 @@
 
   <!-- Section: inner-header -->
   <section class="inner-header divider parallax layer-overlay overlay-white-5">
-    <div class="container pt-50 pb-50">
+    <div class="container pt-10 pb-10">
       <!-- Section Content -->
       <div class="section-content">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h2 class="title">Blog</h2>
+            <!-- <h2 class="title">Blog</h2> -->
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@
 
   <!-- Section: Blog -->
   <section>
-    <div class="container mt-30 mb-30 pt-30 pb-30">
+    <div class="container mt-0 mb-30 pt-0 pb-30">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="blog-posts single-post">
