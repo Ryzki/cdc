@@ -269,3 +269,11 @@
       </section>
   </div>
   <!-- end main-content -->
+  <script>
+      $("input:radio[name='f1201']").change(function() {
+          $(".input-lainnya").hide()
+          if ($(this).val() == "7") {
+              $(".input-lainnya").show();
+          }
+      });
+  </script>

@@ -37,19 +37,19 @@
                                           <?= form_error('opCariKerja', '<label><small class="text-danger"><i>', '</i></small></label>') ?>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="f301" id="rbCariKerja1" value="1" required>
+                                                  <input type="radio" name="f301" id="rbCariKerja1" class="rbCariKerja" value="1" required>
                                                   Kira-kira <input id="input1" name="f302" type="number" style="width: 54px;"> bulan sebelum lulus
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="f301" id="rbCariKerja2" value="2">
+                                                  <input type="radio" name="f301" id="rbCariKerja2" class="rbCariKerja" value="2">
                                                   Kira-kira <input id="input2" name="f303" type="number" style="width: 54px;"> bulan setelah lulus
                                               </label>
                                           </div>
                                           <div class="radio">
                                               <label>
-                                                  <input type="radio" name="f301" id="rbCariKerja3" value="3">
+                                                  <input type="radio" name="f301" id="rbCariKerja3" class="rbCariKerja" value="3">
                                                   Saya tidak mencari kerja
                                               </label>
                                           </div>
@@ -73,13 +73,15 @@
       $(document).ready(function() {
           $("#input1").hide();
           $("#input2").hide();
-          $("input:radio[name='opCariKerja']").change(function() {
+          $(".rbCariKerja").change(function() {
               //   alert("aaa");
               $("#input1, #input2").hide()
               if ($(this).val() == "1") {
                   $("#input1").show();
               } else if ($(this).val() == "2") {
                   $("#input2").show();
+              } else {
+                  $("#input1, #input2").hide()
               }
           });
       });
