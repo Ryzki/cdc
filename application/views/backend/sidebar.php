@@ -127,7 +127,7 @@
                                     <li class="nav-item">
                                         <a href="lock.html" class="nav-link">
                                             <span class="sidenav-mini-icon"> G </span>
-                                            <span class="sidenav-normal"> Grafik </span>
+                                            <span class="sidenav-normal"> Analisa Tracer Study </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
