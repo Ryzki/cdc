@@ -128,6 +128,13 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
+
+        // if ($this->input->post('f303') == "3") {
+        //     redirect('tracer/ask17');
+        // } else {
+        //     redirect('tracer/ask11');
+        // }
+
     }
 
     public function update_question_4()
@@ -143,13 +150,13 @@ class Tracer_model extends CI_Model
             'f407' => $this->input->post('f407'),
             'f408' => $this->input->post('f408'),
             'f409' => $this->input->post('f409'),
-            'f4010' => $this->input->post('f410'),
-            'f4011' => $this->input->post('f411'),
-            'f4012' => $this->input->post('f412'),
-            'f4013' => $this->input->post('f413'),
-            'f4014' => $this->input->post('f414'),
-            'f4015' => $this->input->post('f415'),
-            'f4016' => $this->input->post('f416'),
+            'f410' => $this->input->post('f410'),
+            'f411' => $this->input->post('f411'),
+            'f412' => $this->input->post('f412'),
+            'f413' => $this->input->post('f413'),
+            'f414' => $this->input->post('f414'),
+            'f415' => $this->input->post('f415'),
+            'f416' => $this->input->post('f416'),
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);

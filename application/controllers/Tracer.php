@@ -130,6 +130,7 @@ class Tracer extends CI_Controller
             redirect(base_url('tracer/ask5'));
         } else {
             $data['title'] = 'Question 4 | Tracer Study';
+            // var_dump($data);
             $this->load->view('tracer/header', $data);
             $this->load->view('tracer/3');
             $this->load->view('tracer/footer');
