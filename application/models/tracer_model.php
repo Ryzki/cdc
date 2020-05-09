@@ -25,31 +25,32 @@ class Tracer_model extends CI_Model
             if ($status_tracer == 0) {
                 redirect('tracer/sambutan', $sess_data);
             } elseif ($status_tracer == 1) {
-                redirect('tracer/ask_wajib', $sess_data);
-            } elseif ($status_tracer == 2) {
+                // redirect('tracer/ask_wajib', $sess_data);
                 redirect('tracer/ask1', $sess_data);
-            } elseif ($status_tracer == 3) {
+            } elseif ($status_tracer == 2) {
                 redirect('tracer/ask2', $sess_data);
-            } elseif ($status_tracer == 4) {
+            } elseif ($status_tracer == 3) {
                 redirect('tracer/ask3', $sess_data);
-            } elseif ($status_tracer == 5) {
+            } elseif ($status_tracer == 4) {
                 redirect('tracer/ask5', $sess_data);
-            } elseif ($status_tracer == 6) {
+            } elseif ($status_tracer == 5) {
                 redirect('tracer/ask6', $sess_data);
-            } elseif ($status_tracer == 7) {
+            } elseif ($status_tracer == 6) {
                 redirect('tracer/ask7', $sess_data);
-            } elseif ($status_tracer == 8) {
+            } elseif ($status_tracer == 7) {
                 redirect('tracer/ask9', $sess_data);
-            } elseif ($status_tracer == 9) {
+            } elseif ($status_tracer == 8) {
                 redirect('tracer/ask10', $sess_data);
-            } elseif ($status_tracer == 10) {
+            } elseif ($status_tracer == 9) {
                 redirect('tracer/ask11', $sess_data);
-            } elseif ($status_tracer == 11) {
+            } elseif ($status_tracer == 10) {
                 redirect('tracer/ask16', $sess_data);
-            } elseif ($status_tracer == 12) {
+            } elseif ($status_tracer == 11) {
                 redirect('tracer/ask17', $sess_data);
-            } elseif ($status_tracer == 13) {
+            } elseif ($status_tracer == 12) {
                 redirect('tracer/ask18', $sess_data);
+            } elseif ($status_tracer == 13) {
+                redirect('tracer/finish', $sess_data);
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Pastikan Data Alumni Sesuai!</div>');
