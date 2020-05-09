@@ -143,13 +143,13 @@ class Tracer_model extends CI_Model
             'f407' => $this->input->post('f407'),
             'f408' => $this->input->post('f408'),
             'f409' => $this->input->post('f409'),
-            'f4010' => $this->input->post('f4010'),
-            'f4011' => $this->input->post('f4011'),
-            'f4012' => $this->input->post('f4012'),
-            'f4013' => $this->input->post('f4013'),
-            'f4014' => $this->input->post('f4014'),
-            'f4015' => $this->input->post('f4015'),
-            'f4016' => $this->input->post('f4016'),
+            'f4010' => $this->input->post('f410'),
+            'f4011' => $this->input->post('f411'),
+            'f4012' => $this->input->post('f412'),
+            'f4013' => $this->input->post('f413'),
+            'f4014' => $this->input->post('f414'),
+            'f4015' => $this->input->post('f415'),
+            'f4016' => $this->input->post('f416'),
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);

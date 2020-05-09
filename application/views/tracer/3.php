@@ -139,7 +139,7 @@
                           <!-- Job Form Validation-->
                           <script type="text/javascript">
                               $(document).ready(function() {
-                                  $("#check-lainnya").change(function() {
+                                  $("#cb_15").change(function() {
                                       $(".input-lainnya").toggle(this.checked);
                                   }).change();
                               });
