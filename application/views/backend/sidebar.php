@@ -113,7 +113,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="register.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/alumni') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> A </span>
                                             <span class="sidenav-normal"> Alumni </span>
                                         </a>

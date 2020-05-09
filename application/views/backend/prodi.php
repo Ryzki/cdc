@@ -49,7 +49,7 @@
                                 <tr>
                                     <th>Kode</th>
                                     <th>Program Studi</th>
-                                    <th>Actiony</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tfoot>
