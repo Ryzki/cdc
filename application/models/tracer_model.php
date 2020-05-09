@@ -113,7 +113,7 @@ class Tracer_model extends CI_Model
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
 
-        if ($this->input->post('f303') == "3") {
+        if ($this->input->post('f301') == "3") {
             redirect('tracer/ask8');
         } else {
             redirect('tracer/ask3');
