@@ -107,13 +107,13 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="login.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/prodi') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> P </span>
                                             <span class="sidenav-normal"> Program Studi </span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="register.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/alumni') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> A </span>
                                             <span class="sidenav-normal"> Alumni </span>
                                         </a>

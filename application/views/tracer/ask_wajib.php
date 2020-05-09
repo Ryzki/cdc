@@ -132,7 +132,7 @@
                               </div>
 
                               <hr>
-                              <p><b>Sebutkan sumber dana dalam pembiayaan kuliah ?</b></p>
+                              <p><b>Seberapa erat hubungan antara bidang studi dengan pekerjaan anda ?</b></p>
                               <div class="row">
                                   <div class="col-sm-12">
                                       <div class="form-group">

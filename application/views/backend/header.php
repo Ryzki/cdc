@@ -14,6 +14,10 @@
     <!-- Icons -->
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/nucleo/css/nucleo.css" type="text/css">
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
+    <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/css/argon.min5438.css?v=1.2.0" type="text/css">
 </head>
