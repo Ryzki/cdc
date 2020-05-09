@@ -25,13 +25,13 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="ni ni-shop text-primary"></i>
+                                <i class="ni ni-shop text-red"></i>
                                 <span class="nav-link-text">Dashboards</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
-                                <i class="ni ni-app text-red"></i>
+                                <i class="ni ni-world text-blue"></i>
                                 <span class="nav-link-text">Website CDC</span>
                             </a>
                             <div class="collapse" id="navbar-dashboards">
