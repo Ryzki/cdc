@@ -107,7 +107,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="login.html" class="nav-link">
+                                        <a href="<?= base_url('backend/dashboard/prodi') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> P </span>
                                             <span class="sidenav-normal"> Program Studi </span>
                                         </a>
