@@ -13,7 +13,8 @@ class Welcome extends CI_Controller
 	public function contact()
 	{
 		$data['title'] = "Contact | Universitas Kanjuruhan Malang";
-		$this->load->view('tracer/header', $data);
+		$this->load->view('landing-page/header_blog', $data);
+		// $this->load->view('tracer/header', $data);
 		$this->load->view('landing-page/contact');
 		$this->load->view('landing-page/footer');
 	}
@@ -21,7 +22,8 @@ class Welcome extends CI_Controller
 	public function blog()
 	{
 		$data['title'] = "Blog | Universitas Kanjuruhan Malang";
-		$this->load->view('tracer/header', $data);
+		$this->load->view('landing-page/header_blog', $data);
+		// $this->load->view('tracer/header', $data);
 		$this->load->view('landing-page/blog');
 		$this->load->view('landing-page/footer');
 	}
