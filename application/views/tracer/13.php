@@ -86,12 +86,5 @@
   <!-- end main-content -->
 
   <script>
-      $(document).ready(function() {
-          $("input:radio[name='opCariKerja']").change(function() {
-              $(".input-lainnya").hide()
-              if ($(this).val() == "5") {
-                  $(".input-lainnya").show();
-              }
-          });
-      });
+      $(document).ready(function() {});
   </script>

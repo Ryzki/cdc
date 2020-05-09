@@ -346,11 +346,7 @@
                           </form>
                           <!-- Job Form Validation-->
                           <script type="text/javascript">
-                              $(document).ready(function() {
-                                  $("#check-lainnya").change(function() {
-                                      $(".input-lainnya").toggle(this.checked);
-                                  }).change();
-                              });
+                              $(document).ready(function() {});
                           </script>
                       </div>
                   </div>

@@ -25,11 +25,12 @@ class Tracer_model extends CI_Model
             if ($status_tracer == 0) {
                 redirect('tracer/sambutan', $sess_data);
             } elseif ($status_tracer == 1) {
-                redirect('tracer/ask2', $sess_data);
+                // redirect('tracer/ask_wajib', $sess_data);
+                redirect('tracer/ask1', $sess_data);
             } elseif ($status_tracer == 2) {
-                redirect('tracer/ask3', $sess_data);
+                redirect('tracer/ask2', $sess_data);
             } elseif ($status_tracer == 3) {
-                redirect('tracer/ask4', $sess_data);
+                redirect('tracer/ask3', $sess_data);
             } elseif ($status_tracer == 4) {
                 redirect('tracer/ask5', $sess_data);
             } elseif ($status_tracer == 5) {
@@ -37,28 +38,18 @@ class Tracer_model extends CI_Model
             } elseif ($status_tracer == 6) {
                 redirect('tracer/ask7', $sess_data);
             } elseif ($status_tracer == 7) {
-                redirect('tracer/ask8', $sess_data);
-            } elseif ($status_tracer == 8) {
                 redirect('tracer/ask9', $sess_data);
-            } elseif ($status_tracer == 9) {
+            } elseif ($status_tracer == 8) {
                 redirect('tracer/ask10', $sess_data);
-            } elseif ($status_tracer == 10) {
+            } elseif ($status_tracer == 9) {
                 redirect('tracer/ask11', $sess_data);
-            } elseif ($status_tracer == 11) {
-                redirect('tracer/ask12', $sess_data);
-            } elseif ($status_tracer == 12) {
-                redirect('tracer/ask13', $sess_data);
-            } elseif ($status_tracer == 13) {
-                redirect('tracer/ask14', $sess_data);
-            } elseif ($status_tracer == 14) {
-                redirect('tracer/ask15', $sess_data);
-            } elseif ($status_tracer == 15) {
+            } elseif ($status_tracer == 10) {
                 redirect('tracer/ask16', $sess_data);
-            } elseif ($status_tracer == 16) {
+            } elseif ($status_tracer == 11) {
                 redirect('tracer/ask17', $sess_data);
-            } elseif ($status_tracer == 17) {
+            } elseif ($status_tracer == 12) {
                 redirect('tracer/ask18', $sess_data);
-            } elseif ($status_tracer == 18) {
+            } elseif ($status_tracer == 13) {
                 redirect('tracer/finish', $sess_data);
             }
         } else {
@@ -67,7 +58,7 @@ class Tracer_model extends CI_Model
         }
     }
 
-    public function insert_question_1()
+    public function insert_data_wajib()
     {
         $data = array(
             'npm' => $this->session->userdata('npm'),
@@ -77,14 +68,17 @@ class Tracer_model extends CI_Model
             'nama' => $this->session->userdata('nama'),
             'telp' => $this->session->userdata('telp'),
             'email' => $this->session->userdata('email'),
-
-            'f21' => $this->input->post('f21'),
-            'f22' => $this->input->post('f22'),
-            'f23' => $this->input->post('f23'),
-            'f24' => $this->input->post('f24'),
-            'f25' => $this->input->post('f25'),
-            'f26' => $this->input->post('f26'),
-            'f27' => $this->input->post('f27'),
+            'f501' => $this->input->post('f501'),
+            'f502' => $this->input->post('f502'),
+            'f503' => $this->input->post('f503'),
+            'f1201' => $this->input->post('f1201'),
+            'f1202' => $this->input->post('f1202'),
+            'f8' => $this->input->post('f8'),
+            'f14' => $this->input->post('f14'),
+            'f15' => $this->input->post('f15'),
+            'f1301' => $this->input->post('f1301'),
+            'f1302' => $this->input->post('f1302'),
+            'f1303' => $this->input->post('f1303'),
         );
         $this->db->insert('tbl_tracer', $data);
 
@@ -100,9 +94,13 @@ class Tracer_model extends CI_Model
     {
         $npm = $this->session->userdata('npm');
         $data = array(
-            'f301' => $this->input->post('f301'),
-            'f302' => $this->input->post('f302'),
-            'f303' => $this->input->post('f303'),
+            'f21' => $this->input->post('f21'),
+            'f22' => $this->input->post('f22'),
+            'f23' => $this->input->post('f23'),
+            'f24' => $this->input->post('f24'),
+            'f25' => $this->input->post('f25'),
+            'f26' => $this->input->post('f26'),
+            'f27' => $this->input->post('f27'),
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
@@ -112,15 +110,34 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
-
-        if ($this->input->post('f303') == "3") {
-            redirect('tracer/ask8');
-        } else {
-            redirect('tracer/ask3');
-        }
     }
 
     public function update_question_3()
+    {
+        $npm = $this->session->userdata('npm');
+        $data = array(
+            'f301' => $this->input->post('f301'),
+            'f302' => $this->input->post('f302'),
+            'f303' => $this->input->post('f303'),
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_tracer', $data);
+
+        $data_update = array(
+            'status' => '3',
+        );
+        $this->db->where('npm', $npm);
+        $this->db->update('tbl_alumni', $data_update);
+
+        // if ($this->input->post('f303') == "3") {
+        //     redirect('tracer/ask17');
+        // } else {
+        //     redirect('tracer/ask11');
+        // }
+
+    }
+
+    public function update_question_4()
     {
         $npm = $this->session->userdata('npm');
         $data = array(
@@ -140,24 +157,6 @@ class Tracer_model extends CI_Model
             'f414' => $this->input->post('f414'),
             'f415' => $this->input->post('f415'),
             'f416' => $this->input->post('f416'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '3',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-
-    public function update_question_4()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-            'f501' => $this->input->post('f501'),
-            'f502' => $this->input->post('f502'),
-            'f503' => $this->input->post('f503'),
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
@@ -221,7 +220,12 @@ class Tracer_model extends CI_Model
     {
         $npm = $this->session->userdata('npm');
         $data = array(
-            'f8' => $this->input->post('f8'),
+            'f901' => $this->input->post('f901'),
+            'f902' => $this->input->post('f902'),
+            'f903' => $this->input->post('f903'),
+            'f904' => $this->input->post('f904'),
+            'f905' => $this->input->post('f905'),
+            'f906' => $this->input->post('f906'),
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
@@ -237,29 +241,6 @@ class Tracer_model extends CI_Model
     {
         $npm = $this->session->userdata('npm');
         $data = array(
-
-            'f901' => $this->input->post('f901'),
-            'f902' => $this->input->post('f902'),
-            'f903' => $this->input->post('f903'),
-            'f904' => $this->input->post('f904'),
-            'f905' => $this->input->post('f905'),
-            'f906' => $this->input->post('f906'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '9',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-
-    public function update_question_10()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-
             'f1001' => $this->input->post('f1001'),
             'f1002' => $this->input->post('f1002'),
         );
@@ -267,7 +248,7 @@ class Tracer_model extends CI_Model
         $this->db->update('tbl_tracer', $data);
 
         $data_update = array(
-            'status' => '10',
+            'status' => '9',
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
@@ -279,92 +260,24 @@ class Tracer_model extends CI_Model
         }
     }
 
-    public function update_question_11()
+    public function update_question_10()
     {
         $npm = $this->session->userdata('npm');
         $data = array(
-
             'f1101' => $this->input->post('f1101'),
             'f1102' => $this->input->post('f1102'),
-
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
 
         $data_update = array(
-            'status' => '11',
+            'status' => '10',
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
     }
 
-    public function update_question_12()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-            'f1201' => $this->input->post('f1201'),
-            'f1202' => $this->input->post('f1202'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '12',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-    public function update_question_13()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-            'f1301' => $this->input->post('f1301'),
-            'f1302' => $this->input->post('f1302'),
-            'f1303' => $this->input->post('f1303'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '13',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-
-    public function update_question_14()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-            'f14' => $this->input->post('f14'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '14',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-
-    public function update_question_15()
-    {
-        $npm = $this->session->userdata('npm');
-        $data = array(
-            'f15' => $this->input->post('f15'),
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_tracer', $data);
-
-        $data_update = array(
-            'status' => '15',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-    }
-
-    public function update_question_16()
+    public function update_question_11()
     {
         $npm = $this->session->userdata('npm');
         $data = array(
@@ -387,17 +300,16 @@ class Tracer_model extends CI_Model
         $this->db->update('tbl_tracer', $data);
 
         $data_update = array(
-            'status' => '16',
+            'status' => '11',
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
     }
 
-    public function update_question_17()
+    public function update_question_12()
     {
         $npm = $this->session->userdata('npm');
         $data = array(
-
             'f171' => $this->input->post('f171'),
             'f173' => $this->input->post('f173'),
             'f175' => $this->input->post('f175'),
@@ -432,13 +344,12 @@ class Tracer_model extends CI_Model
         $this->db->update('tbl_tracer', $data);
 
         $data_update = array(
-            'status' => '17',
+            'status' => '12',
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
     }
-
-    public function update_question_18()
+    public function update_question_13()
     {
         $npm = $this->session->userdata('npm');
         $data = array(
@@ -476,7 +387,7 @@ class Tracer_model extends CI_Model
         $this->db->update('tbl_tracer', $data);
 
         $data_update = array(
-            'status' => '18',
+            'status' => '13',
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);

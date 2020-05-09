@@ -70,7 +70,7 @@
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
                             <ul class="menuzord-menu">
-                                <li class="active"><a href="#home">Home</a>
+                                <li class="active"><a href="<?= base_url('tracer/logout') ?>">Logout</a>
                                 </li>
                                 <!-- <li><a href="#">Features</a>
                                 </li>
