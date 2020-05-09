@@ -49,7 +49,7 @@ class Tracer extends CI_Controller
             redirect(base_url('tracer'));
         }
         if (!empty($_REQUEST)) {
-            $this->tracer_model->insert_data();
+            $this->tracer_model->insert_data_wajib();
             redirect(base_url('tracer/ask1'));
         } else {
             $data['title'] = 'Question 1 | Tracer Study';
