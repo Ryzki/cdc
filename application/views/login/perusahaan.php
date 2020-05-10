@@ -85,7 +85,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 p-t-5">
-                                    <p><a href="#">Lupa Password</a><a href="<?= base_url('login/daftar_baru') ?>" class="pull-right">Daftar Baru</a></p>
+                                    <p><a href="#">&nbsp;</a><a href="<?= base_url('login/daftar_baru') ?>" class="pull-right">Daftar Baru</a></p>
                                 </div>
                             </div>
                         </form>
