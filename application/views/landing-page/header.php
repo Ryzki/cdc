@@ -237,12 +237,13 @@
                                     <li class=""><a href="#about"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
                                         <?php
-                                        $data['submenu'] = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
-                                        if (!empty($data['submenu'])) {
+                                        $submenu = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
+                                        if (!empty($submenu)) {
                                             foreach ($submenu as $sbm) {
+                                                $d = $sbm->submenu;
                                         ?>
                                                 <ul class="dropdown">
-                                                    <li><a href=""><?= $sbm->submenu ?></a></li>
+                                                    <li><a href=""><?= $d ?></a></li>
                                                 </ul>
                                         <?php
                                             }

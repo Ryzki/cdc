@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.mst_company: ~0 rows (approximately)
+-- Dumping data for table db_cdc.mst_company: ~1 rows (approximately)
 /*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
 REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `password`, `is_active`, `date_input`) VALUES
 	(1, '', 'asdgasdf', 'asdgasdf', 'arthur@jai.co.id', 'admin', 0, '2020-05-10 08:38:31');
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `tbl_alumni` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.tbl_alumni: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_alumni: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_alumni` DISABLE KEYS */;
 REPLACE INTO `tbl_alumni` (`id`, `npm`, `nama`, `telp`, `email`, `kode_prodi`, `tahun_lulus`, `status`, `remark`) VALUES
 	(1, '1', 'aaa', '123', '1@a.com', '1', '1234', 2, '');
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu: ~4 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 REPLACE INTO `tbl_menu` (`id`, `menu`, `link`) VALUES
 	(1, 'About', ''),
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tracer` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.tbl_tracer: ~1 rows (approximately)
+-- Dumping data for table db_cdc.tbl_tracer: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_tracer` DISABLE KEYS */;
 REPLACE INTO `tbl_tracer` (`id`, `npm`, `kode_pt`, `tahun_lulus`, `kode_prodi`, `nama`, `telp`, `email`, `f21`, `f22`, `f23`, `f24`, `f25`, `f26`, `f27`, `f301`, `f302`, `f303`, `f401`, `f402`, `f403`, `f404`, `f405`, `f406`, `f407`, `f408`, `f409`, `f410`, `f411`, `f412`, `f413`, `f414`, `f415`, `f416`, `f501`, `f502`, `f503`, `f6`, `f7`, `f7a`, `f8`, `f901`, `f902`, `f903`, `f904`, `f905`, `f906`, `f1001`, `f1002`, `f1101`, `f1102`, `f1201`, `f1202`, `f1301`, `f1302`, `f1303`, `f14`, `f15`, `f1601`, `f1602`, `f1603`, `f1604`, `f1605`, `f1606`, `f1607`, `f1608`, `f1609`, `f1610`, `f1611`, `f1612`, `f1613`, `f1614`, `f171`, `f172b`, `f173`, `f175`, `f174b`, `f176b`, `f175a`, `f176ba`, `f177`, `f178b`, `f179`, `f1710b`, `f1711`, `f1712b`, `f1713`, `f1714b`, `f1715`, `f1716b`, `f1717`, `f1718b`, `f1719`, `f1720b`, `f1721`, `f1722b`, `f1723`, `f1724b`, `f1725`, `f1726b`, `f1727`, `f1728b`, `f1729`, `f1730b`, `f1731`, `f1732b`, `f1733`, `f1734b`, `f1735`, `f1736b`, `f1737`, `f1738b`, `f1737a`, `f1738ba`, `f1739`, `f1740b`, `f1741`, `f1742b`, `f1743`, `f1744b`, `f1745`, `f1746b`, `f1747`, `f1748b`, `f1749`, `f1750b`, `f1751`, `f1752b`, `f1753`, `f1754b`) VALUES
 	(1, '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '2', '', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
@@ -297,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.user: ~2 rows (approximately)
+-- Dumping data for table db_cdc.user: ~3 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 REPLACE INTO `user` (`id`, `username`, `password`, `email`, `level`, `blokir`, `id_sessions`) VALUES
 	(1, 'agus@gmail.com', '$2y$10$iqyRa5vI.x0IrfQPAvlVYucJE7YMqNMjrW5adwR4CSs1CFn.U0k5e', 'admin@gmai.com', 'admin', 'N', ''),
