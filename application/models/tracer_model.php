@@ -107,15 +107,19 @@ class Tracer_model extends CI_Model
         $this->db->where('npm', $npm);
         $this->db->update('tbl_tracer', $data);
 
-        $data_update = array(
-            'status' => '2',
-        );
-        $this->db->where('npm', $npm);
-        $this->db->update('tbl_alumni', $data_update);
-
         if ($this->input->post('f301') == "3") {
+            $data_update = array(
+                'status' => '7',
+            );
+            $this->db->where('npm', $npm);
+            $this->db->update('tbl_alumni', $data_update);
             redirect('tracer/ask8');
         } else {
+            $data_update = array(
+                'status' => '2',
+            );
+            $this->db->where('npm', $npm);
+            $this->db->update('tbl_alumni', $data_update);
             redirect('tracer/ask3');
         }
     }
@@ -486,5 +490,48 @@ class Tracer_model extends CI_Model
         );
         $this->db->where('npm', $npm);
         $this->db->update('tbl_alumni', $data_update);
+    }
+
+    public function cek_status($status)
+    {
+        if ($status == 0) {
+            return redirect('tracer/sambutan');
+        } elseif ($status == 1) {
+            return redirect('tracer/ask2');
+        } elseif ($status == 2) {
+            return redirect('tracer/ask3');
+        } elseif ($status == 3) {
+            return redirect('tracer/ask4');
+        } elseif ($status == 4) {
+            return redirect('tracer/ask5');
+        } elseif ($status == 5) {
+            return redirect('tracer/ask6');
+        } elseif ($status == 6) {
+            return redirect('tracer/ask7');
+        } elseif ($status == 7) {
+            return redirect('tracer/ask8');
+        } elseif ($status == 8) {
+            return redirect('tracer/ask9');
+        } elseif ($status == 9) {
+            return redirect('tracer/ask10');
+        } elseif ($status == 10) {
+            return redirect('tracer/ask11');
+        } elseif ($status == 11) {
+            return redirect('tracer/ask12');
+        } elseif ($status == 12) {
+            return redirect('tracer/ask13');
+        } elseif ($status == 13) {
+            return redirect('tracer/ask14');
+        } elseif ($status == 14) {
+            return redirect('tracer/ask15');
+        } elseif ($status == 15) {
+            return redirect('tracer/ask16');
+        } elseif ($status == 16) {
+            return redirect('tracer/ask17');
+        } elseif ($status == 17) {
+            return redirect('tracer/ask18');
+        } elseif ($status == 18) {
+            return redirect('tracer/finish');
+        }
     }
 }
