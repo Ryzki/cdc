@@ -232,29 +232,36 @@
                                 <li class="active"><a href="#home">Home</a>
                                 </li>
                                 <?php
-                                foreach ($menu as $mn) {
+                                // foreach ($menu as $m) {
+                                //     echo '<li class=""><a href="#about">' . $m->menu . '</a>';
+                                //     echo '<ul class="dropdown">';
+                                //     foreach ($submenu as $sm) {
+                                //         if ($sm->menu == $m->menu) {
+                                //             echo '<li><a href="">' . $sm->submenu . '</a></li>';
+                                //         }
+                                //     }
+                                //     echo '</ul>';
+                                // }
                                 ?>
+
+                                <?php foreach ($menu as $mn) { ?>
                                     <li class=""><a href="#about"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
-                                        <?php
-                                        $submenu = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
-                                        if (!empty($submenu)) {
-                                            foreach ($submenu as $sbm) {
-                                                $d = $sbm->submenu;
-                                        ?>
-                                                <ul class="dropdown">
-                                                    <li><a href=""><?= $d ?></a></li>
-                                                </ul>
-                                        <?php
-                                            }
-                                        }
-                                        ?>
-                                    </li>
-                                <?php
-                                }
-                                ?>
-                                <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
-                                </li>
+                                        <?php $aaa = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
+                                        if (!empty($aaa)) {
+                                            echo '<ul class="dropdown">';
+                                            foreach ($aaa as $sbm) {
+                                                $d = $sbm->submenu; ?>
+                                    <li><a href=""><?= $d ?></a></li>
+                            <?php }
+                                            echo '</ul>';
+                                        } ?>
+                            </li>
+                        <?php  } ?>
+
+
+                        <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
+                        </li>
                             </ul>
                         </nav>
                     </div>
