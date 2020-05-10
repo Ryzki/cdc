@@ -224,9 +224,9 @@
                 <div class="header-nav-wrapper">
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default no-bg">
-                            <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html">
-                                <img class="logo-default" src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt="">
-                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt="">
+                            <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="#">
+                                <img class="logo-default" src="<?= base_url('assets/') ?>images/logo/logo.png" alt="">
+                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo/logo.png" alt="">
                             </a>
                             <ul class="menuzord-menu" style="color: #888">
                                 <li class="active"><a href="#home">Home</a>
