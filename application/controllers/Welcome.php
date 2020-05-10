@@ -5,7 +5,12 @@ class Welcome extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('landing-page/header');
+		$data['menu'] = $this->landing_page_model->getMenu();
+		$data['submenu'] = $this->landing_page_model->getSubMenu();
+
+		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
+
+		$this->load->view('landing-page/header', $data);
 		$this->load->view('landing-page/landing_page');
 		$this->load->view('landing-page/footer');
 	}
