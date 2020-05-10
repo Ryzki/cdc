@@ -6,7 +6,7 @@
                 &copy; 2020 <a href="#" class="font-weight-bold ml-1">Universitas Kanjuruhan Malang</a>
             </div>
         </div>
-        <div class="col-lg-6">
+        <!-- <div class="col-lg-6">
             <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Unikama</a>
@@ -21,7 +21,7 @@
                     <a href="#" class="nav-link">License</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </footer>
 </div>

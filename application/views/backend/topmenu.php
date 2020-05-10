@@ -42,7 +42,7 @@
                                 <h3 class="mb-0">Daftar Menu Utama</h3>
                             </div>
                             <div class="col-6 text-right">
-                                <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Menu">
+                                <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-original-title="Tambah Menu" data-toggle="modal" data-target="#modal-menu">
                                     <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                                     <span class="btn-inner--text">Tambah</span>
                                 </a>
@@ -236,7 +236,7 @@
                                     <h3 class="mb-0">Daftar Sub Menu</h3>
                                 </div>
                                 <div class="col-6 text-right">
-                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Sub Menu">
+                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="modal" data-target="#modal-submenu">
                                         <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                                         <span class="btn-inner--text">Tambah</span>
                                     </a>
@@ -458,7 +458,7 @@
                                     <h3 class="mb-0">Daftar Menu Kaki</h3>
                                 </div>
                                 <div class="col-6 text-right">
-                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Menu Kaki">
+                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="modal" data-target="#modal-kaki">
                                         <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                                         <span class="btn-inner--text">Tambah</span>
                                     </a>
@@ -586,7 +586,7 @@
                                     <h3 class="mb-0">Daftar Artikel</h3>
                                 </div>
                                 <div class="col-6 text-right">
-                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Artikel">
+                                    <a href="<?= base_url('backend/dashboard/artikel') ?>" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Artikel">
                                         <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                                         <span class="btn-inner--text">Tambah</span>
                                     </a>
@@ -762,16 +762,17 @@
                     <!-- Card body -->
                     <div class="card-body">
                         <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
-                            <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website.
+                            <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website. File gambar harus berextensi .png (background transparant)
                         </div>
                         <!-- Card body -->
                         <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <label>Upload Logo</label>
-                                    <input type="file" class="form-control" id="customFileLang" lang="en">
-                                    <button type="submit" class="btn btn-primary btn-sm mt-3">Upload</button>
-                                </div>
+                            <?= $data ?>
+                            <?php echo form_open_multipart('backend/upload/aksi_upload'); ?>
+                            <div class="form-group">
+                                <label>Upload Logo</label>
+                                <input type="file" class="form-control" id="customFileLang" lang="en" name="berkas">
+                                <button type="submit" class="btn btn-primary btn-sm mt-3">Upload</button>
+                            </div>
                             </form>
                             <div class="mt-3">
                                 <table class="table table-bordered">
@@ -780,7 +781,7 @@
                                         <td>
                                             ​<picture>
 
-                                                <img src="<?= base_url('assets') ?>/images/logo-unikama-1.png" class="img-fluid img-thumbnail" alt="Logo">
+                                                <img src="<?= base_url('assets') ?>/images/logo/logo.png" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
                                         </td>
                                         <td class="table-actions">
@@ -870,6 +871,94 @@
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tambah menu-->
+    <div class="modal fade" id="modal-menu" tabindex="-1" role="dialog" aria-labelledby="modal-menu" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class=" modal-title" id="modal-title-default">Tambah Menu</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label>Nama Menu</label>
+                            <input type="text" name="menu" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tambah Sub menu-->
+    <div class="modal fade" id="modal-submenu" tabindex="-1" role="dialog" aria-labelledby="modal-submenu" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class=" modal-title" id="modal-title-default">Tambah Sub Menu</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label>Nama Sub Menu</label>
+                            <input type="text" name="menu" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Parent</label>
+                            <select name="submenu" id="submenu" class="form-control">
+                                <option>-- Pilih Menu --</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tambah Sub menu-->
+    <div class="modal fade" id="modal-kaki" tabindex="-1" role="dialog" aria-labelledby="modal-kaki" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class=" modal-title" id="modal-title-default">Tambah Link Kaki</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label>Nama Menu Kaki</label>
+                            <input type="text" name="menu" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Link Url</label>
+                            <input type="text" name="kaki_url" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
