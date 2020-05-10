@@ -251,8 +251,9 @@
                                         if (!empty($aaa)) {
                                             echo '<ul class="dropdown">';
                                             foreach ($aaa as $sbm) {
-                                                $d = $sbm->submenu; ?>
-                                    <li><a href=""><?= $d ?></a></li>
+                                                $d = $sbm->submenu;
+                                                $e = $sbm->link; ?>
+                                    <li><a href="<?= base_url($e) ?>"><?= $d ?></a></li>
                             <?php }
                                             echo '</ul>';
                                         } ?>

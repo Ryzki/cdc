@@ -58,4 +58,20 @@ class Backend_user_model extends CI_Model
             redirect('backend/login');
         }
     }
+
+    public function getMenuKaki($table)
+    {
+        return $this->db->get($table);
+    }
+
+    public function insert_data($data, $table)
+    {
+        $this->db->insert($table, $data);
+    }
+
+    public function hapus_data($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }

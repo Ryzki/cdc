@@ -8,6 +8,7 @@ class Welcome extends CI_Controller
 		$data['menu'] = $this->landing_page_model->getMenu();
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
 
+
 		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
 
 		$this->load->view('landing-page/header', $data);

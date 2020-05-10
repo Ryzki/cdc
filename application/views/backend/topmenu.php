@@ -61,153 +61,43 @@
                                         </div>
                                     </th>
                                     <th>Menu</th>
-                                    <th>Total SubMenu</th>
                                     <th>Link Artikel</th>
                                     <th>Active</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td class="table-user">
-                                        <b>About</b>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted">4</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Sub Menu</a>
-                                    </td>
-                                    <td>
-                                        <label class="custom-toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                        </label>
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td class="table-user">
-                                        <b>Pelatihan</b>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted">2</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Sub Menu</a>
-                                    </td>
-                                    <td>
-                                        <label class="custom-toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                        </label>
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td class="table-user">
-                                        <b>Artikel</b>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted">-</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Artikel</a>
-                                    </td>
-                                    <td>
-                                        <label class="custom-toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                        </label>
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td class="table-user">
-                                        <b>Lowongan Kerja</b>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted">-</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Lowongan Kerja</a>
-                                    </td>
-                                    <td>
-                                        <label class="custom-toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                        </label>
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td class="table-user">
-                                        <b>Hubingi Kami</b>
-                                    </td>
-                                    <td>
-                                        <span class="text-muted">-</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Hubungi Kami</a>
-                                    </td>
-                                    <td>
-                                        <label class="custom-toggle">
-                                            <input type="checkbox" checked>
-                                            <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                        </label>
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                <?php
+                                foreach ($menu as $mn) {
+                                ?>
+                                    <tr>
+                                        <th>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
+                                                <label class="custom-control-label" for="table-check-all"></label>
+                                            </div>
+                                        </th>
+                                        <td class="table-user">
+                                            <b><?= $mn->menu; ?></b>
+                                        </td>
+                                        <td>
+                                            <span class="text-muted"><?= $mn->link; ?></span>
+                                        </td>
+                                        <td>
+                                            <label class="custom-toggle">
+                                                <input type="checkbox" checked>
+                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-actions">
+                                            <a href="delete/<?= $mn->id; ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -262,174 +152,40 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Profile</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">About</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Artikel Profile</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Visi & Misi</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">About</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Artikel Visi & Misi</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Struktur</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">About</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Artikel Struktur Organisasi</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Login</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">About</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Redirect Login Page</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Softskills</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Pelatihan</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Artikel Pelatihan Softskills</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Pelatihan Pusat Karir</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Pelatihan</span>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Artikel Pelatihan PPK</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    foreach ($submenu as $sbm) {
+                                    ?>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
+                                                    <label class="custom-control-label" for="table-check-all"></label>
+                                                </div>
+                                            </th>
+                                            <td class="table-user">
+                                                <b><?= $sbm->submenu ?></b>
+                                            </td>
+                                            <td>
+                                                <span class="text-muted"><?= $sbm->menu ?></span>
+                                            </td>
+                                            <td>
+                                                <a href="#!" class="font-weight-bold"><?= $sbm->link ?></a>
+                                            </td>
+                                            <td>
+                                                <label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
+                                                </label>
+                                            </td>
+                                            <td class="table-actions">
+                                                <a href="deleteSbm\<?= $sbm->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -483,81 +239,37 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Tracer Study</b>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Redirect to Tracer Page</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Counseling career</b>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Redirect to Counseling Page</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Training Softskills</b>
-                                        </td>
-                                        <td>
-                                            <a href="#!" class="font-weight-bold">Redirect to Training Page</a>
-                                        </td>
-                                        <td>
-                                            <label class="custom-toggle">
-                                                <input type="checkbox" checked>
-                                                <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                            </label>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    foreach ($menukaki as $mk) {
+                                    ?>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
+                                                    <label class="custom-control-label" for="table-check-all"></label>
+                                                </div>
+                                            </th>
+                                            <td class="table-user">
+                                                <b><?= $mk->menu ?></b>
+                                            </td>
+                                            <td>
+                                                <a href="#!" class="font-weight-bold"><?= $mk->link ?></a>
+                                            </td>
+                                            <td>
+                                                <label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
+                                                </label>
+                                            </td>
+                                            <td class="table-actions">
+                                                <a href="deleteMk/<?= $mk->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -887,17 +599,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="tambah_data" method="POST">
                         <div class="form-group">
                             <label>Nama Menu</label>
                             <input type="text" name="menu" class="form-control">
                         </div>
-                    </form>
+                        <div class="form-group">
+                            <label>Link</label>
+                            <input type="text" name="link" class="form-control">
+                        </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
@@ -913,28 +629,38 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="tambahSbm" method="POST">
                         <div class="form-group">
                             <label>Nama Sub Menu</label>
-                            <input type="text" name="menu" class="form-control">
+                            <input type="text" name="submenu" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Parent</label>
-                            <select name="submenu" id="submenu" class="form-control">
-                                <option>-- Pilih Menu --</option>
+                            <select name="parent" id="parent" class="form-control">
+                                <?php
+                                foreach ($menu as $mn) {
+                                ?>
+                                    <option value="<?= $mn->menu ?>"><?= $mn->menu ?></option>
+                                <?php
+                                }
+                                ?>
                             </select>
                         </div>
-                    </form>
+                        <div class="form-group">
+                            <label>Link</label>
+                            <input type="text" name="link" class="form-control">
+                        </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Modal tambah Sub menu-->
+    <!-- Modal tambah menu kaki-->
     <div class="modal fade" id="modal-kaki" tabindex="-1" role="dialog" aria-labelledby="modal-kaki" aria-hidden="true">
         <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
             <div class="modal-content">
@@ -945,21 +671,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="tambahMenuKaki" method="POST">
                         <div class="form-group">
                             <label>Nama Menu Kaki</label>
                             <input type="text" name="menu" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Link Url</label>
-                            <input type="text" name="kaki_url" class="form-control">
+                            <input type="text" name="link" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
