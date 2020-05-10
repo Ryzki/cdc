@@ -36,13 +36,11 @@
                     <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Alumni : </strong> Input data alumni, para alumni ini yang nantinya akan mengisi kuesioner tracer study.
                     </div>
-                    <div class="col-6 text-right">
+                    <div class="col-12 text-left">
                         <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Alumni">
                             <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                             <span class="btn-inner--text">Tambah</span>
                         </a>
-                    </div>
-                    <div class="col-6 text-right">
                         <a href="#" class="btn btn-sm btn-success btn-round btn-icon" data-toggle="tooltip" data-original-title="Upload Alumni">
                             <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                             <span class="btn-inner--text">Upload</span>

@@ -51,6 +51,14 @@
     <script src="<?= base_url('assets/') ?>js/jquery-plugin-collection.js"></script>
 </head>
 
+<style>
+    .button-trace {
+        color: white !important;
+        border: 2px solid orange;
+        background-color: orange;
+    }
+</style>
+
 <body class="">
     <div id="wrapper">
         <!-- preloader -->
@@ -86,11 +94,11 @@
                                         <li><a href="">Pelatihan Pusat Karir</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="Welcome/blog">Artikel</a>
+                                <li class=""><a href="<?= base_url('Welcome/blog') ?>">Artikel</a>
                                 </li>
-                                <li class=""><a href="JobDetil/all">Lowongan Kerja</a>
+                                <li class=""><a href="<?= base_url('JobDetil/all') ?>">Lowongan Kerja</a>
                                 </li>
-                                <li class=""><a href="Welcome/contact">Hubungi Kami</a>
+                                <li class=""><a href="<?= base_url('Welcome/contact') ?>">Hubungi Kami</a>
                                 </li>
                                 <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
                                 </li>
