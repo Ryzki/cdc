@@ -28,7 +28,7 @@
                       <div class="border-1px p-30 mb-0">
                           <h3 class="text-theme-colored mt-0 pt-5 text-center">Question 14</h3>
                           <hr>
-                          <p>Sebutkan sumber dana dalam pembiayaan kuliah ?</p>
+                          <p>Seberapa erat hubungan antara bidang studi dengan pekerjaan anda saat ini ?</p>
                           <form id="tracer_question1" name="tracer_question1" action="<?= base_url('tracer/ask14') ?>" method="post" enctype="multipart/form-data">
                               <div class="row">
                                   <div class="col-sm-12">

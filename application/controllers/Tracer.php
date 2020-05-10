@@ -453,8 +453,15 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask16");
             }
-            $this->tracer_model->update_question_11();
-            redirect(base_url('tracer/ask17'));
+            //cek dulu statusnya
+
+            if ($data['alumni']['status'] == '15') {
+                $this->tracer_model->update_question_16();
+                redirect(base_url('tracer/ask17'));
+            } else {
+                $this->tracer_model->update_question_11();
+                redirect(base_url('tracer/ask17'));
+            }
         } else {
             $data['title'] = 'Question 16 | Tracer Study';
             $this->load->view('tracer/header', $data);
@@ -475,8 +482,14 @@ class Tracer extends CI_Controller
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_12();
-            redirect(base_url('tracer/ask18'));
+            //cek dulu statusnya
+            if ($data['alumni']['status'] == '16') {
+                $this->tracer_model->update_question_17();
+                redirect(base_url('tracer/ask18'));
+            } else {
+                $this->tracer_model->update_question_12();
+                redirect(base_url('tracer/ask18'));
+            }
         } else {
             $data['title'] = 'Question 17 | Tracer Study';
             $this->load->view('tracer/header', $data);
@@ -497,7 +510,7 @@ class Tracer extends CI_Controller
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_13();
+            $this->tracer_model->update_question_18();
             redirect(base_url('tracer/finish'));
         } else {
             $data['title'] = 'Question 18 | Tracer Study';
