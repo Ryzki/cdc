@@ -16,6 +16,41 @@
 CREATE DATABASE IF NOT EXISTS `db_cdc` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_cdc`;
 
+-- Dumping structure for table db_cdc.mst_company
+CREATE TABLE IF NOT EXISTS `mst_company` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kode_pt` varchar(50) NOT NULL,
+  `nama_pt` varchar(100) NOT NULL,
+  `jenis_pt` varchar(100) NOT NULL COMMENT 'Bergerak dibidang apa',
+  `email_pt` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `is_active` int(1) NOT NULL,
+  `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_cdc.mst_company: ~0 rows (approximately)
+/*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
+REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `password`, `is_active`, `date_input`) VALUES
+	(1, '', 'asdgasdf', 'asdgasdf', 'arthur@jai.co.id', 'admin', 0, '2020-05-10 08:38:31');
+/*!40000 ALTER TABLE `mst_company` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_agenda
+CREATE TABLE IF NOT EXISTS `tbl_agenda` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `time_1` time NOT NULL,
+  `time_2` time NOT NULL,
+  `location` varchar(100) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_cdc.tbl_agenda: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_agenda` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_agenda` ENABLE KEYS */;
+
 -- Dumping structure for table db_cdc.tbl_alumni
 CREATE TABLE IF NOT EXISTS `tbl_alumni` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -33,8 +68,24 @@ CREATE TABLE IF NOT EXISTS `tbl_alumni` (
 -- Dumping data for table db_cdc.tbl_alumni: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_alumni` DISABLE KEYS */;
 REPLACE INTO `tbl_alumni` (`id`, `npm`, `nama`, `telp`, `email`, `kode_prodi`, `tahun_lulus`, `status`, `remark`) VALUES
-	(1, '1', 'aaa', '123', '1@a.com', '1', '1234', 1, '');
+	(1, '1', 'aaa', '123', '1@a.com', '1', '1234', 2, '');
 /*!40000 ALTER TABLE `tbl_alumni` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_contact_us
+CREATE TABLE IF NOT EXISTS `tbl_contact_us` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `pesan` text NOT NULL,
+  `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_cdc.tbl_contact_us: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_contact_us` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_contact_us` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_tracer
 CREATE TABLE IF NOT EXISTS `tbl_tracer` (
@@ -169,11 +220,49 @@ CREATE TABLE IF NOT EXISTS `tbl_tracer` (
   `f1753` varchar(100) NOT NULL,
   `f1754b` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table db_cdc.tbl_tracer: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_tracer` DISABLE KEYS */;
+REPLACE INTO `tbl_tracer` (`id`, `npm`, `kode_pt`, `tahun_lulus`, `kode_prodi`, `nama`, `telp`, `email`, `f21`, `f22`, `f23`, `f24`, `f25`, `f26`, `f27`, `f301`, `f302`, `f303`, `f401`, `f402`, `f403`, `f404`, `f405`, `f406`, `f407`, `f408`, `f409`, `f410`, `f411`, `f412`, `f413`, `f414`, `f415`, `f416`, `f501`, `f502`, `f503`, `f6`, `f7`, `f7a`, `f8`, `f901`, `f902`, `f903`, `f904`, `f905`, `f906`, `f1001`, `f1002`, `f1101`, `f1102`, `f1201`, `f1202`, `f1301`, `f1302`, `f1303`, `f14`, `f15`, `f1601`, `f1602`, `f1603`, `f1604`, `f1605`, `f1606`, `f1607`, `f1608`, `f1609`, `f1610`, `f1611`, `f1612`, `f1613`, `f1614`, `f171`, `f172b`, `f173`, `f175`, `f174b`, `f176b`, `f175a`, `f176ba`, `f177`, `f178b`, `f179`, `f1710b`, `f1711`, `f1712b`, `f1713`, `f1714b`, `f1715`, `f1716b`, `f1717`, `f1718b`, `f1719`, `f1720b`, `f1721`, `f1722b`, `f1723`, `f1724b`, `f1725`, `f1726b`, `f1727`, `f1728b`, `f1729`, `f1730b`, `f1731`, `f1732b`, `f1733`, `f1734b`, `f1735`, `f1736b`, `f1737`, `f1738b`, `f1737a`, `f1738ba`, `f1739`, `f1740b`, `f1741`, `f1742b`, `f1743`, `f1744b`, `f1745`, `f1746b`, `f1747`, `f1748b`, `f1749`, `f1750b`, `f1751`, `f1752b`, `f1753`, `f1754b`) VALUES
+	(1, '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '2', '', '1', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 /*!40000 ALTER TABLE `tbl_tracer` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_vacancy
+CREATE TABLE IF NOT EXISTS `tbl_vacancy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kode_pt` varchar(100) NOT NULL,
+  `nama_pt` varchar(100) NOT NULL,
+  `date_posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `due_date` date NOT NULL,
+  `location` varchar(100) NOT NULL,
+  `job_title` varchar(100) NOT NULL,
+  `salary` varchar(100) NOT NULL,
+  `requirement` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_cdc.tbl_vacancy: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_vacancy` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_vacancy` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.user
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `level` enum('admin','user') NOT NULL,
+  `blokir` enum('N','Y') NOT NULL,
+  `id_sessions` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table db_cdc.user: ~0 rows (approximately)
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+REPLACE INTO `user` (`id`, `username`, `password`, `email`, `level`, `blokir`, `id_sessions`) VALUES
+	(1, 'agus@gmail.com', '$2y$10$iqyRa5vI.x0IrfQPAvlVYucJE7YMqNMjrW5adwR4CSs1CFn.U0k5e', 'admin@gmai.com', 'admin', 'N', '');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
