@@ -271,7 +271,7 @@ class Tracer_model extends CI_Model
         $this->db->update('tbl_tracer', $data);
 
         if ($this->input->post('f1001') !== "1") {
-            $status = '17';
+            $status = '16';
         } else {
             $status = '10';
         }
