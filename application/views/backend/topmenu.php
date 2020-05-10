@@ -317,143 +317,35 @@
                                             </div>
                                         </th>
                                         <th>Judul</th>
-                                        <th>Linked to</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Profile</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Visi & Misi</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Struktur Organisasi</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Pelatihan Softskills</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Pelatihan PPK</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <td class="table-user">
-                                            <b>Artikel Pelatihan Softskills</b>
-                                        </td>
-                                        <td>
-                                            <span class="text-muted">Sub Menu / Menu</span>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
-                                                <i class="fas fa-user-edit"></i>
-                                            </a>
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    foreach ($artikel as $ar) {
+                                    ?>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
+                                                    <label class="custom-control-label" for="table-check-all"></label>
+                                                </div>
+                                            </th>
+                                            <td class="table-user">
+                                                <b><?= $ar->judul ?></b>
+                                            </td>
+                                            <td class="table-actions">
+                                                <a href="editArtikel/<?= $ar->id ?>" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
+                                                    <i class="fas fa-user-edit"></i>
+                                                </a>
+                                                <a href="deleteArtikel/<?= $ar->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

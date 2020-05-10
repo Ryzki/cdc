@@ -36,7 +36,8 @@ class Dashboard extends CI_Controller
         $data = array('data' => '');
         $data['menu'] = $this->landing_page_model->getMenu();
         $data['submenu'] = $this->landing_page_model->getSubMenu();
-        $data['menukaki'] = $this->backend_user_model->getMenuKaki('tbl_menu_kaki')->result();
+        $data['menukaki'] = $this->backend_user_model->tampil_data('tbl_menu_kaki')->result();
+        $data['artikel'] = $this->backend_user_model->tampil_data('tbl_artikel')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -293,9 +294,12 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $data['menu'] = $this->backend_user_model->tampil_data('tbl_menu')->result();
+        $data['submenu'] = $this->backend_user_model->tampil_data('tbl_submenu')->result();
+
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
-        $this->load->view('backend/artikel');
+        $this->load->view('backend/artikel', $data);
         $this->load->view('backend/footer');
     }
 
@@ -339,6 +343,69 @@ class Dashboard extends CI_Controller
         );
 
         $this->backend_user_model->insert_data($data, 'tbl_menu_kaki');
+        redirect('backend/dashboard/profile');
+    }
+
+    public function tambahArtikel()
+    {
+        $judul = $this->input->post('judul');
+        $menu = $this->input->post('menu');
+        $submenu = $this->input->post('submenu');
+        $konten = $this->input->post('konten');
+
+        $data = array(
+            'judul' => $judul,
+            'menu' => $menu,
+            'sub_menu' => $submenu,
+            'konten' => $konten,
+        );
+
+        $this->backend_user_model->insert_data($data, 'tbl_artikel');
+        redirect('backend/dashboard/profile');
+    }
+
+    public function editArtikel()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $data['menu'] = $this->backend_user_model->tampil_data('tbl_menu')->result();
+        $data['submenu'] = $this->backend_user_model->tampil_data('tbl_submenu')->result();
+        $data['artikel'] = $this->backend_user_model->tampil_data('tbl_artikel')->result();
+
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/artikel_edit', $data);
+        $this->load->view('backend/footer');
+    }
+
+    public function editArtikelAksi()
+    {
+        $id = $this->input->post('id');
+        $judul = $this->input->post('judul');
+        $menu = $this->input->post('menu');
+        $submenu = $this->input->post('submenu');
+        $konten = $this->input->post('konten');
+
+        $data = array(
+            'judul' => $judul,
+            'menu' => $menu,
+            'sub_menu' => $submenu,
+            'konten' => $konten,
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->backend_user_model->update_data($where, $data, 'tbl_artikel');
+
         redirect('backend/dashboard/profile');
     }
 

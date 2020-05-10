@@ -35,18 +35,35 @@
                 <div class="col-md-12">
 
                     <div class="col-md-12 mt-4">
-                        <form action="#" method="POST">
+                        <form action="tambahArtikel" method="POST">
                             <div class="form-group">
                                 <label>Judul</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="judul" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Menu</label>
-                                <input type="text" class="form-control">
+                                <select name="menu" id="menu" class="form-control">
+                                    <?php
+                                    foreach ($menu as $mn) {
+                                    ?>
+                                        <option value="<?= $mn->menu ?>"><?= $mn->menu ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Sub Menu</label>
-                                <input type="text" class="form-control">
+                                <select name="submenu" id="submenu" class="form-control">
+                                    <option value="">None - Direct Link</option>
+                                    <?php
+                                    foreach ($submenu as $sbm) {
+                                    ?>
+                                        <option value="<?= $sbm->submenu ?>"><?= $sbm->submenu ?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Gambar Utama</label>
@@ -70,10 +87,9 @@
                             </div>
                             <div class="form-group">
                                 <label class="mt-4">Isi Artikel</label>
-                                <textarea name="ckeditor" id="ckeditor">
+                                <textarea name="konten" id="ckeditor">
                                 </textarea>
                             </div>
-
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
