@@ -20,6 +20,11 @@ class Login extends CI_Controller
 	}
 
 
+	public function daftar_baru()
+	{
+		$this->load->view('login/daftar_baru');
+	}
+
 	public function sign_up()
 	{
 		$this->company_model->sign_up();

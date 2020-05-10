@@ -26,14 +26,19 @@ class Company_model extends CI_Model
         $cek_company = $this->db->get_where('mst_company', ['email_pt' => $email])->row_array();
         if ($cek_company) {
             if (password_verify($password, $cek_company['password'])) {
-                $sess_data = array(
-                    'email' => $cek_company['email_pt'],
-                    'nama' => $cek_company['nama_pt'],
-                    'jenis' => $cek_company['jenis_pt'],
-                );
-                $this->session->set_userdata($sess_data);
-                $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Login!</div>');
-                redirect('login/perusahaan', $sess_data);
+                if ($cek_company['is_active'] == 0) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-warning text-center" role="alert">User Is Not Active !, Please Call Our Support</div>');
+                    redirect('login/perusahaan');
+                } else {
+                    $sess_data = array(
+                        'email' => $cek_company['email_pt'],
+                        'nama' => $cek_company['nama_pt'],
+                        'jenis' => $cek_company['jenis_pt'],
+                        'logged_in' => TRUE,
+                    );
+                    $this->session->set_userdata($sess_data);
+                    redirect('backend/Dashboard/company', $sess_data);
+                }
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Password Incorrect!</div>');
                 redirect('login/perusahaan');
