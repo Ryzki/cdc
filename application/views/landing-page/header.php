@@ -231,26 +231,27 @@
                             <ul class="menuzord-menu" style="color: #888">
                                 <li class="active"><a href="#home">Home</a>
                                 </li>
-                                <li class=""><a href="#about">About</a>
-                                    <ul class="dropdown">
-                                        <li><a href="">Profile</a></li>
-                                        <li><a href="">Visi & Misi</a></li>
-                                        <li><a href="">Struktur</a></li>
-                                        <li><a href="<?= base_url('backend/dashboard/login') ?>">Login</a></li>
-                                    </ul>
-                                </li>
-                                <li class=""><a href="#career">Pelatihan</a>
-                                    <ul class="dropdown">
-                                        <li><a href="">Softskills</a></li>
-                                        <li><a href="">Pelatihan Pusat Karir</a></li>
-                                    </ul>
-                                </li>
-                                <li class=""><a href="Welcome/blog">Artikel</a>
-                                </li>
-                                <li class=""><a href="JobDetil/all">Lowongan Kerja</a>
-                                </li>
-                                <li class=""><a href="Welcome/contact">Hubungi Kami</a>
-                                </li>
+                                <?php
+                                foreach ($menu as $mn) {
+                                ?>
+                                    <li class=""><a href="#about"><?= $mn->menu ?></a>
+                                        <!-- Buat kondisi apakah ada Submenu -->
+                                        <?php
+                                        $data['submenu'] = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
+                                        if (!empty($data['submenu'])) {
+                                            foreach ($submenu as $sbm) {
+                                        ?>
+                                                <ul class="dropdown">
+                                                    <li><a href=""><?= $sbm->submenu ?></a></li>
+                                                </ul>
+                                        <?php
+                                            }
+                                        }
+                                        ?>
+                                    </li>
+                                <?php
+                                }
+                                ?>
                                 <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
                                 </li>
                             </ul>

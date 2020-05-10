@@ -5,10 +5,13 @@ class Welcome extends CI_Controller
 {
 	public function index()
 	{
-		$data['menu'] = $this->prodi_model->tampil_data('prodi')->result();
+		$data['menu'] = $this->landing_page_model->getMenu();
+		$data['submenu'] = $this->landing_page_model->getSubMenu();
 
-		$this->load->view('landing-page/header');
-		$this->load->view('landing-page/landing_page', $data);
+		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
+
+		$this->load->view('landing-page/header', $data);
+		$this->load->view('landing-page/landing_page');
 		$this->load->view('landing-page/footer');
 	}
 
