@@ -364,7 +364,7 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/profile');
     }
 
-    public function editArtikel()
+    public function editArtikel($id)
     {
         if (!isset($this->session->userdata['username'])) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -375,9 +375,11 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $where = array('id' => $id);
+        $data['artikel'] = $this->backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
+
         $data['menu'] = $this->backend_user_model->tampil_data('tbl_menu')->result();
         $data['submenu'] = $this->backend_user_model->tampil_data('tbl_submenu')->result();
-        $data['artikel'] = $this->backend_user_model->tampil_data('tbl_artikel')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');

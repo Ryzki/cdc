@@ -42,6 +42,7 @@
                                 <div class="form-group">
                                     <label>Judul</label>
                                     <input type="text" name="judul" class="form-control" value="<?= $ar->judul ?>">
+                                    <input type="hidden" name="id" class="form-control" value="<?= $ar->id ?>">
                                 </div>
                                 <div class="form-group">
                                     <label>Menu</label>

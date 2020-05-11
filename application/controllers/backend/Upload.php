@@ -20,17 +20,10 @@ class Upload extends CI_Controller
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_upload('berkas')) {
-            $data = array('data' => $this->upload->display_errors());
-            $this->load->view('backend/header');
-            $this->load->view('backend/sidebar');
-            $this->load->view('backend/topmenu', $data);
-            $this->load->view('backend/footer');
+            // $data = array('data' => $this->upload->display_errors());
+            redirect(base_url('backend/dashboard/profile'));
         } else {
-
-            $this->load->view('backend/header');
-            $this->load->view('backend/sidebar');
-            $this->load->view('backend/topmenu', array('data' => 'Sukses'));
-            $this->load->view('backend/footer');
+            redirect(base_url('backend/dashboard/profile'));
         }
     }
 }

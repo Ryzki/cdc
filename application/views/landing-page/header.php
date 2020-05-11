@@ -245,7 +245,7 @@
                                 ?>
 
                                 <?php foreach ($menu as $mn) { ?>
-                                    <li class=""><a href="#about"><?= $mn->menu ?></a>
+                                    <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
                                         <?php $aaa = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
                                         if (!empty($aaa)) {
