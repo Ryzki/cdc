@@ -1,12 +1,14 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+class Landing extends CI_Controller
 {
 	public function index()
 	{
 		$data['menu'] = $this->landing_page_model->getMenu();
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
+		$data['kaki'] = $this->landing_page_model->getKaki('tbl_menu_kaki')->result();
+		$data['video'] = $this->landing_page_model->getKaki('tbl_video')->result();
 
 
 		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();

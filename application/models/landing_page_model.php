@@ -11,4 +11,8 @@ class Landing_page_model extends CI_Model
     {
         return $data['submenu'] = $this->db->get('tbl_submenu')->result();
     }
+    public function getKaki($table)
+    {
+        return $this->db->get($table);
+    }
 }

@@ -90,9 +90,11 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $data['video'] = $this->backend_user_model->tampil_data('tbl_video')->result();
+
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
-        $this->load->view('backend/video');
+        $this->load->view('backend/video', $data);
         $this->load->view('backend/footer');
     }
 
