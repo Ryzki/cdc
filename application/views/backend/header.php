@@ -21,4 +21,7 @@
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/css/argon.min5438.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/sweetalert2/dist/sweetalert2.min.css">
+    <script src="<?= base_url('assets_backend') ?>/vendor/jquery/dist/jquery.min.js"></script>
 </head>

@@ -24,31 +24,31 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/company') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/company') ?>">
                                 <i class="ni ni-shop text-red"></i>
                                 <span class="nav-link-text">Dashboards</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/company_profile') ?>">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('backend/company/company_profile') ?>">
                                 <i class="ni ni-book-bookmark text-blue"></i>
                                 <span class="nav-link-text">Profile</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/company_create_vacancy') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/company/company_vacancy') ?>">
                                 <i class="ni ni-world text-blue"></i>
-                                <span class="nav-link-text">Create Vacancy</span>
+                                <span class="nav-link-text">Vacancy</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/company/create_agenda') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/company/agenda') ?>">
                                 <i class="ni ni-single-02 text-purple"></i>
-                                <span class="nav-link-text">Create Agenda</span>
+                                <span class="nav-link-text">Agenda</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/company/apply_vacancy') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/company/apply_vacancy') ?>">
                                 <i class="ni ni-chat-round text-green"></i>
                                 <span class="nav-link-text">Apply For Job</span>
                             </a>
@@ -61,7 +61,7 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/company/logout_company') ?>">
                                 <i class="ni ni-lock-circle-open text-black"></i>
                                 <span class="nav-link-text">Logout</span>
                             </a>
@@ -269,7 +269,7 @@
                             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-4.jpg">
+                                        <img alt="Image placeholder" src="<?= base_url('assets') ?>/images/<?= $image['image'] ?>">
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold"><?= strtoupper($nama_company) ?></span>
@@ -297,7 +297,7 @@
                                     <span>Support</span>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="<?= base_url('backend/company/logout') ?>" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
                                     <span>Logout</span>
                                 </a>
