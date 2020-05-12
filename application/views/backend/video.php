@@ -38,7 +38,6 @@
                     </div>
                     <div class="col-md-12 mt-4">
                         <?php echo form_open_multipart('backend/upload/tambah_video');
-                        // var_dump($video->deskripsi);
                         foreach ($video as $vd) {
                         ?>
                             <div class="form-group">

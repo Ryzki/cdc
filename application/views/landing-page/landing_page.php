@@ -656,269 +656,170 @@
 
 
           <!-- Section: -->
-          <section data-bg-img="<?= base_url('assets/') ?>images/bg6.jpg">
+          <?php
+          foreach ($gb_testimoni as $gb) {
+          ?>
+            <section data-bg-img="<?= base_url('assets/') ?>images/testimoni/<?= $gb->gb_utama ?>">
+            <?php
+          }
+            ?>
             <div class="container-fluid p-0">
               <div class="section-content">
                 <div class="row">
                   <div class="col-md-6"></div>
                   <div class="col-md-6 bg-theme-colored">
-                    <h3 class="text-center line-height-1 text-white mt-100 mb-15 mt-sm-0 pt-sm-100">Our Client's Say</h3>
+                    <h3 class="text-center line-height-1 text-white mt-100 mb-15 mt-sm-0 pt-sm-100">Testimoni</h3>
                     <div class="owl-carousel-1col pr-150 pl-150 pr-sm-50 pl-sm-50 pb-90" data-dots="true">
-                      <div class="item">
-                        <div class="testimonial-wrapper text-center">
-                          <div class="content">
-                            <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
-                            <a class="mt-20 mb-15 display-block" href="#">
-                              <img alt="" src="<?= base_url('assets/') ?>images/s1.jpg" class="img-circle">
-                            </a>
-                            <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
-                            <h4 class="service-box-title font-weight-800 text-white-f3">Corvin Adams</h4>
-                            <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">web Desinger (ceo)</span>
+                      <?php
+                      foreach ($testimoni as $ts) {
+                      ?>
+                        <div class="item">
+                          <div class="testimonial-wrapper text-center">
+                            <div class="content">
+                              <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
+                              <a class="mt-20 mb-15 display-block" href="#">
+                                <img alt="" src="<?= base_url('assets/') ?>images/testimoni/klien/<?= $ts->gambar ?>" class="img-circle">
+                              </a>
+                              <p class="mb-sm-10 text-white-f3"><?= $ts->testimoni ?></p>
+                              <h4 class="service-box-title font-weight-800 text-white-f3"><?= $ts->nama ?></h4>
+                              <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0"><?= $ts->profesi ?></span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="item">
-                        <div class="testimonial-wrapper text-center">
-                          <div class="content">
-                            <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
-                            <a class="mt-20 mb-15 display-block" href="#">
-                              <img alt="" src="<?= base_url('assets/') ?>images/s2.jpg" class="img-circle">
-                            </a>
-                            <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
-                            <h4 class="service-box-title font-weight-800 text-white-f3">Jhon Doe</h4>
-                            <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">Web Developer (Maneger)</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="testimonial-wrapper text-center">
-                          <div class="content">
-                            <i class="fa fa-quote-left text-theme-colored2 font-42 mt-15 mb-10 mb-sm-0"></i>
-                            <a class="mt-20 mb-15 display-block" href="#">
-                              <img alt="" src="<?= base_url('assets/') ?>images/s1.jpg" class="img-circle">
-                            </a>
-                            <p class="mb-sm-10 text-white-f3">Lorem Ipsum has been the industry's standard dummy text ever, when an took a galley of type and it to make a type book.It has survived the leap into</p>
-                            <h4 class="service-box-title font-weight-800 text-white-f3">Corvin Adams</h4>
-                            <span class="text-theme-colored2 font-14 font-weight-600 mt-5 mt-sm-0">Web Desinger (QC)</span>
-                          </div>
-                        </div>
-                      </div>
+                      <?php
+                      }
+                      ?>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-
-          <!-- Section:  -->
-
-
-
-          <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="<?= base_url('assets/') ?>images/malang.jpg" data-parallax-ratio="0.7">
-            <div class="container pt-100 pb-100">
-              <div class="section-title">
-                <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    <h2 class="text-white text-center line-height-1 mt-0">Our Success</h2>
-                    <p class="text-white-f2 text-center">Lorem ipsum dolor simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                  </div>
-                </div>
-              </div>
-              <div class="section-content">
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="funfact">
-                          <i class="pe-7s-notebook text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                          <div class="ml-60">
-                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="280" data-animation-duration="2000">0</h2>
-                            <div class="clearfix"></div>
-                            <h5 class="text-white-f2">Courses</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <div class="funfact">
-                          <i class="pe-7s-users text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                          <div class="ml-60">
-                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="15K" data-animation-duration="2500">0</h2>
-                            <div class="clearfix"></div>
-                            <h5 class="text-white-f2">Students</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="funfact">
-                          <i class="pe-7s-study text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                          <div class="ml-60">
-                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="10K" data-animation-duration="3000">0</h2>
-                            <div class="clearfix"></div>
-                            <h5 class="text-white-f2">Graduate Students</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="funfact">
-                          <i class="pe-7s-cup text-theme-colored2 mt-20 font-48 pull-left flip"></i>
-                          <div class="ml-60">
-                            <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="189" data-animation-duration="3000">0</h2>
-                            <div class="clearfix"></div>
-                            <h5 class="text-white-f2">Awards</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <!-- Students Join 1 Area Start Here -->
-            <div class="students-join1-area">
-              <div class="container">
-                <div class="students-join1-wrapper">
-                  <div class="students-join1-left">
-                    <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
-                      <ul class="ri-grid-list">
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student1.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student2.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student3.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student4.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student5.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student6.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student7.jpg" alt=""></a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="<?= base_url('assets/') ?>images/students/student8.jpg" alt=""></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="students-join1-right">
-                    <div>
-                      <h2><span> 29,122,093</span> <br> Students.</h2>
-                      <a href="#" class="join-now-btn">Join With Us</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Students Join 1 Area End Here -->
-
-            <!-- Caraousel -->
-            <section>
-              <div class="container">
-                <h2 class="text-center line-height-1 mt-0" style="margin-bottom: 30px;">Our<span class="text-theme-colored3"> Partner</span></h2>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="owl-carousel-6col" data-dots="true" data-nav="true">
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/a.jpg" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/b.jpg" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/c.png" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/d.png" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/e.jpg" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/f.jpg" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/g.png" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/h.png" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/i.jpg" alt=""></div>
-                      <div class="item"><img src="<?= base_url('assets/') ?>images/brand/d.png" alt=""></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </section>
-            <!-- end caraousel --->
-          </section>
 
-          <!-- Section: blog -->
+            <!-- Section:  -->
+
+
+            <?php
+            foreach ($achievement as $ac) {
+            ?>
+              <section class="divider parallax layer-overlay overlay-dark-8" data-bg-img="<?= base_url('assets/') ?>images/achievement/<?= $ac->gambar ?>" data-parallax-ratio="0.7">
+                <div class="container pt-100 pb-100">
+                  <div class="section-title">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-white text-center line-height-1 mt-0"><?= $ac->judul ?></h2>
+                        <p class="text-white-f2 text-center"><?= $ac->deskripsi ?></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-content">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <div class="funfact">
+                              <i class="pe-7s-notebook text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                              <div class="ml-60">
+                                <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="<?= $ac->kursus ?>" data-animation-duration="2000">0</h2>
+                                <div class="clearfix"></div>
+                                <h5 class="text-white-f2">Pelatihan</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                            <div class="funfact">
+                              <i class="pe-7s-users text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                              <div class="ml-60">
+                                <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="<?= $ac->jobseeker ?>" data-animation-duration="2500">0</h2>
+                                <div class="clearfix"></div>
+                                <h5 class="text-white-f2">Job Seeker</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="funfact">
+                              <i class="fa fa-building-o text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                              <div class="ml-60">
+                                <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="<?= $ac->company ?>" data-animation-duration="3000">0</h2>
+                                <div class="clearfix"></div>
+                                <h5 class="text-white-f2">Mitra Perusahaan</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="funfact">
+                              <i class="fa fa-bullhorn text-theme-colored2 mt-20 font-48 pull-left flip"></i>
+                              <div class="ml-60">
+                                <h2 class="animate-number text-white-f1 mt-0 mb-0 font-48 line-bottom-white" data-value="<?= $ac->lowongan ?>" data-animation-duration="3000">0</h2>
+                                <div class="clearfix"></div>
+                                <h5 class="text-white-f2">Lowongan</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <?php
+            }
+            ?>
+
+            <section>
+              <!-- Students Join 1 Area Start Here -->
+              <div class="students-join1-area">
+                <div class="container">
+                  <div class="students-join1-wrapper">
+                    <div class="students-join1-left">
+                      <div id="ri-grid" class="author-banner-bg ri-grid header text-center">
+                        <ul class="ri-grid-list">
+                          <?php
+                          foreach ($member as $mr) {
+                          ?>
+                            <li>
+                              <a href="#"><img src="<?= base_url('assets/') ?>images/member/<?= $mr->gambar ?>" alt=""></a>
+                            </li>
+                          <?php
+                          }
+                          ?>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="students-join1-right">
+                      <div>
+                        <h2><span> 2,541</span> <br> Member.</h2>
+                        <a href="#" class="join-now-btn">Join With Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Students Join 1 Area End Here -->
+
+              <!-- Caraousel -->
+              <section>
+                <div class="container">
+                  <h2 class="text-center line-height-1 mt-0" style="margin-bottom: 30px;">Mitra<span class="text-theme-colored3"> Perusahaan</span></h2>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="owl-carousel-6col" data-dots="true" data-nav="true">
+                        <?php
+                        foreach ($partner as $pr) {
+                        ?>
+                          <div class="item"><img src="<?= base_url('assets/') ?>images/partner/<?= $pr->gambar ?>" alt=""></div>
+                        <?php
+                        }
+                        ?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- end caraousel --->
+            </section>
+
+            <!-- Section: blog -->
 
         </div>
         <!-- end main-content -->

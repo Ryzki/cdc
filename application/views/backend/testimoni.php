@@ -35,31 +35,34 @@
             </div>
             <!-- Card body -->
             <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label>Upload Gambar Utama</label>
-                        <input type="file" class="form-control" id="customFileLang" lang="en">
-                    </div>
-                    <div class="mt-3">
-                        <table class="table table-bordered">
-                            <tr>
-                                <td>Gambar yang digunakan saat ini</td>
-                                <td>
+                <div class="mt-3">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Gambar yang digunakan saat ini</td>
+                            <td>
+                                <?php
+                                foreach ($gambar as $ts) {
+                                ?>
                                     ​<picture>
-
-                                        <img src="<?= base_url('assets/') ?>images/bg6.jpg" class="img-fluid img-thumbnail" alt="Logo">
+                                        <img src="<?= base_url('assets/') ?>images/testimoni/<?= $ts->gb_utama ?>" class="img-fluid img-thumbnail" alt="Logo">
                                     </picture>
-                                </td>
-                                <td class="table-actions">
-                                    <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-sm mt-3">Upload</button>
-                </form>
+                                <?php
+                                }
+                                ?>
+                            </td>
+                            <td style="width: 30%;">
+                                <?php echo form_open_multipart('backend/upload/tambah_testimoni');
+                                ?>
+                                <div class="form-group">
+                                    <label>Upload Gambar Utama</label>
+                                    <input type="file" class="form-control" id="customFileLang" lang="en" name="testimoni">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm mt-3">Upload</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
         </div>
@@ -86,7 +89,7 @@
                                         <h3 class="mb-0">Says</h3>
                                     </div>
                                     <div class="col-6 text-right">
-                                        <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Gambar">
+                                        <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="modal" data-target="#modal-testimoni" data-original-title="Tambah Gambar">
                                             <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
                                             <span class="btn-inner--text">Tambah</span>
                                         </a>
@@ -112,56 +115,37 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                    <label class="custom-control-label" for="table-check-all"></label>
-                                                </div>
-                                            </th>
-                                            <td>
-                                                <span class="text-muted">Arthur JR</span>
-                                            </td>
-                                            <td>
-                                                <a href="#!" class="font-weight-bold">Buruh</a>
-                                            </td>
-                                            <td>
-                                                <span class="text-muted">Oke, ini aplikasi bagus</span>
-                                            </td>
-                                            <td>
-                                                <img src="<?= base_url('assets/') ?>images/s2.jpg" alt="galeri">
-                                            </td>
-                                            <td class="table-actions">
-                                                <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                    <label class="custom-control-label" for="table-check-all"></label>
-                                                </div>
-                                            </th>
-                                            <td>
-                                                <span class="text-muted">Agus Salim</span>
-                                            </td>
-                                            <td>
-                                                <a href="#!" class="font-weight-bold">Dokter</a>
-                                            </td>
-                                            <td>
-                                                <span class="text-muted">Oke, ini aplikasi bagus</span>
-                                            </td>
-                                            <td>
-                                                <img src="<?= base_url('assets/') ?>images/s1.jpg" alt="galeri">
-                                            </td>
-                                            <td class="table-actions">
-                                                <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                        foreach ($list as $ls) {
+                                        ?>
+                                            <tr>
+                                                <th>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input class="custom-control-input" id="table-check-all" type="checkbox">
+                                                        <label class="custom-control-label" for="table-check-all"></label>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <span class="text-muted"><?= $ls->nama ?></span>
+                                                </td>
+                                                <td>
+                                                    <a href="#!" class="font-weight-bold"><?= $ls->profesi ?></a>
+                                                </td>
+                                                <td>
+                                                    <span class="text-muted"><?= $ls->testimoni ?></span>
+                                                </td>
+                                                <td>
+                                                    <img src="<?= base_url('assets/') ?>images/<?= $ls->gambar ?>" alt="galeri">
+                                                </td>
+                                                <td class="table-actions">
+                                                    <a href="deleteTestimoni/<?= $ls->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -169,6 +153,44 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tambah menu-->
+    <div class="modal fade" id="modal-testimoni" tabindex="-1" role="dialog" aria-labelledby="modal-testimoni" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class=" modal-title" id="modal-title-default">Tambah Testimoni</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php echo form_open_multipart('backend/upload/testimoni_gambar'); ?>
+                    <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" name="nama" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Profesi</label>
+                        <input type="text" name="profesi" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Testimoni</label>
+                        <input type="text" name="testimoni" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Photo</label>
+                        <input type="file" class="form-control" id="customFileLang" lang="en" name="photo">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>

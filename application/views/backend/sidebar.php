@@ -79,6 +79,12 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/member') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> M </span>
+                                            <span class="sidenav-normal"> Member </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="<?= base_url('backend/dashboard/partner') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> P </span>
                                             <span class="sidenav-normal"> Partner Kampus </span>

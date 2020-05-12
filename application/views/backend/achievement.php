@@ -37,53 +37,55 @@
                         <strong>Achievement : </strong> Halaman achievement merupakan informasi pencapaian yang sudah didapat.
                     </div>
                     <div class="col-md-12 mt-4">
-                        <form action="#" method="POST">
+                        <?php
+                        foreach ($achievement as $ac) {
+                        ?>
+                            <?php echo form_open_multipart('backend/upload/achievement'); ?>
                             <div class="form-group">
                                 <label>Judul</label>
-                                <input type="text" class="form-control" placeholder="Our Success">
+                                <input type="text" name="judul" class="form-control" value="<?= $ac->judul ?>">
+                                <input type="hidden" name="id" class="form-control" value="<?= $ac->id ?>">
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi teks</label>
-                                <input type="text" class="form-control" placeholder="Bisa diisi kutipan atau visi dan misi">
+                                <input type="text" name="deskripsi" class="form-control" value="<?= $ac->deskripsi ?>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label>Pelatihan</label>
-                                <input type="number" class="form-control" placeholder="138">
+                                <input type="text" name="kursus" class="form-control" value="<?= $ac->kursus ?>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label>Member</label>
-                                <input type="number" class="form-control" placeholder="2457">
+                                <input type="text" name="jobseeker" class="form-control" value="<?= $ac->jobseeker ?>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label>Mitra Perusahaan</label>
-                                <input type="number" class="form-control" placeholder="38">
+                                <input type="text" name="company" class="form-control" value="<?= $ac->company ?>">
                             </div>
-                            <div class="form-group">
-                                <label>Success</label>
-                                <input type="number" class="form-control" placeholder="178">
+                            <div class=" form-group">
+                                <label>Lowongan</label>
+                                <input type="text" name="lowongan" class="form-control" value="<?= $ac->lowongan ?>">
                             </div>
-                            <div class="form-group">
+                            <div class=" form-group">
                                 <label>Gambar Background</label>
-                                <input type="file" class="form-control" id="customFileLang" lang="en">
+                                <input type="file" class="form-control" id="customFileLang" lang="en" name="latar">
                                 <table class="table table-bordered mt-2">
                                     <tr>
                                         <td>Gambar latar yang digunakan saat ini</td>
                                         <td>
                                             ​<picture>
 
-                                                <img src="<?= base_url('assets/') ?>images/malang.jpg" class="img-fluid img-thumbnail" alt="Logo">
+                                                <img src="<?= base_url('assets/') ?>images/achievement/<?= $ac->gambar ?>" class="img-fluid img-thumbnail" alt="Logo">
                                             </picture>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
                                         </td>
                                     </tr>
                                 </table>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                        </form>
+                            </form>
+                        <?php
+                        }
+                        ?>
                     </div>
 
                 </div>

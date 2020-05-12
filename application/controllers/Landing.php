@@ -9,6 +9,11 @@ class Landing extends CI_Controller
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
 		$data['kaki'] = $this->landing_page_model->getKaki('tbl_menu_kaki')->result();
 		$data['video'] = $this->landing_page_model->getKaki('tbl_video')->result();
+		$data['testimoni'] = $this->landing_page_model->getKaki('tbl_says')->result();
+		$data['gb_testimoni'] = $this->landing_page_model->getKaki('tbl_testimoni')->result();
+		$data['achievement'] = $this->landing_page_model->getKaki('tbl_achievement')->result();
+		$data['member'] = $this->landing_page_model->getKaki('tbl_member')->result();
+		$data['partner'] = $this->landing_page_model->getKaki('tbl_partner')->result();
 
 
 		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
