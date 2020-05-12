@@ -29,13 +29,32 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.mst_company: ~1 rows (approximately)
+-- Dumping data for table db_cdc.mst_company: ~0 rows (approximately)
 /*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
 REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `password`, `is_active`, `date_input`) VALUES
 	(1, '', 'asdgasdf', 'asdgasdf', 'arthur@jai.co.id', 'admin', 0, '2020-05-10 08:38:31'),
 	(3, '', 'scm', 'it', 'arthur@jai.co.id', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 1, '2020-05-10 11:06:42'),
 	(4, '', 'solusi cipta media', 'Programming', 'agus@gmail.com', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 1, '2020-05-10 18:20:39');
 /*!40000 ALTER TABLE `mst_company` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_achievement
+CREATE TABLE IF NOT EXISTS `tbl_achievement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(100) NOT NULL DEFAULT '',
+  `deskripsi` text NOT NULL,
+  `company` varchar(10) NOT NULL DEFAULT '',
+  `jobseeker` varchar(10) NOT NULL DEFAULT '',
+  `lowongan` varchar(10) NOT NULL DEFAULT '',
+  `kursus` varchar(10) NOT NULL DEFAULT '',
+  `gambar` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_achievement: ~1 rows (approximately)
+/*!40000 ALTER TABLE `tbl_achievement` DISABLE KEYS */;
+REPLACE INTO `tbl_achievement` (`id`, `judul`, `deskripsi`, `company`, `jobseeker`, `lowongan`, `kursus`, `gambar`) VALUES
+	(1, 'Our Success', 'Ini adalah hasil pencapaian yang sudah kami dapat hingga saat ini', '27', '2345', '157', '57', 'bg1.jpg');
+/*!40000 ALTER TABLE `tbl_achievement` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_agenda
 CREATE TABLE IF NOT EXISTS `tbl_agenda` (
@@ -82,10 +101,13 @@ CREATE TABLE IF NOT EXISTS `tbl_artikel` (
   `gambar` varchar(255) NOT NULL DEFAULT '',
   `konten` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table db_cdc.tbl_artikel: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_artikel` DISABLE KEYS */;
+REPLACE INTO `tbl_artikel` (`id`, `judul`, `menu`, `sub_menu`, `gambar`, `konten`) VALUES
+	(2, 'Visi & Misi', 'About', 'Visi & Misi', '', '<p><strong>Visi </strong></p>\r\n\r\n<p><strong>&ldquo;</strong>Menjadi pusat karir yang berkontribusi bagi pengembangan karir calon lulusan dan alumni UNIKAMA&rdquo;</p>\r\n\r\n<p>Misi</p>\r\n\r\n<ol>\r\n	<li>Menyelenggarakan pengembangan diri calon lulusan dan alumni untuk memasuki dunia kerja</li>\r\n	<li>Membangun kemitraan strategis dengan dunia usaha dan dunia industri</li>\r\n	<li>Mengelola informasi ketenagakerjaan yang relevan dengan kebutuhan calon lulusan dan alumni</li>\r\n	<li>Menyelenggarakan tracer study tingkat universitas yang berkualitas sesuasi dengan kebutuhan pengembangan karir lulusan dan kebutuhan pengguna lulusan</li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n'),
+	(3, 'Pelatihan', 'About', '', '', '<p>okokokokokokokok</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>yayayayay</p>\r\n\r\n<p>&nbsp;</p>\r\n');
 /*!40000 ALTER TABLE `tbl_artikel` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_contact_us
@@ -121,6 +143,43 @@ CREATE TABLE IF NOT EXISTS `tbl_job_seeker` (
 /*!40000 ALTER TABLE `tbl_job_seeker` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_job_seeker` ENABLE KEYS */;
 
+-- Dumping structure for table db_cdc.tbl_member
+CREATE TABLE IF NOT EXISTS `tbl_member` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gambar` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_member: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_member` DISABLE KEYS */;
+REPLACE INTO `tbl_member` (`id`, `gambar`) VALUES
+	(5, 'student1.jpg'),
+	(6, 'student2.jpg'),
+	(7, 'student3.jpg'),
+	(8, 'student4.jpg'),
+	(9, 'student5.jpg'),
+	(10, 'student6.jpg'),
+	(11, 'student7.jpg'),
+	(12, 'student8.jpg'),
+	(13, 'student3.jpg'),
+	(14, 'student1.jpg'),
+	(15, 'student2.jpg'),
+	(16, 'student4.jpg'),
+	(17, 'student5.jpg'),
+	(18, 'student6.jpg'),
+	(19, 'student7.jpg'),
+	(20, 'student8.jpg'),
+	(21, 'student1.jpg'),
+	(22, 'student2.jpg'),
+	(23, 'student3.jpg'),
+	(24, 'student4.jpg'),
+	(25, 'student5.jpg'),
+	(26, 'student6.jpg'),
+	(27, 'student7.jpg'),
+	(28, 'student8.jpg'),
+	(29, 'student8.jpg');
+/*!40000 ALTER TABLE `tbl_member` ENABLE KEYS */;
+
 -- Dumping structure for table db_cdc.tbl_menu
 CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -129,14 +188,12 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu: ~5 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 REPLACE INTO `tbl_menu` (`id`, `menu`, `link`) VALUES
 	(1, 'About', ''),
-	(2, 'Pelatihan', ''),
-	(3, 'Artikel', ''),
-	(4, 'Lowongan Kerja', ''),
-	(6, 'Hubungi Kami', '');
+	(4, 'Lowongan Kerja', 'http://ub.ac.id'),
+	(7, 'Hubungi Kami', 'backend/dashboard/apa');
 /*!40000 ALTER TABLE `tbl_menu` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_menu_kaki
@@ -145,15 +202,56 @@ CREATE TABLE IF NOT EXISTS `tbl_menu_kaki` (
   `menu` varchar(50) NOT NULL DEFAULT '',
   `link` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu_kaki: ~3 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu_kaki: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu_kaki` DISABLE KEYS */;
 REPLACE INTO `tbl_menu_kaki` (`id`, `menu`, `link`) VALUES
 	(1, 'Tracer Study', ''),
 	(2, 'Counseling Career', ''),
 	(3, 'Training Softskills', '');
 /*!40000 ALTER TABLE `tbl_menu_kaki` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_partner
+CREATE TABLE IF NOT EXISTS `tbl_partner` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) NOT NULL DEFAULT '',
+  `gambar` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_partner: ~10 rows (approximately)
+/*!40000 ALTER TABLE `tbl_partner` DISABLE KEYS */;
+REPLACE INTO `tbl_partner` (`id`, `nama`, `gambar`) VALUES
+	(3, 'PT. Pertamina', 'pertamina-head.jpg'),
+	(4, 'PT. Tokopedia', 'h.png'),
+	(5, 'PT. Nestle', 'd.png'),
+	(6, 'PT. PLN', 'c.png'),
+	(7, 'PT. Indonesia Power', 'b.jpg'),
+	(8, 'PT. Jatim Autocomp Indonesia', 'a.jpg'),
+	(9, 'Bank BCA', 'bca-head.jpg'),
+	(10, 'Toyota', 'g.png'),
+	(11, 'PT. Wijaya Karya', 'i.jpg'),
+	(12, 'Samsung', 'samsung-head.jpg');
+/*!40000 ALTER TABLE `tbl_partner` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_says
+CREATE TABLE IF NOT EXISTS `tbl_says` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL DEFAULT '',
+  `profesi` varchar(100) NOT NULL DEFAULT '',
+  `testimoni` text NOT NULL,
+  `gambar` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_says: ~3 rows (approximately)
+/*!40000 ALTER TABLE `tbl_says` DISABLE KEYS */;
+REPLACE INTO `tbl_says` (`id`, `nama`, `profesi`, `testimoni`, `gambar`) VALUES
+	(4, 'Agus', 'Karyawan Swasta', 'Menurut saya ini adalah aplikasi yang sangat bagus, bayangkan setelah lulus saya cukup mendaftar di aplikasi ini dan kemudian apply di suatu perusahaan, dan saat ini saya sudah diterima bekerja disebuah PMA perusahaan Jepang.', 's1.jpg'),
+	(5, 'Arthur', 'Karyawan PMA', 'Ini menarik hanya tinggal klik dan upload CV, kemudian saya mendapat panggilan dan diterima bekerja di perusahaan asing.', 's2.jpg'),
+	(6, 'Robert', 'Ninja', 'Apik boss', '1.jpg');
+/*!40000 ALTER TABLE `tbl_says` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_submenu
 CREATE TABLE IF NOT EXISTS `tbl_submenu` (
@@ -174,6 +272,19 @@ REPLACE INTO `tbl_submenu` (`id`, `submenu`, `menu`, `link`) VALUES
 	(5, 'Softskills', 'Pelatihan', ''),
 	(8, 'Pelatihan Pusat Karir', 'Pelatihan', 'belum ada link');
 /*!40000 ALTER TABLE `tbl_submenu` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_testimoni
+CREATE TABLE IF NOT EXISTS `tbl_testimoni` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gb_utama` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_testimoni: ~1 rows (approximately)
+/*!40000 ALTER TABLE `tbl_testimoni` DISABLE KEYS */;
+REPLACE INTO `tbl_testimoni` (`id`, `gb_utama`) VALUES
+	(13, '1.jpg');
+/*!40000 ALTER TABLE `tbl_testimoni` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_tracer
 CREATE TABLE IF NOT EXISTS `tbl_tracer` (
@@ -310,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tracer` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.tbl_tracer: ~1 rows (approximately)
+-- Dumping data for table db_cdc.tbl_tracer: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_tracer` DISABLE KEYS */;
 REPLACE INTO `tbl_tracer` (`id`, `npm`, `kode_pt`, `tahun_lulus`, `kode_prodi`, `nama`, `telp`, `email`, `f21`, `f22`, `f23`, `f24`, `f25`, `f26`, `f27`, `f301`, `f302`, `f303`, `f401`, `f402`, `f403`, `f404`, `f405`, `f406`, `f407`, `f408`, `f409`, `f410`, `f411`, `f412`, `f413`, `f414`, `f415`, `f416`, `f501`, `f502`, `f503`, `f6`, `f7`, `f7a`, `f8`, `f901`, `f902`, `f903`, `f904`, `f905`, `f906`, `f1001`, `f1002`, `f1101`, `f1102`, `f1201`, `f1202`, `f1301`, `f1302`, `f1303`, `f14`, `f15`, `f1601`, `f1602`, `f1603`, `f1604`, `f1605`, `f1606`, `f1607`, `f1608`, `f1609`, `f1610`, `f1611`, `f1612`, `f1613`, `f1614`, `f171`, `f172b`, `f173`, `f175`, `f174b`, `f176b`, `f175a`, `f176ba`, `f177`, `f178b`, `f179`, `f1710b`, `f1711`, `f1712b`, `f1713`, `f1714b`, `f1715`, `f1716b`, `f1717`, `f1718b`, `f1719`, `f1720b`, `f1721`, `f1722b`, `f1723`, `f1724b`, `f1725`, `f1726b`, `f1727`, `f1728b`, `f1729`, `f1730b`, `f1731`, `f1732b`, `f1733`, `f1734b`, `f1735`, `f1736b`, `f1737`, `f1738b`, `f1737a`, `f1738ba`, `f1739`, `f1740b`, `f1741`, `f1742b`, `f1743`, `f1744b`, `f1745`, `f1746b`, `f1747`, `f1748b`, `f1749`, `f1750b`, `f1751`, `f1752b`, `f1753`, `f1754b`) VALUES
 	(20, '1', '071050', '1234', '1', 'aaa', '123', '1@a.com', '1', '1', '1', '1', '1', '1', '1', '1', '2', '', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', 'mertua', '1', '2', '', '5', '3', '1', '1', '1', '2', '3', '4', '5', 'mertua saya', '1', '', '', '', '', '', '', '', '', '5', '4', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', 'mama', '1', '1', '2', '3', '2', '3', '4', '4', '5', '5', '4', '4', '3', '3', '2', '2', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '4', '4', '3', '3', '2', '2', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '4', '4', '3', '3', '2', '2', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5');
@@ -333,6 +444,21 @@ CREATE TABLE IF NOT EXISTS `tbl_vacancy` (
 -- Dumping data for table db_cdc.tbl_vacancy: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_vacancy` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tbl_vacancy` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_video
+CREATE TABLE IF NOT EXISTS `tbl_video` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(255) NOT NULL DEFAULT '',
+  `deskripsi` varchar(255) NOT NULL DEFAULT '',
+  `link_youtube` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_video: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_video` DISABLE KEYS */;
+REPLACE INTO `tbl_video` (`id`, `judul`, `deskripsi`, `link_youtube`) VALUES
+	(1, 'Watch Our Activity', 'Kehidupan yang besar dimulai dari mimpi yang besar ~ Agus Salim', 'http://www.youtube.com/watch?v=1iIZeIy7TqM');
+/*!40000 ALTER TABLE `tbl_video` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.user
 CREATE TABLE IF NOT EXISTS `user` (
