@@ -330,4 +330,78 @@ class Upload extends CI_Controller
             redirect('backend/dashboard/member');
         }
     }
+
+    public function update_footer()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["footer"]["name"]);
+
+        $config['upload_path']          = './assets/images/logo-footer/';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 10024; // 1MB
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+
+        $id = $this->input->post('id');
+        $alamat = $this->input->post('alamat');
+        $telp = $this->input->post('telp');
+        $email = $this->input->post('email');
+        $website = $this->input->post('website');
+        $taut1 = $this->input->post('taut1');
+        $link1 = $this->input->post('link1');
+        $taut2 = $this->input->post('taut2');
+        $link2 = $this->input->post('link2');
+        $taut3 = $this->input->post('taut3');
+        $link3 = $this->input->post('link3');
+        $taut4 = $this->input->post('taut4');
+        $link4 = $this->input->post('link4');
+        $taut5 = $this->input->post('taut5');
+        $link5 = $this->input->post('link5');
+        $facebook = $this->input->post('facebook');
+        $instagram = $this->input->post('instagram');
+        $twitter = $this->input->post('twitter');
+        $youtube = $this->input->post('youtube');
+        $skype = $this->input->post('skype');
+        $pinterest = $this->input->post('pinterest');
+
+        $data = array(
+            'alamat' => $alamat,
+            'telp' => $telp,
+            'email' => $email,
+            'website' => $website,
+            'taut1' => $taut1,
+            'link1' => $link1,
+            'taut2' => $taut2,
+            'link2' => $link2,
+            'taut3' => $taut3,
+            'link3' => $link3,
+            'taut4' => $taut4,
+            'link4' => $link4,
+            'taut5' => $taut5,
+            'link5' => $link5,
+            'facebook' => $facebook,
+            'instagram' => $instagram,
+            'twitter' => $twitter,
+            'youtube' => $youtube,
+            'skype' => $skype,
+            'pinterest' => $pinterest,
+        );
+
+
+        $where = array('id' => $id);
+
+
+        $this->backend_user_model->update_data($where, $data, 'tbl_footer');
+
+        if (!$this->upload->do_upload('footer')) {
+            redirect('backend/dashboard/footer');
+        } else {
+            redirect('backend/dashboard/footer');
+        }
+    }
 }
