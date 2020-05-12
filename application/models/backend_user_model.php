@@ -77,6 +77,7 @@ class Backend_user_model extends CI_Model
 
     public function update_data($where, $data, $table)
     {
+
         $this->db->where($where);
         $this->db->update($table, $data);
     }
@@ -85,5 +86,15 @@ class Backend_user_model extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
+    }
+
+    public function hapus_all()
+    {
+        $delete_data = $this->db->query('delete from tbl_testimoni');
+        if ($delete_data) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 }

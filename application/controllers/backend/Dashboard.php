@@ -90,9 +90,11 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $data['video'] = $this->backend_user_model->tampil_data('tbl_video')->result();
+
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
-        $this->load->view('backend/video');
+        $this->load->view('backend/video', $data);
         $this->load->view('backend/footer');
     }
 
@@ -124,7 +126,10 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['gambar'] = $this->backend_user_model->tampil_data('tbl_testimoni')->result();
+        $data['list'] = $this->backend_user_model->tampil_data('tbl_says')->result();
+
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/testimoni');
         $this->load->view('backend/footer');
@@ -141,9 +146,30 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['achievement'] = $this->backend_user_model->tampil_data('tbl_achievement')->result();
+
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/achievement');
+        $this->load->view('backend/footer');
+    }
+
+    public function member()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $data['member'] = $this->backend_user_model->tampil_data('tbl_member')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/member');
         $this->load->view('backend/footer');
     }
 
@@ -158,7 +184,9 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['partner'] = $this->backend_user_model->tampil_data('tbl_partner')->result();
+
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/partner');
         $this->load->view('backend/footer');
@@ -430,6 +458,27 @@ class Dashboard extends CI_Controller
         $where = array('id' => $id);
         $this->backend_user_model->hapus_data($where, 'tbl_menu_kaki');
         redirect('backend/dashboard/profile');
+    }
+
+    public function deleteTestimoni($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_says');
+        redirect('backend/dashboard/testimoni');
+    }
+
+    public function deletePartner($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_partner');
+        redirect('backend/dashboard/partner');
+    }
+
+    public function deleteMember($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_member');
+        redirect('backend/dashboard/member');
     }
 
     public function logout()

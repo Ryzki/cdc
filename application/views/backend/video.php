@@ -37,40 +37,41 @@
                         <strong>Video : </strong> Masukan judul dan link video promosi anda, link video harus berasal dari youtube channel, jika belum ada buatlah sebuah video terlebih dahulu, upload ke youtube, kemudian taruh link dihalaman ini.
                     </div>
                     <div class="col-md-12 mt-4">
-                        <form action="#" method="POST">
+                        <?php echo form_open_multipart('backend/upload/tambah_video');
+                        foreach ($video as $vd) {
+                        ?>
                             <div class="form-group">
                                 <label>Judul Video Promosi anda</label>
-                                <input type="text" class="form-control" placeholder="Watch Our Activity">
+                                <input type="text" class="form-control" value="<?= $vd->judul ?>" name="judul">
+                                <input type="hidden" class="form-control" name="id" value="1">
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi teks</label>
-                                <input type="text" class="form-control" placeholder="Bisa diisi kutipan atau visi dan misi">
+                                <input type="text" class="form-control" value="<?= $vd->deskripsi ?>" name="deskripsi">
                             </div>
                             <div class="form-group">
                                 <label>Link Youtube</label>
-                                <input type="text" class="form-control" placeholder="http://www.youtube.com/watch?v=1iIZeIy7TqM">
+                                <input type="text" class="form-control" value="<?= $vd->link_youtube ?>" name="youtube">
                             </div>
                             <div class="form-group">
                                 <label>Gambar Background</label>
-                                <input type="file" class="form-control" id="customFileLang" lang="en">
+                                <input type="file" class="form-control" id="customFileLang" lang="en" name="video">
                                 <table class="table table-bordered mt-2">
                                     <tr>
                                         <td>Gambar yang digunakan saat ini</td>
                                         <td>
                                             ​<picture>
 
-                                                <img src="<?= base_url('assets/') ?>images/cdc_unikama.jpg" class="img-fluid img-thumbnail" alt="Logo">
+                                                <img src="<?= base_url('assets/') ?>images/video/1.jpg" class="img-fluid img-thumbnail" alt="Logo" width="50%" height="50%">
                                             </picture>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
                                         </td>
                                     </tr>
                                 </table>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
+                        <?php
+                        }
+                        ?>
                         </form>
                     </div>
 
