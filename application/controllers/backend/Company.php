@@ -114,7 +114,7 @@ class Company extends CI_Controller
             $konversi_tanggal = DateTime::createFromFormat("m/d/Y", $this->input->post('due_date'));
             $due_date = $konversi_tanggal->format('Y-m-d');
             $data = array(
-                'kode_pt' => '1',
+                'kode_pt' => $this->session->userdata('kode'),
                 'nama_pt' => $this->session->userdata('nama'),
                 'job_title' => $this->input->post('job_title'),
                 'position' => $this->input->post('position'),
@@ -125,6 +125,24 @@ class Company extends CI_Controller
             );
             $this->company_model->insert_data($data, 'tbl_vacancy');
             redirect(base_url('backend/company/company_vacancy'));
+        } else {
+            redirect(base_url('login/perusahaan'));
+        }
+    }
+
+    public function add_agenda()
+    {
+        if ($this->session->userdata('logged_in')) {
+            $data = array(
+                'kode_pt' => $this->session->userdata('kode'),
+                'title' => $this->input->post('title'),
+                'time_1' => $this->input->post('time_1'),
+                'time_2' => $this->input->post('time_2'),
+                'location' => $this->input->post('location'),
+                'content' => $this->input->post('content'),
+            );
+            $this->company_model->insert_data($data, 'tbl_agenda');
+            redirect(base_url('backend/company/agenda'));
         } else {
             redirect(base_url('login/perusahaan'));
         }

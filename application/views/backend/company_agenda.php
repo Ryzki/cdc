@@ -39,7 +39,7 @@
                             <tr class="text-center">
                                 <th>No</th>
                                 <th>Title</th>
-                                <th>Date</th>
+                                <th>Date Create</th>
                                 <th>Time</th>
                                 <th>Location</th>
                                 <th width='1%'></th>
@@ -51,7 +51,7 @@
                                 <tr class="text-center row<?= $data->id ?>">
                                     <td><?= $i ?></td>
                                     <td><?= $data->title ?></td>
-                                    <td><?= $data->date ?></td>
+                                    <td><?= $data->date_input ?></td>
                                     <td><?= $data->time_1 . " - " . $data->time_2 ?></td>
                                     <td><?= $data->location ?></td>
                                     <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
@@ -76,7 +76,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="<?= base_url('backend/company/add_vacancy') ?>">
+                    <form method="POST" action="<?= base_url('backend/company/add_agenda') ?>">
                         <div class="form-group">
                             <label class="form-control-label" for="exampleFormControlInput1">Title</label>
                             <input type="text" name="title" class="form-control" id="title" placeholder="Title" required>
@@ -86,7 +86,7 @@
                                 <div class="form-group">
                                     <label class="form-control-label" for="exampleFormControlInput1">Time 1</label>
                                     <div class='input-group date' id='datetimepicker1'>
-                                        <input type='text' class="form-control" />
+                                        <input type='text' name="time_1" class="form-control" />
                                         <span class="input-group-addon input-group-append">
                                             <button class="btn btn-outline-primary" type="button" id="button-addon2"> <span class="fa fa-calendar"></span></button>
                                         </span>
@@ -97,7 +97,7 @@
                                 <div class="form-group">
                                     <label class="form-control-label" for="exampleFormControlInput1">Time 2</label>
                                     <div class='input-group date' id='datetimepicker2'>
-                                        <input type='text' class="form-control" />
+                                        <input type='text' name="time_2" class="form-control" />
                                         <span class="input-group-addon input-group-append">
                                             <button class="btn btn-outline-primary" type="button" id="button-addon3"> <span class="fa fa-calendar"></span></button>
                                         </span>
@@ -123,7 +123,7 @@
                             <input type="text" name="location" class="form-control" id="location" placeholder="Location" required>
                         </div>
                         <label class="form-control-label" for="exampleFormControlInput1">Content</label>
-                        <textarea name="requirement" id="ckeditor"></textarea>
+                        <textarea name="content" id="ckeditor"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -176,11 +176,11 @@
                             <h4 class="mb-0" id="view_location"></h4>
                         </div>
                     </div>
-                    <div class="row py-3 align-items-center">
+                    <div class="row py-3">
                         <div class="col-sm-3 pl-5">
                             <small class="text-uppercase text-muted font-weight-bold">Content</small>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 align-items-center">
                             <h4 class="mb-0" id="view_content"></h4>
                         </div>
                     </div>

@@ -65,6 +65,7 @@ class Company_model extends CI_Model
 
     public function get_data_by_kode($data, $table)
     {
+        $this->db->order_by('id', 'DESC');
         return $this->db->get_where($table, $data);
     }
 
