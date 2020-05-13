@@ -14,6 +14,7 @@ class Landing extends CI_Controller
 		$data['achievement'] = $this->landing_page_model->getKaki('tbl_achievement')->result();
 		$data['member'] = $this->landing_page_model->getKaki('tbl_member')->result();
 		$data['partner'] = $this->landing_page_model->getKaki('tbl_partner')->result();
+		// $data['footer'] = $this->landing_page_model->getKaki('tbl_footer')->result();
 
 
 		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
