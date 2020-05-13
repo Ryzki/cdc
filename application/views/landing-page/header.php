@@ -225,8 +225,14 @@
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default no-bg">
                             <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="#">
-                                <img class="logo-default" src="<?= base_url('assets/') ?>images/logo/logo.png" alt="">
-                                <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo/logo.png" alt="">
+                                <?php
+                                foreach ($logo as $lg) {
+                                ?>
+                                    <img class="logo-default" src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt="">
+                                    <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt="">
+                                <?php
+                                }
+                                ?>
                             </a>
                             <ul class="menuzord-menu" style="color: #888">
                                 <li class="active"><a href="#home">Home</a>

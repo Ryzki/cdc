@@ -5,6 +5,8 @@ class Landing extends CI_Controller
 {
 	public function index()
 	{
+		$data['logo'] = $this->landing_page_model->getKaki('tbl_logo')->result();
+		$data['slide'] = $this->landing_page_model->getKaki('tbl_slide')->result();
 		$data['menu'] = $this->landing_page_model->getMenu();
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
 		$data['kaki'] = $this->landing_page_model->getKaki('tbl_menu_kaki')->result();

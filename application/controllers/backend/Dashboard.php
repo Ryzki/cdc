@@ -33,15 +33,16 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data = array('data' => '');
+        $data['logo'] = $this->backend_user_model->tampil_data('tbl_logo')->result();
+        $data['slide'] = $this->backend_user_model->tampil_data('tbl_slide')->result();
         $data['menu'] = $this->landing_page_model->getMenu();
         $data['submenu'] = $this->landing_page_model->getSubMenu();
         $data['menukaki'] = $this->backend_user_model->tampil_data('tbl_menu_kaki')->result();
         $data['artikel'] = $this->backend_user_model->tampil_data('tbl_artikel')->result();
 
-        $this->load->view('backend/header');
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
-        $this->load->view('backend/topmenu', $data);
+        $this->load->view('backend/topmenu');
         $this->load->view('backend/footer');
     }
 
