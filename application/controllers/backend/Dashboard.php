@@ -203,7 +203,10 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+
+        $data['footer'] = $this->backend_user_model->tampil_data('tbl_footer')->result();
+
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/footer_area');
         $this->load->view('backend/footer');
