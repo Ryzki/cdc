@@ -32,9 +32,9 @@ class Company_model extends CI_Model
                 } else {
                     $sess_data = array(
                         'kode' => $cek_company['kode_pt'],
-                        'email' => $cek_company['email_pt'],
                         'nama' => $cek_company['nama_pt'],
                         'jenis' => $cek_company['jenis_pt'],
+                        'email' => $cek_company['email_pt'],
                         'deskripsi' => $cek_company['deskripsi'],
                         'date_input' => $cek_company['date_input'],
                         'logged_in' => TRUE,
@@ -79,6 +79,12 @@ class Company_model extends CI_Model
     }
 
     public function get_total_vacancy($data, $table)
+    {
+        $this->db->get_where($table, $data);
+        return $this->db->count_all_results();
+    }
+
+    public function get_total_apply($data, $table)
     {
         $this->db->get_where($table, $data);
         return $this->db->count_all_results();
