@@ -23,18 +23,20 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
   `nama_pt` varchar(100) NOT NULL,
   `jenis_pt` varchar(100) NOT NULL COMMENT 'Bergerak dibidang apa',
   `email_pt` varchar(100) NOT NULL,
+  `deskripsi` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
   `is_active` int(1) NOT NULL,
   `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.mst_company: ~0 rows (approximately)
+-- Dumping data for table db_cdc.mst_company: ~3 rows (approximately)
 /*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
-REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `password`, `is_active`, `date_input`) VALUES
-	(1, '', 'asdgasdf', 'asdgasdf', 'arthur@jai.co.id', 'admin', 0, '2020-05-10 08:38:31'),
-	(3, '', 'scm', 'it', 'arthur@jai.co.id', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 1, '2020-05-10 11:06:42'),
-	(4, '', 'solusi cipta media', 'Programming', 'agus@gmail.com', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 1, '2020-05-10 18:20:39');
+REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `deskripsi`, `password`, `image`, `is_active`, `date_input`) VALUES
+	(3, 'CP3', 'pt mantap', 'it', 'arthur@jai.co.id', '', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 'cowok2.jpg', 1, '2020-05-10 11:06:42'),
+	(4, 'CP4', 'solusi cipta media', 'Programming', 'agus@gmail.com', '', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 'cowok2.jpg', 1, '2020-05-10 18:20:39'),
+	(5, 'CP5', 'aa', 'aa', 'aa@jai.co.id', '', '$2y$10$fB/.ZVRUuMoMnF3IGVlGB./rUYyT7/pr./bRl8NEsfi1VoGKt5TQW', 'cowok2.jpg', 1, '2020-05-10 21:19:43');
 /*!40000 ALTER TABLE `mst_company` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_achievement
@@ -59,6 +61,7 @@ REPLACE INTO `tbl_achievement` (`id`, `judul`, `deskripsi`, `company`, `jobseeke
 -- Dumping structure for table db_cdc.tbl_agenda
 CREATE TABLE IF NOT EXISTS `tbl_agenda` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kode_pt` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `date` date NOT NULL,
   `time_1` time NOT NULL,
@@ -66,10 +69,12 @@ CREATE TABLE IF NOT EXISTS `tbl_agenda` (
   `location` varchar(100) NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table db_cdc.tbl_agenda: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_agenda` DISABLE KEYS */;
+REPLACE INTO `tbl_agenda` (`id`, `kode_pt`, `title`, `date`, `time_1`, `time_2`, `location`, `content`) VALUES
+	(1, 'CP3', 'Agenda Title', '2020-05-13', '07:54:43', '13:54:44', 'Pasuruan', 'Buka Bersama');
 /*!40000 ALTER TABLE `tbl_agenda` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_alumni
@@ -103,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `tbl_artikel` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_artikel: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_artikel: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tbl_artikel` DISABLE KEYS */;
 REPLACE INTO `tbl_artikel` (`id`, `judul`, `menu`, `sub_menu`, `gambar`, `konten`) VALUES
 	(2, 'Visi & Misi', 'About', 'Visi & Misi', '', '<p><strong>Visi </strong></p>\r\n\r\n<p><strong>&ldquo;</strong>Menjadi pusat karir yang berkontribusi bagi pengembangan karir calon lulusan dan alumni UNIKAMA&rdquo;</p>\r\n\r\n<p>Misi</p>\r\n\r\n<ol>\r\n	<li>Menyelenggarakan pengembangan diri calon lulusan dan alumni untuk memasuki dunia kerja</li>\r\n	<li>Membangun kemitraan strategis dengan dunia usaha dan dunia industri</li>\r\n	<li>Mengelola informasi ketenagakerjaan yang relevan dengan kebutuhan calon lulusan dan alumni</li>\r\n	<li>Menyelenggarakan tracer study tingkat universitas yang berkualitas sesuasi dengan kebutuhan pengembangan karir lulusan dan kebutuhan pengguna lulusan</li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n'),
@@ -153,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `tbl_footer` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_footer: ~1 rows (approximately)
+-- Dumping data for table db_cdc.tbl_footer: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_footer` DISABLE KEYS */;
 REPLACE INTO `tbl_footer` (`id`, `logo`, `alamat`, `telp`, `email`, `website`, `taut1`, `link1`, `taut2`, `link2`, `taut3`, `link3`, `taut4`, `link4`, `taut5`, `link5`, `facebook`, `instagram`, `twitter`, `youtube`, `skype`, `pinterest`) VALUES
 	(1, 'logo.png', 'Jl. S.Supriadi No.48 Malang Jawa Timur, Indonesia', '(+62)341-801488', 'email@unikama.ac.id', 'www.unikama.ac.id', 'Unikama Official', 'https://unikama.ac.id', 'Kemenristekdikti', 'https://ristekdikti.go.id', 'LPPM Unikama', 'https://lppm.unikama.ac.id', 'Kemahasiswaan', 'https://mhs.unikama.ac.id', 'Info PMB', 'https://infopmb.unikama.ac.id', '1', '2', '3', '4', '5', '6');
@@ -183,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `tbl_member` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_member: ~22 rows (approximately)
+-- Dumping data for table db_cdc.tbl_member: ~25 rows (approximately)
 /*!40000 ALTER TABLE `tbl_member` DISABLE KEYS */;
 REPLACE INTO `tbl_member` (`id`, `gambar`) VALUES
 	(5, 'student1.jpg'),
@@ -221,11 +226,14 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu: ~5 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu: ~6 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 REPLACE INTO `tbl_menu` (`id`, `menu`, `link`) VALUES
 	(1, 'About', ''),
+	(2, 'Pelatihan', ''),
+	(3, 'Artikel', ''),
 	(4, 'Lowongan Kerja', 'http://ub.ac.id'),
+	(6, 'Hubungi Kami', ''),
 	(7, 'Hubungi Kami', 'backend/dashboard/apa');
 /*!40000 ALTER TABLE `tbl_menu` ENABLE KEYS */;
 
@@ -237,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu_kaki` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu_kaki: ~4 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu_kaki: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu_kaki` DISABLE KEYS */;
 REPLACE INTO `tbl_menu_kaki` (`id`, `menu`, `link`) VALUES
 	(1, 'Tracer Study', ''),
@@ -253,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `tbl_partner` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_partner: ~8 rows (approximately)
+-- Dumping data for table db_cdc.tbl_partner: ~10 rows (approximately)
 /*!40000 ALTER TABLE `tbl_partner` DISABLE KEYS */;
 REPLACE INTO `tbl_partner` (`id`, `nama`, `gambar`) VALUES
 	(3, 'PT. Pertamina', 'pertamina-head.jpg'),
@@ -278,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `tbl_says` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_says: ~2 rows (approximately)
+-- Dumping data for table db_cdc.tbl_says: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tbl_says` DISABLE KEYS */;
 REPLACE INTO `tbl_says` (`id`, `nama`, `profesi`, `testimoni`, `gambar`) VALUES
 	(4, 'Agus', 'Karyawan Swasta', 'Menurut saya ini adalah aplikasi yang sangat bagus, bayangkan setelah lulus saya cukup mendaftar di aplikasi ini dan kemudian apply di suatu perusahaan, dan saat ini saya sudah diterima bekerja disebuah PMA perusahaan Jepang.', 's1.jpg'),
@@ -465,17 +473,27 @@ CREATE TABLE IF NOT EXISTS `tbl_vacancy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode_pt` varchar(100) NOT NULL,
   `nama_pt` varchar(100) NOT NULL,
-  `date_posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `due_date` date NOT NULL,
+  `position` varchar(100) NOT NULL,
   `location` varchar(100) NOT NULL,
   `job_title` varchar(100) NOT NULL,
   `salary` varchar(100) NOT NULL,
   `requirement` text NOT NULL,
+  `date_posted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.tbl_vacancy: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_vacancy: ~8 rows (approximately)
 /*!40000 ALTER TABLE `tbl_vacancy` DISABLE KEYS */;
+REPLACE INTO `tbl_vacancy` (`id`, `kode_pt`, `nama_pt`, `due_date`, `position`, `location`, `job_title`, `salary`, `requirement`, `date_posted`) VALUES
+	(19, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title1', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:19'),
+	(24, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title2', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:20'),
+	(25, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title3', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:20'),
+	(26, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title4', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:20'),
+	(27, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title5', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:21'),
+	(28, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title6', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:21'),
+	(29, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title7', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:22'),
+	(30, 'CP3', 'scm', '2020-05-12', 'Staff IT', 'Tulungagung', 'Job Title7', '10000000', 'I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.', '2020-05-13 07:56:22');
 /*!40000 ALTER TABLE `tbl_vacancy` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_video
@@ -505,7 +523,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.user: ~2 rows (approximately)
+-- Dumping data for table db_cdc.user: ~3 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 REPLACE INTO `user` (`id`, `username`, `password`, `email`, `level`, `blokir`, `id_sessions`) VALUES
 	(1, 'agus@gmail.com', '$2y$10$iqyRa5vI.x0IrfQPAvlVYucJE7YMqNMjrW5adwR4CSs1CFn.U0k5e', 'admin@gmai.com', 'admin', 'N', ''),

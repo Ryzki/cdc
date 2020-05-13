@@ -56,11 +56,11 @@ class Company extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Create Vacancy | PPK UNIKAMA';
             $data['nama_company'] = $this->session->userdata('nama');
-            $data['data_vacancy'] = $this->company_model->get_data('tbl_vacancy')->result();
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
             $data['image'] = $this->company_model->get_image($where, 'mst_company')->row_array();
+            $data['data_vacancy'] = $this->company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
             // var_dump($data['data_vacancy']);
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
@@ -80,6 +80,7 @@ class Company extends CI_Controller
                 'kode_pt' => $this->session->userdata('kode')
             );
             $data['image'] = $this->company_model->get_image($where, 'mst_company')->row_array();
+            $data['data_agenda'] = $this->company_model->get_data_by_kode($where, 'tbl_agenda')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_agenda');

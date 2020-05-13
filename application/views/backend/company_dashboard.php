@@ -63,7 +63,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Total Agenda</h5>
-                                    <span class="h2 font-weight-bold mb-0" id="total_vacancy">-</span>
+                                    <span class="h2 font-weight-bold mb-0" id="total_agenda">-</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
@@ -201,6 +201,21 @@
                 success: function(data) {
                     console.log(data)
                     $("#total_apply").html(data);
+                }
+            });
+        }
+
+        function get_total_agenda() {
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('backend/company/total_agenda') ?>",
+                data: {
+                    kode: "<?= $data_company['kode'] ?>"
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data)
+                    $("#total_agenda").html(data);
                 }
             });
         }
