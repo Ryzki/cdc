@@ -63,9 +63,9 @@ class Company_model extends CI_Model
         $this->db->insert($table, $data);
     }
 
-    public function get_data($table)
+    public function get_data_by_kode($data, $table)
     {
-        return $this->db->get($table);
+        return $this->db->get_where($table, $data);
     }
 
     public function get_data_by_id($data, $table)
