@@ -139,6 +139,15 @@ class Company extends CI_Controller
         echo json_encode($this->company_model->get_data_by_id($data, 'tbl_vacancy')->row_array());
     }
 
+    public function view_agenda()
+    {
+        $id = $this->input->post('id');
+        $data = array(
+            'id' => $id
+        );
+        echo json_encode($this->company_model->get_data_by_id($data, 'tbl_agenda')->row_array());
+    }
+
     public function delete_vacancy()
     {
         $id = $this->input->post('id');
@@ -153,13 +162,27 @@ class Company extends CI_Controller
         }
     }
 
+    public function delete_agenda()
+    {
+        $id = $this->input->post('id');
+        $data = array(
+            'id' => $id
+        );
+        $delete = $this->company_model->delete_data_by_id($data, 'tbl_agenda');
+        if ($delete) {
+            echo json_encode(array('statusCode' => '200'));
+        } else {
+            echo json_encode(array('statusCode' => '100'));
+        }
+    }
+
     public function total_vacancy_company()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_vacancy($data, 'tbl_vacancy'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_data($kode, 'tbl_vacancy'));
     }
 
     public function latest_vacancy()
@@ -174,19 +197,28 @@ class Company extends CI_Controller
     public function total_apply()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_apply($data, 'tbl_apply'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_apply($kode, 'tbl_apply'));
+    }
+
+    public function apply_this_month()
+    {
+        $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_apply_per_month($kode, 'tbl_apply'));
     }
 
     public function total_agenda()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_apply($data, 'tbl_agenda'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_data($kode, 'tbl_agenda'));
     }
 
     public function logout()

@@ -78,16 +78,34 @@ class Company_model extends CI_Model
         return $this->db->delete($table, $data);
     }
 
-    public function get_total_vacancy($data, $table)
+    public function get_total_data($data, $table)
     {
-        $this->db->get_where($table, $data);
+        // $this->db->get_where($table, $data);
+        $this->db->where('kode_pt', $data);
+        $this->db->from($table);
         return $this->db->count_all_results();
     }
 
-    public function get_total_apply($data, $table)
+    public function get_total_apply($kode, $table)
     {
-        $this->db->get_where($table, $data);
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->join('tbl_vacancy', $table . '.id_vacancy = tbl_vacancy.id');
+
+        $this->db->where('kode_pt', $kode);
         return $this->db->count_all_results();
+    }
+
+    public function get_apply_per_month($kode, $table)
+    {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->join('tbl_vacancy', $table . '.id_vacancy = tbl_vacancy.id');
+        $this->db->where('kode_pt', $kode);
+        $this->db->where('MONTH(date_apply)', date('m'));
+        $this->db->where('YEAR(date_apply)', date('Y'));
+        $this->db->order_by('id', 'DESC');
+        return $this->db->count_all_results();;
     }
 
     public function get_latest_vacancy($data, $table)

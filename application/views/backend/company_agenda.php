@@ -52,9 +52,9 @@
                                     <td><?= $i ?></td>
                                     <td><?= $data->title ?></td>
                                     <td><?= $data->date ?></td>
-                                    <td><?= $data->time1 . " - " . $data->time2 ?></td>
+                                    <td><?= $data->time_1 . " - " . $data->time_2 ?></td>
                                     <td><?= $data->location ?></td>
-                                    <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_vacancy('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
+                                    <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
                                 </tr>
                             <?php $i++;
                             } ?>
@@ -78,31 +78,51 @@
                 <div class="modal-body">
                     <form method="POST" action="<?= base_url('backend/company/add_vacancy') ?>">
                         <div class="form-group">
-                            <label class="form-control-label" for="exampleFormControlInput1">Job Title</label>
-                            <input type="text" name="job_title" class="form-control" id="job_title" placeholder="Job Title" required>
+                            <label class="form-control-label" for="exampleFormControlInput1">Title</label>
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Title" required>
                         </div>
-                        <div class="form-group">
-                            <label class="form-control-label" for="exampleFormControlInput1">Position</label>
-                            <input type="text" name="position" class="form-control" id="position" placeholder="Position" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-control-label" for="exampleFormControlInput1">Location</label>
-                            <input type="text" name="location" class="form-control" id="location" placeholder="Position" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-control-label" for="exampleFormControlInput1">Salary</label>
-                            <div class="input-group input-group-merge">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">IDR</span>
+                        <div class="row">
+                            <div class='col-sm-6 mt-3'>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="exampleFormControlInput1">Time 1</label>
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary" type="button" id="button-addon2"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
                                 </div>
-                                <input type="text" name="salary" class="form-control" id="salary" placeholder="Salary" required>
+                            </div>
+                            <div class='col-sm-6 mt-3'>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="exampleFormControlInput1">Time 2</label>
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary" type="button" id="button-addon3"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-control-label" for="exampleFormControlInput1">Due Date</label>
-                            <input type="text" name="due_date" class="form-control datepicker" id="" placeholder="Due-Date" value="<?= date("m/d/Y") ?>" required>
+                        <!-- <div class="form-group">
+                            <label class="form-control-label" for="exampleFormControlInput1">Date</label>
+                            <input type="text" name="date" class="form-control datepicker" id="" placeholder="Due-Date" value="<?= date("m/d/Y") ?>" required>
                         </div>
-                        <label class="form-control-label" for="exampleFormControlInput1">Requirement</label>
+                        <label class="form-control-label" for="exampleFormControlInput1">Time</label>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <input type="text" name="time_1" class="form-control" id="time_1" placeholder="00.00 AM" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="time_2" class="form-control" id="time_2" placeholder="00.00 PM" required>
+                            </div>
+                        </div> -->
+                        <div class="form-group">
+                            <label class="form-control-label" for="exampleFormControlInput1">Location</label>
+                            <input type="text" name="location" class="form-control" id="location" placeholder="Location" required>
+                        </div>
+                        <label class="form-control-label" for="exampleFormControlInput1">Content</label>
                         <textarea name="requirement" id="ckeditor"></textarea>
                 </div>
                 <div class="modal-footer">
@@ -118,7 +138,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Vacancy</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -126,18 +146,26 @@
                 <div class="modal-body">
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Job Title</small>
+                            <small class="text-uppercase text-muted font-weight-bold">Title</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_job_title"></h4>
+                            <h4 class="mb-0" id="view_title"></h4>
                         </div>
                     </div>
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Position</small>
+                            <small class="text-uppercase text-muted font-weight-bold">Date</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_position"></h4>
+                            <h4 class="mb-0" id="view_date"></h4>
+                        </div>
+                    </div>
+                    <div class="row py-3 align-items-center">
+                        <div class="col-sm-3 pl-5">
+                            <small class="text-uppercase text-muted font-weight-bold">Time</small>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4 class="mb-0" id="view_time"></h4>
                         </div>
                     </div>
                     <div class="row py-3 align-items-center">
@@ -150,26 +178,10 @@
                     </div>
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Salary</small>
+                            <small class="text-uppercase text-muted font-weight-bold">Content</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_salary"></h4>
-                        </div>
-                    </div>
-                    <div class="row py-3 align-items-center">
-                        <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Due Date</small>
-                        </div>
-                        <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_due_date"></h4>
-                        </div>
-                    </div>
-                    <div class="row py-3">
-                        <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Requirement</small>
-                        </div>
-                        <div class="col-sm-9 align-items-center">
-                            <h4 class="mb-0" id="view_requirement"></h4>
+                            <h4 class="mb-0" id="view_content"></h4>
                         </div>
                     </div>
                 </div>
@@ -197,9 +209,40 @@
                     }
                 },
             })
+
+            $('#datetimepicker1').datetimepicker({
+                icons: {
+                    time: "fa fa-clock",
+                    date: "fa fa-calendar-day",
+                    up: "fa fa-chevron-up",
+                    down: "fa fa-chevron-down",
+                    previous: 'fa fa-chevron-left',
+                    next: 'fa fa-chevron-right',
+                    today: 'fa fa-screenshot',
+                    clear: 'fa fa-trash',
+                    close: 'fa fa-remove'
+                },
+                format: 'YYYY-MM-DD HH:mm'
+            });
+
+            $('#datetimepicker2').datetimepicker({
+                icons: {
+                    time: "fa fa-clock",
+                    date: "fa fa-calendar-day",
+                    up: "fa fa-chevron-up",
+                    down: "fa fa-chevron-down",
+                    previous: 'fa fa-chevron-left',
+                    next: 'fa fa-chevron-right',
+                    today: 'fa fa-screenshot',
+                    clear: 'fa fa-trash',
+                    close: 'fa fa-remove'
+                },
+                format: 'YYYY-MM-DD HH:mm'
+            });
+
         })
 
-        function delete_vacancy(id) {
+        function delete_agenda(id) {
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -213,18 +256,20 @@
                 if (result.value) {
                     $.ajax({
                         type: "POST",
-                        url: "<?= base_url('backend/company/delete_vacancy') ?>",
+                        url: "<?= base_url('backend/company/delete_agenda') ?>",
                         data: {
                             id: id
                         },
                         dataType: 'json',
                         success: function(data) {
                             if (data.statusCode == '200') {
-                                Swal.fire(
-                                    'Deleted!',
-                                    'Vacancy has been deleted.',
-                                    'success'
-                                )
+                                Swal.fire({
+                                    type: 'success',
+                                    title: 'Deleted!',
+                                    text: "Agenda has been deleted.",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
                                 $(".row" + id).hide();
                             } else {
                                 alert("Failed Delete Data!!");
@@ -235,22 +280,21 @@
             })
         }
 
-        function view_vacancy(id) {
+        function view_agenda(id) {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/view_vacancy') ?>",
+                url: "<?= base_url('backend/company/view_agenda') ?>",
                 data: {
                     id: id
                 },
                 dataType: 'json',
                 success: function(data) {
                     console.log(data)
-                    $("#view_job_title").html(data.job_title);
-                    $("#view_position").html(data.position);
+                    $("#view_title").html(data.title);
+                    $("#view_date").html(data.date);
+                    $("#view_time").html(data.time_1 + " - " + data.time_2);
                     $("#view_location").html(data.location);
-                    $("#view_salary").html("IDR " + data.salary);
-                    $("#view_due_date").html(data.due_date);
-                    $("#view_requirement").html(data.requirement);
+                    $("#view_content").html(data.content);
                 }
             });
         }

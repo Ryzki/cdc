@@ -158,6 +158,8 @@
         $(document).ready(function() {
             get_total_vacancy()
             get_latest_vacancy()
+            get_total_agenda()
+            get_total_apply()
         })
 
         function get_total_vacancy() {
@@ -194,6 +196,21 @@
             $.ajax({
                 type: "POST",
                 url: "<?= base_url('backend/company/total_apply') ?>",
+                data: {
+                    kode: "<?= $data_company['kode'] ?>"
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data)
+                    $("#total_apply").html(data);
+                }
+            });
+        }
+
+        function get_apply_this_month() {
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('backend/company/appy_this_month') ?>",
                 data: {
                     kode: "<?= $data_company['kode'] ?>"
                 },
