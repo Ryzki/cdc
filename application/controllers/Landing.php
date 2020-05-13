@@ -5,6 +5,8 @@ class Landing extends CI_Controller
 {
 	public function index()
 	{
+		$data['logo'] = $this->landing_page_model->getKaki('tbl_logo')->result();
+		$data['slide'] = $this->landing_page_model->getKaki('tbl_slide')->result();
 		$data['menu'] = $this->landing_page_model->getMenu();
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
 		$data['kaki'] = $this->landing_page_model->getKaki('tbl_menu_kaki')->result();
@@ -14,10 +16,7 @@ class Landing extends CI_Controller
 		$data['achievement'] = $this->landing_page_model->getKaki('tbl_achievement')->result();
 		$data['member'] = $this->landing_page_model->getKaki('tbl_member')->result();
 		$data['partner'] = $this->landing_page_model->getKaki('tbl_partner')->result();
-		// $data['footer'] = $this->landing_page_model->getKaki('tbl_footer')->result();
-
-
-		// $data['menu'] = $this->landing_page_model->getMenu('tbl_menu')->result();
+		$data['footer'] = $this->landing_page_model->getKaki('tbl_footer')->result();
 
 		$this->load->view('landing-page/header', $data);
 		$this->load->view('landing-page/landing_page');

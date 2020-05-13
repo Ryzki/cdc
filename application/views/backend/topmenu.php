@@ -366,7 +366,7 @@
                     <!-- Card body -->
                     <div class="card-body">
                         <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
-                            <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website. File gambar harus berextensi .png (background transparant)
+                            <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website.
                         </div>
                         <!-- Card body -->
                         <div class="card-body">
@@ -376,12 +376,17 @@
                                     <tr>
                                         <td>Logo yang digunakan saat ini</td>
                                         <td>
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/logo/logo.png" class="img-fluid img-thumbnail" alt="Logo">
-                                            </picture>
+                                            <?php
+                                            foreach ($logo as $lg) {
+                                            ?>
+                                                ​<picture>
+                                                    <img src="<?= base_url('assets') ?>/images/logo/<?= $lg->logo ?>" class="img-fluid img-thumbnail" alt="Logo">
+                                                </picture>
+                                            <?php
+                                            }
+                                            ?>
                                         </td>
                                         <td>
-                                            <?= $data ?>
                                             <?php echo form_open_multipart('backend/upload/aksi_upload'); ?>
                                             <div class="form-group">
                                                 <label>Upload Logo</label>

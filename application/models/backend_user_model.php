@@ -97,4 +97,14 @@ class Backend_user_model extends CI_Model
             return FALSE;
         }
     }
+
+    public function hapus_logo()
+    {
+        $delete_data = $this->db->query('delete from tbl_logo');
+        if ($delete_data) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }

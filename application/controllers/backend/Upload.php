@@ -9,20 +9,30 @@ class Upload extends CI_Controller
 
     public function aksi_upload()
     {
+        //ambil nama file
+        $temp_filename = basename($_FILES["berkas"]["name"]);
+
         $config['upload_path']          = './assets/images/logo/';
-        $config['allowed_types']        = 'png';
-        $config['file_name']            = 'logo';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 1024; // 1MB
+        $config['max_size']             = 10024; // 1MB
         // $config['max_width']            = 1024;
         // $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
+        $data = array(
+            'logo' => $temp_filename,
+        );
+        //hapus data
+        $this->backend_user_model->hapus_logo();
+        //insert to db
+        $this->backend_user_model->insert_data($data, 'tbl_logo');
 
         if (!$this->upload->do_upload('berkas')) {
-            redirect(base_url('backend/dashboard/profile'));
+            redirect('backend/dashboard/profile');
         } else {
-            redirect(base_url('backend/dashboard/profile'));
+            redirect('backend/dashboard/profile');
         }
     }
 
@@ -129,12 +139,12 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg';
         $config['file_name']            = '1';
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
+        $config['max_size']             = 0; // 1MB
         // $config['max_width']            = 1024;
         // $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
-
+        $this->upload->do_upload();
 
         $id = $this->input->post('id');
         $judul = $this->input->post('judul');
