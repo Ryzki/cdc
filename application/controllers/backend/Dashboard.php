@@ -110,7 +110,11 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+
+        $data['galeri'] = $this->backend_user_model->tampil_data('tbl_galeri_menu')->result();
+        $data['galeri_gb'] = $this->backend_user_model->tampil_data('tbl_galeri_gb')->result();
+
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/galeri');
         $this->load->view('backend/footer');
@@ -348,6 +352,17 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/profile');
     }
 
+    public function tambah_album()
+    {
+        $album = $this->input->post('album');
+        $data = array(
+            'menu' => $album,
+        );
+
+        $this->backend_user_model->insert_data($data, 'tbl_galeri_menu');
+        redirect('backend/dashboard/galeri');
+    }
+
     public function tambahSbm()
     {
         $nama_submenu = $this->input->post('submenu');
@@ -448,6 +463,27 @@ class Dashboard extends CI_Controller
         $where = array('id' => $id);
         $this->backend_user_model->hapus_data($where, 'tbl_menu');
         redirect('backend/dashboard/profile');
+    }
+
+    public function deleteAlbum($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_galeri_menu');
+        $this->deleteGambar($id);
+    }
+
+    public function deletegambar($id)
+    {
+        $where = array('menu' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_galeri_gb');
+        redirect('backend/dashboard/galeri');
+    }
+
+    public function deleteGaleri($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_galeri_gb');
+        redirect('backend/dashboard/galeri');
     }
 
     public function deleteSbm($id)

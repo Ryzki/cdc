@@ -133,6 +133,37 @@ class Upload extends CI_Controller
         }
     }
 
+    public function galeri_gb()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["gal"]["name"]);
+
+        $config['upload_path']          = './assets/images/gallery/';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+        $this->load->library('upload', $config);
+        $menu = $this->input->post('album');
+
+        $data = array(
+            'gambar' => $temp_filename,
+            'menu' => $menu,
+        );
+
+        //insert to db
+        $this->backend_user_model->insert_data($data, 'tbl_galeri_gb');
+
+        if (!$this->upload->do_upload('gal')) {
+            redirect('backend/dashboard/galeri');
+        } else {
+            redirect('backend/dashboard/galeri');
+        }
+    }
+
     public function testimoni_gambar()
     {
         //ambil nama file
