@@ -114,7 +114,7 @@ class Company extends CI_Controller
             $konversi_tanggal = DateTime::createFromFormat("m/d/Y", $this->input->post('due_date'));
             $due_date = $konversi_tanggal->format('Y-m-d');
             $data = array(
-                'kode_pt' => '1',
+                'kode_pt' => $this->session->userdata('kode'),
                 'nama_pt' => $this->session->userdata('nama'),
                 'job_title' => $this->input->post('job_title'),
                 'position' => $this->input->post('position'),
@@ -130,6 +130,24 @@ class Company extends CI_Controller
         }
     }
 
+    public function add_agenda()
+    {
+        if ($this->session->userdata('logged_in')) {
+            $data = array(
+                'kode_pt' => $this->session->userdata('kode'),
+                'title' => $this->input->post('title'),
+                'time_1' => $this->input->post('time_1'),
+                'time_2' => $this->input->post('time_2'),
+                'location' => $this->input->post('location'),
+                'content' => $this->input->post('content'),
+            );
+            $this->company_model->insert_data($data, 'tbl_agenda');
+            redirect(base_url('backend/company/agenda'));
+        } else {
+            redirect(base_url('login/perusahaan'));
+        }
+    }
+
     public function view_vacancy()
     {
         $id = $this->input->post('id');
@@ -137,6 +155,15 @@ class Company extends CI_Controller
             'id' => $id
         );
         echo json_encode($this->company_model->get_data_by_id($data, 'tbl_vacancy')->row_array());
+    }
+
+    public function view_agenda()
+    {
+        $id = $this->input->post('id');
+        $data = array(
+            'id' => $id
+        );
+        echo json_encode($this->company_model->get_data_by_id($data, 'tbl_agenda')->row_array());
     }
 
     public function delete_vacancy()
@@ -153,13 +180,27 @@ class Company extends CI_Controller
         }
     }
 
+    public function delete_agenda()
+    {
+        $id = $this->input->post('id');
+        $data = array(
+            'id' => $id
+        );
+        $delete = $this->company_model->delete_data_by_id($data, 'tbl_agenda');
+        if ($delete) {
+            echo json_encode(array('statusCode' => '200'));
+        } else {
+            echo json_encode(array('statusCode' => '100'));
+        }
+    }
+
     public function total_vacancy_company()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_vacancy($data, 'tbl_vacancy'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_data($kode, 'tbl_vacancy'));
     }
 
     public function latest_vacancy()
@@ -174,19 +215,28 @@ class Company extends CI_Controller
     public function total_apply()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_apply($data, 'tbl_apply'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_apply($kode, 'tbl_apply'));
+    }
+
+    public function apply_this_month()
+    {
+        $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_apply_per_month($kode, 'tbl_apply'));
     }
 
     public function total_agenda()
     {
         $kode = $this->input->post('kode');
-        $data = array(
-            'kode_pt' => $kode
-        );
-        echo json_encode($this->company_model->get_total_apply($data, 'tbl_agenda'));
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->company_model->get_total_data($kode, 'tbl_agenda'));
     }
 
     public function logout()

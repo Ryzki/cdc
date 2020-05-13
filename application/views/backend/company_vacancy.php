@@ -89,7 +89,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="exampleFormControlInput1">Location</label>
-                            <input type="text" name="location" class="form-control" id="location" placeholder="Position" required>
+                            <input type="text" name="location" class="form-control" id="location" placeholder="Location" required>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="exampleFormControlInput1">Salary</label>
