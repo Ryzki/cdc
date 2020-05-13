@@ -16,9 +16,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
         $data = array(
@@ -38,95 +38,26 @@ class Upload extends CI_Controller
 
     public function slide1()
     {
+        //ambil nama file
+        $temp_filename = basename($_FILES["slide"]["name"]);
+
         $config['upload_path']          = './assets/images/slide/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '1';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 
-        if (!$this->upload->do_upload('slide1')) {
-            redirect(base_url('backend/dashboard/profile'));
-        } else {
-            redirect(base_url('backend/dashboard/profile'));
-        }
-    }
+        $data = array(
+            'gambar' => $temp_filename,
+        );
 
-    public function slide2()
-    {
-        $config['upload_path']          = './assets/images/slide/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '2';
-        $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $this->backend_user_model->insert_data($data, 'tbl_slide');
 
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('slide2')) {
-            redirect(base_url('backend/dashboard/profile'));
-        } else {
-            redirect(base_url('backend/dashboard/profile'));
-        }
-    }
-
-
-
-    public function slide3()
-    {
-        $config['upload_path']          = './assets/images/slide/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '3';
-        $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('slide3')) {
-            redirect(base_url('backend/dashboard/profile'));
-        } else {
-            redirect(base_url('backend/dashboard/profile'));
-        }
-    }
-
-    public function slide4()
-    {
-        $config['upload_path']          = './assets/images/slide/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '4';
-        $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('slide4')) {
-            redirect(base_url('backend/dashboard/profile'));
-        } else {
-            redirect(base_url('backend/dashboard/profile'));
-        }
-    }
-
-    public function slide5()
-    {
-        $config['upload_path']          = './assets/images/slide/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '5';
-        $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
-
-        $this->load->library('upload', $config);
-
-        if (!$this->upload->do_upload('slide5')) {
+        if (!$this->upload->do_upload('slide')) {
             redirect(base_url('backend/dashboard/profile'));
         } else {
             redirect(base_url('backend/dashboard/profile'));
@@ -135,16 +66,18 @@ class Upload extends CI_Controller
 
     public function tambah_video()
     {
+        //ambil nama file
+        $temp_filename = basename($_FILES["video"]["name"]);
+
         $config['upload_path']          = './assets/images/video/';
-        $config['allowed_types']        = 'jpg';
-        $config['file_name']            = '1';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 0; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
-        $this->upload->do_upload();
 
         $id = $this->input->post('id');
         $judul = $this->input->post('judul');
@@ -155,6 +88,7 @@ class Upload extends CI_Controller
             'judul' => $judul,
             'deskripsi' => $deskripsi,
             'link_youtube' => $youtube,
+            'gambar' => $temp_filename,
         );
 
         $where = array(
@@ -179,9 +113,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
         $data = array(
@@ -208,9 +142,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 
@@ -244,9 +178,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 
@@ -291,9 +225,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 
@@ -322,9 +256,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 
@@ -350,9 +284,9 @@ class Upload extends CI_Controller
         $config['allowed_types']        = 'jpg|png|gif';
         $config['file_name']            = $temp_filename;
         $config['overwrite']            = true;
-        $config['max_size']             = 10024; // 1MB
-        // $config['max_width']            = 1024;
-        // $config['max_height']           = 768;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
 
         $this->load->library('upload', $config);
 

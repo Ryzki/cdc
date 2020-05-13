@@ -485,6 +485,13 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/member');
     }
 
+    public function deleteSlide($id)
+    {
+        $where = array('id' => $id);
+        $this->backend_user_model->hapus_data($where, 'tbl_slide');
+        redirect('backend/dashboard/profile');
+    }
+
     public function logout()
     {
         $this->session->sess_destroy();

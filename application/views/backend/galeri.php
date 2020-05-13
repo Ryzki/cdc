@@ -30,155 +30,97 @@
         </div>
         <!-- Card body -->
         <div class="card-body">
+            <div class="text-center">
+                <ul class="nav nav-pills mb-5">
+                    <li class=""> <a href="#tab-20" class="btn btn-primary mx-2 active" data-toggle="tab" aria-expanded="true"> <i class="fa fa-graduation-cap" aria-hidden="false"></i>Faculty of Arts</a> </li>
+                    <li class=""> <a href="#tab-21" class="btn btn-primary mx-2" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Faculty of Commerce</a> </li>
+                    <li class=""> <a href="#tab-22" class="btn btn-primary mx-2" data-toggle="tab" aria-expanded="false"> <i class="fa fa-book"></i>Faculty of Science</a> </li>
+                    <li class=""> <a href="#tab-23" class="btn btn-primary mx-2" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>Postgraduate</a> </li>
+                    <li class=""> <a href="#tab-24" class="btn btn-primary mx-2" data-toggle="tab" aria-expanded="false"> <i class="fa fa-university" aria-hidden="true"></i>Research Higher Degree</a> </li>
+                </ul>
+            </div>
             <!-- Form groups used in grid -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
-                        <strong>Galeri : </strong> Upload gambar untuk ditampilkan dihalaman website utama.
-                    </div>
-                    <div class="card-header border-0">
-                        <div class="row">
-                            <div class="col-6">
-                                <h3 class="mb-0">Gambar</h3>
+            <div class="tab-content p-0">
+                <div class="tab-pane fade active in show" id="tab-20">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/img-1-1000x900.jpg">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
                             </div>
-                            <div class="col-6 text-right">
-                                <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="tooltip" data-original-title="Tambah Gambar">
-                                    <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-                                    <span class="btn-inner--text">Tambah</span>
-                                </a>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/3.jpg">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/1.jpg">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/2.jpg">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Light table -->
-                    <div class="table-responsive">
-                        <table class="table align-items-center table-flush table-hover">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <th>Url</th>
-                                    <th>Album</th>
-                                    <th>Gambar</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <span class="text-muted"><?= base_url('assets/') ?>images/gallery/1.jpg</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Psikotes</a>
-                                    </td>
-                                    <td>
-                                        <img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt="galeri" width="50%" height="50%">
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <span class="text-muted"><?= base_url('assets/') ?>images/gallery/1.jpg</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Psikotes</a>
-                                    </td>
-                                    <td>
-                                        <img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt="galeri" width="50%" height="50%">
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <span class="text-muted"><?= base_url('assets/') ?>images/gallery/4.jpg</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Psikotes</a>
-                                    </td>
-                                    <td>
-                                        <img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt="galeri" width="50%" height="50%">
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <span class="text-muted"><?= base_url('assets/') ?>images/gallery/1.jpg</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Psikotes</a>
-                                    </td>
-                                    <td>
-                                        <img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt="galeri" width="50%" height="50%">
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                            <label class="custom-control-label" for="table-check-all"></label>
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <span class="text-muted"><?= base_url('assets/') ?>images/gallery/1.jpg</span>
-                                    </td>
-                                    <td>
-                                        <a href="#!" class="font-weight-bold">Psikotes</a>
-                                    </td>
-                                    <td>
-                                        <img src="<?= base_url('assets/') ?>images/gallery/1.jpg" alt="galeri" width="50%" height="50%">
-                                    </td>
-                                    <td class="table-actions">
-                                        <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </div>
+
+
+                <div class="tab-pane fade" id="tab-21">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top img-fluid" src="<?= base_url('assets/images/gallery') ?>/img-1-1000x900.jpg" alt="Image placeholder">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top img-fluid" src="<?= base_url('assets/images/gallery') ?>/3.jpg" alt="Image placeholder">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/1.jpg" alt="Image placeholder">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <!-- Card image -->
+                                <img class="card-img-top" src="<?= base_url('assets/images/gallery') ?>/2.jpg" alt="Image placeholder">
+                                <div class="card-body text-center py-2">
+                                    <a href="#" class="btn btn-icon-only rounded-circle btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@
                       <!-- SLIDE 1 -->
                       <li data-index="rs-1" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="http://placehold.it/1920x1125" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
                         <!-- MAIN IMAGE -->
-                        <img src="<?= base_url('assets/') ?>images/slide/1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                        <img src="<?= base_url('assets/') ?>images/slide/<?= $sl->gambar ?>" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
                         <!-- LAYER NR. 1 -->
                         <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-1-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-basealign="slide" data-responsive_offset="on" style="z-index: 5;background-color:rgba(0, 0, 0, 0);border-color:rgba(0, 0, 0, 1.00);">
@@ -33,58 +33,6 @@
                     <?php
                     }
                     ?>
-
-                    <!-- SLIDE 2 -->
-                    <li data-index="rs-2" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="http://placehold.it/1920x1280" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
-                      <img src="<?= base_url('assets/') ?>images/slide/2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                      <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-basealign="slide" data-responsive_offset="on" style="z-index: 5;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 1.00);">
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['300','195','160','160']" data-fontsize="['60','50','40','35']" data-lineheight="['80','75','70','45']" data-fontweight="['800','700','700','700']" data-textalign="['center','center','center','center']" data-width="['800','650','600','420']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; display: none">Welcome To <span class="text-theme-colored2">EduPonits</span>
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['390','260','220','220']" data-fontsize="['16','16',16',16']" data-lineheight="['24','24','24','24']" data-fontweight="['400','400','400','400']" data-textalign="['center','center','center','center']" data-width="['800','650','600','460']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; display: none">EduPoints is a international leader in teaching students to write effectively,<br> learn from each other and think for themselves.
-                      </div>
-                      <div class="tp-caption rs-parallaxlevel-0" id="slide-2-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['461','321','281','295']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:0;y:0;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-responsive="off" style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
-                      </div>
-                    </li>
-
-                    <!-- SLIDE 3 -->
-                    <li data-index="rs-3" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="http://placehold.it/1920x1280" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
-                      <img src="<?= base_url('assets/') ?>images/slide/3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                      <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-basealign="slide" data-responsive_offset="on" style="z-index: 5;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 1.00);">
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['300','195','160','160']" data-fontsize="['60','50','40','35']" data-lineheight="['80','75','70','45']" data-fontweight="['800','700','700','700']" data-textalign="['center','center','center','center']" data-width="['800','650','600','420']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; display: none">Welcome To <span class="text-theme-colored2">EduPonits</span>
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['390','260','220','220']" data-fontsize="['16','16',16',16']" data-lineheight="['24','24','24','24']" data-fontweight="['400','400','400','400']" data-textalign="['center','center','center','center']" data-width="['800','650','600','460']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; display: none">EduPoints is a international leader in teaching students to write effectively,<br> learn from each other and think for themselves.
-                      </div>
-                      <div class="tp-caption rs-parallaxlevel-0" id="slide-2-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['461','321','281','295']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:0;y:0;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-responsive="off" style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
-                      </div>
-                    </li>
-
-                    <!-- SLIDE 4 -->
-                    <li data-index="rs-4" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="http://placehold.it/1920x1280" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
-                      <img src="<?= base_url('assets/') ?>images/slide/4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                      <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-basealign="slide" data-responsive_offset="on" style="z-index: 5;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 1.00);">
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['300','195','160','160']" data-fontsize="['60','50','40','35']" data-lineheight="['80','75','70','45']" data-fontweight="['800','700','700','700']" data-textalign="['center','center','center','center']" data-width="['800','650','600','420']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; display: none">Welcome To <span class="text-theme-colored2">EduPonits</span>
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['390','260','220','220']" data-fontsize="['16','16',16',16']" data-lineheight="['24','24','24','24']" data-fontweight="['400','400','400','400']" data-textalign="['center','center','center','center']" data-width="['800','650','600','460']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; display: none">EduPoints is a international leader in teaching students to write effectively,<br> learn from each other and think for themselves.
-                      </div>
-                      <div class="tp-caption rs-parallaxlevel-0" id="slide-2-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['461','321','281','295']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:0;y:0;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-responsive="off" style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
-                      </div>
-                    </li>
-
-                    <!-- SLIDE 5 -->
-                    <li data-index="rs-5" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="http://placehold.it/1920x1280" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Make an Impact">
-                      <img src="<?= base_url('assets/') ?>images/slide/5.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-                      <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" data-start="1000" data-basealign="slide" data-responsive_offset="on" style="z-index: 5;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 1.00);">
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['300','195','160','160']" data-fontsize="['60','50','40','35']" data-lineheight="['80','75','70','45']" data-fontweight="['800','700','700','700']" data-textalign="['center','center','center','center']" data-width="['800','650','600','420']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; min-width: 600px; max-width: 600px; white-space: normal; display: none">Welcome To <span class="text-theme-colored2">EduPonits</span>
-                      </div>
-                      <div class="tp-caption tp-resizeme text-white rs-parallaxlevel-0" id="slide-2-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['390','260','220','220']" data-fontsize="['16','16',16',16']" data-lineheight="['24','24','24','24']" data-fontweight="['400','400','400','400']" data-textalign="['center','center','center','center']" data-width="['800','650','600','460']" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;" data-start="700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 5; white-space: nowrap; display: none">EduPoints is a international leader in teaching students to write effectively,<br> learn from each other and think for themselves.
-                      </div>
-                      <div class="tp-caption rs-parallaxlevel-0" id="slide-2-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['461','321','281','295']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:0;y:0;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-responsive="off" style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
-                      </div>
-                    </li>
                   </ul>
                   <div class="tp-bannertimer tp-bottom" style="height: 5px; background-color: rgba(166, 216, 236, 1.00);"></div>
                 </div>
@@ -597,7 +545,7 @@
             <?php
             foreach ($video as $vd) {
             ?>
-              <div class="video-area overlay-video bg-common-style" style="background-image: url('<?= base_url('assets/') ?>images/video/1.jpg');">
+              <div class="video-area overlay-video bg-common-style" style="background-image: url('<?= base_url('assets/') ?>images/video/<?= $vd->gambar ?>');">
                 <div class="container">
                   <div class="video-content">
                     <h2 class="video-title"><?= $vd->judul ?></h2>
@@ -659,6 +607,605 @@
               </div>
             </div>
           </section>
+
+
+
+          <!-- Section: -->
+          <section>
+            <div class="container">
+              <div class="section-title text-center">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                    <h2 class="text-center line-height-1 mt-0">Popular <span class="text-theme-colored3">Courses</span> </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus hic suscipit doloremque deleniti ipsa quia dolor laborum natus tenetur, excepturi?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section-content">
+                <div class="row mtli-row-clearfix">
+                  <div class="col-md-12">
+                    <div class="horizontal-tab-centered">
+                      <div class="text-center">
+                        <ul class="nav nav-pills mb-10">
+                          <li class="active"> <a href="#tab-20" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i>Faculty of Arts</a> </li>
+                          <li class=""> <a href="#tab-21" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Faculty of Commerce</a> </li>
+                          <li class=""> <a href="#tab-22" data-toggle="tab" aria-expanded="true"> <i class="fa fa-book"></i>Faculty of Science</a> </li>
+                          <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>Postgraduate</a> </li>
+                          <li class=""> <a href="#tab-24" data-toggle="tab" aria-expanded="false"> <i class="fa fa-university" aria-hidden="true"></i>Research Higher Degree</a> </li>
+                        </ul>
+                      </div>
+                      <div class="panel-body p-0">
+                        <div class="tab-content p-0">
+                          <div class="tab-pane fade active in" id="tab-20">
+                            <div class="row">
+                              <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <div class="services mb-xs-30">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/1.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Anthropology</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left xs-pull-left  sm-pull-none sm-text-center">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right sm-pull-none xs-pull-right sm-text-center mt-sm-10 mt-xs-0">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="services mb-xs-30">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/2.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Philosophy</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+                                <div class="services mb-xs-30">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/3.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Public Policy</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left xs-pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right xs-pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+                                <div class="services">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/4.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Sociology</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left xs-pull-left sm-pull-none sm-text-center">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right xs-pull-right sm-pull-none sm-text-center mt-sm-10 mt-xs-0">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left xs-pull-left sm-pull-none sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right xs-pull-right sm-pull-none sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="tab-21">
+                            <div class="row">
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/5.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Accounting</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/6.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Finance and Tax</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/7.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">School of Management</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="tab-22">
+                            <div class="row">
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/10.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Biochemistry</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/7.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Physics</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/8.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Chemistry</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/9.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Mathematics</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="tab-23">
+                            <div class="row">
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/1.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Molecular Imaging</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">1.5 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/2.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Bioinformatics</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">1.5 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/3.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Data Science</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">2 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">50</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3 col-md-3 col-lg-3">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/4.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Mineral Resources</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">2 Years</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">50</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="tab-24">
+                            <div class="row">
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/5.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Plant Biology</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">48 weeks</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/6.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">Geology</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">40 weeks</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-4 col-md-4 col-lg-4">
+                                <div class="services mb-sm-50">
+                                  <div class="thumb">
+                                    <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/project/7.jpg">
+                                  </div>
+                                  <div class="services-details clearfix">
+                                    <div class="p-20 p-sm-15 bg-lighter">
+                                      <h4 class="mt-0 line-height-1"><a href="#">School of Management</a></h4>
+                                      <ul class="list-inline text-theme-colored2 pull-left">
+                                        <li>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                          <i class="fa fa-star" aria-hidden="true"></i>
+                                        </li>
+                                      </ul>
+                                      <div class="course-price bg-theme-colored3 pull-right">
+                                        <span class="text-white">$200</span>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                      <ul class="list-inline mt-15 mb-10 clearfix">
+                                        <li class="pull-left flip pr-0 clearfix">Course: <span class="font-weight-700">$189</span></li>
+                                        <li class="text-theme-colored pull-right flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
+                                      </ul>
+                                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
 
 
           <!-- Section: -->

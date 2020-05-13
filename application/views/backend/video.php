@@ -62,7 +62,7 @@
                                         <td>
                                             ​<picture>
 
-                                                <img src="<?= base_url('assets/') ?>images/video/1.jpg" class="img-fluid img-thumbnail" alt="Logo" width="50%" height="50%">
+                                                <img src="<?= base_url('assets/') ?>images/video/<?= $vd->gambar ?>" class="img-fluid img-thumbnail" alt="Logo" width="50%" height="50%">
                                             </picture>
                                         </td>
                                     </tr>

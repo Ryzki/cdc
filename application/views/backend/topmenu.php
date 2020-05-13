@@ -422,97 +422,34 @@
                         <!-- Card body -->
                         <div class="card-body">
                             <div class="mt-3">
+                                <?php echo form_open_multipart('backend/upload/slide1'); ?>
+                                <div class="form-group">
+                                    <label>Upload Gambar</label>
+                                    <input type="file" class="form-control" id="customFileLang" lang="en" name="slide">
+                                    <!-- <label class="custom-file-label" for="customFileLang"></label> -->
+                                    <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
+                                </div>
+                                </form>
                                 <table class="table table-bordered">
-                                    <tr>
-                                        <td>Slide-1</td>
-                                        <td style="width: 50%;">
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/slide/1.jpg" class="img-fluid img-thumbnail" alt="slide">
-                                            </picture>
-                                        </td>
-                                        <td>
-                                            <?php echo form_open_multipart('backend/upload/slide1'); ?>
-                                            <div class="form-group">
-                                                <label>Upload Gambar</label>
-                                                <input type="file" class="form-control" id="customFileLang" lang="en" name="slide1">
-                                                <!-- <label class="custom-file-label" for="customFileLang"></label> -->
-                                                <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
-                                            </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Slide-2</td>
-                                        <td style="width: 50%;">
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/slide/2.jpg" class="img-fluid img-thumbnail" alt="slide">
-                                            </picture>
-                                        </td>
-                                        <td>
-                                            <?php echo form_open_multipart('backend/upload/slide2'); ?>
-                                            <div class="form-group">
-                                                <label>Upload Gambar</label>
-                                                <input type="file" class="form-control" id="customFileLang" lang="en" name="slide2">
-                                                <!-- <label class="custom-file-label" for="customFileLang"></label> -->
-                                                <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
-                                            </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Slide-3</td>
-                                        <td style="width: 50%;">
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/slide/3.jpg" class="img-fluid img-thumbnail" alt="slide">
-                                            </picture>
-                                        </td>
-                                        <td>
-                                            <?php echo form_open_multipart('backend/upload/slide3'); ?>
-                                            <div class="form-group">
-                                                <label>Upload Gambar</label>
-                                                <input type="file" class="form-control" id="customFileLang" lang="en" name="slide3">
-                                                <!-- <label class="custom-file-label" for="customFileLang"></label> -->
-                                                <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
-                                            </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Slide-4</td>
-                                        <td style="width: 50%;">
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/slide/4.jpg" class="img-fluid img-thumbnail" alt="slide">
-                                            </picture>
-                                        </td>
-                                        <td>
-                                            <?php echo form_open_multipart('backend/upload/slide4'); ?>
-                                            <div class="form-group">
-                                                <label>Upload Gambar</label>
-                                                <input type="file" class="form-control" id="customFileLang" lang="en" name="slide4">
-                                                <!-- <label class="custom-file-label" for="customFileLang"></label> -->
-                                                <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
-                                            </div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Slide-5</td>
-                                        <td style="width: 50%;">
-                                            ​<picture>
-                                                <img src="<?= base_url('assets') ?>/images/slide/5.jpg" class="img-fluid img-thumbnail" alt="slide">
-                                            </picture>
-                                        </td>
-                                        <td>
-                                            <?php echo form_open_multipart('backend/upload/slide5'); ?>
-                                            <div class="form-group">
-                                                <label>Upload Gambar</label>
-                                                <input type="file" class="form-control" id="customFileLang" lang="en" name="slide5">
-                                                <!-- <label class="custom-file-label" for="customFileLang"></label> -->
-                                                <button type="submit" class="btn btn-sm btn-primary mt-3">Upload</button>
-                                            </div>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    foreach ($slide as $sl) {
+                                    ?>
+                                        <tr>
+                                            <td><?= $sl->gambar ?></td>
+                                            <td style="width: 50%;">
+                                                ​<picture>
+                                                    <img src="<?= base_url('assets') ?>/images/slide/<?= $sl->gambar ?>" class="img-fluid img-thumbnail" alt="<?= $sl->gambar ?>">
+                                                </picture>
+                                            </td>
+                                            <td class="table-actions">
+                                                <a href="deleteSlide/<?= $sl->id; ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </table>
                             </div>
                         </div>
