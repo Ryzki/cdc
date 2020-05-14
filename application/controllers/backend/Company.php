@@ -94,14 +94,52 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
+            $data['sub_title'] = 'Applier Vacancy';
             $data['nama_company'] = $this->session->userdata('nama');
+            $where_img = array(
+                'kode_pt' => $this->session->userdata('kode')
+            );
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $data['image'] = $this->company_model->get_image($where, 'mst_company')->row_array();
+            $data['image'] = $this->company_model->get_image($where_img, 'mst_company')->row_array();
+            $data['datas'] = $this->company_model->get_data_by_kode($where, 'tbl_apply')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_apply_vacancy');
+            $this->load->view('backend/footer_company');
+        } else {
+            redirect(base_url('login/perusahaan'));
+        }
+    }
+
+    public function result_applier($result)
+    {
+        if ($result == "approved") {
+            $status = '1';
+        } elseif ($result == "rejected") {
+            $status = '2';
+        } elseif ($result == 'outstanding') {
+            $status = '0';
+        } else {
+            redirect(base_url('backend/company/apply_vacancy'));
+        }
+        if ($this->session->userdata('logged_in')) {
+            $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
+            $data['sub_title'] = ucfirst($result) . ' Applier';
+            $data['nama_company'] = $this->session->userdata('nama');
+            $where_img = array(
+                'kode_pt' => $this->session->userdata('kode')
+            );
+            $where = array(
+                'kode_pt' => $this->session->userdata('kode'),
+                'status' => $status
+            );
+            $data['image'] = $this->company_model->get_image($where_img, 'mst_company')->row_array();
+            $data['datas'] = $this->company_model->get_data_by_kode($where, 'tbl_apply')->result();
+            $this->load->view('backend/header', $data);
+            $this->load->view('backend/sidebar_company');
+            $this->load->view('backend/company_result_apply');
             $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));

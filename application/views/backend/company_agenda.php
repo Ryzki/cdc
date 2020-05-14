@@ -31,37 +31,32 @@
         </div>
         <!-- Card body -->
         <div class="card-body table-responsive">
-            <!-- Form groups used in grid -->
-            <div class="row">
-                <div class="col-md-12">
-                    <table id="tableVacancy" class="table table-flush table-hover">
-                        <thead>
-                            <tr class="text-center">
-                                <th>No</th>
-                                <th>Title</th>
-                                <th>Date Create</th>
-                                <th>Time</th>
-                                <th>Location</th>
-                                <th width='1%'></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $i = 1;
-                            foreach ($data_agenda as $data) { ?>
-                                <tr class="text-center row<?= $data->id ?>">
-                                    <td><?= $i ?></td>
-                                    <td><?= $data->title ?></td>
-                                    <td><?= $data->date_input ?></td>
-                                    <td><?= $data->time_1 . " - " . $data->time_2 ?></td>
-                                    <td><?= $data->location ?></td>
-                                    <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
-                                </tr>
-                            <?php $i++;
-                            } ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <table id="tableVacancy" class="table table-flush table-hover table-striped">
+                <thead class="thead-light">
+                    <tr class="text-center">
+                        <th>No</th>
+                        <th>Title</th>
+                        <th>Date Create</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                        <th width='1%'></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $i = 1;
+                    foreach ($data_agenda as $data) { ?>
+                        <tr class="text-center row<?= $data->id ?>">
+                            <td><?= $i ?></td>
+                            <td><?= $data->title ?></td>
+                            <td><?= $data->date_input ?></td>
+                            <td><?= $data->time_1 . " - " . $data->time_2 ?></td>
+                            <td><?= $data->location ?></td>
+                            <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
+                        </tr>
+                    <?php $i++;
+                    } ?>
+                </tbody>
+            </table>
 
         </div>
     </div>

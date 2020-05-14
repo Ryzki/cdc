@@ -33,57 +33,42 @@
             </div>
         </div>
         <!-- Card body -->
-        <div class="table-responsive py-4">
+        <div class="card-body table-responsive">
             <!-- Form groups used in grid -->
-            <table id="tableVacancy" class="table table-flush table-hover dataTable table-striped">
-                <thead class="thead-light">
-                    <tr class="text-center">
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Gender</th>
-                        <th>Position</th>
-                        <th>CV</th>
-                        <th>Status</th>
-                        <th>Date Apply</th>
-                        <!-- <th width='1%'></th> -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $i = 1;
-                    foreach ($datas as $data) {
-                        if ($data->status == '1') {
-                            $aa = '<span class="badge badge-dot">
-                                    <i class="bg-success"></i>
-                                    <span class="status">Approved</span>
-                                  </span>';
-                        } elseif ($data->status == '2') {
-                            $status = '<span class="badge badge-dot">
-                                    <i class="bg-danger"></i>
-                                    <span class="status">Rejected</span>
-                                  </span>';
-                        } else {
-                            $status = '<span class="badge badge-dot">
-                                    <i class="bg-info"></i>
-                                    <span class="status">Outstanding</span>
-                                  </span>';
-                        }
-                    ?>
-                        <tr class="text-center row<?= $data->id ?>">
-                            <td><?= $i ?></td>
-                            <td><?= $data->nama ?></td>
-                            <td><?= $data->email ?></td>
-                            <td><?= $data->jenis_kelamin ?></td>
-                            <td><?= $data->posisi ?></td>
-                            <td><?= $data->cv ?></td>
-                            <td><?= $status ?></td>
-                            <td><?= substr($data->date_apply, 0, 10) ?></td>
-                            <!-- <td><button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-success" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-check"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-danger" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-times"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td> -->
-                        </tr>
-                    <?php $i++;
-                    } ?>
-                </tbody>
-            </table>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="tableVacancy" class="table table-flush table-hover">
+                        <thead>
+                            <tr class="text-center">
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Position</th>
+                                <th>CV</th>
+                                <th>Date Apply</th>
+                                <th width='1%'></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $i = 1;
+                            foreach ($datas as $data) { ?>
+                                <tr class="text-center row<?= $data->id ?>">
+                                    <td><?= $i ?></td>
+                                    <td><?= $data->nama ?></td>
+                                    <td><?= $data->email ?></td>
+                                    <td><?= $data->jenis_kelamin ?></td>
+                                    <td><?= $data->posisi ?></td>
+                                    <td><?= $data->cv ?></td>
+                                    <td><?= substr($data->date_apply, 0, 10) ?></td>
+                                    <td><button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-success" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-check"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-danger" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-times"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
+                                </tr>
+                            <?php $i++;
+                            } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>
