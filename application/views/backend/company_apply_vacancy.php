@@ -34,19 +34,19 @@
         </div>
         <!-- Card body -->
         <div class="table-responsive py-4">
-            <!-- Form groups used in grid -->
             <table id="tableVacancy" class="table table-flush table-hover dataTable table-striped">
                 <thead class="thead-light">
                     <tr class="text-center">
                         <th>No</th>
+                        <th>Job Title</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Gender</th>
                         <th>Position</th>
-                        <th>CV</th>
+                        <!-- <th>CV</th> -->
                         <th>Status</th>
                         <th>Date Apply</th>
-                        <!-- <th width='1%'></th> -->
+                        <th width='1%'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,14 +71,15 @@
                     ?>
                         <tr class="text-center row<?= $data->id ?>">
                             <td><?= $i ?></td>
+                            <td><?= $data->job_title ?></td>
                             <td><?= $data->nama ?></td>
                             <td><?= $data->email ?></td>
                             <td><?= $data->jenis_kelamin ?></td>
                             <td><?= $data->posisi ?></td>
-                            <td><?= $data->cv ?></td>
+                            <!-- <td><?= $data->cv ?></td> -->
                             <td><?= $status ?></td>
                             <td><?= substr($data->date_apply, 0, 10) ?></td>
-                            <!-- <td><button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-success" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-check"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-danger" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-times"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td> -->
+                            <td><a href="<?= base_url('backend/company/download_csv/' . $data->cv) ?>" data-toggle="tooltip" title="Download CV" type="button" id="" class="btn btn-sm btn-success"><i class="fa fa-file"></i></a> <span data-toggle="modal" data-target="#modalInfo"><button data-toggle="tooltip" title="Detail Applier" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></span></td>
                         </tr>
                     <?php $i++;
                     } ?>
@@ -92,12 +93,12 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Detail Applier<span class="float-right">Date Apply</span></h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Detail Applier</h5>
                 </div>
                 <div class="modal-body">
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Name</small>
+                            <small class="text-uppercase text-muted font-weight-bold">Job Title</small>
                         </div>
                         <div class="col-sm-9">
                             <h4 class="mb-0" id="view_title"></h4>
@@ -105,10 +106,18 @@
                     </div>
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
+                            <small class="text-uppercase text-muted font-weight-bold">Name</small>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4 class="mb-0" id="view_name"></h4>
+                        </div>
+                    </div>
+                    <div class="row py-3 align-items-center">
+                        <div class="col-sm-3 pl-5">
                             <small class="text-uppercase text-muted font-weight-bold">Email</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_date"></h4>
+                            <h4 class="mb-0" id="view_email"></h4>
                         </div>
                     </div>
                     <div class="row py-3 align-items-center">
@@ -116,7 +125,7 @@
                             <small class="text-uppercase text-muted font-weight-bold">Gender</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_time"></h4>
+                            <h4 class="mb-0" id="view_gender"></h4>
                         </div>
                     </div>
                     <div class="row py-3 align-items-center">
@@ -124,7 +133,15 @@
                             <small class="text-uppercase text-muted font-weight-bold">Position</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_location"></h4>
+                            <h4 class="mb-0" id="view_position"></h4>
+                        </div>
+                    </div>
+                    <div class="row py-3 align-items-center">
+                        <div class="col-sm-3 pl-5">
+                            <small class="text-uppercase text-muted font-weight-bold">Date Apply</small>
+                        </div>
+                        <div class="col-sm-9">
+                            <h4 class="mb-0" id="view_date_apply"></h4>
                         </div>
                     </div>
                     <div class="row py-3 align-items-center">
@@ -132,7 +149,7 @@
                             <small class="text-uppercase text-muted font-weight-bold">CV</small>
                         </div>
                         <div class="col-sm-9">
-                            <h4 class="mb-0" id="view_location"></h4>
+                            <h4 class="mb-0" id="view_cv"></h4>
                         </div>
                     </div>
                     <div class="row py-3">
@@ -140,7 +157,7 @@
                             <small class="text-uppercase text-muted font-weight-bold">Message</small>
                         </div>
                         <div class="col-sm-9 align-items-center">
-                            <h4 class="mb-0" id="view_content"></h4>
+                            <h4 class="mb-0" id="view_message"></h4>
                         </div>
                     </div>
                 </div>
@@ -169,39 +186,9 @@
                 },
             })
 
-            $('#datetimepicker1').datetimepicker({
-                icons: {
-                    time: "fa fa-clock",
-                    date: "fa fa-calendar-day",
-                    up: "fa fa-chevron-up",
-                    down: "fa fa-chevron-down",
-                    previous: 'fa fa-chevron-left',
-                    next: 'fa fa-chevron-right',
-                    today: 'fa fa-screenshot',
-                    clear: 'fa fa-trash',
-                    close: 'fa fa-remove'
-                },
-                format: 'YYYY-MM-DD HH:mm'
-            });
-
-            $('#datetimepicker2').datetimepicker({
-                icons: {
-                    time: "fa fa-clock",
-                    date: "fa fa-calendar-day",
-                    up: "fa fa-chevron-up",
-                    down: "fa fa-chevron-down",
-                    previous: 'fa fa-chevron-left',
-                    next: 'fa fa-chevron-right',
-                    today: 'fa fa-screenshot',
-                    clear: 'fa fa-trash',
-                    close: 'fa fa-remove'
-                },
-                format: 'YYYY-MM-DD HH:mm'
-            });
-
         })
 
-        function delete_agenda(id) {
+        function delete_data(id) {
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -215,7 +202,7 @@
                 if (result.value) {
                     $.ajax({
                         type: "POST",
-                        url: "<?= base_url('backend/company/delete_agenda') ?>",
+                        url: "<?= base_url('backend/company/delete_data') ?>",
                         data: {
                             id: id
                         },
@@ -242,18 +229,21 @@
         function view_agenda(id) {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/view_agenda') ?>",
+                url: "<?= base_url('backend/company/view_apply') ?>",
                 data: {
                     id: id
                 },
                 dataType: 'json',
                 success: function(data) {
                     console.log(data)
-                    $("#view_title").html(data.title);
-                    $("#view_date").html(data.date);
-                    $("#view_time").html(data.time_1 + " - " + data.time_2);
-                    $("#view_location").html(data.location);
-                    $("#view_content").html(data.content);
+                    $("#view_title").html(data.job_title);
+                    $("#view_name").html(data.nama);
+                    $("#view_email").html(data.email);
+                    $("#view_gender").html(data.jenis_kelamin);
+                    $("#view_position").html(data.posisi.toUpperCase());
+                    $("#view_cv").html(data.cv);
+                    $("#view_date_apply").html(data.date_apply.substr(0, 10));
+                    $("#view_message").html(data.pesan);
                 }
             });
         }

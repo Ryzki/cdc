@@ -117,4 +117,43 @@ class Company_model extends CI_Model
         $this->db->limit(1);
         return $this->db->get_where($table, $data);
     }
+
+    public function get_data_apply($kode_pt, $table)
+    {
+        $this->db->select('v.job_title job_title, a.id id, a.nama nama, a.email email, a.jenis_kelamin jenis_kelamin, a.posisi posisi, a.cv cv, a.date_apply date_apply, a.status status');
+        $this->db->from($table . ' a');
+        $this->db->join('tbl_vacancy v', 'a.id_vacancy = v.id');
+        $this->db->where('a.kode_pt', $kode_pt);
+        $this->db->order_by('a.id', 'DESC');
+        return $this->db->get();
+    }
+
+    public function get_data_apply_per_status($kode_pt, $status, $table)
+    {
+        // $this->db->select('*');
+        // $this->db->from($table);
+        // $this->db->join('tbl_vacancy', $table . '.id_vacancy = tbl_vacancy.id');
+        // $this->db->where($table . '.kode_pt', $kode_pt);
+        // $this->db->where('status', $status);
+        // $this->db->order_by($table . '.id', 'DESC');
+
+        $this->db->select('v.job_title job_title, a.id id, a.nama nama, a.email email, a.jenis_kelamin jenis_kelamin, a.posisi posisi, a.cv cv, a.date_apply date_apply, a.status status');
+        $this->db->from($table . ' a');
+        $this->db->join('tbl_vacancy v', 'a.id_vacancy = v.id');
+        $this->db->where('a.kode_pt', $kode_pt);
+        $this->db->where('a.status', $status);
+        $this->db->order_by('a.id', 'DESC');
+        return $this->db->get();
+    }
+
+
+    public function get_data_apply_by_id($id, $table)
+    {
+        $this->db->select('v.job_title job_title, a.id id, a.nama nama, a.email email, a.jenis_kelamin jenis_kelamin, a.posisi posisi, a.cv cv, a.date_apply date_apply, a.status status, a.pesan pesan');
+        $this->db->from($table . ' a');
+        $this->db->join('tbl_vacancy v', 'a.id_vacancy = v.id');
+        $this->db->where('a.id', $id);
+        $this->db->order_by('a.id', 'DESC');
+        return $this->db->get();
+    }
 }

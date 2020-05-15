@@ -8,6 +8,7 @@ class Company extends CI_Controller
         $this->load->library('form_validation');
         $this->load->model('company_model');
         $this->load->library('session');
+        $this->load->helper(array('url', 'download'));
     }
 
     public function index()
@@ -99,11 +100,11 @@ class Company extends CI_Controller
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $where = array(
-                'kode_pt' => $this->session->userdata('kode')
-            );
+            $kode_pt = $this->session->userdata('kode');
             $data['image'] = $this->company_model->get_image($where_img, 'mst_company')->row_array();
-            $data['datas'] = $this->company_model->get_data_by_kode($where, 'tbl_apply')->result();
+            $data['datas'] = $this->company_model->get_data_apply($kode_pt, 'tbl_apply')->result();
+            // var_dump($data['datas']);
+            // die;
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_apply_vacancy');
@@ -126,17 +127,16 @@ class Company extends CI_Controller
         }
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
+            $data['result'] = $result;
             $data['sub_title'] = ucfirst($result) . ' Applier';
             $data['nama_company'] = $this->session->userdata('nama');
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $where = array(
-                'kode_pt' => $this->session->userdata('kode'),
-                'status' => $status
-            );
+            $kode_pt = $this->session->userdata('kode');
+            $status = $status;
             $data['image'] = $this->company_model->get_image($where_img, 'mst_company')->row_array();
-            $data['datas'] = $this->company_model->get_data_by_kode($where, 'tbl_apply')->result();
+            $data['datas'] = $this->company_model->get_data_apply_per_status($kode_pt, $status, 'tbl_apply')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_result_apply');
@@ -202,6 +202,12 @@ class Company extends CI_Controller
             'id' => $id
         );
         echo json_encode($this->company_model->get_data_by_id($data, 'tbl_agenda')->row_array());
+    }
+
+    public function view_apply()
+    {
+        $id = $this->input->post('id');
+        echo json_encode($this->company_model->get_data_apply_by_id($id, 'tbl_apply')->row_array());
     }
 
     public function delete_vacancy()
@@ -275,6 +281,11 @@ class Company extends CI_Controller
         //     'kode_pt' => $kode
         // );
         echo json_encode($this->company_model->get_total_data($kode, 'tbl_agenda'));
+    }
+
+    public function download_csv($csv)
+    {
+        force_download('assets/cv/' . $csv, NULL);
     }
 
     public function logout()
