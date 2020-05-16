@@ -25,9 +25,9 @@ class Upload extends CI_Controller
             'logo' => $temp_filename,
         );
         //hapus data
-        $this->backend_user_model->hapus_logo();
+        $this->Backend_user_model->hapus_logo();
         //insert to db
-        $this->backend_user_model->insert_data($data, 'tbl_logo');
+        $this->Backend_user_model->insert_data($data, 'tbl_logo');
 
         if (!$this->upload->do_upload('berkas')) {
             redirect('backend/dashboard/profile');
@@ -55,7 +55,7 @@ class Upload extends CI_Controller
             'gambar' => $temp_filename,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_slide');
+        $this->Backend_user_model->insert_data($data, 'tbl_slide');
 
         if (!$this->upload->do_upload('slide')) {
             redirect(base_url('backend/dashboard/profile'));
@@ -95,7 +95,7 @@ class Upload extends CI_Controller
             'id' => $id
         );
 
-        $this->backend_user_model->update_data($where, $data, 'tbl_video');
+        $this->Backend_user_model->update_data($where, $data, 'tbl_video');
 
         if (!$this->upload->do_upload('video')) {
             redirect('backend/dashboard/video');
@@ -122,9 +122,9 @@ class Upload extends CI_Controller
             'gb_utama' => $temp_filename,
         );
         //hapus data
-        $this->backend_user_model->hapus_all();
+        $this->Backend_user_model->hapus_all();
         //insert to db
-        $this->backend_user_model->insert_data($data, 'tbl_testimoni');
+        $this->Backend_user_model->insert_data($data, 'tbl_testimoni');
 
         if (!$this->upload->do_upload('testimoni')) {
             redirect('backend/dashboard/testimoni');
@@ -155,7 +155,7 @@ class Upload extends CI_Controller
         );
 
         //insert to db
-        $this->backend_user_model->insert_data($data, 'tbl_galeri_gb');
+        $this->Backend_user_model->insert_data($data, 'tbl_galeri_gb');
 
         if (!$this->upload->do_upload('gal')) {
             redirect('backend/dashboard/galeri');
@@ -191,7 +191,7 @@ class Upload extends CI_Controller
             'gambar' => $temp_filename,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_says');
+        $this->Backend_user_model->insert_data($data, 'tbl_says');
 
         if (!$this->upload->do_upload('photo')) {
             redirect('backend/dashboard/testimoni');
@@ -238,7 +238,7 @@ class Upload extends CI_Controller
         $where = array('id' => $id);
 
 
-        $this->backend_user_model->update_data($where, $data, 'tbl_achievement');
+        $this->Backend_user_model->update_data($where, $data, 'tbl_achievement');
 
         if (!$this->upload->do_upload('latar')) {
             redirect('backend/dashboard/achievement');
@@ -269,7 +269,7 @@ class Upload extends CI_Controller
             'gambar' => $temp_filename,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_partner');
+        $this->Backend_user_model->insert_data($data, 'tbl_partner');
 
         if (!$this->upload->do_upload('partner')) {
             redirect('backend/dashboard/partner');
@@ -297,7 +297,7 @@ class Upload extends CI_Controller
             'gambar' => $temp_filename,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_member');
+        $this->Backend_user_model->insert_data($data, 'tbl_member');
 
         if (!$this->upload->do_upload('member')) {
             redirect('backend/dashboard/member');
@@ -371,7 +371,7 @@ class Upload extends CI_Controller
         $where = array('id' => $id);
 
 
-        $this->backend_user_model->update_data($where, $data, 'tbl_footer');
+        $this->Backend_user_model->update_data($where, $data, 'tbl_footer');
 
         if (!$this->upload->do_upload('footer')) {
             redirect('backend/dashboard/footer');

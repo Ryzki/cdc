@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $this->backend_user_model->getLoginData($username, $password);
+            $this->Backend_user_model->getLoginData($username, $password);
         }
     }
 
@@ -33,12 +33,12 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['logo'] = $this->backend_user_model->tampil_data('tbl_logo')->result();
-        $data['slide'] = $this->backend_user_model->tampil_data('tbl_slide')->result();
-        $data['menu'] = $this->landing_page_model->getMenu();
-        $data['submenu'] = $this->landing_page_model->getSubMenu();
-        $data['menukaki'] = $this->backend_user_model->tampil_data('tbl_menu_kaki')->result();
-        $data['artikel'] = $this->backend_user_model->tampil_data('tbl_artikel')->result();
+        $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+        $data['slide'] = $this->Backend_user_model->tampil_data('tbl_slide')->result();
+        $data['menu'] = $this->Landing_page_model->getMenu();
+        $data['submenu'] = $this->Landing_page_model->getSubMenu();
+        $data['menukaki'] = $this->Backend_user_model->tampil_data('tbl_menu_kaki')->result();
+        $data['artikel'] = $this->Backend_user_model->tampil_data('tbl_artikel')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -91,7 +91,7 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['video'] = $this->backend_user_model->tampil_data('tbl_video')->result();
+        $data['video'] = $this->Backend_user_model->tampil_data('tbl_video')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -111,8 +111,8 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
 
-        $data['galeri'] = $this->backend_user_model->tampil_data('tbl_galeri_menu')->result();
-        $data['galeri_gb'] = $this->backend_user_model->tampil_data('tbl_galeri_gb')->result();
+        $data['galeri'] = $this->Backend_user_model->tampil_data('tbl_galeri_menu')->result();
+        $data['galeri_gb'] = $this->Backend_user_model->tampil_data('tbl_galeri_gb')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -131,8 +131,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['gambar'] = $this->backend_user_model->tampil_data('tbl_testimoni')->result();
-        $data['list'] = $this->backend_user_model->tampil_data('tbl_says')->result();
+        $data['gambar'] = $this->Backend_user_model->tampil_data('tbl_testimoni')->result();
+        $data['list'] = $this->Backend_user_model->tampil_data('tbl_says')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -151,7 +151,7 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['achievement'] = $this->backend_user_model->tampil_data('tbl_achievement')->result();
+        $data['achievement'] = $this->Backend_user_model->tampil_data('tbl_achievement')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -170,7 +170,7 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['member'] = $this->backend_user_model->tampil_data('tbl_member')->result();
+        $data['member'] = $this->Backend_user_model->tampil_data('tbl_member')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -189,7 +189,7 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['partner'] = $this->backend_user_model->tampil_data('tbl_partner')->result();
+        $data['partner'] = $this->Backend_user_model->tampil_data('tbl_partner')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -209,7 +209,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
 
-        $data['footer'] = $this->backend_user_model->tampil_data('tbl_footer')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -330,8 +330,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $data['menu'] = $this->backend_user_model->tampil_data('tbl_menu')->result();
-        $data['submenu'] = $this->backend_user_model->tampil_data('tbl_submenu')->result();
+        $data['menu'] = $this->Backend_user_model->tampil_data('tbl_menu')->result();
+        $data['submenu'] = $this->Backend_user_model->tampil_data('tbl_submenu')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -348,7 +348,7 @@ class Dashboard extends CI_Controller
             'link' => $link,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_menu');
+        $this->Backend_user_model->insert_data($data, 'tbl_menu');
         redirect('backend/dashboard/profile');
     }
 
@@ -359,7 +359,7 @@ class Dashboard extends CI_Controller
             'menu' => $album,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_galeri_menu');
+        $this->Backend_user_model->insert_data($data, 'tbl_galeri_menu');
         redirect('backend/dashboard/galeri');
     }
 
@@ -375,7 +375,7 @@ class Dashboard extends CI_Controller
             'link' => $link,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_submenu');
+        $this->Backend_user_model->insert_data($data, 'tbl_submenu');
         redirect('backend/dashboard/profile');
     }
 
@@ -389,7 +389,7 @@ class Dashboard extends CI_Controller
             'link' => $link,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_menu_kaki');
+        $this->Backend_user_model->insert_data($data, 'tbl_menu_kaki');
         redirect('backend/dashboard/profile');
     }
 
@@ -407,7 +407,7 @@ class Dashboard extends CI_Controller
             'konten' => $konten,
         );
 
-        $this->backend_user_model->insert_data($data, 'tbl_artikel');
+        $this->Backend_user_model->insert_data($data, 'tbl_artikel');
         redirect('backend/dashboard/profile');
     }
 
@@ -423,10 +423,10 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $where = array('id' => $id);
-        $data['artikel'] = $this->backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
+        $data['artikel'] = $this->Backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
 
-        $data['menu'] = $this->backend_user_model->tampil_data('tbl_menu')->result();
-        $data['submenu'] = $this->backend_user_model->tampil_data('tbl_submenu')->result();
+        $data['menu'] = $this->Backend_user_model->tampil_data('tbl_menu')->result();
+        $data['submenu'] = $this->Backend_user_model->tampil_data('tbl_submenu')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -453,7 +453,7 @@ class Dashboard extends CI_Controller
             'id' => $id
         );
 
-        $this->backend_user_model->update_data($where, $data, 'tbl_artikel');
+        $this->Backend_user_model->update_data($where, $data, 'tbl_artikel');
 
         redirect('backend/dashboard/profile');
     }
@@ -461,70 +461,70 @@ class Dashboard extends CI_Controller
     public function delete($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_menu');
+        $this->Backend_user_model->hapus_data($where, 'tbl_menu');
         redirect('backend/dashboard/profile');
     }
 
     public function deleteAlbum($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_galeri_menu');
+        $this->Backend_user_model->hapus_data($where, 'tbl_galeri_menu');
         $this->deleteGambar($id);
     }
 
     public function deletegambar($id)
     {
         $where = array('menu' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_galeri_gb');
+        $this->Backend_user_model->hapus_data($where, 'tbl_galeri_gb');
         redirect('backend/dashboard/galeri');
     }
 
     public function deleteGaleri($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_galeri_gb');
+        $this->Backend_user_model->hapus_data($where, 'tbl_galeri_gb');
         redirect('backend/dashboard/galeri');
     }
 
     public function deleteSbm($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_submenu');
+        $this->Backend_user_model->hapus_data($where, 'tbl_submenu');
         redirect('backend/dashboard/profile');
     }
 
     public function deleteMk($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_menu_kaki');
+        $this->Backend_user_model->hapus_data($where, 'tbl_menu_kaki');
         redirect('backend/dashboard/profile');
     }
 
     public function deleteTestimoni($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_says');
+        $this->Backend_user_model->hapus_data($where, 'tbl_says');
         redirect('backend/dashboard/testimoni');
     }
 
     public function deletePartner($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_partner');
+        $this->Backend_user_model->hapus_data($where, 'tbl_partner');
         redirect('backend/dashboard/partner');
     }
 
     public function deleteMember($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_member');
+        $this->Backend_user_model->hapus_data($where, 'tbl_member');
         redirect('backend/dashboard/member');
     }
 
     public function deleteSlide($id)
     {
         $where = array('id' => $id);
-        $this->backend_user_model->hapus_data($where, 'tbl_slide');
+        $this->Backend_user_model->hapus_data($where, 'tbl_slide');
         redirect('backend/dashboard/profile');
     }
 
