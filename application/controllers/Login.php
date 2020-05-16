@@ -9,6 +9,7 @@ class Login extends CI_Controller
 		$this->load->model('Company_model');
 		$this->load->library('session');
 		$this->load->helper(array('form', 'url'));
+		$this->load->helper(array('url', 'download'));
 	}
 
 	public function Perusahaan()
@@ -45,10 +46,11 @@ class Login extends CI_Controller
 
 		$this->load->library('upload', $config);
 		if ($this->upload->do_upload('upload_mou')) {
-			echo $this->upload->data('file_name');
-			echo "<br>SUSKES";
+			$this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Upload MOU!, We Will Response Your Submission</div>');
+			redirect(base_url('login/perusahaan'));
 		} else {
-			echo "GAGAL";
+			$this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Error Upload File!, Make Sure Using .docx Extensions</div>');
+			$this->mou();
 		}
 	}
 

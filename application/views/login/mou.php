@@ -56,6 +56,7 @@
         <div class="card pb-0">
             <div class="body">
                 <h3>MOU Partner Employer</h3>
+                <?= $this->session->flashdata('message') ?>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-10 bg-lightest border-1px">
