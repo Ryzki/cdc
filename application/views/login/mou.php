@@ -63,12 +63,20 @@
                             <!-- <form action="<?= base_url('login/sign_up') ?>" method="POST" id="form_sign_up" class="form-horizontal"> -->
                             <h5>Download Template</h5>
                             <a href="<?= base_url('login/download_template_mou') ?>" class="btn btn-sm btn-success pt-10 pb-10 text-white"><i class="fa fa-download"></i> Download Template</a>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <a href="<?= base_url('backend/company/logout') ?>" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10 text-white" data-loading-text="Please wait...">Logout</a>
+                            <?php echo form_open_multipart('login/upload_mou'); ?>
+                            <div class="row" style="margin-top: 50px;">
+                                <div class="col-md-12">
+                                    <input type="file" id="myFile" name="upload_mou" style="margin: auto;">
+                                    <button type="submit" class="btn btn-sm mt-10 py-10 text-black btn-secondary"><i class="fa fa-upload"></i> Upload</button>
                                 </div>
                             </div>
+                            </form>
                             <!-- </form> -->
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <a href="<?= base_url('backend/company/logout') ?>" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10 text-white" data-loading-text="Please wait...">Logout</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-1"></div>

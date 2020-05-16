@@ -10,10 +10,10 @@ class Company_model extends CI_Model
         $password_1 = $this->input->post('password_1');
 
         $kode = $this->db->select('kode_pt')->from('mst_company')->limit(1)->order_by('id', 'DESC')->get()->row_array();
-        echo $kode['kode_pt'];
-        die;
+        $kode_pt = "CP" . (substr($kode['kode_pt'], 2) + 1);
 
         $data = array(
+            'kode_pt' => $kode_pt,
             'nama_pt' => $nama,
             'jenis_pt' => $jenis,
             'email_pt' => $email,

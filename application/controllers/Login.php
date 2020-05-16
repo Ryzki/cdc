@@ -6,11 +6,12 @@ class Login extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
-		$this->load->model('company_model');
+		$this->load->model('Company_model');
 		$this->load->library('session');
+		$this->load->helper(array('form', 'url'));
 	}
 
-	public function perusahaan()
+	public function Perusahaan()
 	{
 		if (!empty($_REQUEST)) {
 			$this->Company_model->sign_in();
@@ -33,6 +34,22 @@ class Login extends CI_Controller
 	public function mou()
 	{
 		$this->load->view('login/mou');
+	}
+
+	public function upload_mou()
+	{
+		$config['upload_path']          = './assets/upload/';
+		$config['allowed_types']        = 'docx';
+		$config['file_name']        	= $this->session->userdata('kode');
+		$config['max_size']             = 2000;
+
+		$this->load->library('upload', $config);
+		if ($this->upload->do_upload('upload_mou')) {
+			echo $this->upload->data('file_name');
+			echo "<br>SUSKES";
+		} else {
+			echo "GAGAL";
+		}
 	}
 
 	public function sign_up()
