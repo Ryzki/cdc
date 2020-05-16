@@ -11,6 +11,8 @@ class Landing extends CI_Controller
 		$data['submenu'] = $this->landing_page_model->getSubMenu();
 		$data['kaki'] = $this->landing_page_model->getKaki('tbl_menu_kaki')->result();
 		$data['video'] = $this->landing_page_model->getKaki('tbl_video')->result();
+		$data['album'] = $this->landing_page_model->getKaki('tbl_galeri_menu')->result();
+		$data['galeri_gb'] = $this->landing_page_model->getKaki('tbl_galeri_gb')->result();
 		$data['testimoni'] = $this->landing_page_model->getKaki('tbl_says')->result();
 		$data['gb_testimoni'] = $this->landing_page_model->getKaki('tbl_testimoni')->result();
 		$data['achievement'] = $this->landing_page_model->getKaki('tbl_achievement')->result();

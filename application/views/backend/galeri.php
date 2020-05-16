@@ -57,7 +57,7 @@
                 foreach ($galeri as $gr) {
                     $tab = $gr->id;
                 ?>
-                    <div class="tab-pane fade active in show" id="tab-<?= $tab ?>">
+                    <div class="tab-pane fade active in" id="tab-<?= $tab ?>">
                         <div class="row">
                             <?php $aaa = $this->db->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
                             foreach ($aaa as $gal) {
