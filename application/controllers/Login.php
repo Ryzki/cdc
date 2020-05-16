@@ -25,6 +25,16 @@ class Login extends CI_Controller
 		$this->load->view('login/daftar_baru');
 	}
 
+	public function download_template_mou()
+	{
+		force_download('assets/template/draft MOU.docx', NULL);
+	}
+
+	public function mou()
+	{
+		$this->load->view('login/mou');
+	}
+
 	public function sign_up()
 	{
 		$this->company_model->sign_up();

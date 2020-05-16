@@ -53,7 +53,7 @@
                     <?php $i = 1;
                     foreach ($datas as $data) {
                         if ($data->status == '1') {
-                            $aa = '<span class="badge badge-dot">
+                            $status = '<span class="badge badge-dot">
                                     <i class="bg-success"></i>
                                     <span class="status">Approved</span>
                                   </span>';
@@ -208,7 +208,7 @@
                         },
                         dataType: 'json',
                         success: function(data) {
-                            if (data.statusCode == '200') {
+                            if (data == '200') {
                                 Swal.fire({
                                     type: 'success',
                                     title: 'Deleted!',
@@ -218,7 +218,7 @@
                                 })
                                 $(".row" + id).hide();
                             } else {
-                                alert("Failed Delete Data!!");
+                                alert("Error Update Data!!");
                             }
                         }
                     });

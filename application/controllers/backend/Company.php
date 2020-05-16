@@ -283,6 +283,16 @@ class Company extends CI_Controller
         echo json_encode($this->company_model->get_total_data($kode, 'tbl_agenda'));
     }
 
+    public function decision()
+    {
+        $id = $this->input->post('id');
+        $status = $this->input->post('status');
+        $data = array(
+            'status' => $status
+        );
+        echo json_encode($this->company_model->update_data_by_id($id, $data, 'tbl_apply'));
+    }
+
     public function download_csv($csv)
     {
         force_download('assets/cv/' . $csv, NULL);

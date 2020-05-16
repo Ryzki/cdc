@@ -45,23 +45,42 @@
                                 <th>Email</th>
                                 <th>Gender</th>
                                 <th>Position</th>
-                                <th>CV</th>
+                                <th>Status</th>
                                 <th>Date Apply</th>
+                                <th>CV</th>
                                 <th width='1%'></th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $i = 1;
-                            foreach ($datas as $data) { ?>
+                            foreach ($datas as $data) {
+                                if ($data->status == '1') {
+                                    $status = '<span class="badge badge-dot">
+                                            <i class="bg-success"></i>
+                                            <span class="status">Approved</span>
+                                          </span>';
+                                } elseif ($data->status == '2') {
+                                    $status = '<span class="badge badge-dot">
+                                            <i class="bg-danger"></i>
+                                            <span class="status">Rejected</span>
+                                          </span>';
+                                } else {
+                                    $status = '<span class="badge badge-dot">
+                                            <i class="bg-info"></i>
+                                            <span class="status">Outstanding</span>
+                                          </span>';
+                                } ?>
                                 <tr class="text-center row<?= $data->id ?>">
                                     <td><?= $i ?></td>
                                     <td><?= $data->nama ?></td>
                                     <td><?= $data->email ?></td>
                                     <td><?= $data->jenis_kelamin ?></td>
                                     <td><?= $data->posisi ?></td>
-                                    <td><?= $data->cv ?></td>
+                                    <td><?= $status ?></td>
                                     <td><?= substr($data->date_apply, 0, 10) ?></td>
-                                    <td><button data-toggle="tooltip" title="Approve" type="button" id="" class="btn btn-sm btn-success" onclick="approve('<?= $data->id ?>')" <?= ($result !== "outstanding") ? "hidden" : "" ?>><i class="fa fa-check"></i></button> <button data-toggle="tooltip" title="Reject" type="button" id="" class="btn btn-sm btn-danger" onclick="reject('<?= $data->id ?>')" <?= ($result !== "outstanding") ? "hidden" : "" ?>><i class="fa fa-times"></i></button> <span data-toggle="modal" data-target="#modalInfo"><button data-toggle="tooltip" title="Detail Applier" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></span></td>
+                                    <td><a href="<?= base_url('backend/company/download_csv/' . $data->cv) ?>" data-toggle="tooltip" title="Download CV" type="button" id="" class="btn btn-sm btn-info"><i class="fa fa-file"></i> Download CV</a></td>
+
+                                    <td><button data-toggle="tooltip" title="Approve" type="button" id="" class="btn btn-sm btn-success" onclick="result('<?= $data->id ?>', 'Approved', '<?= $data->nama ?>')" <?= ($result !== "outstanding") ? "hidden" : "" ?>><i class="fa fa-check"></i></button> <button data-toggle="tooltip" title="Reject" type="button" id="" class="btn btn-sm btn-danger" onclick="result('<?= $data->id ?>', 'Rejected', '<?= $data->nama ?>')" <?= ($result !== "outstanding") ? "hidden" : "" ?>><i class="fa fa-times"></i></button> <button data-toggle="tooltip" title="Return" type="button" id="" class="btn btn-sm btn-secondary" onclick="result('<?= $data->id ?>', 'Return', '<?= $data->nama ?>')" <?= ($result !== "outstanding") ? "" : "hidden" ?>><i class="fa fa-redo"></i></button> <span data-toggle="modal" data-target="#modalInfo"><button data-toggle="tooltip" title="Detail Applier" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></span></td>
                                 </tr>
                             <?php $i++;
                             } ?>
@@ -172,15 +191,25 @@
 
         })
 
-        function delete_agenda(id, result) {
+        function result(id, decision, nama) {
+            if (decision == "Rejected") {
+                status = '2';
+                button = 'btn-danger';
+            } else if (decision == "Approved") {
+                status = '1';
+                button = 'btn-success';
+            } else if (decision == "Return") {
+                status = '0';
+                button = 'btn-default';
+            }
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                type: 'warning',
+                title: decision + ' ' + nama + ' ?',
+                // text: "You won't be able to revert this!",
+                type: 'question',
                 showCancelButton: true,
-                confirmButtonClass: 'btn btn-danger',
+                confirmButtonClass: 'btn ' + button,
                 cancelButtonClass: 'btn btn-secondary',
-                confirmButtonText: 'Yes, delete it!',
+                confirmButtonText: 'Yes, ' + decision + ' it!',
                 buttonsStyling: false
             }).then((result) => {
                 if (result.value) {
@@ -188,21 +217,22 @@
                         type: "POST",
                         url: "<?= base_url('backend/company/decision') ?>",
                         data: {
-                            id: id
+                            id: id,
+                            status: status
                         },
                         dataType: 'json',
                         success: function(data) {
-                            if (data.statusCode == '200') {
+                            if (data == '200') {
                                 Swal.fire({
                                     type: 'success',
-                                    title: 'Deleted!',
-                                    text: "Agenda has been deleted.",
+                                    title: decision + '!',
+                                    text: nama + " has been " + decision,
                                     showConfirmButton: false,
                                     timer: 1500
                                 })
                                 $(".row" + id).hide();
                             } else {
-                                alert("Failed Delete Data!!");
+                                alert("Error Update Data!!");
                             }
                         }
                     });
@@ -225,7 +255,7 @@
                     $("#view_email").html(data.email);
                     $("#view_gender").html(data.jenis_kelamin);
                     $("#view_position").html(data.posisi.toUpperCase());
-                    $("#view_cv").html(data.cv);
+                    $("#view_cv").html('<a href="<?= base_url('backend/company/download_csv/') ?>' + data.cv + '" data-toggle="tooltip" title="Download CV" type="button" id="" class="btn btn-sm btn-info"><i class="fa fa-file"></i> Download CV</a>');
                     $("#view_date_apply").html(data.date_apply.substr(0, 10));
                     $("#view_message").html(data.pesan);
                 }

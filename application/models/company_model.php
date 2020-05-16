@@ -29,6 +29,18 @@ class Company_model extends CI_Model
                 if ($cek_company['is_active'] == 0) {
                     $this->session->set_flashdata('message', '<div class="alert alert-warning text-center" role="alert">User Is Not Active !, Please Call Our Support</div>');
                     redirect('login/perusahaan');
+                } elseif ($cek_company['is_active'] == 1) {
+                    $sess_data = array(
+                        'kode' => $cek_company['kode_pt'],
+                        'nama' => $cek_company['nama_pt'],
+                        'jenis' => $cek_company['jenis_pt'],
+                        'email' => $cek_company['email_pt'],
+                        'deskripsi' => $cek_company['deskripsi'],
+                        'date_input' => $cek_company['date_input'],
+                        'logged_in' => TRUE,
+                    );
+                    $this->session->set_userdata($sess_data);
+                    redirect('login/mou', $sess_data);
                 } else {
                     $sess_data = array(
                         'kode' => $cek_company['kode_pt'],
@@ -155,5 +167,12 @@ class Company_model extends CI_Model
         $this->db->where('a.id', $id);
         $this->db->order_by('a.id', 'DESC');
         return $this->db->get();
+    }
+
+    public function update_data_by_id($id, $data, $table)
+    {
+        $this->db->where('id', $id);
+        $update_data = $this->db->update($table, $data);
+        return ($update_data) ? "200" : "100";
     }
 }
