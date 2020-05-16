@@ -603,36 +603,14 @@
                           ?>
                             <div class="tab-pane fade <?= ($min_data['min'] == $tab) ? "active" : "" ?> in" id="tab-<?= $tab ?>">
                               <div class="row">
-                                <?php $aaa = $this->db->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
+                                <?php $aaa =
+                                  $this->db->limit(4)->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
                                 foreach ($aaa as $gal) {
                                 ?>
-                                  <div class="col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                                    <div class="services mb-xs-30">
+                                  <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <div class=" services mb-xs-30">
                                       <div class="thumb">
                                         <img class="img-fullwidth" alt="" src="<?= base_url('assets/') ?>images/gallery/<?= $gal->gambar ?>">
-                                      </div>
-                                      <div class="services-details clearfix">
-                                        <div class="p-20 p-sm-15 bg-lighter">
-                                          <h4 class="mt-0 line-height-1 sm-text-center"><a href="#">Anthropology</a></h4>
-                                          <ul class="list-inline text-theme-colored2 pull-left xs-pull-left  sm-pull-none sm-text-center">
-                                            <li>
-                                              <i class="fa fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star" aria-hidden="true"></i>
-                                              <i class="fa fa-star" aria-hidden="true"></i>
-                                            </li>
-                                          </ul>
-                                          <div class="course-price bg-theme-colored3 pull-right sm-pull-none xs-pull-right sm-text-center mt-sm-10 mt-xs-0">
-                                            <span class="text-white">$200</span>
-                                          </div>
-                                          <div class="clearfix"></div>
-                                          <ul class="list-inline mt-15 mb-10 clearfix">
-                                            <li class="pull-left sm-pull-none xs-pull-left sm-text-center flip pr-0 clearfix">Course: <span class="font-weight-700">4 Years</span></li>
-                                            <li class="text-theme-colored pull-right sm-pull-none xs-pull-right sm-text-center flip pr-0">Class Size: <span class="font-weight-700">110</span></li>
-                                          </ul>
-                                          <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="#">Learn Now</a>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>

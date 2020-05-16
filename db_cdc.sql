@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `status` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.status: ~6 rows (approximately)
+-- Dumping data for table db_cdc.status: ~7 rows (approximately)
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
 REPLACE INTO `status` (`id`, `table`, `status`, `deskripsi`) VALUES
 	(1, 'tbl_alumni', '1-18', 'setiap status = selesei question ke (status)'),
@@ -86,40 +86,18 @@ CREATE TABLE IF NOT EXISTS `tbl_agenda` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode_pt` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `time_1` datetime NOT NULL,
-  `time_2` datetime NOT NULL,
+  `date` date NOT NULL,
+  `time_1` time NOT NULL,
+  `time_2` time NOT NULL,
   `location` varchar(100) NOT NULL,
   `content` text NOT NULL,
-  `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Dumping data for table db_cdc.tbl_agenda: ~23 rows (approximately)
+-- Dumping data for table db_cdc.tbl_agenda: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_agenda` DISABLE KEYS */;
-REPLACE INTO `tbl_agenda` (`id`, `kode_pt`, `title`, `time_1`, `time_2`, `location`, `content`, `date_input`) VALUES
-	(3, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(9, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(10, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(14, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(15, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(16, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(17, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(18, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(19, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(20, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(22, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(23, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(24, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(25, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(26, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(27, 'CP3', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(28, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(29, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(30, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(31, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(32, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(33, 'CP4', 'Agenda Title', '2020-05-13 07:54:43', '2020-05-13 13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00'),
-	(35, 'CP3', 'Agenda Pertumbuhan Penduduk Di Indonesia', '2020-05-13 14:58:00', '2020-05-14 14:58:00', 'Indonesia', '<p>Agenda yang akan diselenggarakan adalah sebuah agenda yang tidak disangka sangka keberadaannya</p>\r\n', '2020-05-13 14:59:29');
+REPLACE INTO `tbl_agenda` (`id`, `kode_pt`, `title`, `date`, `time_1`, `time_2`, `location`, `content`) VALUES
+	(1, 'CP3', 'Agenda Title', '2020-05-13', '07:54:43', '13:54:44', 'Pasuruan', 'Buka Bersama');
 /*!40000 ALTER TABLE `tbl_agenda` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_alumni
@@ -141,41 +119,6 @@ CREATE TABLE IF NOT EXISTS `tbl_alumni` (
 REPLACE INTO `tbl_alumni` (`id`, `npm`, `nama`, `telp`, `email`, `kode_prodi`, `tahun_lulus`, `status`, `remark`) VALUES
 	(1, '1', 'aaa', '123', '1@a.com', '1', '1234', 18, '');
 /*!40000 ALTER TABLE `tbl_alumni` ENABLE KEYS */;
-
--- Dumping structure for table db_cdc.tbl_apply
-CREATE TABLE IF NOT EXISTS `tbl_apply` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `jenis_kelamin` varchar(100) NOT NULL,
-  `posisi` varchar(100) NOT NULL,
-  `pesan` text NOT NULL,
-  `cv` varchar(100) NOT NULL,
-  `date_apply` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `status` int(11) NOT NULL COMMENT '0=Outstanding, 1=Approved, 2=Rejected',
-  `id_vacancy` int(11) NOT NULL DEFAULT '0',
-  `kode_pt` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_vacancy` (`id_vacancy`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
-
--- Dumping data for table db_cdc.tbl_apply: ~13 rows (approximately)
-/*!40000 ALTER TABLE `tbl_apply` DISABLE KEYS */;
-REPLACE INTO `tbl_apply` (`id`, `nama`, `email`, `jenis_kelamin`, `posisi`, `pesan`, `cv`, `date_apply`, `status`, `id_vacancy`, `kode_pt`) VALUES
-	(1, '1', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 0, 30, 'CP3'),
-	(15, '2', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 0, 27, 'CP3'),
-	(16, '3', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 1, 28, 'CP3'),
-	(17, '4', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 0, 29, 'CP3'),
-	(18, '5', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 2, 24, 'CP3'),
-	(19, '6', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 1, 30, 'CP3'),
-	(20, '7', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 0, 28, 'CP3'),
-	(21, '8', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 1, 27, 'CP3'),
-	(22, '9', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 2, 28, 'CP3'),
-	(23, '10', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 1, 24, 'CP3'),
-	(24, '11', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 0, 29, 'CP3'),
-	(25, '12', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 2, 27, 'CP3'),
-	(26, '13', 'email@email.com', 'laki-laki', 'it', 'mantap jaya', 'cowok2.jpg', '2020-05-13 09:42:46', 2, 28, 'CP3');
-/*!40000 ALTER TABLE `tbl_apply` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_artikel
 CREATE TABLE IF NOT EXISTS `tbl_artikel` (
@@ -250,9 +193,9 @@ CREATE TABLE IF NOT EXISTS `tbl_galeri_gb` (
   `gambar` varchar(255) NOT NULL DEFAULT '',
   `menu` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_galeri_gb: ~14 rows (approximately)
+-- Dumping data for table db_cdc.tbl_galeri_gb: ~16 rows (approximately)
 /*!40000 ALTER TABLE `tbl_galeri_gb` DISABLE KEYS */;
 REPLACE INTO `tbl_galeri_gb` (`id`, `gambar`, `menu`) VALUES
 	(1, '1.jpg', '1'),
@@ -270,7 +213,8 @@ REPLACE INTO `tbl_galeri_gb` (`id`, `gambar`, `menu`) VALUES
 	(13, '4.jpg', '4'),
 	(14, '4.jpg', '4'),
 	(15, '4.jpg', '4'),
-	(16, '4.jpg', '4');
+	(16, '4.jpg', '4'),
+	(17, 'pertamina-head.jpg', '1');
 /*!40000 ALTER TABLE `tbl_galeri_gb` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_galeri_menu
@@ -278,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `tbl_galeri_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menu` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table db_cdc.tbl_galeri_menu: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_galeri_menu` DISABLE KEYS */;
@@ -313,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `tbl_logo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_logo: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_logo: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_logo` DISABLE KEYS */;
 REPLACE INTO `tbl_logo` (`id`, `logo`) VALUES
 	(11, 'logo.png');
@@ -362,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   `menu` varchar(50) NOT NULL DEFAULT '',
   `link` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table db_cdc.tbl_menu: ~6 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
@@ -370,9 +314,7 @@ REPLACE INTO `tbl_menu` (`id`, `menu`, `link`) VALUES
 	(1, 'About', ''),
 	(2, 'Pelatihan', ''),
 	(3, 'Artikel', ''),
-	(4, 'Lowongan Kerja', 'http://ub.ac.id'),
-	(6, 'Hubungi Kami', ''),
-	(7, 'Hubungi Kami', 'backend/dashboard/apa');
+	(4, 'Lowongan Kerja', 'http://ub.ac.id');
 /*!40000 ALTER TABLE `tbl_menu` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_menu_kaki
@@ -440,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `tbl_slide` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_slide: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_slide: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_slide` DISABLE KEYS */;
 REPLACE INTO `tbl_slide` (`id`, `gambar`) VALUES
 	(34, 'slide1.jpg'),
@@ -475,13 +417,12 @@ CREATE TABLE IF NOT EXISTS `tbl_testimoni` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `gb_utama` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table db_cdc.tbl_testimoni: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_testimoni` DISABLE KEYS */;
 REPLACE INTO `tbl_testimoni` (`id`, `gb_utama`) VALUES
-	(1, 'bg6.jpg'),
-	(13, '1.jpg');
+	(1, 'bg6.jpg');
 /*!40000 ALTER TABLE `tbl_testimoni` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_tracer
@@ -659,13 +600,14 @@ CREATE TABLE IF NOT EXISTS `tbl_video` (
   `judul` varchar(255) NOT NULL DEFAULT '',
   `deskripsi` varchar(255) NOT NULL DEFAULT '',
   `link_youtube` varchar(255) NOT NULL DEFAULT '',
+  `gambar` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_video: ~0 rows (approximately)
+-- Dumping data for table db_cdc.tbl_video: ~1 rows (approximately)
 /*!40000 ALTER TABLE `tbl_video` DISABLE KEYS */;
-REPLACE INTO `tbl_video` (`id`, `judul`, `deskripsi`, `link_youtube`) VALUES
-	(1, 'Watch Our Activity', 'Kehidupan yang besar dimulai dari mimpi yang besar ~ Agus Salim', 'http://www.youtube.com/watch?v=1iIZeIy7TqM');
+REPLACE INTO `tbl_video` (`id`, `judul`, `deskripsi`, `link_youtube`, `gambar`) VALUES
+	(1, 'Watch Our Activity', 'Kehidupan yang besar dimulai dari mimpi yang besar ~ Agus Salim', 'http://www.youtube.com/watch?v=1iIZeIy7TqM', 'CDC-Psikotes.jpg');
 /*!40000 ALTER TABLE `tbl_video` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.user
