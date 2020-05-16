@@ -7,7 +7,7 @@ class Tracer extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
-        $this->load->model('tracer_model');
+        $this->load->model('Tracer_model');
         $this->load->library('session');
     }
 
@@ -23,7 +23,7 @@ class Tracer extends CI_Controller
             $this->load->view('tracer/login', $data);
             // $this->load->view('tracer/footer');
         } else {
-            $this->tracer_model->login();
+            $this->Tracer_model->login();
         }
     }
 
@@ -32,7 +32,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '0') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
             $data['title'] = 'Sambutan | Tracer Study';
             $this->load->view('tracer/header', $data);
@@ -51,7 +51,7 @@ class Tracer extends CI_Controller
     //         redirect(base_url('tracer'));
     //     }
     //     if (!empty($_REQUEST)) {
-    //         $this->tracer_model->insert_data_wajib();
+    //         $this->Tracer_model->insert_data_wajib();
     //         redirect(base_url('tracer/ask1'));
     //     } else {
     //         $data['title'] = 'Question 1 | Tracer Study';
@@ -66,14 +66,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '0') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->insert_question_1();
+            $this->Tracer_model->insert_question_1();
             redirect(base_url('tracer/ask2'));
         } else {
             $data['title'] = 'Question 1 | Tracer Study';
@@ -88,14 +88,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '1') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_2();
+            $this->Tracer_model->update_question_2();
             // redirect(base_url('tracer/ask3'));
         } else {
             $data['title'] = 'Question 2 | Tracer Study';
@@ -110,7 +110,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '2') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
@@ -137,7 +137,7 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask3");
             }
-            $this->tracer_model->update_question_3();
+            $this->Tracer_model->update_question_3();
             redirect(base_url('tracer/ask4'));
         } else {
             $data['title'] = 'Question 3 | Tracer Study';
@@ -154,14 +154,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '3') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_4();
+            $this->Tracer_model->update_question_4();
             redirect(base_url('tracer/ask5'));
         } else {
             $data['title'] = 'Question 4 | Tracer Study';
@@ -176,14 +176,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '4') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_5();
+            $this->Tracer_model->update_question_5();
             redirect(base_url('tracer/ask6'));
         } else {
             $data['title'] = 'Question 5 | Tracer Study';
@@ -198,14 +198,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '5') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_6();
+            $this->Tracer_model->update_question_6();
             redirect(base_url('tracer/ask7'));
         } else {
             $data['title'] = 'Question 6 | Tracer Study';
@@ -220,14 +220,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '6') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_7();
+            $this->Tracer_model->update_question_7();
             redirect(base_url('tracer/ask8'));
         } else {
             $data['title'] = 'Question 7 | Tracer Study';
@@ -243,14 +243,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '7') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_8();
+            $this->Tracer_model->update_question_8();
             redirect(base_url('tracer/ask9'));
         } else {
             $data['title'] = 'Question 8 | Tracer Study';
@@ -265,7 +265,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '8') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
@@ -282,7 +282,7 @@ class Tracer extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-warning" role="alert"><strong class="text-center"> Data Tidak Boleh Kosong ! !</strong></div>');
                 redirect("tracer/ask9");
             }
-            $this->tracer_model->update_question_9();
+            $this->Tracer_model->update_question_9();
             redirect(base_url('tracer/ask10'));
         } else {
             $data['title'] = 'Question 9 | Tracer Study';
@@ -297,14 +297,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '9') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_10();
+            $this->Tracer_model->update_question_10();
             // redirect(base_url('tracer/ask11'));
         } else {
             $data['title'] = 'Question 10 | Tracer Study';
@@ -319,14 +319,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '10') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_11();
+            $this->Tracer_model->update_question_11();
             redirect(base_url('tracer/ask12'));
         } else {
             $data['title'] = 'Question 11 | Tracer Study';
@@ -343,14 +343,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '11') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_12();
+            $this->Tracer_model->update_question_12();
             redirect(base_url('tracer/ask13'));
         } else {
             $data['title'] = 'Question 12 | Tracer Study';
@@ -364,14 +364,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '12') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_13();
+            $this->Tracer_model->update_question_13();
             redirect(base_url('tracer/ask14'));
         } else {
             $data['title'] = 'Question 13 | Tracer Study';
@@ -385,14 +385,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '13') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_14();
+            $this->Tracer_model->update_question_14();
             redirect(base_url('tracer/ask15'));
         } else {
             $data['title'] = 'Question 14 | Tracer Study';
@@ -406,14 +406,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '14') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_15();
+            $this->Tracer_model->update_question_15();
             redirect(base_url('tracer/ask16'));
         } else {
             $data['title'] = 'Question 15 | Tracer Study';
@@ -428,7 +428,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '15') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
@@ -456,10 +456,10 @@ class Tracer extends CI_Controller
             //cek dulu statusnya
 
             if ($data['alumni']['status'] == '15') {
-                $this->tracer_model->update_question_16();
+                $this->Tracer_model->update_question_16();
                 redirect(base_url('tracer/ask17'));
             } else {
-                $this->tracer_model->update_question_11();
+                $this->Tracer_model->update_question_11();
                 redirect(base_url('tracer/ask17'));
             }
         } else {
@@ -475,7 +475,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '16') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
@@ -484,10 +484,10 @@ class Tracer extends CI_Controller
         if (!empty($_REQUEST)) {
             //cek dulu statusnya
             if ($data['alumni']['status'] == '16') {
-                $this->tracer_model->update_question_17();
+                $this->Tracer_model->update_question_17();
                 redirect(base_url('tracer/ask18'));
             } else {
-                $this->tracer_model->update_question_12();
+                $this->Tracer_model->update_question_12();
                 redirect(base_url('tracer/ask18'));
             }
         } else {
@@ -503,14 +503,14 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '17') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));
         }
 
         if (!empty($_REQUEST)) {
-            $this->tracer_model->update_question_18();
+            $this->Tracer_model->update_question_18();
             redirect(base_url('tracer/finish'));
         } else {
             $data['title'] = 'Question 18 | Tracer Study';
@@ -525,7 +525,7 @@ class Tracer extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['alumni'] = $this->db->get_where('tbl_alumni', ['npm' => $this->session->userdata('npm')])->row_array();
             if ($data['alumni']['status'] !== '18') {
-                $this->tracer_model->cek_status($data['alumni']['status']);
+                $this->Tracer_model->cek_status($data['alumni']['status']);
             }
         } else {
             redirect(base_url('tracer'));

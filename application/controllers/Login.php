@@ -13,7 +13,7 @@ class Login extends CI_Controller
 	public function perusahaan()
 	{
 		if (!empty($_REQUEST)) {
-			$this->company_model->sign_in();
+			$this->Company_model->sign_in();
 		} else {
 			$this->load->view('login/perusahaan');
 		}
