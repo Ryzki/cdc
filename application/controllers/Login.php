@@ -46,6 +46,10 @@ class Login extends CI_Controller
 
 		$this->load->library('upload', $config);
 		if ($this->upload->do_upload('upload_mou')) {
+			$data_update = array(
+				'file_mou' => $this->upload->data('file_name'),
+			);
+			$this->Company_model->update_upload($this->session->userdata('kode'), $data_update);
 			$this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Upload MOU!, We Will Response Your Submission</div>');
 			redirect(base_url('login/perusahaan'));
 		} else {

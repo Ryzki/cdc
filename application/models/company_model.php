@@ -34,6 +34,10 @@ class Company_model extends CI_Model
                     $this->session->set_flashdata('message', '<div class="alert alert-warning text-center" role="alert">User Is Not Active !, Please Call Our Support</div>');
                     redirect('login/perusahaan');
                 } elseif ($cek_company['is_active'] == 1) {
+                    if (!empty($cek_company['file_mou'])) {
+                        $this->session->set_flashdata('message', '<div class="alert alert-warning text-center" role="alert">MOU Are Already Uploaded!, Please Wait Or Call Our Support</div>');
+                        redirect('login/perusahaan');
+                    }
                     $sess_data = array(
                         'kode' => $cek_company['kode_pt'],
                         'nama' => $cek_company['nama_pt'],
@@ -178,5 +182,11 @@ class Company_model extends CI_Model
         $this->db->where('id', $id);
         $update_data = $this->db->update($table, $data);
         return ($update_data) ? "200" : "100";
+    }
+
+    public function update_upload($kode, $data_update)
+    {
+        $this->db->where('kode_pt', $kode);
+        $this->db->update('mst_company', $data_update);
     }
 }
