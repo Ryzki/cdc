@@ -44,26 +44,26 @@
                             <div class="widget dark">
                                 <h4 class="widget-title">Galeri Aktivitas</h4>
                                 <div class="opening-hours">
-                                    <div class="row">
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
-                                        </div>
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
-                                        </div>
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/3.jpg">
-                                        </div>
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/4.jpg">
-                                        </div>
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
-                                        </div>
-                                        <div class="col-md-4 sm-text-center" style="padding-left: 0px;padding-right: 10px;">
-                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
-                                        </div>
+
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
                                     </div>
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
+                                    </div>
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/3.jpg">
+                                    </div>
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/4.jpg">
+                                    </div>
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
+                                    </div>
+                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                         <div class="row">
                             <div class="col-md-6 sm-text-center">
                                 <p class="font-13 text-black-777 m-0">Hak Cipta © 2020 Unikama Career & Development Center. Hak cipta dilindungi oleh undang-undang. Powered by SCM </p>
-                            </div>
+                            </div><br>
                             <div class="col-md-6 text-right flip sm-text-center">
                                 <div class="widget no-border m-0">
                                     <ul class="styled-icons icon-dark icon-circled icon-sm">
