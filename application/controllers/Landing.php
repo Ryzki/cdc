@@ -20,6 +20,9 @@ class Landing extends CI_Controller
 		$data['partner'] = $this->Landing_page_model->getKaki('tbl_partner')->result();
 		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
 
+		$data['vacancy'] = $this->Landing_page_model->get_data_vacancy('tbl_vacancy')->result();
+		$data['agenda'] = $this->Landing_page_model->get_data('tbl_agenda')->result();
+
 		$this->load->view('landing-page/header', $data);
 		$this->load->view('landing-page/landing_page');
 		$this->load->view('landing-page/footer');
