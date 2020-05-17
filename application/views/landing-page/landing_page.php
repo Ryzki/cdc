@@ -344,8 +344,11 @@
                       </div>
                     </div>
                   </div>
-                  <a href="JobDetil/all" type="button" class="btn btn-flat btn-sm btn-primary pull-right">Lihat Semua</a>
-
+                  <div style="margin-right: 15px;">
+                    <div class="row">
+                      <a href="JobDetil/all" type="button" class="btn btn-flat btn-sm btn-primary pull-right">Lihat Semua</a>
+                    </div>
+                  </div>
                 </div>
 
 
