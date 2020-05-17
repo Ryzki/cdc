@@ -34,15 +34,15 @@
                                 <button class="btn btn-sm bg-pink" style="margin-top: -40px;font-size: 16px;padding: 15px 30px;">INFORMASI</button>
                             </div>
                         </div> <br>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button class="btn btn-primary" style="padding:10px;"><img src="<?= base_url('assets/') ?>images/notepad.png" width="72" height="72" /><br>Prosedur</button>
+                        <div class="row" style="margin:auto;">
+                            <div class="col-md-4 col-xs-4" style="padding-left:0px;padding-right:0px;">
+                                <button class="btn btn-primary" style="padding:5px;"><img src="<?= base_url('assets/') ?>images/notepad.png" width="72" height="72" /><br>Prosedur</button>
                             </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-warning" style="padding:10px;"><img src="<?= base_url('assets/') ?>images/bill.png" width="72" height="72" /><br>Biaya</button>
+                            <div class="col-md-4 col-xs-4" style="padding-left:0px;padding-right:0px;">
+                                <button class="btn btn-warning" style="padding:5px;"><img src="<?= base_url('assets/') ?>images/bill.png" width="72" height="72" /><br>Biaya</button>
                             </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-success" style="padding:10px;"><img src="<?= base_url('assets/') ?>images/board.png" width="72" height="72" /><br>Fasilitas</button>
+                            <div class="col-md-4 col-xs-4" style="padding-left:0px;padding-right:0px;">
+                                <button class="btn btn-success" style="padding:5px;"><img src="<?= base_url('assets/') ?>images/board.png" width="72" height="72" /><br>Fasilitas</button>
                             </div>
                         </div> <br>
                         <div class="row">
@@ -85,7 +85,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 p-t-5">
-                                    <p><a href="#">&nbsp;</a><a href="<?= base_url('login/daftar_baru') ?>" class="pull-right">Daftar Baru</a></p>
+                                    <p><a href="#">&nbsp;</a><a href="<?= base_url('') ?>" class="pull-leftt">
+                                            Kembali</a> <a href="#">&nbsp;
+                                        </a><a href="<?= base_url('login/daftar_baru') ?>" class="pull-right">Daftar Baru</a></p>
                                 </div>
                             </div>
                         </form>
