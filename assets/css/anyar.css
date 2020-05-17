@@ -1,0 +1,344 @@
+/*=======================================================================
+[08] Students Join Area
+=========================================================================*/
+.students-join1-area {
+    background: #fdc800;
+    padding: 100px 0;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join1-area {
+      padding: 90px 0;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join1-area {
+      padding: 80px 0;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join1-area {
+      padding: 70px 0;
+    }
+  }
+  @media (min-width: 321px) and (max-width: 479px) {
+    .students-join1-area {
+      padding: 60px 0;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .students-join1-area {
+      padding: 50px 0;
+    }
+  }
+  .students-join1-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join1-wrapper {
+      display: block;
+    }
+  }
+  .students-join1-wrapper .students-join1-left {
+    -webkit-box-flex: 5;
+    -moz-flex: 5;
+    -webkit-flex: 5;
+    flex: 5;
+    border: 1px solid #FFFFFF;
+  }
+  .students-join1-wrapper .students-join1-left ul li {
+    border: 2px solid #FFFFFF;
+  }
+  .students-join1-wrapper .students-join1-left .ri-grid {
+    margin: 0;
+  }
+  .students-join1-wrapper .students-join1-right {
+    -webkit-box-flex: 2;
+    -moz-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+    text-align: center;
+    background: #002147;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+  .students-join1-wrapper .students-join1-right > div {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join1-wrapper .students-join1-right {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  .students-join1-wrapper .students-join1-right h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join1-wrapper .students-join1-right h2 {
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join1-wrapper .students-join1-right h2 {
+      font-size: 30px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join1-wrapper .students-join1-right h2 {
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .students-join1-wrapper .students-join1-right h2 {
+      font-size: 24px;
+    }
+  }
+  .students-join1-wrapper .students-join1-right h2 span {
+    font-weight: 700;
+  }
+  .students-join2-area {
+    background: #f5f5f5;
+    padding: 100px 0;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join2-area {
+      padding: 90px 0;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join2-area {
+      padding: 80px 0;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join2-area {
+      padding: 70px 0;
+    }
+  }
+  @media (min-width: 321px) and (max-width: 479px) {
+    .students-join2-area {
+      padding: 60px 0;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .students-join2-area {
+      padding: 50px 0;
+    }
+  }
+  .students-join2-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join2-wrapper {
+      display: block;
+    }
+  }
+  .students-join2-wrapper .students-join2-left {
+    -webkit-box-flex: 5;
+    -moz-flex: 5;
+    -webkit-flex: 5;
+    flex: 5;
+    border: 1px solid #FFFFFF;
+  }
+  .students-join2-wrapper .students-join2-left ul li {
+    border: 2px solid #FFFFFF;
+  }
+  .students-join2-wrapper .students-join2-left .ri-grid {
+    margin: 0;
+  }
+  .students-join2-wrapper .students-join2-right {
+    -webkit-box-flex: 2;
+    -moz-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+    text-align: center;
+    background: #fdc800;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+  .students-join2-wrapper .students-join2-right > div {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join2-wrapper .students-join2-right {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  .students-join2-wrapper .students-join2-right h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join2-wrapper .students-join2-right h2 {
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join2-wrapper .students-join2-right h2 {
+      font-size: 30px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join2-wrapper .students-join2-right h2 {
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .students-join2-wrapper .students-join2-right h2 {
+      font-size: 24px;
+    }
+  }
+  .students-join2-wrapper .students-join2-right h2 span {
+    font-weight: 700;
+    color: #002147;
+  }
+  .students-join3-area {
+    background: #f5f5f5;
+    padding: 100px 0;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join3-area {
+      padding: 90px 0;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join3-area {
+      padding: 80px 0;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join3-area {
+      padding: 70px 0;
+    }
+  }
+  @media (min-width: 321px) and (max-width: 479px) {
+    .students-join3-area {
+      padding: 60px 0;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .students-join3-area {
+      padding: 50px 0;
+    }
+  }
+  .students-join3-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join3-wrapper {
+      display: block;
+    }
+  }
+  .students-join3-wrapper .students-join3-left {
+    -webkit-box-flex: 5;
+    -moz-flex: 5;
+    -webkit-flex: 5;
+    flex: 5;
+    border: 1px solid #FFFFFF;
+  }
+  .students-join3-wrapper .students-join3-left ul li {
+    border: 2px solid #FFFFFF;
+  }
+  .students-join3-wrapper .students-join3-left .ri-grid {
+    margin: 0;
+  }
+  .students-join3-wrapper .students-join3-right {
+    -webkit-box-flex: 2;
+    -moz-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+    text-align: center;
+    background: #002147;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+  .students-join3-wrapper .students-join3-right > div {
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 991px) {
+    .students-join3-wrapper .students-join3-right {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  .students-join3-wrapper .students-join3-right h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .students-join3-wrapper .students-join3-right h2 {
+      font-size: 32px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .students-join3-wrapper .students-join3-right h2 {
+      font-size: 30px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .students-join3-wrapper .students-join3-right h2 {
+      font-size: 26px;
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .students-join3-wrapper .students-join3-right h2 {
+      font-size: 24px;
+    }
+  }
+  .students-join3-wrapper .students-join3-right h2 span {
+    font-weight: 700;
+    color: #fdc800;
+  }

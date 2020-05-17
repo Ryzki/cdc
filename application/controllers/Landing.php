@@ -23,6 +23,7 @@ class Landing extends CI_Controller
 		$this->load->view('landing-page/header', $data);
 		$this->load->view('landing-page/landing_page');
 		$this->load->view('landing-page/footer');
+		// $this->load->view('landing-page/edu', $data);
 	}
 
 	public function contact()
