@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <table id="tableVacancy" class="table table-flush table-hover">
-                        <thead>
+                        <thead class="thead-light">
                             <tr class="text-center">
                                 <th>No</th>
                                 <th>Name</th>

@@ -16,17 +16,17 @@ class Company extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             // $sess = $this->session->userdata();
             $data['title'] = 'Dashboard Company | PPK UNIKAMA';
-            $data['nama_Company'] = $this->session->userdata('nama');
-            $data['data_Company'] = $this->session->userdata();
+            $data['nama_company'] = $this->session->userdata('nama');
+            $data['data_company'] = $this->session->userdata();
             $data['session'] = $this->session->userdata();
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $data['image'] = $this->Company_model->get_image($where, 'mst_Company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $this->load->view('backend/header', $data);
-            $this->load->view('backend/sidebar_Company');
-            $this->load->view('backend/Company_dashboard');
-            $this->load->view('backend/footer_Company');
+            $this->load->view('backend/sidebar_company');
+            $this->load->view('backend/company_dashboard');
+            $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));
         }
@@ -36,12 +36,12 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Company Profile | PPK UNIKAMA';
-            $data['nama_Company'] = $this->session->userdata('nama');
-            $data['data_Company'] = $this->session->userdata();
+            $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $data['image'] = $this->Company_model->get_image($where, 'mst_Company')->row_array();
+            $data['data_company'] = $this->Company_model->get_data_by_kode($where, 'mst_company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
 
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
@@ -56,11 +56,11 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Create Vacancy | PPK UNIKAMA';
-            $data['nama_Company'] = $this->session->userdata('nama');
+            $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $data['image'] = $this->Company_model->get_image($where, 'mst_Company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_vacancy'] = $this->Company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
             // var_dump($data['data_vacancy']);
             $this->load->view('backend/header', $data);
@@ -76,11 +76,11 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Agenda | PPK UNIKAMA';
-            $data['nama_Company'] = $this->session->userdata('nama');
+            $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
-            $data['image'] = $this->Company_model->get_image($where, 'mst_Company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_agenda'] = $this->Company_model->get_data_by_kode($where, 'tbl_agenda')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
@@ -96,18 +96,18 @@ class Company extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
             $data['sub_title'] = 'Applier Vacancy';
-            $data['nama_Company'] = $this->session->userdata('nama');
+            $data['nama_company'] = $this->session->userdata('nama');
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
             $kode_pt = $this->session->userdata('kode');
-            $data['image'] = $this->Company_model->get_image($where_img, 'mst_Company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply($kode_pt, 'tbl_apply')->result();
             // var_dump($data['datas']);
             // die;
             $this->load->view('backend/header', $data);
-            $this->load->view('backend/sidebar_Company');
-            $this->load->view('backend/Company_apply_vacancy');
+            $this->load->view('backend/sidebar_company');
+            $this->load->view('backend/company_apply_vacancy');
             $this->load->view('backend/footer_Company');
         } else {
             redirect(base_url('login/perusahaan'));
@@ -129,16 +129,16 @@ class Company extends CI_Controller
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
             $data['result'] = $result;
             $data['sub_title'] = ucfirst($result) . ' Applier';
-            $data['nama_Company'] = $this->session->userdata('nama');
+            $data['nama_company'] = $this->session->userdata('nama');
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
             $kode_pt = $this->session->userdata('kode');
             $status = $status;
-            $data['image'] = $this->Company_model->get_image($where_img, 'mst_Company')->row_array();
+            $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply_per_status($kode_pt, $status, 'tbl_apply')->result();
             $this->load->view('backend/header', $data);
-            $this->load->view('backend/sidebar_Company');
+            $this->load->view('backend/sidebar_company');
             $this->load->view('backend/Company_result_apply');
             $this->load->view('backend/footer_Company');
         } else {
@@ -296,6 +296,51 @@ class Company extends CI_Controller
     public function download_csv($csv)
     {
         force_download('assets/cv/' . $csv, NULL);
+    }
+
+    public function edit_profile()
+    {
+        $kode = $this->session->userdata('kode');
+        $data = array(
+            'nama_pt' => $this->input->post('nama'),
+            'jenis_pt' => $this->input->post('jenis'),
+            'email_pt' => $this->input->post('email'),
+            'deskripsi' => $this->input->post('deskripsi'),
+        );
+        $update_data = $this->Company_model->update_data_by_kode($kode, $data, 'mst_company');
+        if ($update_data) {
+            $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Update Data</div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Failed Update Data!!</div>');
+        }
+        $this->Company_profile();
+    }
+
+    public function upload_image()
+    {
+
+        $config['upload_path']          = './assets/images/';
+        $config['allowed_types']        = 'jpg|png|jpeg';
+        $config['file_name']            = $this->session->userdata('kode');
+        $config['max_size']             = 1000;
+        $config['overwrite']            = true;
+
+        $config['max_width']            = 500;
+        $config['max_height']           = 500;
+
+        $this->load->library('upload', $config);
+        if ($this->upload->do_upload('upload_image')) {
+            $data_update = array(
+                'image' => $this->upload->data('file_name'),
+            );
+            $this->Company_model->update_upload($this->session->userdata('kode'), $data_update);
+            $this->session->set_flashdata('message_image', '<div class="alert alert-info text-center" role="alert">Success Update Image</div>');
+            $this->Company_profile();
+        } else {
+            $error = array('error' => $this->upload->display_errors());
+            $this->session->set_flashdata('message_image', '<div class="alert alert-danger text-center" role="alert">Error Upload File!, ' . $error['error'] . '</div>');
+            $this->Company_profile();
+        }
     }
 
     public function logout()

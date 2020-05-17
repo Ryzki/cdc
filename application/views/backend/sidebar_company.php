@@ -92,8 +92,7 @@
                     </form>
                     <!-- Navbar links -->
                     <ul class="navbar-nav align-items-center  ml-md-auto ">
-                        <li class="nav-item d-xl-none">
-                            <!-- Sidenav toggler -->
+                        <!-- <li class="nav-item d-xl-none">
                             <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
                                 <div class="sidenav-toggler-inner">
                                     <i class="sidenav-toggler-line"></i>
@@ -112,16 +111,13 @@
                                 <i class="ni ni-bell-55"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                                <!-- Dropdown header -->
                                 <div class="px-3 py-3">
                                     <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
                                 </div>
-                                <!-- List group -->
                                 <div class="list-group list-group-flush">
                                     <a href="#!" class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
-                                                <!-- Avatar -->
                                                 <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-1.jpg" class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
@@ -140,7 +136,6 @@
                                     <a href="#!" class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
-                                                <!-- Avatar -->
                                                 <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-2.jpg" class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
@@ -159,7 +154,6 @@
                                     <a href="#!" class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
-                                                <!-- Avatar -->
                                                 <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-3.jpg" class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
@@ -178,7 +172,6 @@
                                     <a href="#!" class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
-                                                <!-- Avatar -->
                                                 <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-4.jpg" class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
@@ -197,7 +190,6 @@
                                     <a href="#!" class="list-group-item list-group-item-action">
                                         <div class="row align-items-center">
                                             <div class="col-auto">
-                                                <!-- Avatar -->
                                                 <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-5.jpg" class="avatar rounded-circle">
                                             </div>
                                             <div class="col ml--2">
@@ -214,7 +206,6 @@
                                         </div>
                                     </a>
                                 </div>
-                                <!-- View all -->
                                 <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
                             </div>
                         </li>
@@ -262,7 +253,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
                         <li class="nav-item dropdown">
@@ -278,13 +269,13 @@
                             </a>
                             <div class="dropdown-menu  dropdown-menu-right ">
                                 <div class="dropdown-header noti-title">
-                                    <h6 class="text-overflow m-0">Welcome!</h6>
+                                    <h6 class="text-overflow m-0">Welcome <?= strtoupper($nama_company) ?>!</h6>
                                 </div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="<?= base_url('backend/company/company_profile') ?>" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
-                                    <span>My profile</span>
+                                    <span>Edit profile</span>
                                 </a>
-                                <a href="#!" class="dropdown-item">
+                                <!-- <a href="#!" class="dropdown-item">
                                     <i class="ni ni-settings-gear-65"></i>
                                     <span>Settings</span>
                                 </a>
@@ -295,7 +286,7 @@
                                 <a href="#!" class="dropdown-item">
                                     <i class="ni ni-support-16"></i>
                                     <span>Support</span>
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a href="<?= base_url('backend/company/logout') ?>" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
