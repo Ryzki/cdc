@@ -199,7 +199,7 @@
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/brand/pertamina-head.jpg" alt="...">
+                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/pertamina-head.jpg" alt="...">
                         </div>
                       </div>
                       <div class="col-sm-4 pl-0 pl-sm-15">
@@ -229,7 +229,7 @@
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/brand/bca-head.jpg" alt="...">
+                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/bca-head.jpg" alt="...">
                         </div>
                       </div>
                       <div class="col-sm-4 pl-0 pl-sm-15">
@@ -259,7 +259,7 @@
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/brand/yazaki-head.jpg" alt="...">
+                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/a.jpg" alt="...">
                         </div>
                       </div>
                       <div class="col-sm-4 pl-0 pl-sm-15">
@@ -289,7 +289,7 @@
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/brand/indo-head.jpg" alt="...">
+                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/b.jpg" alt="...">
                         </div>
                       </div>
                       <div class="col-sm-4 pl-0 pl-sm-15">
@@ -319,7 +319,7 @@
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/brand/samsung-head.jpg" alt="...">
+                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/samsung-head.jpg" alt="...">
                         </div>
                       </div>
                       <div class="col-sm-4 pl-0 pl-sm-15">
