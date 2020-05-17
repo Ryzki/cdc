@@ -214,8 +214,8 @@
                         <div class="col-sm-4">
                           <div class="event-count p-15 mt-15">
                             <ul class="event-date list-inline font-16 text-uppercase mt-10 mb-20">
-                              <li class="p-15 mr-5 bg-lightest"><?= substr($v->date_posted, 5, 2) ?></li>
-                              <li class="p-15 pl-20 pr-20 mr-5 bg-lightest"> <?= substr($v->date_posted, 8, 2) ?></li>
+                              <li class="p-15 bg-lightest"><?= date('M', mktime(0, 0, 0, substr($v->date_posted, 5, 2), 10)) ?></li>
+                              <li class="p-15 pl-20 pr-20 bg-lightest"> <?= substr($v->date_posted, 8, 2) ?></li>
                               <li class="p-15 bg-lightest"><?= substr($v->date_posted, 0, 4) ?></li>
                             </ul>
                             <ul>
@@ -379,7 +379,7 @@
                         </div>
                         <div class="media-body">
                           <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#"><?= $warna . $a->title ?></a></h4>
+                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#"><?= $a->title ?></a></h4>
                             <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at <?= substr($a->time_1, 0, 5) ?> - <?= substr($a->time_2, 0, 5) ?></span>
                             <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> <?= $a->location ?></span>
                             <p class="mb-5"><?= $a->content ?></p>
