@@ -1,7 +1,7 @@
         <!-- Start main-content -->
         <div class="main-content">
           <!-- Section: home -->
-          <section id="home" class="divider" style="height: 762px;">
+          <section id="home" class="divider">
             <div class="container-fluid p-0">
 
               <!-- START REVOLUTION SLIDER 5.0.7 -->
@@ -143,7 +143,7 @@
             </div>
           </section>
 
-          <section class="little-menu" style="margin-top: -50px;">
+          <!-- <section class="little-menu" style="margin-top: -50px;">
             <div class="container" style="padding-right: 15px; padding-left: 15px; padding-top:0px; padding-bottom:0px; margin-right: auto; margin-left: auto;">
               <div class="little-menu-container">
                 <ul>
@@ -157,28 +157,28 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </section> -->
           <section style="background-color: #e2e2e2;">
             <div class="container" style="padding-top: 40px;padding-bottom: 30px;">
 
               <div class="section-content text-center">
                 <div class="row mtli-row-clearfix">
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
                       <a href="Login/perusahaan" class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</a>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
-                      <button class="btn btn-warning btn-flat" style="padding: 20px;"><i class="fa fa-graduation-cap fa-5x"></i><br>JobSeeker</button>
+                      <button class="btn btn-warning btn-flat" style="padding: 22px;margin-bottom:10px;"><i class="fa fa-users fa-5x"></i><br>JobSeeker</button>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
                       <button class="btn btn-success btn-flat" style="padding: 20px;"><i class="fa fa-leanpub fa-5x"></i><br>Magang</button>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
                       <button class="btn btn-danger btn-flat" style="padding: 20px;"><i class="fa fa-wechat fa-5x"></i><br>Konseling</button>
                     </div>
@@ -348,189 +348,189 @@
 
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-5 col-md-4">
-                    <h2 class="mt-0 mt-xs-20 line-height-1 line-bottom-edu"><span>Agend</span>a</h2>
-                    <div class="bxslider bx-nav-top" data-minslides="10">
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored pl-10">
-                          <ul class="mt-15 mt-sm-30">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Rekrutmen PT Indolakto Purwosari</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+
+                <div class="col-sm-5 col-md-4">
+                  <h2 class="mt-0 mt-xs-20 line-height-1 line-bottom-edu"><span>Agend</span>a</h2>
+                  <div class="bxslider bx-nav-top" data-minslides="10">
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored pl-10">
+                        <ul class="mt-15 mt-sm-30">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Rekrutmen PT Indolakto Purwosari</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">AGENDA PSIKOTEST PT KAYABA INDONESIA</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">AGENDA PSIKOTEST PT KAYABA INDONESIA</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Job Fair XVIII Universitas Kanjuruhan</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Job Fair XVIII Universitas Kanjuruhan</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pelatihan Softskill IV</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pelatihan Softskill IV</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Psikotes PT. Pertamina</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Psikotes PT. Pertamina</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Rekrutmen PT. Samsung</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Rekrutmen PT. Samsung</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Walk Interview PT. BCA</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Walk Interview PT. BCA</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored pl-10">
-                          <ul class="mt-15 mt-sm-30">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Tes Kesehatan PT. PLN</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored pl-10">
+                        <ul class="mt-15 mt-sm-30">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Tes Kesehatan PT. PLN</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Psikotes PT. Indonesia Power</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Pengumuman Psikotes PT. Indonesia Power</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">PT. Jatim Autocomp Walk Interview</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored3 p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">PT. Jatim Autocomp Walk Interview</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                      <div class="event media mt-0 no-bg no-border">
-                        <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
-                          <ul class="mt-5 mt-sm-20">
-                            <li class="font-20 text-white font-weight-600">28</li>
-                            <li class="font-14 text-uppercase text-white">Feb</li>
-                          </ul>
-                        </div>
-                        <div class="media-body">
-                          <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">work in Japan Seminar & Career Counseling</a></h4>
-                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                            <p class="mb-5">Lorem ipsum dolor sit amet</p>
-                          </div>
+                    </div>
+                    <div class="event media mt-0 no-bg no-border">
+                      <div class="event-date-new media-left text-center flip bg-theme-colored p-10">
+                        <ul class="mt-5 mt-sm-20">
+                          <li class="font-20 text-white font-weight-600">28</li>
+                          <li class="font-14 text-uppercase text-white">Feb</li>
+                        </ul>
+                      </div>
+                      <div class="media-body">
+                        <div class="event-content pull-left flip pl-20 pl-xs-10">
+                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">work in Japan Seminar & Career Counseling</a></h4>
+                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
+                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
+                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </section>
