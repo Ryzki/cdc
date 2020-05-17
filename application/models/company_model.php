@@ -177,6 +177,13 @@ class Company_model extends CI_Model
         return $this->db->get();
     }
 
+    public function update_data_by_kode($kode, $data, $table)
+    {
+        $this->db->where('kode_pt', $kode);
+        $update_data = $this->db->update($table, $data);
+        return ($update_data) ? TRUE : FALSE;
+    }
+
     public function update_data_by_id($id, $data, $table)
     {
         $this->db->where('id', $id);

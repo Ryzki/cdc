@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
 -- Dumping data for table db_cdc.mst_company: ~5 rows (approximately)
 /*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
 REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `deskripsi`, `password`, `image`, `file_mou`, `is_active`, `date_input`) VALUES
-	(3, 'CP3', 'pt mantap', 'it', 'arthur@jai.co.id', '', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 'cowok2.jpg', '', 1, '2020-05-10 11:06:42'),
+	(3, 'CP3', 'pt mantap', 'it', 'arthur@jai.co.id', '', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 'cowok2.jpg', 'CP35.docx', 2, '2020-05-10 11:06:42'),
 	(4, 'CP4', 'pt. abc', 'Programming', 'agus@gmail.com', '', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 'cowok2.jpg', '', 1, '2020-05-10 18:20:39'),
 	(5, 'CP5', 'aa', 'aa', 'aa@jai.co.id', '', '$2y$10$fB/.ZVRUuMoMnF3IGVlGB./rUYyT7/pr./bRl8NEsfi1VoGKt5TQW', 'cowok2.jpg', '', 1, '2020-05-10 21:19:43'),
 	(6, '', 'PT. INDOFFOD', 'MIE', 'agus@gmail.com', '', '$2y$10$gqTYVG/wwD3lelGE0YseI.lphuyjw2bnt0.xS68z5J/dFzhmMJiDq', '', '', 0, '2020-05-13 19:29:59'),
@@ -87,18 +87,18 @@ CREATE TABLE IF NOT EXISTS `tbl_agenda` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode_pt` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `date` date NOT NULL,
   `time_1` time NOT NULL,
   `time_2` time NOT NULL,
   `location` varchar(100) NOT NULL,
   `content` text NOT NULL,
+  `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table db_cdc.tbl_agenda: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_agenda` DISABLE KEYS */;
-REPLACE INTO `tbl_agenda` (`id`, `kode_pt`, `title`, `date`, `time_1`, `time_2`, `location`, `content`) VALUES
-	(1, 'CP3', 'Agenda Title', '2020-05-13', '07:54:43', '13:54:44', 'Pasuruan', 'Buka Bersama');
+REPLACE INTO `tbl_agenda` (`id`, `kode_pt`, `title`, `time_1`, `time_2`, `location`, `content`, `date_input`) VALUES
+	(1, 'CP3', 'Agenda Title', '07:54:43', '13:54:44', 'Pasuruan', 'Buka Bersama', '2020-05-13 00:00:00');
 /*!40000 ALTER TABLE `tbl_agenda` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_alumni
@@ -120,6 +120,27 @@ CREATE TABLE IF NOT EXISTS `tbl_alumni` (
 REPLACE INTO `tbl_alumni` (`id`, `npm`, `nama`, `telp`, `email`, `kode_prodi`, `tahun_lulus`, `status`, `remark`) VALUES
 	(1, '1', 'aaa', '123', '1@a.com', '1', '1234', 18, '');
 /*!40000 ALTER TABLE `tbl_alumni` ENABLE KEYS */;
+
+-- Dumping structure for table db_cdc.tbl_apply
+CREATE TABLE IF NOT EXISTS `tbl_apply` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `jenis_kelamin` varchar(100) NOT NULL,
+  `posisi` varchar(100) NOT NULL,
+  `pesan` text NOT NULL,
+  `cv` varchar(100) NOT NULL,
+  `date_apply` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(11) NOT NULL COMMENT '0=Outstanding, 1=Approved, 2=Rejected',
+  `id_vacancy` int(11) NOT NULL,
+  `kode_pt` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_vacancy` (`id_vacancy`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table db_cdc.tbl_apply: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tbl_apply` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_apply` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.tbl_artikel
 CREATE TABLE IF NOT EXISTS `tbl_artikel` (
