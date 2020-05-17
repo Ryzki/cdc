@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
   `deskripsi` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL,
+  `file_mou` varchar(100) NOT NULL,
   `is_active` int(1) NOT NULL,
   `date_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -33,12 +34,12 @@ CREATE TABLE IF NOT EXISTS `mst_company` (
 
 -- Dumping data for table db_cdc.mst_company: ~5 rows (approximately)
 /*!40000 ALTER TABLE `mst_company` DISABLE KEYS */;
-REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `deskripsi`, `password`, `image`, `is_active`, `date_input`) VALUES
-	(3, 'CP3', 'pt mantap', 'it', 'arthur@jai.co.id', '', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 'cowok2.jpg', 1, '2020-05-10 11:06:42'),
-	(4, 'CP4', 'pt. abc', 'Programming', 'agus@gmail.com', '', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 'cowok2.jpg', 1, '2020-05-10 18:20:39'),
-	(5, 'CP5', 'aa', 'aa', 'aa@jai.co.id', '', '$2y$10$fB/.ZVRUuMoMnF3IGVlGB./rUYyT7/pr./bRl8NEsfi1VoGKt5TQW', 'cowok2.jpg', 1, '2020-05-10 21:19:43'),
-	(6, '', 'PT. INDOFFOD', 'MIE', 'agus@gmail.com', '', '$2y$10$gqTYVG/wwD3lelGE0YseI.lphuyjw2bnt0.xS68z5J/dFzhmMJiDq', '', 0, '2020-05-13 19:29:59'),
-	(7, '', 'pt. bri', 'bank', 'kh.bariyyah@gmail.com', '', '$2y$10$nb0oNKkrIqy6zhAHTHlXMeviWKEbGd9p4TnhIHmYOLuSiYrympl9a', '', 0, '2020-05-13 19:30:43');
+REPLACE INTO `mst_company` (`id`, `kode_pt`, `nama_pt`, `jenis_pt`, `email_pt`, `deskripsi`, `password`, `image`, `file_mou`, `is_active`, `date_input`) VALUES
+	(3, 'CP3', 'pt mantap', 'it', 'arthur@jai.co.id', '', '$2y$10$HqxtxS99uDW95JEO6VeXh.DTRTXD88onNbWXTIRWjRG2a131RtwHu', 'cowok2.jpg', '', 1, '2020-05-10 11:06:42'),
+	(4, 'CP4', 'pt. abc', 'Programming', 'agus@gmail.com', '', '$2y$10$FHEft3.fuWeCFtKAVe77OuFghLPaO3X9OlaQTnSl2mzjH730ovdd6', 'cowok2.jpg', '', 1, '2020-05-10 18:20:39'),
+	(5, 'CP5', 'aa', 'aa', 'aa@jai.co.id', '', '$2y$10$fB/.ZVRUuMoMnF3IGVlGB./rUYyT7/pr./bRl8NEsfi1VoGKt5TQW', 'cowok2.jpg', '', 1, '2020-05-10 21:19:43'),
+	(6, '', 'PT. INDOFFOD', 'MIE', 'agus@gmail.com', '', '$2y$10$gqTYVG/wwD3lelGE0YseI.lphuyjw2bnt0.xS68z5J/dFzhmMJiDq', '', '', 0, '2020-05-13 19:29:59'),
+	(7, '', 'pt. bri', 'bank', 'kh.bariyyah@gmail.com', '', '$2y$10$nb0oNKkrIqy6zhAHTHlXMeviWKEbGd9p4TnhIHmYOLuSiYrympl9a', '', '', 0, '2020-05-13 19:30:43');
 /*!40000 ALTER TABLE `mst_company` ENABLE KEYS */;
 
 -- Dumping structure for table db_cdc.status
@@ -195,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `tbl_galeri_gb` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_galeri_gb: ~16 rows (approximately)
+-- Dumping data for table db_cdc.tbl_galeri_gb: ~17 rows (approximately)
 /*!40000 ALTER TABLE `tbl_galeri_gb` DISABLE KEYS */;
 REPLACE INTO `tbl_galeri_gb` (`id`, `gambar`, `menu`) VALUES
 	(1, '1.jpg', '1'),
@@ -257,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `tbl_logo` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_logo: ~1 rows (approximately)
+-- Dumping data for table db_cdc.tbl_logo: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_logo` DISABLE KEYS */;
 REPLACE INTO `tbl_logo` (`id`, `logo`) VALUES
 	(11, 'logo.png');
@@ -308,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `tbl_menu` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_menu: ~6 rows (approximately)
+-- Dumping data for table db_cdc.tbl_menu: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tbl_menu` DISABLE KEYS */;
 REPLACE INTO `tbl_menu` (`id`, `menu`, `link`) VALUES
 	(1, 'About', ''),
@@ -341,7 +342,7 @@ CREATE TABLE IF NOT EXISTS `tbl_partner` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_partner: ~10 rows (approximately)
+-- Dumping data for table db_cdc.tbl_partner: ~11 rows (approximately)
 /*!40000 ALTER TABLE `tbl_partner` DISABLE KEYS */;
 REPLACE INTO `tbl_partner` (`id`, `nama`, `gambar`) VALUES
 	(3, 'PT. Pertamina', 'pertamina-head.jpg'),
@@ -382,7 +383,7 @@ CREATE TABLE IF NOT EXISTS `tbl_slide` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_slide: ~4 rows (approximately)
+-- Dumping data for table db_cdc.tbl_slide: ~5 rows (approximately)
 /*!40000 ALTER TABLE `tbl_slide` DISABLE KEYS */;
 REPLACE INTO `tbl_slide` (`id`, `gambar`) VALUES
 	(34, 'slide1.jpg'),
@@ -604,7 +605,7 @@ CREATE TABLE IF NOT EXISTS `tbl_video` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table db_cdc.tbl_video: ~1 rows (approximately)
+-- Dumping data for table db_cdc.tbl_video: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tbl_video` DISABLE KEYS */;
 REPLACE INTO `tbl_video` (`id`, `judul`, `deskripsi`, `link_youtube`, `gambar`) VALUES
 	(1, 'Watch Our Activity', 'Kehidupan yang besar dimulai dari mimpi yang besar ~ Agus Salim', 'http://www.youtube.com/watch?v=1iIZeIy7TqM', 'CDC-Psikotes.jpg');
