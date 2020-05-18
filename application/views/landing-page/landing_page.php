@@ -214,37 +214,40 @@
               <div class="row">
                 <div class="col-md-8">
                   <h2 class="mt-0 mt-xs-20 line-height-1 line-bottom-edu"><span>Lowongan</span> Kerja</h2>
-                  <div class="upcoming-events bg-white-f3 mb-20">
-                    <div class="row">
-                      <div class="col-sm-4 pr-0 pr-sm-15">
-                        <div class="thumb p-15">
-                          <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/partner/pertamina-head.jpg" alt="...">
+
+                  <?php foreach ($vacancy as $v) { ?>
+                    <div class="upcoming-events bg-white-f3 mb-20">
+                      <div class="row">
+                        <div class="col-sm-4 pr-0 pr-sm-15">
+                          <div class="thumb p-15">
+                            <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/<?= $v->image ?>" alt="...">
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-sm-4 pl-0 pl-sm-15">
-                        <div class="event-details p-15 mt-20">
-                          <h4 class="media-heading text-uppercase font-weight-500">PT. PERTAMINA (PERSERO) TBK</h4>
-                          <p>Pertamina merupakan Badan Usaha Milik Negara yang bergerak dalam bisnis Oil&Gas mengundang putra-putri.</p>
-                          <a href="JobDetil" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
+                        <div class="col-sm-4 pl-0 pl-sm-15">
+                          <div class="event-details p-15 mt-20">
+                            <h4 class="media-heading text-uppercase font-weight-500"><?= $v->nama_pt ?></h4>
+                            <p><?= $v->deskripsi ?></p>
+                            <a href="JobDetil/<?= $v->id ?>" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="event-count p-15 mt-15">
-                          <ul class="event-date list-inline font-16 text-uppercase mt-10 mb-20">
-                            <li class="p-15 mr-5 bg-lightest">Dec</li>
-                            <li class="p-15 pl-20 pr-20 mr-5 bg-lightest"> 31</li>
-                            <li class="p-15 bg-lightest">2015</li>
-                          </ul>
-                          <ul>
-                            <li class="mb-10 text-theme-colored"><i class="fa fa-clock-o mr-5"></i> Batas 17-Mar-2020</li>
-                            <li class="text-theme-colored"><i class="fa fa-map-marker mr-5"></i> Jakarta - Indonesia.</li>
-                          </ul>
+                        <div class="col-sm-4">
+                          <div class="event-count p-15 mt-15">
+                            <ul class="event-date list-inline font-16 text-uppercase mt-10 mb-20">
+                              <li class="p-15 bg-lightest"><?= date('M', mktime(0, 0, 0, substr($v->date_posted, 5, 2), 10)) ?></li>
+                              <li class="p-15 pl-20 pr-20 bg-lightest"> <?= substr($v->date_posted, 8, 2) ?></li>
+                              <li class="p-15 bg-lightest"><?= substr($v->date_posted, 0, 4) ?></li>
+                            </ul>
+                            <ul>
+                              <li class="mb-10 text-theme-colored"><i class="fa fa-clock-o mr-5"></i> Batas <?= $v->due_date ?></li>
+                              <li class="text-theme-colored"><i class="fa fa-map-marker mr-5"></i> <?= $v->location ?></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  <?php } ?>
 
-                  <div class="upcoming-events bg-white-f3 mb-20">
+                  <!-- <div class="upcoming-events bg-white-f3 mb-20">
                     <div class="row">
                       <div class="col-sm-4 pr-0 pr-sm-15">
                         <div class="thumb p-15">
@@ -362,7 +365,8 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+
                   <div style="margin-right: 15px;">
                     <div class="row">
                       <a href="JobDetil/all" type="button" class="btn btn-flat btn-sm btn-primary pull-right">Lihat Semua</a>
@@ -374,23 +378,38 @@
                 <div class="col-sm-5 col-md-4">
                   <h2 class="mt-0 mt-xs-20 line-height-1 line-bottom-edu"><span>Agend</span>a</h2>
                   <div class="bxslider bx-nav-top" data-minslides="10">
-                    <div class="event media mt-0 no-bg no-border">
-                      <div class="event-date-new media-left text-center flip bg-theme-colored pl-10">
-                        <ul class="mt-15 mt-sm-30">
-                          <li class="font-20 text-white font-weight-600">28</li>
-                          <li class="font-14 text-uppercase text-white">Feb</li>
-                        </ul>
-                      </div>
-                      <div class="media-body">
-                        <div class="event-content pull-left flip pl-20 pl-xs-10">
-                          <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#">Rekrutmen PT Indolakto Purwosari</a></h4>
-                          <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at 5.00 pm - 7.30 pm</span>
-                          <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> 25 Newyork City</span>
-                          <p class="mb-5">Lorem ipsum dolor sit amet</p>
+
+                    <?php $i = 1;
+
+                    foreach ($agenda as $a) {
+
+                      if ($i == 1) {
+                        $warna = '';
+                      } else {
+                        $warna = $i;
+                      }
+                    ?>
+                      <div class="event media mt-0 no-bg no-border">
+                        <div class="event-date-new media-left text-center flip bg-theme-colored<?= $warna ?> pl-10">
+                          <ul class="mt-15 mt-sm-30">
+                            <li class="font-20 text-white font-weight-600"><?= substr($a->date_input, 8, 2) ?></li>
+                            <li class="font-14 text-uppercase text-white"><?= date('M', mktime(0, 0, 0, substr($a->date_input, 5, 2), 10)) ?></li>
+                          </ul>
+                        </div>
+                        <div class="media-body">
+                          <div class="event-content pull-left flip pl-20 pl-xs-10">
+                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#"><?= $a->title ?></a></h4>
+                            <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at <?= substr($a->time_1, 0, 5) ?> - <?= substr($a->time_2, 0, 5) ?></span>
+                            <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> <?= $a->location ?></span>
+                            <p class="mb-5"><?= $a->content ?></p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="event media mt-0 no-bg no-border">
+                    <?php $i++;
+                      ($i == 4) ? $i = 1 : $i;
+                    } ?>
+
+                    <!-- <div class="event media mt-0 no-bg no-border">
                       <div class="event-date-new media-left text-center flip bg-theme-colored2 p-10">
                         <ul class="mt-5 mt-sm-20">
                           <li class="font-20 text-white font-weight-600">28</li>
@@ -549,7 +568,8 @@
                           <p class="mb-5">Lorem ipsum dolor sit amet</p>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
+
                   </div>
                 </div>
 
