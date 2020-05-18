@@ -208,7 +208,7 @@
                           <div class="event-details p-15 mt-20">
                             <h4 class="media-heading text-uppercase font-weight-500"><?= $v->nama_pt ?></h4>
                             <p><?= $v->deskripsi ?></p>
-                            <a href="JobDetil/<?= $v->id ?>" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
+                            <a href="<?= base_url('landing/job_detil/') . $v->id ?>" class="btn btn-flat btn-dark btn-theme-colored btn-sm">Details <i class="fa fa-angle-double-right"></i></a>
                           </div>
                         </div>
                         <div class="col-sm-4">
