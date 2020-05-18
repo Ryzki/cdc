@@ -180,13 +180,32 @@
                   </div>
                   <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
-                      <button class="btn btn-danger btn-flat" style="padding: 20px;"><i class="fa fa-wechat fa-5x"></i><br>Konseling</button>
+                      <button class="btn btn-danger btn-flat" style="padding: 20px;" data-toggle="modal" data-target=".modalBesar"><i class="fa fa-wechat fa-5x"></i><br>Konseling</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+
+
+
+          <!-- Modal Konseling -->
+          <div class="modal fade modalBesar" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Daftar Konselor PPK Unikama</h5>
+                </div>
+                <div class="modal-body">
+                  Silahkan hubungi konselor dibawah ini untuk sesi konseling anda.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Modal Konseling -->
+
 
 
 
@@ -606,9 +625,10 @@
                           ?>
                             <div class="tab-pane fade <?= ($min_data['min'] == $tab) ? "active" : "" ?> in" id="tab-<?= $tab ?>">
                               <div class="row">
-                                <?php $aaa =
-                                  $this->db->limit(4)->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
+                                <?php
+                                $aaa = $this->db->limit(4)->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
                                 foreach ($aaa as $gal) {
+                                  echo $gal->gambar;
                                 ?>
                                   <div class="col-sm-3 col-md-3 col-lg-3">
                                     <div class=" services mb-xs-30">

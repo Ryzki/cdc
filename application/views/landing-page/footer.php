@@ -44,26 +44,16 @@
                             <div class="widget dark">
                                 <h4 class="widget-title">Galeri Aktivitas</h4>
                                 <div class="opening-hours">
-
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
-                                    </div>
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
-                                    </div>
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/3.jpg">
-                                    </div>
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/4.jpg">
-                                    </div>
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/1.jpg">
-                                    </div>
-                                    <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
-                                        <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/2.jpg">
-                                    </div>
-
+                                    <?php
+                                    $aaa = $this->db->limit(6)->get('tbl_galeri_gb')->result();
+                                    foreach ($aaa as $gal) {
+                                    ?>
+                                        <div class="col-md-4 col-xs-4" style="padding-left: 0px;padding-right: 10px;">
+                                            <img class="mt-10 mb-20" alt="" src="<?= base_url('assets/') ?>images/gallery/<?= $gal->gambar ?>">
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
