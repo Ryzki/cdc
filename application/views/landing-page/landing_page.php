@@ -648,7 +648,6 @@
                                 <?php
                                 $aaa = $this->db->limit(4)->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
                                 foreach ($aaa as $gal) {
-                                  echo $gal->gambar;
                                 ?>
                                   <div class="col-sm-3 col-md-3 col-lg-3">
                                     <div class=" services mb-xs-30">
