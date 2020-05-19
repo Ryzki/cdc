@@ -52,7 +52,7 @@
 
             </div>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 mt-10">
             <div class="icon-box mb-0 p-0">
               <a href="#" class="icon icon-gray pull-left mb-0 mr-10">
                 <i class="pe-7s-users"></i>
