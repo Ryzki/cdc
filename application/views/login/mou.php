@@ -64,6 +64,8 @@
                             <!-- <form action="<?= base_url('login/sign_up') ?>" method="POST" id="form_sign_up" class="form-horizontal"> -->
                             <h5>Download Template</h5>
                             <a href="<?= base_url('login/download_template_mou') ?>" class="btn btn-sm btn-success pt-10 pb-10 text-white"><i class="fa fa-download"></i> Download Template</a>
+                            <hr>
+                            <h5>Upload MOU</h5>
                             <?php echo form_open_multipart('login/upload_mou'); ?>
                             <div class="row" style="margin-top: 50px;">
                                 <div class="col-md-12">

@@ -33,9 +33,8 @@ class Landing_page_model extends CI_Model
         return $this->db->get();
     }
 
-    public function getKonten($where, $table)
+    public function get_data_by_id($where, $table)
     {
-
         return $this->db->get_where($table, $where);
     }
 }

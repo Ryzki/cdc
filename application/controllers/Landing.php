@@ -57,17 +57,19 @@ class Landing extends CI_Controller
 		$this->load->view('landing-page/footer');
 	}
 
-	public function aa()
+
+	public function job_detil()
 	{
-		$where = array('id' => 2);
-		$data['pages'] = $this->Backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
-		$data['title'] = "Blog Detail | Universitas Kanjuruhan Malang";
-		$data['menu'] = $this->Landing_page_model->getMenu();
-		$data['submenu'] = $this->Landing_page_model->getSubMenu();
-
-
-		// $this->load->view('landing-page/header_blog', $data);
-		$this->load->view('landing-page/blogDetil');
-		// $this->load->view('tracer/footer');
+		if (isset($_GET['seq'])) {
+			$data['title'] = "Detail Job | Universitas Kanjuruhan Malang";
+			$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+			$where = array(
+				'id' => $_GET['seq'],
+			);
+			$data['jobs'] = $this->Landing_page_model->get_data_by_id($where, 'tbl_vacancy')->row_array();
+			$this->load->view('landing-page/header_blog', $data);
+			$this->load->view('landing-page/jobdetil');
+			$this->load->view('landing-page/footer');
+		}
 	}
 }
