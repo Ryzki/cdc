@@ -32,4 +32,10 @@ class Landing_page_model extends CI_Model
         $this->db->limit(4);
         return $this->db->get();
     }
+
+    public function getKonten($where, $table)
+    {
+
+        return $this->db->get_where($table, $where);
+    }
 }

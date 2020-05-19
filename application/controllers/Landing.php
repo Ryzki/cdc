@@ -50,9 +50,24 @@ class Landing extends CI_Controller
 	public function blogDetil()
 	{
 		$data['title'] = "Blog Detail | Universitas Kanjuruhan Malang";
+		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
 		// $this->load->view('tracer/header', $data);
 		$this->load->view('landing-page/header_blog', $data);
 		$this->load->view('landing-page/blogDetil');
 		$this->load->view('landing-page/footer');
+	}
+
+	public function aa()
+	{
+		$where = array('id' => 2);
+		$data['pages'] = $this->Backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
+		$data['title'] = "Blog Detail | Universitas Kanjuruhan Malang";
+		$data['menu'] = $this->Landing_page_model->getMenu();
+		$data['submenu'] = $this->Landing_page_model->getSubMenu();
+
+
+		// $this->load->view('landing-page/header_blog', $data);
+		$this->load->view('landing-page/blogDetil');
+		// $this->load->view('tracer/footer');
 	}
 }

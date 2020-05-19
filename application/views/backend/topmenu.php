@@ -520,7 +520,15 @@
                         </div>
                         <div class="form-group">
                             <label>Link</label>
-                            <input type="text" name="link" class="form-control">
+                            <select name="link" id="link" class="form-control">
+                                <?php
+                                foreach ($artikel as $ar) {
+                                ?>
+                                    <option value="landing/pages/<?= $ar->id ?>"><?= $ar->judul ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                 </div>
                 <div class="modal-footer">

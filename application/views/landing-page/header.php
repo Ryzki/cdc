@@ -238,18 +238,6 @@
                             <ul class="menuzord-menu" style="color: #888">
                                 <li class="active"><a href="#home">Home</a>
                                 </li>
-                                <?php
-                                // foreach ($menu as $m) {
-                                //     echo '<li class=""><a href="#about">' . $m->menu . '</a>';
-                                //     echo '<ul class="dropdown">';
-                                //     foreach ($submenu as $sm) {
-                                //         if ($sm->menu == $m->menu) {
-                                //             echo '<li><a href="">' . $sm->submenu . '</a></li>';
-                                //         }
-                                //     }
-                                //     echo '</ul>';
-                                // }
-                                ?>
 
                                 <?php foreach ($menu as $mn) { ?>
                                     <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>

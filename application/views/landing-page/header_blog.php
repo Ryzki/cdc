@@ -51,57 +51,34 @@
     <script src="<?= base_url('assets/') ?>js/jquery-plugin-collection.js"></script>
 </head>
 
-<style>
-    .button-trace {
-        color: white !important;
-        border: 2px solid orange;
-        background-color: orange;
-    }
-</style>
-
 <body class="">
     <div id="wrapper">
         <!-- preloader -->
-        <div id="preloader">
+        <!-- <div id="preloader">
             <div id="spinner">
                 <div class="preloader-dot-loading">
                     <div class="dfg"><i></i><i></i><i></i><i></i></div>
                 </div>
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
-        </div>
+        </div> -->
 
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="<?= base_url() ?>"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
-                            <ul class="menuzord-menu" style="color: #888">
-                                <li><a href="<?= base_url() ?>">Home</a>
+                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
+                            <ul class="menuzord-menu">
+                                <li class="active"><a href="<?= base_url('tracer/logout') ?>">Logout</a>
                                 </li>
-                                <li class=""><a href="#about">About</a>
+                                <li><a href="#">Features</a>
                                     <ul class="dropdown">
-                                        <li><a href="">Profile</a></li>
-                                        <li><a href="">Visi & Misi</a></li>
-                                        <li><a href="">Struktur</a></li>
-                                        <li><a href="<?= base_url('backend/dashboard/login') ?>">Login</a></li>
+                                        <li><a href="#">OK DP1</a></li>
                                     </ul>
                                 </li>
-                                <li class=""><a href="#career">Pelatihan</a>
-                                    <ul class="dropdown">
-                                        <li><a href="">Softskills</a></li>
-                                        <li><a href="">Pelatihan Pusat Karir</a></li>
-                                    </ul>
-                                </li>
-                                <li class=""><a href="<?= base_url('Welcome/blog') ?>">Artikel</a>
-                                </li>
-                                <li class=""><a href="<?= base_url('JobDetil/all') ?>">Lowongan Kerja</a>
-                                </li>
-                                <li class=""><a href="<?= base_url('Welcome/contact') ?>">Hubungi Kami</a>
-                                </li>
-                                <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
-                                </li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Blog</a></li>
                             </ul>
                         </nav>
                     </div>
