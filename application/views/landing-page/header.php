@@ -205,6 +205,10 @@
     .btn-blue:hover {
         background-color: #0c406c;
     }
+
+    .modal-dialog-center {
+        margin-top: 19%;
+    }
 </style>
 
 <body>
