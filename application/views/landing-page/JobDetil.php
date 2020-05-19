@@ -52,7 +52,7 @@
 
             </div>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 mt-10">
             <div class="icon-box mb-0 p-0">
               <a href="#" class="icon icon-gray pull-left mb-0 mr-10">
                 <i class="pe-7s-users"></i>
@@ -91,7 +91,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content p-30 pt-10">
         <h3 class="text-center text-theme-colored mb-20">Apply Now</h3>
-        <form id="job_apply_form" name="job_apply_form" action="http://html.kodesolution.live/f/edupoints/v3/demo/includes/job.php" method="post" enctype="multipart/form-data">
+        <form id="job_apply_form" name="job_apply_form" action="<?= base_url('landing/apply_job') ?>" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
