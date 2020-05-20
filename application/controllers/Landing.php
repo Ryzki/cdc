@@ -12,7 +12,7 @@ class Landing extends CI_Controller
 		$data['kaki'] = $this->Landing_page_model->getKaki('tbl_menu_kaki')->result();
 		$data['video'] = $this->Landing_page_model->getKaki('tbl_video')->result();
 		$data['album'] = $this->Landing_page_model->getKaki('tbl_galeri_menu')->result();
-		$data['galeri_gb'] = $this->Landing_page_model->getKaki('tbl_galeri_gb')->result();
+		$data['galeri_gb'] = $this->Landing_page_model->get_galeri_gb('tbl_galeri_gb')->result();
 		$data['testimoni'] = $this->Landing_page_model->getKaki('tbl_says')->result();
 		$data['gb_testimoni'] = $this->Landing_page_model->getKaki('tbl_testimoni')->result();
 		$data['achievement'] = $this->Landing_page_model->getKaki('tbl_achievement')->result();
@@ -57,6 +57,16 @@ class Landing extends CI_Controller
 		$this->load->view('landing-page/footer');
 	}
 
+
+	public function job_all()
+	{
+		$data['title'] = "Job | Universitas Kanjuruhan Malang";
+		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+		$data['jobs'] = $this->Landing_page_model->get_job_by_due_date('tbl_vacancy')->result();
+		$this->load->view('landing-page/header_blog', $data);
+		$this->load->view('landing-page/jobAll');
+		$this->load->view('landing-page/footer');
+	}
 
 	public function job_detil()
 	{

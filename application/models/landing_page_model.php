@@ -23,6 +23,13 @@ class Landing_page_model extends CI_Model
         return $this->db->get($table);
     }
 
+    public function get_galeri_gb($table)
+    {
+        $this->db->distinct();
+        $this->db->select('menu');
+        return $this->db->get($table);
+    }
+
     public function get_data_vacancy($table)
     {
         $this->db->select('v.kode_pt kode_pt, v.id id, v.nama_pt nama_pt, v.due_date due_date, v.position position, v.location location, v.requirement requirement, v.date_posted date_posted, m.image image, m.deskripsi deskripsi');
@@ -36,5 +43,14 @@ class Landing_page_model extends CI_Model
     public function get_data_by_id($where, $table)
     {
         return $this->db->get_where($table, $where);
+    }
+
+    public function get_job_by_due_date($table)
+    {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->where('due_date >= "' . date('Y-m-d') . '"');
+        $this->db->order_by('due_date', 'DESC');
+        return $this->db->get();
     }
 }

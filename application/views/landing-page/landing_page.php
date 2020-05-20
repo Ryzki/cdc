@@ -201,10 +201,6 @@
                 <div class="modal-body">
                   Silahkan hubungi konselor dibawah ini untuk sesi konseling anda.
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
-                </div>
               </div>
             </div>
           </div>
@@ -373,7 +369,7 @@
 
                   <div style="margin-right: 15px;">
                     <div class="row">
-                      <a href="JobDetil/all" type="button" class="btn btn-flat btn-sm btn-primary pull-right">Lihat Semua</a>
+                      <a href="<?= base_url('landing/job_all') ?>" type="button" class="btn btn-flat btn-sm btn-primary pull-right">Lihat Semua</a>
                     </div>
                   </div>
                 </div>
@@ -626,9 +622,10 @@
                       <div class="text-center">
                         <ul class="nav nav-pills mb-10">
                           <?php
+                          $min_data = $this->db->query('select min(id) as min from tbl_galeri_menu')->row_array();
                           foreach ($album as $ab) {
                           ?>
-                            <li class=""> <a href="#tab-<?= $ab->id ?>" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i><?= $ab->menu ?></a> </li>
+                            <li class="<?= ($min_data['min'] == $ab->id) ? "active" : "" ?>"> <a href="#tab-<?= $ab->id ?>" class="" data-toggle="tab" aria-expanded="false"> <i class="fa fa-graduation-cap" aria-hidden="true"></i><?= $ab->menu ?></a> </li>
                             <!-- <li class=""> <a href="#tab-21" data-toggle="tab" aria-expanded="false"> <i class="fa fa-leanpub"></i>Faculty of Commerce</a> </li>
                             <li class=""> <a href="#tab-22" data-toggle="tab" aria-expanded="true"> <i class="fa fa-book"></i>Faculty of Science</a> </li>
                             <li class=""> <a href="#tab-23" data-toggle="tab" aria-expanded="false"> <i class="fa fa-certificate"> </i>Postgraduate</a> </li>
@@ -642,10 +639,8 @@
                         <div class="tab-content p-0">
                           <?php
                           //ambil nilai min
-                          $min_data = $this->db->query('select min(id) as min from tbl_galeri_menu')->row_array();
-
                           foreach ($galeri_gb as $gr) {
-                            $tab = $gr->id;
+                            $tab = $gr->menu;
                           ?>
                             <div class="tab-pane fade <?= ($min_data['min'] == $tab) ? "active" : "" ?> in" id="tab-<?= $tab ?>">
                               <div class="row">

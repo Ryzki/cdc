@@ -62,10 +62,10 @@
                 <div class="footer-bottom bg-black">
                     <div class="container pt-10 pb-0">
                         <div class="row">
-                            <div class="col-md-6 sm-text-center">
+                            <div class="col-md-7 sm-text-center">
                                 <p class="font-13 text-black-777 m-0">Hak Cipta © 2020 Unikama Career & Development Center. Hak cipta dilindungi oleh undang-undang. Powered by SCM </p>
                             </div><br>
-                            <div class="col-md-6 text-right flip sm-text-center">
+                            <div class="col-md-5 text-right flip sm-text-center">
                                 <div class="widget no-border m-0">
                                     <ul class="styled-icons icon-dark icon-circled icon-sm">
                                         <li><a href="<?= $ft->facebook ?>"><i class="fa fa-facebook"></i></a></li>

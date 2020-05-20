@@ -24,7 +24,7 @@
                 <dt><i class="fa fa-calendar text-theme-colored mt-5 font-15"></i></dt>
                 <dd>
                   <h5 class="mt-0">Date Posted:</h5>
-                  <p><?= date('j F, Y', strtotime(substr($jobs['date_posted'], 0, 10)));  ?></p>
+                  <p><?= date('j F, Y', strtotime(substr($jobs['date_posted'], 0, 10)))  ?></p>
                 </dd>
               </dl>
               <dl class="dl-horizontal">
