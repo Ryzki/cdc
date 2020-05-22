@@ -32,10 +32,14 @@ class Landing extends CI_Controller
 	public function contact()
 	{
 		$data['title'] = "Contact | Universitas Kanjuruhan Malang";
+		$data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+		$data['menu'] = $this->Landing_page_model->getMenu();
+		$data['submenu'] = $this->Landing_page_model->getSubMenu();
+		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+
 		$this->load->view('landing-page/header_blog', $data);
-		// $this->load->view('tracer/header', $data);
 		$this->load->view('landing-page/contact');
-		$this->load->view('landing-page/footer');
+		$this->load->view('landing-page/footer_minimalis');
 	}
 
 	public function blog()
