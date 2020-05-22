@@ -440,7 +440,7 @@
                                 <?php
                                 foreach ($artikel as $ar) {
                                 ?>
-                                    <option value="landing/pages/<?= $ar->id ?>"><?= $ar->judul ?></option>
+                                    <option value="pages/pages/pagesDetil?seq=<?= $ar->id ?>"><?= $ar->judul ?></option>
                                 <?php
                                 }
                                 ?>
