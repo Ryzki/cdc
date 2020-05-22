@@ -404,9 +404,9 @@ class Upload extends CI_Controller
         $this->Backend_user_model->insert_data($data, 'tbl_artikel_gb');
 
         if (!$this->upload->do_upload('gambar')) {
-            redirect('backend/dashboard/profile');
+            redirect('backend/dashboard/artikel');
         } else {
-            redirect('backend/dashboard/profile');
+            redirect('backend/dashboard/artikel');
         }
     }
 }

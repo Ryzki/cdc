@@ -456,6 +456,13 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/profile');
     }
 
+    public function deleteArtikel($id)
+    {
+        $where = array('id' => $id);
+        $this->Backend_user_model->hapus_data($where, 'tbl_artikel');
+        redirect('backend/dashboard/profile');
+    }
+
     public function deleteAlbum($id)
     {
         $where = array('id' => $id);
