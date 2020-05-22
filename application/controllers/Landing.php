@@ -87,4 +87,23 @@ class Landing extends CI_Controller
 			$this->load->view('landing-page/footer');
 		}
 	}
+
+	public function form_contact()
+	{
+		$nama = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$phone = $this->input->post('phone');
+		$judul = $this->input->post('judul');
+		$pesan = $this->input->post('pesan');
+		$data = array(
+			'nama' => $nama,
+			'email' => $email,
+			'phone' => $phone,
+			'title' => $judul,
+			'pesan' => $pesan
+		);
+
+		$this->Backend_user_model->insert_data($data, 'tbl_contact_us');
+		redirect('landing/contact');
+	}
 }

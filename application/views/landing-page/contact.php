@@ -23,18 +23,18 @@ foreach ($contact as $ct) {
         <div class="col-md-4">
           <h3 class="mt-0 mb-10 mt-sm-30">Kirim Pesan:</h3>
           <!-- Contact Form -->
-          <form id="contact_form" name="contact_form" class="" action="" method="post">
+          <form id="contact_form" name="contact_form" class="" action="form_contact" method="post">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Nama</label>
-                  <input name="form_name" class="form-control" type="text" required="">
+                  <input name="nama" class="form-control" type="text" required="">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Email</label>
-                  <input name="form_email" class="form-control required email" type="email">
+                  <input name="email" class="form-control required email" type="email">
                 </div>
               </div>
             </div>
@@ -43,20 +43,20 @@ foreach ($contact as $ct) {
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Judul</label>
-                  <input name="form_subject" class="form-control required" type="text">
+                  <input name="judul" class="form-control required" type="text">
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Phone</label>
-                  <input name="form_phone" class="form-control" type="text">
+                  <input name="phone" class="form-control" type="text">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
               <label>Pesan</label>
-              <textarea name="form_message" class="form-control required" rows="5"></textarea>
+              <textarea name="pesan" class="form-control required" rows="5"></textarea>
             </div>
             <div class=" form-group">
               <input name="form_botcheck" class="form-control" type="hidden" value="" />
@@ -69,7 +69,7 @@ foreach ($contact as $ct) {
         ?>
 
         <!-- Contact Form Validation-->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
           $("#contact_form").validate({
             submitHandler: function(form) {
               var form_btn = $(form).find('button[type="submit"]');
@@ -93,7 +93,7 @@ foreach ($contact as $ct) {
               });
             }
           });
-        </script>
+        </script> -->
         </div>
       </div>
     </div>
