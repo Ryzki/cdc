@@ -104,6 +104,52 @@ class Upload extends CI_Controller
         }
     }
 
+    public function update_contact()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["contact"]["name"]);
+
+        $config['upload_path']          = './assets/images/contact/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+        $this->load->library('upload', $config);
+
+        $id = $this->input->post('id');
+        $teks1 = $this->input->post('teks1');
+        $teks2 = $this->input->post('teks2');
+        $phone = $this->input->post('phone');
+        $email = $this->input->post('email');
+        $alamat = $this->input->post('alamat');
+        $map = $this->input->post('map');
+
+        $data = array(
+            'text1' => $teks1,
+            'text2' => $teks2,
+            'phone' => $phone,
+            'email' => $email,
+            'alamat' => $alamat,
+            'map' => $map,
+            'gambar' => $temp_filename,
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->Backend_user_model->update_data($where, $data, 'tbl_contact_us_detil');
+
+        if (!$this->upload->do_upload('contact')) {
+            redirect('backend/dashboard/contact');
+        } else {
+            redirect('backend/dashboard/contact');
+        }
+    }
+
     public function tambah_testimoni()
     {
         //ambil nama file

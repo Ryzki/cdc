@@ -43,6 +43,12 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/contact') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> C </span>
+                                            <span class="sidenav-normal"> Contact Us </span>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item">
                                         <a href="<?= base_url('backend/dashboard/lowongan') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> L </span>
                                             <span class="sidenav-normal"> Lowongan Area </span>
@@ -53,7 +59,7 @@
                                             <span class="sidenav-mini-icon"> A </span>
                                             <span class="sidenav-normal"> Agenda Area </span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                         <a href="<?= base_url('backend/dashboard/video') ?>" class="nav-link">
                                             <span class="sidenav-mini-icon"> V </span>
