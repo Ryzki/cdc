@@ -45,53 +45,8 @@
                                     <input type="hidden" name="id" class="form-control" value="<?= $ar->id ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label>Menu</label>
-                                    <select name="menu" id="menu" class="form-control">
-                                        <?php
-                                        foreach ($menu as $mn) {
-                                        ?>
-                                            <option value="<?= $mn->menu ?>"><?= $mn->menu ?></option>
-                                        <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Sub Menu</label>
-                                    <select name="submenu" id="submenu" class="form-control">
-                                        <option value="">None - Direct Link</option>
-                                        <?php
-                                        foreach ($submenu as $sbm) {
-                                        ?>
-                                            <option value="<?= $sbm->submenu ?>"><?= $sbm->submenu ?></option>
-                                        <?php
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Gambar Utama</label>
-                                    <input type="file" class="form-control" id="customFileLang" lang="en">
-                                    <!-- <table class="table table-bordered mt-2">
-                                    <tr>
-                                        <td>Gambar yang digunakan saat ini</td>
-                                        <td>
-                                            ​<picture>
-
-                                                <img src="<?= base_url('assets/') ?>images/cdc_unikama.jpg" class="img-fluid img-thumbnail" alt="Logo" width="50%" height="50%">
-                                            </picture>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table> -->
-                                </div>
-                                <div class="form-group">
                                     <label class="mt-4">Isi Artikel</label>
-                                    <textarea name="konten" id="ckeditor">
+                                    <textarea name="konten" id="textEditor" cols="80" rows="15">
                                         <?= $ar->konten ?>
                                 </textarea>
                                 </div>

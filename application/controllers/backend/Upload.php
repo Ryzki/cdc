@@ -379,4 +379,34 @@ class Upload extends CI_Controller
             redirect('backend/dashboard/footer');
         }
     }
+
+    public function artikel_gambar()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["gambar"]["name"]);
+
+        $config['upload_path']          = './images/';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+        $this->load->library('upload', $config);
+
+
+        $data = array(
+            'gambar' => $temp_filename
+        );
+
+
+        $this->Backend_user_model->insert_data($data, 'tbl_artikel_gb');
+
+        if (!$this->upload->do_upload('gambar')) {
+            redirect('backend/dashboard/profile');
+        } else {
+            redirect('backend/dashboard/profile');
+        }
+    }
 }

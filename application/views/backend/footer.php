@@ -50,9 +50,23 @@
 <!-- Demo JS - remove this in your project -->
 <script src="<?= base_url('assets_backend') ?>/js/demo.min.js"></script>
 <!-- CKeditor -->
-<script src="<?= base_url('assets_backend') ?>/ckeditor/ckeditor.js"></script>
+<!-- <script src="<?= base_url('assets_backend') ?>/ckeditor/ckeditor.js"></script>
 <script src="<?= base_url('assets_backend') ?>/js/admin.js"></script>
-<script src="<?= base_url('assets_backend') ?>/js/editors.js"></script>
+<script src="<?= base_url('assets_backend') ?>/js/editors.js"></script> -->
+<!-- Tinymce -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+<script>
+    $('.imageSelect').click(function() {
+        var ed = tinymce.activeEditor;
+        var src = $(this).attr('src');
+        var img = '<img src="' + src + '" alt="no-img" style="border-radius:.25rem;">';
+
+        ed.selection.setContent(img);
+        $('#exampleModalCenter').modal('hide');
+    });
+</script>
 
 </body>
 

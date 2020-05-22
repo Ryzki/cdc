@@ -335,7 +335,7 @@
                                                 <b><?= $ar->judul ?></b>
                                             </td>
                                             <td class="table-actions">
-                                                <a href="editArtikel/<?= $ar->id ?>" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
+                                                <a href="editArtikel?seq=<?= $ar->id ?>" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
                                                     <i class="fas fa-user-edit"></i>
                                                 </a>
                                                 <a href="deleteArtikel/<?= $ar->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
