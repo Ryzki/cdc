@@ -358,6 +358,35 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function perusahaan_outstanding()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        //buat data bahwa ini list untuk perusahaan outstanding
+        $data = array(
+            'status' => 'outstanding',
+            'judul' => 'Perusahaan Outstanding',
+            'deskripsi' => 'Dibawah ini adalah perusahan yang sudah mendaftar dan butuh persetujuan untuk mendownload draft MoU'
+        );
+        $where = array(
+            'is_active' => '0'
+        );
+
+        $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/perusahaan');
+        $this->load->view('backend/footer');
+    }
+
     public function tambah_data()
     {
         $nama_menu = $this->input->post('menu');
@@ -372,7 +401,7 @@ class Dashboard extends CI_Controller
             } else if ($pages == 'artikel') {
                 $isi = 'pages/pages/listArtikel';
             } else if ($pages == 'lowongan') {
-                $isi = 'landing/lowongan';
+                $isi = 'landing/job_all';
             } else {
                 $isi = '';
             }

@@ -57,6 +57,9 @@ class Landing extends CI_Controller
 	public function job_all()
 	{
 		$data['title'] = "Job | Universitas Kanjuruhan Malang";
+		$data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+		$data['menu'] = $this->Landing_page_model->getMenu();
+		$data['submenu'] = $this->Landing_page_model->getSubMenu();
 		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
 		$data['jobs'] = $this->Landing_page_model->get_job_by_due_date('tbl_vacancy')->result();
 		$this->load->view('landing-page/header_blog', $data);
@@ -68,6 +71,9 @@ class Landing extends CI_Controller
 	{
 		if (isset($_GET['seq'])) {
 			$data['title'] = "Detail Job | Universitas Kanjuruhan Malang";
+			$data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+			$data['menu'] = $this->Landing_page_model->getMenu();
+			$data['submenu'] = $this->Landing_page_model->getSubMenu();
 			$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
 			$where = array(
 				'id' => $_GET['seq'],

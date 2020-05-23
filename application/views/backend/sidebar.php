@@ -152,10 +152,32 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../widgets.html">
+                            <a class="nav-link" href="#navbar-perusahaan" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
                                 <i class="ni ni-building text-green"></i>
                                 <span class="nav-link-text">Mitra Perusahaan</span>
                             </a>
+                            <div class="collapse" id="navbar-perusahaan">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/perusahaan_outstanding') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> O </span>
+                                            <span class="sidenav-normal"> Outstanding </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/perusahaan_mou') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> M </span>
+                                            <span class="sidenav-normal"> Waiting MoU </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('backend/dashboard/perusahaan_verified') ?>" class="nav-link">
+                                            <span class="sidenav-mini-icon"> V </span>
+                                            <span class="sidenav-normal"> Verified </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../widgets.html">
