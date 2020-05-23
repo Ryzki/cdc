@@ -33,7 +33,24 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
+                    <div class="col-md-12 mt-4">
+                        <?php echo form_open_multipart('backend/upload/artikel_gambar'); ?>
+                        <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                            <strong>Media Gallery : </strong> Upload gambar yang ingin ditampilkan di dalam Artikel.
+                        </div>
+                        <div class="form-group">
+                            <label>Media Gallery</label>
+                            <input type="file" class="form-control" id="customFileLang" lang="en" name="gambar">
+                        </div>
+                        <button type="submit" class="btn btn-danger">Simpan</button>
+                        <hr>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-md-12">
                     <div class="col-md-12 mt-4">
                         <form action="tambahArtikel" method="POST">
                             <div class="form-group">
@@ -41,61 +58,47 @@
                                 <input type="text" name="judul" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Menu</label>
-                                <select name="menu" id="menu" class="form-control">
-                                    <?php
-                                    foreach ($menu as $mn) {
-                                    ?>
-                                        <option value="<?= $mn->menu ?>"><?= $mn->menu ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Sub Menu</label>
-                                <select name="submenu" id="submenu" class="form-control">
-                                    <option value="">None - Direct Link</option>
-                                    <?php
-                                    foreach ($submenu as $sbm) {
-                                    ?>
-                                        <option value="<?= $sbm->submenu ?>"><?= $sbm->submenu ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Gambar Utama</label>
-                                <input type="file" class="form-control" id="customFileLang" lang="en">
-                                <!-- <table class="table table-bordered mt-2">
-                                    <tr>
-                                        <td>Gambar yang digunakan saat ini</td>
-                                        <td>
-                                            ​<picture>
-
-                                                <img src="<?= base_url('assets/') ?>images/cdc_unikama.jpg" class="img-fluid img-thumbnail" alt="Logo" width="50%" height="50%">
-                                            </picture>
-                                        </td>
-                                        <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Gambar">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table> -->
-                            </div>
-                            <div class="form-group">
                                 <label class="mt-4">Isi Artikel</label>
-                                <textarea name="konten" id="ckeditor">
+                                <textarea name="konten" id="textEditor" placeholder="Masukan konten disini..." cols="80" rows="15">
                                 </textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
-
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Media Gallery</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-row">
+                        <?php
+                        $folder = 'images/';
+                        $scandir = scandir($folder);
+
+                        foreach ($scandir as $file) {
+                            if (!in_array($file, ['.', '..'])) {
+                                $filePath = $folder . $file;
+                                if (is_file($filePath) && preg_match('/^.*\.(jpg|jpeg|png|bmp)$/', $file)) {
+                                    print '<div class="col-2"><img class="imageSelect rounded img-fluid" src="' . base_url($filePath) . '" alt="no-img"></div>';
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>

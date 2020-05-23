@@ -24,4 +24,19 @@
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/quill/dist/quill.core.css">
     <link rel="stylesheet" href="<?= base_url('assets_backend') ?>/vendor/sweetalert2/dist/sweetalert2.min.css">
     <script src="<?= base_url('assets_backend') ?>/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Tinymce -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <script src="<?= base_url('assets_backend') ?>/tinymce/js/tinymce/tinymce.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <script>
+        tinymce.init({
+            selector: '#textEditor',
+            plugins: 'link lists image advlist fullscreen media code table emoticons textcolor codesample hr preview mediaGallery',
+            menubar: false,
+            toolbar: [
+                'undo redo | bold italic underline strikethrough forecolor backcolor bullist numlist | blockquote subscript superscript | alignleft aligncenter alignright alignjustify | image media link',
+                ' formatselect | cut copy paste selectall | table emoticons hr | removeformat | preview code | fullscreen | mediaGallery',
+            ],
+        });
+    </script>
 </head>

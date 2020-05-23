@@ -201,90 +201,6 @@
                 <div class="card">
                     <!-- Card header -->
                     <div class="card-header">
-                        <h3 class="mb-0">Menu Kaki</h3>
-                    </div>
-                    <!-- Card body -->
-                    <div class="card-body">
-                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
-                            <strong>Daftar Menu Kaki : </strong> Anda dapat membuat dan mengatur daftar menu Kaki yang anda inginkan.
-                        </div>
-                        <div class="card-header border-0">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h3 class="mb-0">Daftar Menu Kaki</h3>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="modal" data-target="#modal-kaki">
-                                        <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-                                        <span class="btn-inner--text">Tambah</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Light table -->
-                        <div class="table-responsive">
-                            <table class="table align-items-center table-flush table-hover">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                <label class="custom-control-label" for="table-check-all"></label>
-                                            </div>
-                                        </th>
-                                        <th>Menu</th>
-                                        <th>Link Artikel</th>
-                                        <th>Active</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    foreach ($menukaki as $mk) {
-                                    ?>
-                                        <tr>
-                                            <th>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="table-check-all" type="checkbox">
-                                                    <label class="custom-control-label" for="table-check-all"></label>
-                                                </div>
-                                            </th>
-                                            <td class="table-user">
-                                                <b><?= $mk->menu ?></b>
-                                            </td>
-                                            <td>
-                                                <a href="#!" class="font-weight-bold"><?= $mk->link ?></a>
-                                            </td>
-                                            <td>
-                                                <label class="custom-toggle">
-                                                    <input type="checkbox" checked>
-                                                    <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
-                                                </label>
-                                            </td>
-                                            <td class="table-actions">
-                                                <a href="deleteMk/<?= $mk->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card-wrapper">
-                <!-- Form controls -->
-                <div class="card">
-                    <!-- Card header -->
-                    <div class="card-header">
                         <h3 class="mb-0">Artikel</h3>
                     </div>
                     <!-- Card body -->
@@ -335,7 +251,7 @@
                                                 <b><?= $ar->judul ?></b>
                                             </td>
                                             <td class="table-actions">
-                                                <a href="editArtikel/<?= $ar->id ?>" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
+                                                <a href="editArtikel?seq=<?= $ar->id ?>" class="table-action" data-toggle="tooltip" data-original-title="Edit Artikel">
                                                     <i class="fas fa-user-edit"></i>
                                                 </a>
                                                 <a href="deleteArtikel/<?= $ar->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Artikel">
@@ -524,7 +440,7 @@
                                 <?php
                                 foreach ($artikel as $ar) {
                                 ?>
-                                    <option value="landing/pages/<?= $ar->id ?>"><?= $ar->judul ?></option>
+                                    <option value="pages/pages/pagesDetil?seq=<?= $ar->id ?>"><?= $ar->judul ?></option>
                                 <?php
                                 }
                                 ?>

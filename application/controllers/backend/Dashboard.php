@@ -80,6 +80,25 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function contact()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        $data['contact'] = $this->Backend_user_model->tampil_data('tbl_contact_us_detil')->result();
+
+        $this->load->view('backend/header');
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/contact', $data);
+        $this->load->view('backend/footer');
+    }
+
     public function video()
     {
         if (!isset($this->session->userdata['username'])) {
@@ -396,14 +415,10 @@ class Dashboard extends CI_Controller
     public function tambahArtikel()
     {
         $judul = $this->input->post('judul');
-        $menu = $this->input->post('menu');
-        $submenu = $this->input->post('submenu');
         $konten = $this->input->post('konten');
 
         $data = array(
             'judul' => $judul,
-            'menu' => $menu,
-            'sub_menu' => $submenu,
             'konten' => $konten,
         );
 
@@ -411,7 +426,7 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/profile');
     }
 
-    public function editArtikel($id)
+    public function editArtikel()
     {
         if (!isset($this->session->userdata['username'])) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -422,11 +437,10 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $id = $this->input->get('seq');
+
         $where = array('id' => $id);
         $data['artikel'] = $this->Backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
-
-        $data['menu'] = $this->Backend_user_model->tampil_data('tbl_menu')->result();
-        $data['submenu'] = $this->Backend_user_model->tampil_data('tbl_submenu')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -438,14 +452,10 @@ class Dashboard extends CI_Controller
     {
         $id = $this->input->post('id');
         $judul = $this->input->post('judul');
-        $menu = $this->input->post('menu');
-        $submenu = $this->input->post('submenu');
         $konten = $this->input->post('konten');
 
         $data = array(
             'judul' => $judul,
-            'menu' => $menu,
-            'sub_menu' => $submenu,
             'konten' => $konten,
         );
 
@@ -462,6 +472,13 @@ class Dashboard extends CI_Controller
     {
         $where = array('id' => $id);
         $this->Backend_user_model->hapus_data($where, 'tbl_menu');
+        redirect('backend/dashboard/profile');
+    }
+
+    public function deleteArtikel($id)
+    {
+        $where = array('id' => $id);
+        $this->Backend_user_model->hapus_data($where, 'tbl_artikel');
         redirect('backend/dashboard/profile');
     }
 

@@ -53,34 +53,41 @@
 
 <body class="">
     <div id="wrapper">
-        <!-- preloader -->
-        <!-- <div id="preloader">
-            <div id="spinner">
-                <div class="preloader-dot-loading">
-                    <div class="dfg"><i></i><i></i><i></i><i></i></div>
-                </div>
-            </div>
-            <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
-        </div> -->
 
         <!-- Header -->
         <header id="header" class="header">
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="<?= base_url() ?>"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
+                        <?php
+                        foreach ($logo as $lg) {
+                        ?>
+                            <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt=""></a>
+                            <?php
+                        }
+                            ?>
                             <ul class="menuzord-menu">
-                                <li class="active"><a href="<?= base_url('tracer/logout') ?>">Logout</a>
+                                <li class="active"><a href="<?= base_url() ?>">Home</a>
                                 </li>
-                                <li><a href="#">Features</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">OK DP1</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <?php foreach ($menu as $mn) { ?>
+                                    <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>
+                                        <!-- Buat kondisi apakah ada Submenu -->
+                                        <?php $aaa = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
+                                        if (!empty($aaa)) {
+                                            echo '<ul class="dropdown">';
+                                            foreach ($aaa as $sbm) {
+                                                $d = $sbm->submenu;
+                                                $e = $sbm->link; ?>
+                                    <li><a href="<?= base_url($e) ?>"><?= $d ?></a></li>
+                            <?php }
+                                            echo '</ul>';
+                                        } ?>
+                            </li>
+                        <?php  } ?>
+                        <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
+                        </li>
                             </ul>
-                        </nav>
+                            </nav>
                     </div>
                 </div>
             </div>

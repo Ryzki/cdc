@@ -12,6 +12,7 @@ class Login extends CI_Controller
 		$this->load->helper(array('url', 'download'));
 	}
 
+
 	public function Perusahaan()
 	{
 		if (!empty($_REQUEST)) {
