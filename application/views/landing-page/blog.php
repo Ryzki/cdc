@@ -63,7 +63,7 @@
                         </div>
                       </div>
                       <p class="mt-10"><?= substr($ar->konten, 0, 500) ?> ...</p>
-                      <a href="blogDetil" class="btn-read-more">Read more</a>
+                      <a href="pagesDetil?seq=<?= $ar->id ?>" class="btn-read-more">Read more</a>
                       <div class="clearfix"></div>
                     </div>
                   </article>

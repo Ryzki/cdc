@@ -387,6 +387,64 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function perusahaan_mou()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        //buat data bahwa ini list untuk perusahaan mou
+        $data = array(
+            'status' => 'mou',
+            'judul' => 'Perusahaan Waiting Mou',
+            'deskripsi' => 'Perusahaan telah mendownload draft MoU dan menunggu untuk diupload',
+        );
+        $where = array(
+            'is_active' => '1'
+        );
+
+        $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/perusahaan');
+        $this->load->view('backend/footer');
+    }
+
+    public function perusahaan_verified()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+        //buat data bahwa ini list untuk perusahaan verified
+        $data = array(
+            'status' => 'verified',
+            'judul' => 'Perusahaan Verified',
+            'deskripsi' => 'Perusahaan telah mengunggah MoU, artinya kesepakat kerja dengan perusahaan telah resmi terjalin',
+        );
+        $where = array(
+            'is_active' => '2'
+        );
+
+        $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/perusahaan');
+        $this->load->view('backend/footer');
+    }
+
     public function tambah_data()
     {
         $nama_menu = $this->input->post('menu');

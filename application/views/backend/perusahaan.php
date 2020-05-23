@@ -61,9 +61,27 @@
                                         <td><?= $cp->jenis_pt ?></td>
                                         <td><?= $cp->deskripsi ?></td>
                                         <td class="table-actions">
-                                            <a href="#!" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
-                                                <i class="fas fa-check"></i>
-                                            </a>
+                                            <?php
+                                            if ($status == 'outstanding') {
+                                            ?>
+                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
+                                                    <i class="fas fa-check"></i>
+                                                </a>
+                                            <?php
+                                            } else if ($status == 'mou') {
+                                            ?>
+                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
+                                                    <i class="fas fa-check"></i>
+                                                </a>
+                                            <?php
+                                            } else if ($status == 'verified') {
+                                            ?>
+                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
+                                                    <i class="fas fa-check"></i>
+                                                </a>
+                                            <?php
+                                            }
+                                            ?>
                                         </td>
                                     </tr>
                                 <?php
