@@ -29,12 +29,12 @@
                                         </div>
                                         <?= $agenda['content'] ?>
                                         <div class="mt-30 mb-0">
-                                            <h5 class="pull-left flip mt-10 mr-20 text-theme-colored">Share:</h5>
+                                            <!-- <h5 class="pull-left flip mt-10 mr-20 text-theme-colored">Share:</h5>
                                             <ul class="styled-icons icon-circled m-0">
                                                 <li><a href="#" data-bg-color="#3A5795"><i class="fa fa-facebook text-white"></i></a></li>
                                                 <li><a href="#" data-bg-color="#55ACEE"><i class="fa fa-twitter text-white"></i></a></li>
                                                 <li><a href="#" data-bg-color="#A11312"><i class="fa fa-google-plus text-white"></i></a></li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                 </article>
@@ -42,12 +42,12 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="tags">
-                                                <p class="mb-0"><i class="fa fa-tags text-theme-colored"></i> <span>Tags:</span> Law, Juggement, lawyer, Cases</p>
+                                                <!-- <p class="mb-0"><i class="fa fa-tags text-theme-colored"></i> <span>Tags:</span> Law, Juggement, lawyer, Cases</p> -->
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="share text-right flip">
-                                                <p><i class="fa fa-share-alt text-theme-colored"></i> Share</p>
+                                                <!-- <p><i class="fa fa-share-alt text-theme-colored"></i> Share</p> -->
                                             </div>
                                         </div>
                                     </div>
