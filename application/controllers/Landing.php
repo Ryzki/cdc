@@ -82,4 +82,37 @@ class Landing extends CI_Controller
 			$this->load->view('landing-page/footer');
 		}
 	}
+
+	public function apply_job()
+	{
+		$id = $this->input->post('id_vacancy');
+
+		$config['upload_path']          = './assets/cv/';
+		$config['allowed_types']        = 'pdf';
+		$config['file_name']            = uniqid();
+		$config['max_size']             = 2000;
+		$config['overwrite']            = false;
+
+		$this->load->library('upload', $config);
+		if ($this->upload->do_upload('cv')) {
+			$data = array(
+				'id_vacancy' => $this->input->post('id_vacancy'),
+				'nama' => $this->input->post('nama'),
+				'email' => $this->input->post('email'),
+				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+				'pesan' => $this->input->post('pesan'),
+				'posisi' => $this->input->post('posisi'),
+				'kode_pt' => $this->input->post('kode_pt'),
+				'cv' => $this->upload->data('file_name'),
+			);
+
+			$this->Landing_page_model->insert_data($data, 'tbl_apply');
+			$this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Apply</div>');
+			$this->job_all();
+		} else {
+			$error = array('error' => $this->upload->display_errors());
+			$this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Failed Apply !, ' . $error['error'] . '</div>');
+			redirect('landing/job_detil?seq=' . $id);
+		}
+	}
 }

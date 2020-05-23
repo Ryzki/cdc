@@ -201,7 +201,7 @@
                 },
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data)
+                    console.log('total_apply' + data)
                     $("#total_apply").html(data);
                 }
             });

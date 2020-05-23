@@ -53,11 +53,13 @@
             </div>
           </div>
           <div class="col-md-9 mt-10">
+            <?= $this->session->flashdata('message') ?>
             <div class="icon-box mb-0 p-0">
               <a href="#" class="icon icon-gray pull-left mb-0 mr-10">
                 <i class="pe-7s-users"></i>
               </a>
-              <h3 class="icon-box-title pt-15 mt-0 mb-40"><?= ucwords($jobs['position']) ?></h3>
+              <h3 class="icon-box-title pt-15 mt-0 mb-0"><?= ucwords($jobs['position']) ?></h3>
+              <span><?= strtoupper($jobs['nama_pt']) ?></span>
               <hr>
               <p class="text-gray"><?php
                                     $where = array(
@@ -93,16 +95,19 @@
         <h3 class="text-center text-theme-colored mb-20">Apply Now</h3>
         <form id="job_apply_form" name="job_apply_form" action="<?= base_url('landing/apply_job') ?>" method="post" enctype="multipart/form-data">
           <div class="row">
+            <input name="id_vacancy" type="hidden" value="<?= $_GET['seq'] ?>">
+            <input name="posisi" type="hidden" value="<?= ucwords($jobs['position']) ?>">
+            <input name="kode_pt" type="hidden" value="<?= ucwords($jobs['kode_pt']) ?>">
             <div class="col-sm-6">
               <div class="form-group">
                 <label>Nama <small>*</small></label>
-                <input name="form_name" type="text" placeholder="Masukan Nama" required="" class="form-control">
+                <input name="nama" type="text" placeholder="Masukan Nama" class="form-control" value="<?= set_value('nama') ?>" required>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="form_email">Email <small>*</small></label>
-                <input name="form_email" class="form-control required email" type="email" placeholder="Masukan Email">
+                <input name="email" class="form-control required email" type="email" placeholder="Masukan Email" value="<?= set_value('email') ?>" required>
               </div>
             </div>
           </div>
@@ -110,31 +115,31 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label>Jenis Kelamin <small>*</small></label>
-                <select name="form_sex" class="form-control required">
+                <select name="jenis_kelamin" class="form-control required">
                   <option value="Male">Pria</option>
                   <option value="Female">Wanita</option>
                 </select>
               </div>
             </div>
             <!-- <div class="col-sm-6">
-                          <div class="form-group">
-                            <label>Posisi yang dilamar <small>*</small></label>
-                            <select name="form_post" class="form-control required">
-                              <option value="Finance Manager">Supervisor IT</option>
-                              <option value="Area Manager">Supervisor EXIM</option>
-                              <option value="Country Manager">Supervisor ISS</option>
-                            </select>
-                          </div>
-                        </div> -->
+                <div class="form-group">
+                  <label>Posisi yang dilamar <small>*</small></label>
+                  <select name="form_post" class="form-control required">
+                    <option value="Finance Manager">Supervisor IT</option>
+                    <option value="Area Manager">Supervisor EXIM</option>
+                    <option value="Country Manager">Supervisor ISS</option>
+                  </select>
+                </div>
+              </div> -->
           </div>
           <div class="form-group">
             <label>Pesan <small>*</small></label>
-            <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Tuliskan pesan dengan baik dan sopan, karena pesan ini akan dikirimkan kepada perusahaan"></textarea>
+            <textarea id="form_message" name="pesan" class="form-control required" rows="5" placeholder="Tuliskan pesan dengan baik dan sopan, karena pesan ini akan dikirimkan kepada perusahaan" value="<?= set_value('pesan') ?>" required></textarea>
           </div>
           <div class="form-group">
             <label>C/V Upload</label>
-            <input name="form_attachment" class="file" type="file" multiple data-show-upload="false" data-show-caption="true">
-            <small>Maximum upload file size: 12 MB</small>
+            <input name="cv" class="file" type="file" multiple data-show-upload="false" data-show-caption="true" required>
+            <small>Maximum upload file size: 2 MB, Extentions: .pdf</small>
           </div>
           <div class="form-group">
             <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
@@ -143,29 +148,29 @@
         </form>
         <!-- Job Form Validation-->
         <script type="text/javascript">
-          $("#job_apply_form").validate({
-            submitHandler: function(form) {
-              var form_btn = $(form).find('button[type="submit"]');
-              var form_result_div = '#form-result';
-              $(form_result_div).remove();
-              form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-              var form_btn_old_msg = form_btn.html();
-              form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-              $(form).ajaxSubmit({
-                dataType: 'json',
-                success: function(data) {
-                  if (data.status === 'true') {
-                    $(form).find('.form-control').val('');
-                  }
-                  form_btn.prop('disabled', false).html(form_btn_old_msg);
-                  $(form_result_div).html(data.message).fadeIn('slow');
-                  setTimeout(function() {
-                    $(form_result_div).fadeOut('slow')
-                  }, 6000);
-                }
-              });
-            }
-          });
+          // $("#job_apply_form").validate({
+          //   submitHandler: function(form) {
+          //     var form_btn = $(form).find('button[type="submit"]');
+          //     var form_result_div = '#form-result';
+          //     $(form_result_div).remove();
+          //     form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+          //     var form_btn_old_msg = form_btn.html();
+          //     form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+          //     $(form).ajaxSubmit({
+          //       dataType: 'json',
+          //       success: function(data) {
+          //         if (data.status === 'true') {
+          //           $(form).find('.form-control').val('');
+          //         }
+          //         form_btn.prop('disabled', false).html(form_btn_old_msg);
+          //         $(form_result_div).html(data.message).fadeIn('slow');
+          //         setTimeout(function() {
+          //           $(form_result_div).fadeOut('slow')
+          //         }, 6000);
+          //       }
+          //     });
+          //   }
+          // });
         </script>
       </div>
     </div>

@@ -20,6 +20,7 @@
       <div class="section-content">
         <div class="row">
           <div class="col-md-12">
+            <?= $this->session->flashdata('message') ?>
             <table class="table table-striped table-schedule">
               <thead>
                 <tr class="bg-theme-colored">

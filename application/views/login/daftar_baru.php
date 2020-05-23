@@ -51,7 +51,7 @@
 <body class="login-page">
     <div class="login-box">
         <div class="logo text-center">
-            <img src="<?= base_url('assets/') ?>images/ppk.png" width="200" height="130" /><a href="javascript:void(0);"></a>
+            <a href="<?= base_url('login/perusahaan') ?>"><img src="<?= base_url('assets/') ?>images/ppk.png" width="200" height="130" /></a>
         </div>
         <div class="card pb-0">
             <div class="body">

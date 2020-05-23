@@ -165,7 +165,7 @@
                 <div class="row mtli-row-clearfix">
                   <div class="col-md-3 col-xs-6">
                     <div class="horizontal-tab-centered">
-                      <a href="Login/perusahaan" class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</a>
+                      <a href="login/perusahaan" class="btn btn-primary btn-flat" style="padding: 20px;"><i class="fa fa-bank fa-5x"></i><br>Perusahaan</a>
                     </div>
                   </div>
                   <div class="col-md-3 col-xs-6">
@@ -232,6 +232,9 @@
                         </div>
                         <div class="col-sm-4">
                           <div class="event-count p-15 mt-15">
+                            <ul>
+                              <li class="text-theme-colored"><i class="fa fa-briefcase mr-5"></i> Position - <?= $v->position ?></li>
+                            </ul>
                             <ul class="event-date list-inline font-16 text-uppercase mt-10 mb-20">
                               <li class="p-15 bg-lightest"><?= date('M', mktime(0, 0, 0, substr($v->date_posted, 5, 2), 10)) ?></li>
                               <li class="p-15 pl-20 pr-20 bg-lightest"> <?= substr($v->date_posted, 8, 2) ?></li>

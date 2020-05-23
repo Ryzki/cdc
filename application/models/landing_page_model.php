@@ -53,4 +53,9 @@ class Landing_page_model extends CI_Model
         $this->db->order_by('due_date', 'DESC');
         return $this->db->get();
     }
+
+    public function insert_data($data, $table)
+    {
+        $this->db->insert($table, $data);
+    }
 }

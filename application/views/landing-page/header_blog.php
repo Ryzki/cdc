@@ -68,7 +68,7 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
+                        <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="<?= base_url() ?>"><img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" alt=""></a>
                             <ul class="menuzord-menu">
                                 <li class="active"><a href="<?= base_url('tracer/logout') ?>">Logout</a>
                                 </li>
