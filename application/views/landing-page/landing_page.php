@@ -401,7 +401,7 @@
                         </div>
                         <div class="media-body">
                           <div class="event-content pull-left flip pl-20 pl-xs-10">
-                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="#"><?= $a->title ?></a></h4>
+                            <h4 class="event-title media-heading font-raleway font-weight-700 mb-0 pt-5"><a href="<?= base_url('landing/detail_agenda?seq=' . $a->id) ?>"><?= $a->title ?></a></h4>
                             <span class="mb-5 font-12 mr-10"><i class="fa fa-clock-o mr-5 text-theme-colored"></i> at <?= substr($a->time_1, 0, 5) ?> - <?= substr($a->time_2, 0, 5) ?></span>
                             <span class="font-12"><i class="fa fa-map-marker mr-5 text-theme-colored"></i> <?= $a->location ?></span>
                             <p class="mb-5"><?= $a->content ?></p>

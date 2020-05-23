@@ -88,6 +88,23 @@ class Landing extends CI_Controller
 		}
 	}
 
+	public function detail_agenda()
+	{
+		if (isset($_GET['seq'])) {
+			$data['menu'] = $this->Landing_page_model->getMenu();
+			$data['title'] = "Detail Agenda | Universitas Kanjuruhan Malang";
+			$data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+			$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+			$where = array(
+				'id' => $_GET['seq'],
+			);
+			$data['agenda'] = $this->Landing_page_model->get_data_by_id($where, 'tbl_agenda')->row_array();
+			$this->load->view('landing-page/header_blog', $data);
+			$this->load->view('landing-page/detail_agenda');
+			$this->load->view('landing-page/footer');
+		}
+	}
+
 	public function apply_job()
 	{
 		$id = $this->input->post('id_vacancy');
