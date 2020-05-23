@@ -207,7 +207,13 @@
     }
 
     .modal-dialog-center {
-        margin-top: 19%;
+        margin-top: 10%;
+    }
+
+    .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
     }
 </style>
 
