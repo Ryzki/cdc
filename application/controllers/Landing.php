@@ -43,15 +43,6 @@ class Landing extends CI_Controller
 		$this->load->view('landing-page/footer_minimalis');
 	}
 
-	public function blog()
-	{
-		$data['title'] = "Blog | Universitas Kanjuruhan Malang";
-		$this->load->view('landing-page/header_blog', $data);
-		// $this->load->view('tracer/header', $data);
-		$this->load->view('landing-page/blog');
-		$this->load->view('landing-page/footer');
-	}
-
 	public function blogDetil()
 	{
 		$data['title'] = "Blog Detail | Universitas Kanjuruhan Malang";

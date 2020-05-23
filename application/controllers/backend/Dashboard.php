@@ -362,9 +362,26 @@ class Dashboard extends CI_Controller
     {
         $nama_menu = $this->input->post('menu');
         $link = $this->input->post('link');
+        $pages = $this->input->post('pages');
+
+        //buat kondisi
+        if (empty($link)) {
+            //buat kondisi pages apa yang dipilih
+            if ($pages == 'contact') {
+                $isi = 'landing/contact';
+            } else if ($pages == 'artikel') {
+                $isi = 'pages/pages/listArtikel';
+            } else if ($pages == 'lowongan') {
+                $isi = 'landing/lowongan';
+            } else {
+                $isi = '';
+            }
+        } else if (empty($pages)) {
+            $isi = $link;
+        }
         $data = array(
             'menu' => $nama_menu,
-            'link' => $link,
+            'link' => $isi,
         );
 
         $this->Backend_user_model->insert_data($data, 'tbl_menu');

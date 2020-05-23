@@ -399,8 +399,8 @@
                         <p class="text-center" style="font-weight:bold;">ATAU</p>
                         <div class="form-group">
                             <label>Halaman</label>
-                            <select name="pages" class="form-control">
-                                <option value="link">-- Pilih Halaman --</option>
+                            <select name="pages" class="form-control" name="pages">
+                                <option value="">-- Pilih Halaman --</option>
                                 <option value="artikel">Artikel</option>
                                 <option value="lowongan">Lowongan Kerja</option>
                                 <option value="contact">Hubungi Kami</option>
