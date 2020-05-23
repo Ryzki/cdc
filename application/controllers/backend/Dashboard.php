@@ -475,10 +475,13 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/profile');
     }
 
-    public function deleteArtikel($id)
+    public function deleteArtikel($id) //9
     {
         $where = array('id' => $id);
         $this->Backend_user_model->hapus_data($where, 'tbl_artikel');
+
+        //hapus tbl_submenu
+        $this->Backend_user_model->hapus_submenu($id);
         redirect('backend/dashboard/profile');
     }
 

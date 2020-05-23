@@ -107,4 +107,14 @@ class Backend_user_model extends CI_Model
             return FALSE;
         }
     }
+
+    public function hapus_submenu($id)
+    {
+        $delete_data = $this->db->query('delete from tbl_submenu where link like "%seq=' . $id . '%"');
+        if ($delete_data) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }

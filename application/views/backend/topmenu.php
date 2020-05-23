@@ -396,6 +396,16 @@
                             <label>Link</label>
                             <input type="text" name="link" class="form-control">
                         </div>
+                        <p class="text-center" style="font-weight:bold;">ATAU</p>
+                        <div class="form-group">
+                            <label>Halaman</label>
+                            <select name="pages" class="form-control">
+                                <option value="link">-- Pilih Halaman --</option>
+                                <option value="artikel">Artikel</option>
+                                <option value="lowongan">Lowongan Kerja</option>
+                                <option value="contact">Hubungi Kami</option>
+                            </select>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>
@@ -435,7 +445,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Link</label>
+                            <label>Link Artikel</label>
                             <select name="link" id="link" class="form-control">
                                 <?php
                                 foreach ($artikel as $ar) {
