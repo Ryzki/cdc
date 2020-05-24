@@ -19,6 +19,8 @@ class Landing extends CI_Controller
 		$data['member'] = $this->Landing_page_model->getKaki('tbl_member')->result();
 		$data['partner'] = $this->Landing_page_model->getKaki('tbl_partner')->result();
 		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+		$data['footer'] = $this->Landing_page_model->getKaki('tbl_footer')->result();
+		$data['data_konselor'] = $this->Landing_page_model->getKaki('tbl_konselor')->result();
 
 		$data['vacancy'] = $this->Landing_page_model->get_data_vacancy('tbl_vacancy')->result();
 		$data['agenda'] = $this->Landing_page_model->get_data('tbl_agenda')->result();

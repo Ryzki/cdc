@@ -208,49 +208,27 @@
                     </thead> -->
                     <tbody>
                       <?php
-                      $data_konselor = array(
-                        [
-                          'image' => 'konselor.jpg',
-                          'nama' => 'Agus Salim',
-                          'phone' => '085707803934',
-                          'email' => 'agus.salim@gmail.com',
-                        ],
-                        [
-                          'image' => 'cowok2.jpg',
-                          'nama' => 'Agus Salim',
-                          'phone' => '085707803934',
-                          'email' => 'agus.salim@gmail.com',
-                        ],
-                      );
                       $no = 1;
-                      foreach ($data_konselor as $key) : ?>
+                      foreach ($data_konselor as $kons) : ?>
                         <hr <?= ($no == 1) ? "style='display: none'" : "" ?>>
                         <div class="row mb-10 <?= ($no == 1) ? "mt-20" : "" ?>">
                           <div class="col-md-3 col-xs-5">
-                            <img alt="" src="<?= base_url('assets/') ?>images/konselor/<?= $key['image'] ?>" class="img-circle img-responsive" style="height: 100px; width: 100px; margin: auto;">
+                            <img alt="" src="<?= base_url('assets/') ?>images/konselor/<?= $kons->image ?>" class="img-circle img-responsive" style="height: 100px; width: 100px; margin: auto;">
                           </div>
                           <div class="col-md-9 col-xs-7">
                             <div class="row">
                               <div class="col-xs-12 col-md-3 vcenter">
-                                <h3 class="mt-10"><?= ucwords($key['nama']) ?></h3>
+                                <h3 class="mt-10"><?= ucwords($kons->nama) ?></h3>
                               </div>
                               <div class="col-xs-12 col-md-4 vcenter">
-                                <label for=""><i class="fa fa-phone"></i> <?= $key['phone'] ?></label>
+                                <label for=""><i class="fa fa-phone"></i> <?= $kons->phone ?></label>
                               </div>
                               <div class="col-xs-12 col-md-4 vcenter">
-                                <label for=""><i class="fa fa-envelope"></i> <?= $key['email'] ?></span></label>
+                                <label for=""><i class="fa fa-envelope"></i> <?= $kons->email ?></span></label>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- <tr>
-                          <td class="text-center" <?= ($no == 1) ? "style='border: 0px'" : "" ?>>
-                            <a class="mt-20 mb-15" href="#">
-                              <h3><img alt="" src="<?= base_url('assets/') ?>images/testimoni/klien/<?= $key['image'] ?>" class="img-circle mr-20">
-                                <span class="mr-40"><?= ucwords($key['nama']) ?></span> <span class="mr-40"><i class="fa fa-phone"></i> <?= $key['phone'] ?></span> <span><i class="fa fa-envelope"></i> <?= $key['email'] ?></span></h3>
-                            </a>
-                          </td>
-                        </!-->
                       <?php $no++;
                       endforeach; ?>
                     </tbody>
@@ -867,7 +845,7 @@
                     <div class="students-join1-right">
                       <div>
                         <h2><span> 2,541</span> <br> Member.</h2>
-                        <a href="#" class="join-now-btn">Join With Us</a>
+                        <a href="<?= base_url('landing/job_all') ?>" class="join-now-btn">Join With Us</a>
                       </div>
                     </div>
                   </div>
