@@ -192,9 +192,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../widgets.html">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/konselor') ?>">
                                 <i class="ni ni-chat-round text-green"></i>
-                                <span class="nav-link-text">Konseling</span>
+                                <span class="nav-link-text">Konselor</span>
                             </a>
                         </li>
                         <li class="nav-item">

@@ -445,6 +445,34 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function konselor()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+
+        $data['konselor'] = $this->Backend_user_model->tampil_data('tbl_konselor')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/konselor');
+        $this->load->view('backend/footer');
+    }
+
+    public function deleteKonselor($id)
+    {
+        $where = array('id' => $id);
+
+        $this->Backend_user_model->hapus_data($where, 'tbl_konselor');
+        redirect('backend/dashboard/konselor');
+    }
+
     public function approve($id)
     {
         $where = array('id' => $id);
