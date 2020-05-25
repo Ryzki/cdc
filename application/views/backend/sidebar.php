@@ -24,7 +24,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/profile') ?>">
                                 <i class="ni ni-shop text-red"></i>
                                 <span class="nav-link-text">Dashboards</span>
                             </a>
@@ -211,7 +211,7 @@
                     <!-- Navigation -->
                     <ul class="navbar-nav mb-md-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/logout') ?>">
                                 <i class="ni ni-lock-circle-open text-black"></i>
                                 <span class="nav-link-text">Logout</span>
                             </a>
@@ -419,10 +419,10 @@
                             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="<?= base_url('assets_backend') ?>/img/theme/team-4.jpg">
+                                        <img alt="<?= base_url('assets/images/user') . $this->session->userdata('image'); ?>" src="<?= base_url('assets/images/user/') . $this->session->userdata('image'); ?>">
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
-                                        <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                                        <span class="mb-0 text-sm  font-weight-bold"><?= $this->session->userdata('username'); ?></span>
                                     </div>
                                 </div>
                             </a>
@@ -434,20 +434,8 @@
                                     <i class="ni ni-single-02"></i>
                                     <span>My profile</span>
                                 </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-settings-gear-65"></i>
-                                    <span>Settings</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-calendar-grid-58"></i>
-                                    <span>Activity</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ni ni-support-16"></i>
-                                    <span>Support</span>
-                                </a>
                                 <div class="dropdown-divider"></div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="logout" class="dropdown-item">
                                     <i class="ni ni-user-run"></i>
                                     <span>Logout</span>
                                 </a>

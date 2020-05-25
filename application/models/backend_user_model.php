@@ -30,6 +30,7 @@ class Backend_user_model extends CI_Model
                     'username' => $userdata['username'],
                     'password' => $userdata['password'],
                     'level' => $userdata['level'],
+                    'image' => $userdata['image'],
                 ];
                 $this->session->set_userdata($sess_data);
                 redirect('backend/dashboard/profile');
