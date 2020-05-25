@@ -37,6 +37,7 @@
                     <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Users : </strong> Anda dapat menambahkan user untuk mengakses halaman administrator ini
                     </div>
+                    <?= $this->session->flashdata('message') ?>
                     <div class="mb-3">
                         <a href="#" class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#modal-user"><i class=" fa fa-plus"></i> Tambah User</a>
                     </div>
@@ -67,7 +68,7 @@
                                             <span class="text-muted"><?= $us->level ?></span>
                                         </td>
                                         <td class="table-actions">
-                                            <a href="deleteKonselor/<?= $us->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Konselor">
+                                            <a href="deleteUser/<?= $us->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Konselor">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </td>
@@ -97,7 +98,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?php echo form_open_multipart('backend/upload/tambah_konselor'); ?>
+                    <?php echo form_open_multipart('backend/dashboard/tambah_user'); ?>
                     <div class="form-group">
                         <label>Username</label>
                         <input type="email" name="username" class="form-control">

@@ -118,7 +118,7 @@ class Backend_user_model extends CI_Model
         }
     }
 
-    public function sign_up()
+    public function tambah_user()
     {
         //ambil nama file
         $temp_filename = basename($_FILES["user"]["name"]);
@@ -137,10 +137,26 @@ class Backend_user_model extends CI_Model
         $password1 = $this->input->post('password1');
         $password2 = $this->input->post('password2');
 
+        //buat kondisi jika password1 dan 2 tidak sama maka eror
+        if ($password1 <> $password2) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismiss text-center" role="alert">Password tidak sama</div>');
+            redirect('backend/dashboard/user');
+        }
+        //buat kondisi jika username sudah pernah dipakai jangan lanjut
+        $where = array('username' => $username);
+        $double = $this->db->get_where('user', $where)->row_array();
+
+        if ($double) {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismiss text-center" role="alert">Username sudah ada didatabase</div>');
+            redirect('backend/dashboard/user');
+        }
+
+
         $data = array(
             'username' => $username,
             'password' => password_hash($password1, PASSWORD_DEFAULT),
-            'images' => $temp_filename
+            'image' => $temp_filename,
+            'email' => $username
         );
         $this->db->insert('user', $data);
         if (!$this->upload->do_upload('user')) {

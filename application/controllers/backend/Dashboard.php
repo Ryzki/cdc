@@ -477,11 +477,11 @@ class Dashboard extends CI_Controller
     {
         if (!isset($this->session->userdata['username'])) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Anda belum login!
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>');
+            Anda belum login!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>');
             redirect('backend/dashboard/login');
         }
 
@@ -493,10 +493,18 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
-    public function sign_up()
+    public function deleteUser($id)
     {
-        $this->Backend_user_model->sign_up();
-        $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Create Account!, We Will Response Your Submission</div>');
+        $where = array('id' => $id);
+
+        $this->Backend_user_model->hapus_data($where, 'user');
+        redirect('backend/dashboard/user');
+    }
+
+    public function tambah_user()
+    {
+        $this->Backend_user_model->tambah_user();
+        $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Tambah User Berhasil</div>');
         redirect(base_url('backend/dashboard/user'));
     }
 
