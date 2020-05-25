@@ -62,7 +62,7 @@
                                     </th>
                                     <th>Menu</th>
                                     <th>Link Artikel</th>
-                                    <th>Active</th>
+                                    <!-- <th>Active</th> -->
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -83,12 +83,12 @@
                                         <td>
                                             <span class="text-muted"><?= $mn->link; ?></span>
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             <label class="custom-toggle">
                                                 <input type="checkbox" checked>
                                                 <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
                                             </label>
-                                        </td>
+                                        </td> -->
                                         <td class="table-actions">
                                             <a href="delete/<?= $mn->id; ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Menu">
                                                 <i class="fas fa-trash"></i>
@@ -147,7 +147,7 @@
                                         <th>Sub Menu</th>
                                         <th>Parent</th>
                                         <th>Link Artikel</th>
-                                        <th>Active</th>
+                                        <!-- <th>Active</th> -->
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -171,12 +171,12 @@
                                             <td>
                                                 <a href="#!" class="font-weight-bold"><?= $sbm->link ?></a>
                                             </td>
-                                            <td>
+                                            <!-- <td>
                                                 <label class="custom-toggle">
                                                     <input type="checkbox" checked>
                                                     <span class="custom-toggle-slider rounded-circle" data-label-off="No" data-label-on="Yes"></span>
                                                 </label>
-                                            </td>
+                                            </td> -->
                                             <td class="table-actions">
                                                 <a href="deleteSbm\<?= $sbm->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Sub Menu">
                                                     <i class="fas fa-trash"></i>

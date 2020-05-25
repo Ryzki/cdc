@@ -33,7 +33,7 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Alumni : </strong> Input data alumni, para alumni ini yang nantinya akan mengisi kuesioner tracer study.
                     </div>
                     <div class="col-12 text-left">

@@ -39,6 +39,7 @@ class Dashboard extends CI_Controller
         $data['submenu'] = $this->Landing_page_model->getSubMenu();
         $data['menukaki'] = $this->Backend_user_model->tampil_data('tbl_menu_kaki')->result();
         $data['artikel'] = $this->Backend_user_model->tampil_data('tbl_artikel')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -57,6 +58,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
         $this->load->view('backend/lowongan');
@@ -74,6 +77,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
         $this->load->view('backend/agenda');
@@ -92,6 +97,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $data['contact'] = $this->Backend_user_model->tampil_data('tbl_contact_us_detil')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -111,6 +117,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $data['video'] = $this->Backend_user_model->tampil_data('tbl_video')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');
@@ -132,6 +139,7 @@ class Dashboard extends CI_Controller
 
         $data['galeri'] = $this->Backend_user_model->tampil_data('tbl_galeri_menu')->result();
         $data['galeri_gb'] = $this->Backend_user_model->tampil_data('tbl_galeri_gb')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -152,6 +160,7 @@ class Dashboard extends CI_Controller
         }
         $data['gambar'] = $this->Backend_user_model->tampil_data('tbl_testimoni')->result();
         $data['list'] = $this->Backend_user_model->tampil_data('tbl_says')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -171,6 +180,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $data['achievement'] = $this->Backend_user_model->tampil_data('tbl_achievement')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -190,6 +200,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $data['member'] = $this->Backend_user_model->tampil_data('tbl_member')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -209,6 +220,7 @@ class Dashboard extends CI_Controller
             redirect('backend/dashboard/login');
         }
         $data['partner'] = $this->Backend_user_model->tampil_data('tbl_partner')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -247,7 +259,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/kodept');
         $this->load->view('backend/footer');
@@ -264,7 +277,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/sambutan');
         $this->load->view('backend/footer');
@@ -281,7 +295,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/prodi');
         $this->load->view('backend/footer');
@@ -298,7 +313,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/alumni');
         $this->load->view('backend/footer');
@@ -315,7 +331,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/analisa');
         $this->load->view('backend/footer');
@@ -332,7 +349,8 @@ class Dashboard extends CI_Controller
                       </div>');
             redirect('backend/dashboard/login');
         }
-        $this->load->view('backend/header');
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/laporan');
         $this->load->view('backend/footer');
@@ -351,8 +369,9 @@ class Dashboard extends CI_Controller
         }
         $data['menu'] = $this->Backend_user_model->tampil_data('tbl_menu')->result();
         $data['submenu'] = $this->Backend_user_model->tampil_data('tbl_submenu')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
-        $this->load->view('backend/header');
+        $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
         $this->load->view('backend/artikel', $data);
         $this->load->view('backend/footer');
@@ -380,6 +399,7 @@ class Dashboard extends CI_Controller
         );
 
         $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -409,6 +429,7 @@ class Dashboard extends CI_Controller
         );
 
         $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -438,6 +459,7 @@ class Dashboard extends CI_Controller
         );
 
         $data['company'] = $this->Backend_user_model->tampil_data_aksi($where, 'mst_company')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -458,6 +480,7 @@ class Dashboard extends CI_Controller
         }
 
         $data['konselor'] = $this->Backend_user_model->tampil_data('tbl_konselor')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -486,6 +509,7 @@ class Dashboard extends CI_Controller
         }
 
         $data['user'] = $this->Backend_user_model->tampil_data('user')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header', $data);
         $this->load->view('backend/sidebar');
@@ -632,6 +656,7 @@ class Dashboard extends CI_Controller
 
         $where = array('id' => $id);
         $data['artikel'] = $this->Backend_user_model->tampil_data_aksi($where, 'tbl_artikel')->result();
+        $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
         $this->load->view('backend/header');
         $this->load->view('backend/sidebar');

@@ -33,14 +33,14 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Sambutan : </strong> Kata sambutan dari Rektor/Direktur/Pimpinan Organisasi yang akan ditampilkan sebelum tracer study.
                     </div>
                     <div class="col-md-12 mt-4">
                         <form action="#" method="POST">
                             <div class="form-group">
                                 <label>Kata Sambutan</label>
-                                <textarea name="ckeditor" id="ckeditor">
+                                <textarea name="textEditor" id="textEditor" cols="80" rows="15">
                                 <p><strong>Alumni Universitas Kanjuruhan Malang (UNIKAMA)</strong> yang kami banggakan, Apa kabar??? semoga selalu dalam lindungan Tuhan Yang Maha Esa dan diberkahi segala aktivitasnya. Mohon maaf untuk mengganggu aktivitas dan waktunya beberapa saat. Saat ini UNIKAMA melalui Career Development Center (CDC) sedang terus meningkatkan hubungan dengan para Alumni, termasuk melalui Studi Penelusuran Alumni (Tracer Study) layaknya yang dilakukan universitas-universitas terkemuka di dunia. UNIKAMA dapat menjadi perguruan tinggi yang unggul dan mencapai status world class university tentunya dengan dukungan para Alumni yang kami banggakan. Oleh karenanya, diharapkan kesediaan para alumni UNIKAMA untuk bekerjasama mengisi kuesioner Tracer Study ini. Kuesioner ini ditujukan untuk alumni Program S1 yang lulus mulai tahun 2015. Studi ini bertujuan untuk mengetahui masa transisi dari dunia kampus menuju dunia kerja dan menganalisis tingkat kompetensi yang diperoleh pada saat pendidikan dan aplikasinya di dunia kerja. Studi ini juga akan menggali informasi terkait dengan proses dan kondisi pembelajaran di UNIKAMA dan akan digunakan untuk memberikan feedback bagi penyempurnaan kurikulum program studi di UNIKAMA. Hasil dari studi ini akan menjadi data berharga bagi UNIKAMA yang akan digunakan sebagai masukan untuk berbagai upaya dan program pengembangan UNIKAMA, termasuk diantaranya akreditasi universitas dan program studi. UNIKAMA dapat menjamin kerahasiaan informasi yang diberikan. Atas perhatian dan partisipasinya disampaikan terima kasih. Salam dan doa kami dari Almamater untuk kesuksesan Anda semua para Alumni UNIKAMA.</p>
 
                                     <p>&nbsp;</p>
@@ -59,5 +59,37 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Media Gallery</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-row">
+                        <?php
+                        $folder = 'images/';
+                        $scandir = scandir($folder);
+
+                        foreach ($scandir as $file) {
+                            if (!in_array($file, ['.', '..'])) {
+                                $filePath = $folder . $file;
+                                if (is_file($filePath) && preg_match('/^.*\.(jpg|jpeg|png|bmp)$/', $file)) {
+                                    print '<div class="col-2"><img class="imageSelect rounded img-fluid" src="' . base_url($filePath) . '" alt="no-img"></div>';
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>

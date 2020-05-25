@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
-                        <strong>Footer Area : </strong> Atur area footer website utama.
+                        <strong>Footer Area : </strong> Atur informasi footer untuk ditampilkan dihalaman administrator dan Website utama.
                     </div>
                     <div class="col-md-12 mt-4">
                         <?php
@@ -74,6 +74,10 @@
                             <div class="form-group">
                                 <label>Website</label>
                                 <input type="text" name="website" class="form-control" value="<?= $ft->website ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Judul Footer (ditampilkan di halaman administrator bagian bawah</label>
+                                <input type="text" name="footer" class="form-control" value="<?= $ft->footer ?>">
                             </div>
                             <div class="form-group">
                                 <label>Tautan -1</label>

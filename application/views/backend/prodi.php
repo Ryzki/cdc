@@ -33,7 +33,7 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Program Studi : </strong> Masukan program studi apa saja yang ada, daftar program studi ini terkait dengan alumni anda dalam mengisi tracer study.
                     </div>
                     <div class="col-6 text-right">

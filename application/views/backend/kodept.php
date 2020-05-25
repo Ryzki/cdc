@@ -33,7 +33,7 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Kode PT : </strong> Kode PT merupakan kode yang dimiliki setiap Perguruan Tinggi yang diperoleh dari Kementerian Pendidikan dan Perguruan Tinggi.
                     </div>
                     <div class="col-md-12 mt-5">
