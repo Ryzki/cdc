@@ -34,20 +34,28 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong><?= $judul ?> : </strong> <?= $deskripsi ?>
                     </div>
 
                     <div class="table-responsive py-4">
-                        <table class="table table-flush" id="datatable-basic">
+                        <table class="table table-flush" id="datatable-buttons">
                             <thead class="thead-light">
                                 <tr>
                                     <th>Kode</th>
                                     <th>Nama Perusahaan</th>
                                     <th>Email</th>
                                     <th>Bergerak dibidang</th>
-                                    <th>Deskripsi</th>
-                                    <th>Action</th>
+                                    <?php
+                                    if ($status == 'outstanding') {
+                                        echo '<th>Action</th>';
+                                    } else if ($status == 'mou') {
+                                        echo '<th>Mou</th>';
+                                        echo '<th>Action</th>';
+                                    } else if ($status == 'verified') {
+                                        echo '';
+                                    }
+                                    ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,45 +67,35 @@
                                         <td><?= $cp->nama_pt ?></td>
                                         <td><?= $cp->email_pt ?></td>
                                         <td><?= $cp->jenis_pt ?></td>
-                                        <td><?= $cp->deskripsi ?></td>
-                                        <td class="table-actions">
+                                        <?php
+                                        if ($status == 'outstanding') {
+                                            echo '<td class="table-actions">';
+                                            echo    '<a href="approve/' . $cp->id . '" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">';
+                                            echo        '<i class="fas fa-check"></i>';
+                                            echo    '</a>';
+                                            echo '</td>';
+                                        } else if ($status == 'mou') {
+                                            echo '<td class="table-actions">';
+                                        ?>
+                                            <a href="<?= base_url('assets/upload/') . $cp->file_mou ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Mou">
                                             <?php
-                                            if ($status == 'outstanding') {
+                                            echo        '<i class="fas fa-file"></i>';
+                                            echo    '</a>';
+                                            echo '</td>';
+                                            echo '<td class="table-actions">';
+                                            echo    '<a href="approveMou/' . $cp->id . '" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">';
+                                            echo        '<i class="fas fa-check"></i>';
+                                            echo    '</a>';
+                                            echo '</td>';
+                                        } else if ($status == 'verified') {
+                                            echo '';
+                                        }
                                             ?>
-                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
-                                                    <i class="fas fa-check"></i>
-                                                </a>
-                                            <?php
-                                            } else if ($status == 'mou') {
-                                            ?>
-                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
-                                                    <i class="fas fa-check"></i>
-                                                </a>
-                                            <?php
-                                            } else if ($status == 'verified') {
-                                            ?>
-                                                <a href="#" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Approve">
-                                                    <i class="fas fa-check"></i>
-                                                </a>
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
                                     </tr>
                                 <?php
                                 }
                                 ?>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Kode</th>
-                                    <th>Nama Perusahaan</th>
-                                    <th>Email</th>
-                                    <th>Bergerak dibidang</th>
-                                    <th>Deskripsi</th>
-                                    <th>Action</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
 

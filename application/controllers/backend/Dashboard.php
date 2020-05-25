@@ -445,6 +445,30 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/footer');
     }
 
+    public function approve($id)
+    {
+        $where = array('id' => $id);
+
+        $data = array(
+            'is_active' => '1'
+        );
+
+        $this->Backend_user_model->update_data($where, $data, 'mst_company');
+        redirect('backend/dashboard/perusahaan_outstanding');
+    }
+
+    public function approveMou($id)
+    {
+        $where = array('id' => $id);
+
+        $data = array(
+            'is_active' => '2'
+        );
+
+        $this->Backend_user_model->update_data($where, $data, 'mst_company');
+        redirect('backend/dashboard/perusahaan_mou');
+    }
+
     public function tambah_data()
     {
         $nama_menu = $this->input->post('menu');

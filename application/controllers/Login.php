@@ -61,7 +61,7 @@ class Login extends CI_Controller
 
 	public function sign_up()
 	{
-		$this->company_model->sign_up();
+		$this->Company_model->sign_up();
 		$this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Create Account!, We Will Response Your Submission</div>');
 		redirect(base_url('login/perusahaan'));
 	}
