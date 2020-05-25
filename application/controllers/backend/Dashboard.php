@@ -492,6 +492,14 @@ class Dashboard extends CI_Controller
         $this->load->view('backend/user');
         $this->load->view('backend/footer');
     }
+
+    public function sign_up()
+    {
+        $this->Backend_user_model->sign_up();
+        $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Create Account!, We Will Response Your Submission</div>');
+        redirect(base_url('backend/dashboard/user'));
+    }
+
     public function approve($id)
     {
         $where = array('id' => $id);

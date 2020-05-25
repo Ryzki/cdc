@@ -117,4 +117,36 @@ class Backend_user_model extends CI_Model
             return FALSE;
         }
     }
+
+    public function sign_up()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["user"]["name"]);
+
+        $config['upload_path']          = './assets/images/user/';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+        $this->load->library('upload', $config);
+
+        $username = $this->input->post('username');
+        $password1 = $this->input->post('password1');
+        $password2 = $this->input->post('password2');
+
+        $data = array(
+            'username' => $username,
+            'password' => password_hash($password1, PASSWORD_DEFAULT),
+            'images' => $temp_filename
+        );
+        $this->db->insert('user', $data);
+        if (!$this->upload->do_upload('user')) {
+            redirect('backend/dashboard/user');
+        } else {
+            redirect('backend/dashboard/user');
+        }
+    }
 }
