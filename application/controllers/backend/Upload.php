@@ -179,6 +179,41 @@ class Upload extends CI_Controller
         }
     }
 
+    public function tambah_konselor()
+    {
+        //ambil nama file
+        $temp_filename = basename($_FILES["konselor"]["name"]);
+
+        $config['upload_path']          = './assets/images/konselor/';
+        $config['allowed_types']        = 'jpg|png|gif';
+        $config['file_name']            = $temp_filename;
+        $config['overwrite']            = true;
+        $config['max_size']             = 0; // unlimited
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+        $this->load->library('upload', $config);
+        //ambil data dari inputan
+        $nama = $this->input->post('nama');
+        $phone = $this->input->post('phone');
+        $email = $this->input->post('email');
+
+        $data = array(
+            'nama' => $nama,
+            'phone' => $phone,
+            'email' => $email,
+            'image' => $temp_filename,
+        );
+        //insert to db
+        $this->Backend_user_model->insert_data($data, 'tbl_konselor');
+
+        if (!$this->upload->do_upload('konselor')) {
+            redirect('backend/dashboard/konselor');
+        } else {
+            redirect('backend/dashboard/konselor');
+        }
+    }
+
     public function galeri_gb()
     {
         //ambil nama file

@@ -37,6 +37,9 @@
                     <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Konselor : </strong> Anda dapat menambahkan konselor yang akan tampil dihalaman depan
                     </div>
+                    <div class="mb-3">
+                        <a href="#" class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#modal-konselor"><i class=" fa fa-plus"></i> Tambah Konselor</a>
+                    </div>
 
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush table-striped">
@@ -80,5 +83,43 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Modal tambah konselor-->
+    <div class="modal fade" id="modal-konselor" tabindex="-1" role="dialog" aria-labelledby="modal-konselor" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class=" modal-title" id="modal-title-default">Tambah Konselor</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php echo form_open_multipart('backend/upload/tambah_konselor'); ?>
+                    <div class="form-group">
+                        <label>Nama Konselor</label>
+                        <input type="text" name="nama" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Gambar Profile</label>
+                        <input type="file" class="form-control" id="customFileLang" lang="en" name="konselor">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+                </div>
+                </form>
+            </div>
         </div>
     </div>
