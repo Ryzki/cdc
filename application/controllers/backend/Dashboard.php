@@ -473,6 +473,25 @@ class Dashboard extends CI_Controller
         redirect('backend/dashboard/konselor');
     }
 
+    public function user()
+    {
+        if (!isset($this->session->userdata['username'])) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Anda belum login!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>');
+            redirect('backend/dashboard/login');
+        }
+
+        $data['user'] = $this->Backend_user_model->tampil_data('user')->result();
+
+        $this->load->view('backend/header', $data);
+        $this->load->view('backend/sidebar');
+        $this->load->view('backend/user');
+        $this->load->view('backend/footer');
+    }
     public function approve($id)
     {
         $where = array('id' => $id);

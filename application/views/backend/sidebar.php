@@ -185,12 +185,12 @@
                                 <span class="nav-link-text">Job Seeker</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="../widgets.html">
                                 <i class="ni ni-book-bookmark text-blue"></i>
                                 <span class="nav-link-text">Magang</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('backend/dashboard/konselor') ?>">
                                 <i class="ni ni-chat-round text-green"></i>
@@ -198,7 +198,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../widgets.html">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/user') ?>">
                                 <i class="ni ni-single-02 text-purple"></i>
                                 <span class="nav-link-text">Users</span>
                             </a>
