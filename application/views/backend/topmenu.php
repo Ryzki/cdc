@@ -33,7 +33,7 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Daftar Menu : </strong> Anda dapat membuat dan mengatur daftar menu yang anda inginkan.
                     </div>
                     <div class="card-header border-0">
@@ -117,7 +117,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Daftar Sub Menu : </strong> Anda dapat membuat dan mengatur daftar Sub menu yang anda inginkan.
                         </div>
                         <div class="card-header border-0">
@@ -205,7 +205,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-primary" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Daftar Artikel : </strong> Anda dapat menambahkan dan menghapus artikel disini.
                         </div>
                         <div class="card-header border-0">
@@ -281,7 +281,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Logo : </strong> Silahkan upload gambar untuk digunakan sebagai Logo pada halaman Website.
                         </div>
                         <!-- Card body -->
@@ -332,7 +332,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-danger" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Slide Show : </strong> Silahkan upload gambar untuk digunakan untuk slide show di halaman Website.
                         </div>
                         <!-- Card body -->

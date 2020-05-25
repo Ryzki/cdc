@@ -13,10 +13,10 @@
                         </ol>
                     </nav>
                 </div>
-                <div class="col-lg-6 col-5 text-right">
+                <!-- <div class="col-lg-6 col-5 text-right">
                     <a href="#" class="btn btn-sm btn-neutral">New</a>
                     <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
         </div>
         <!-- Card body -->
         <div class="card-body">
-            <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+            <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                 <strong>Testimoni klien : </strong> Upload gambar utama klien /alumni, kemudian tambahkan beberapa testimoni dari mereka.
             </div>
             <!-- Card body -->
@@ -78,7 +78,7 @@
                     </div>
                     <!-- Card body -->
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                        <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                             <strong>Testimoni klien : </strong> Tambahkan testimoni dari alumni maupun mitra perusahaan.
                         </div>
                         <!-- Card body -->

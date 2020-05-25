@@ -179,12 +179,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="../widgets.html">
                                 <i class="ni ni-badge text-orange"></i>
                                 <span class="nav-link-text">Job Seeker</span>
                             </a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="../widgets.html">
                                 <i class="ni ni-book-bookmark text-blue"></i>

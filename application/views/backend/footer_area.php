@@ -13,10 +13,10 @@
                         </ol>
                     </nav>
                 </div>
-                <div class="col-lg-6 col-5 text-right">
+                <!-- <div class="col-lg-6 col-5 text-right">
                     <a href="#" class="btn btn-sm btn-neutral">New</a>
                     <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
             <!-- Form groups used in grid -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="alert alert-success" role="alert"><i class="fas fa-info-circle"></i>
+                    <div class="alert alert-dark" role="alert"><i class="fas fa-info-circle"></i>
                         <strong>Footer Area : </strong> Atur area footer website utama.
                     </div>
                     <div class="col-md-12 mt-4">
