@@ -22,6 +22,7 @@ class Company extends CI_Controller
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where, 'mst_company')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
@@ -40,10 +41,11 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Company Profile | PPK UNIKAMA';
-            $data['nama_company'] = $this->session->userdata('nama');
+            // $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where, 'mst_company')->result();
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['data_company'] = $this->Company_model->get_data_by_kode($where, 'mst_company')->row_array();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
@@ -62,10 +64,11 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Create Vacancy | PPK UNIKAMA';
-            $data['nama_company'] = $this->session->userdata('nama');
+            // $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where, 'mst_company')->result();
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_vacancy'] = $this->Company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
@@ -85,10 +88,11 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Agenda | PPK UNIKAMA';
-            $data['nama_company'] = $this->session->userdata('nama');
+            // $data['nama_company'] = $this->session->userdata('nama');
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where, 'mst_company')->result();
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_agenda'] = $this->Company_model->get_data_by_kode($where, 'tbl_agenda')->result();
@@ -109,10 +113,11 @@ class Company extends CI_Controller
         if ($this->session->userdata('logged_in')) {
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
             $data['sub_title'] = 'Applier Vacancy';
-            $data['nama_company'] = $this->session->userdata('nama');
+            // $data['nama_company'] = $this->session->userdata('nama');
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where_img, 'mst_company')->result();
             $kode_pt = $this->session->userdata('kode');
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
@@ -144,10 +149,11 @@ class Company extends CI_Controller
             $data['title'] = 'Apply Vacancy | PPK UNIKAMA';
             $data['result'] = $result;
             $data['sub_title'] = ucfirst($result) . ' Applier';
-            $data['nama_company'] = $this->session->userdata('nama');
+            // $data['nama_company'] = $this->session->userdata('nama');
             $where_img = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['detail'] = $this->Company_model->get_data_by_id($where_img, 'mst_company')->result();
             $kode_pt = $this->session->userdata('kode');
             $status = $status;
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
@@ -218,6 +224,7 @@ class Company extends CI_Controller
         $data = array(
             'id' => $id
         );
+        $this->load->library('scm');
         echo json_encode($this->Company_model->get_data_by_id($data, 'tbl_agenda')->row_array());
     }
 
@@ -336,7 +343,7 @@ class Company extends CI_Controller
     public function upload_image()
     {
 
-        $config['upload_path']          = './assets/images/';
+        $config['upload_path']          = './assets/images/user_company';
         $config['allowed_types']        = 'jpg|png|jpeg';
         $config['file_name']            = $this->session->userdata('kode');
         $config['max_size']             = 1000;

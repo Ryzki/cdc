@@ -147,14 +147,14 @@
                             <h4 class="mb-0" id="view_title"></h4>
                         </div>
                     </div>
-                    <div class="row py-3 align-items-center">
+                    <!-- <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
                             <small class="text-uppercase text-muted font-weight-bold">Date</small>
                         </div>
                         <div class="col-sm-9">
                             <h4 class="mb-0" id="view_date"></h4>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row py-3 align-items-center">
                         <div class="col-sm-3 pl-5">
                             <small class="text-uppercase text-muted font-weight-bold">Time</small>
@@ -276,6 +276,7 @@
         }
 
         function view_agenda(id) {
+
             $.ajax({
                 type: "POST",
                 url: "<?= base_url('backend/company/view_agenda') ?>",
@@ -285,9 +286,11 @@
                 dataType: 'json',
                 success: function(data) {
                     console.log(data)
+
+                    // System.out.println(data.time_1.substring(11, 8)); //he  
                     $("#view_title").html(data.title);
-                    $("#view_date").html(data.date);
-                    $("#view_time").html(data.time_1 + " - " + data.time_2);
+                    // $("#view_date").html(data.date);
+                    $("#view_time").html(data.time_1 + " ~ " + data.time_2);
                     $("#view_location").html(data.location);
                     $("#view_content").html(data.content);
                 }

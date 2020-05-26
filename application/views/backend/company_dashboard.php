@@ -106,53 +106,59 @@
 <!-- Page content -->
 <div class="container-fluid mt--6">
     <div class="card mb-4">
-        <!-- Card header -->
-        <div class="card-header">
+        <?php
+        foreach ($detail as $dt) {
+        ?>
+            <!-- Card header -->
+            <div class="card-header">
 
-            <h3 class="mb-0"><span>Company Profile Of <?= strtoupper($nama_company) ?></span> <span class="float-right">Tanggal Daftar : <?= $this->scm->tgl(substr($data_company['date_input'], 0, 10)) ?></span></h3>
-        </div>
-        <!-- Card body -->
-        <div class="card-body">
-            <div class="row">
-                <div class="col-sm-3 text-center">
-                    <img src="<?= base_url('assets') ?>/images/user_company/<?= empty($image['image']) ? 'no_image.jpg' : ''; ?>" alt="">
-                </div>
-                <div class="col-sm-9">
-                    <div class="row py-3 align-items-center">
-                        <div class="col-sm-2 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Nama</small>
-                        </div>
-                        <div class="col-sm-10">
-                            <h4 class="mb-0"><?= strtoupper($nama_company) ?></h4>
-                        </div>
+                <h3 class="mb-0"><span>Company Profile Of <?= strtoupper($dt->nama_pt) ?></span> <span class="float-right">Tanggal Daftar : <?= $this->scm->tgl(substr($dt->date_input, 0, 10)) ?></span></h3>
+            </div>
+            <!-- Card body -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3 text-center">
+                        <img src="<?= base_url('assets') ?>/images/user_company/<?= empty($dt->image) ? 'no_image.jpg' : $dt->image; ?>" alt="">
                     </div>
-                    <div class="row py-3 align-items-center">
-                        <div class="col-sm-2 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Jenis</small>
+                    <div class="col-sm-9">
+                        <div class="row py-3 align-items-center">
+                            <div class="col-sm-2 pl-5">
+                                <small class="text-uppercase text-muted font-weight-bold">Nama</small>
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="mb-0"><?= strtoupper($dt->nama_pt) ?></h4>
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            <h4 class="mb-0"><?= $data_company['jenis'] ?></h4>
+                        <div class="row py-3 align-items-center">
+                            <div class="col-sm-2 pl-5">
+                                <small class="text-uppercase text-muted font-weight-bold">Jenis</small>
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="mb-0"><?= $dt->jenis_pt ?></h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row py-3 align-items-center">
-                        <div class="col-sm-2 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Email</small>
+                        <div class="row py-3 align-items-center">
+                            <div class="col-sm-2 pl-5">
+                                <small class="text-uppercase text-muted font-weight-bold">Email</small>
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="mb-0"><?= $dt->email_pt ?></h4>
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            <h4 class="mb-0"><?= $data_company['email'] ?></h4>
-                        </div>
-                    </div>
-                    <div class="row py-3">
-                        <div class="col-sm-2 pl-5">
-                            <small class="text-uppercase text-muted font-weight-bold">Deskripsi</small>
-                        </div>
-                        <div class="col-sm-10 align-items-center">
-                            <h4 class="mb-0"><?= $data_company['deskripsi'] ?></h4>
+                        <div class="row py-3">
+                            <div class="col-sm-2 pl-5">
+                                <small class="text-uppercase text-muted font-weight-bold">Deskripsi</small>
+                            </div>
+                            <div class="col-sm-10 align-items-center">
+                                <h4 class="mb-0"><?= $dt->deskripsi ?></h4>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php
+        }
+        ?>
     </div>
 
     <script>
