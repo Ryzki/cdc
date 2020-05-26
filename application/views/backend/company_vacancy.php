@@ -6,10 +6,10 @@
                 <div class="col-lg-6 col-7">
                     <h6 class="h2 text-white d-inline-block mb-0">Vacancy</h6>
                 </div>
-                <div class="col-lg-6 col-5 text-right">
+                <!-- <div class="col-lg-6 col-5 text-right">
                     <a href="#" class="btn btn-sm btn-neutral">&nbsp;</a>
                     <a href="#" class="btn btn-sm btn-neutral">&nbsp;</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

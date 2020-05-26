@@ -4,9 +4,15 @@
         <div class="scrollbar-inner">
             <!-- Brand -->
             <div class="sidenav-header  d-flex  align-items-center">
-                <a class="navbar-brand" href="../dashboards/dashboard.html">
-                    <img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" class="navbar-brand-img" alt="...">
-                </a>
+                <?php
+                foreach ($logo as $lg) {
+                ?>
+                    <a class="navbar-brand" href="../dashboards/dashboard.html">
+                        <img src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" class="navbar-brand-img" alt="...">
+                    </a>
+                <?php
+                }
+                ?>
                 <div class=" ml-auto ">
                     <!-- Sidenav toggler -->
                     <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
@@ -260,7 +266,7 @@
                             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="<?= base_url('assets') ?>/images/<?= $image['image'] ?>">
+                                        <img alt="<?= empty($image['image']) ? 'kosong' : 'isi'; ?>" src="<?= base_url('assets') ?>/images/user_company/<?= empty($image['image']) ? 'no_image.jpg' : $image['image']; ?>">
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold"><?= strtoupper($nama_company) ?></span>

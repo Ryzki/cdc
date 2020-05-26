@@ -4,9 +4,15 @@
         <div class="scrollbar-inner">
             <!-- Brand -->
             <div class="sidenav-header  d-flex  align-items-center">
-                <a class="navbar-brand" href="../dashboards/dashboard.html">
-                    <img src="<?= base_url('assets/') ?>images/logo-unikama-1.png" class="navbar-brand-img" alt="...">
-                </a>
+                <?php
+                foreach ($logo as $lg) {
+                ?>
+                    <a class="navbar-brand" href="<?= base_url('backend/dashboard/profile') ?>">
+                        <img src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" class="navbar-brand-img" alt="...">
+                    </a>
+                <?php
+                }
+                ?>
                 <div class=" ml-auto ">
                     <!-- Sidenav toggler -->
                     <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">

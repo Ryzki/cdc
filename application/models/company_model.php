@@ -45,6 +45,7 @@ class Company_model extends CI_Model
                         'email' => $cek_company['email_pt'],
                         'deskripsi' => $cek_company['deskripsi'],
                         'date_input' => $cek_company['date_input'],
+                        'image' => $cek_company['image'],
                         'logged_in' => TRUE,
                     );
                     $this->session->set_userdata($sess_data);
@@ -57,6 +58,7 @@ class Company_model extends CI_Model
                         'email' => $cek_company['email_pt'],
                         'deskripsi' => $cek_company['deskripsi'],
                         'date_input' => $cek_company['date_input'],
+                        'image' => $cek_company['image'],
                         'logged_in' => TRUE,
                     );
                     $this->session->set_userdata($sess_data);

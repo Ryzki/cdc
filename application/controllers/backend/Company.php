@@ -23,6 +23,7 @@ class Company extends CI_Controller
                 'kode_pt' => $this->session->userdata('kode')
             );
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_dashboard');
@@ -40,6 +41,7 @@ class Company extends CI_Controller
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['data_company'] = $this->Company_model->get_data_by_kode($where, 'mst_company')->row_array();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
 
@@ -60,6 +62,7 @@ class Company extends CI_Controller
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_vacancy'] = $this->Company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
             // var_dump($data['data_vacancy']);
@@ -80,6 +83,7 @@ class Company extends CI_Controller
             $where = array(
                 'kode_pt' => $this->session->userdata('kode')
             );
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_agenda'] = $this->Company_model->get_data_by_kode($where, 'tbl_agenda')->result();
             $this->load->view('backend/header', $data);
@@ -101,6 +105,7 @@ class Company extends CI_Controller
                 'kode_pt' => $this->session->userdata('kode')
             );
             $kode_pt = $this->session->userdata('kode');
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply($kode_pt, 'tbl_apply')->result();
             // var_dump($data['datas']);
@@ -135,6 +140,7 @@ class Company extends CI_Controller
             );
             $kode_pt = $this->session->userdata('kode');
             $status = $status;
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply_per_status($kode_pt, $status, 'tbl_apply')->result();
             $this->load->view('backend/header', $data);
