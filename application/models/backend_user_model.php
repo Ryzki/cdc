@@ -175,4 +175,29 @@ class Backend_user_model extends CI_Model
         $this->db->where('username', $username);
         $this->db->update('user', $data_update);
     }
+
+    public function get_total_data($table)
+    {
+        // $this->db->get_where($table, $data);
+        // $this->db->where('id', $data);
+        $this->db->from($table);
+        return $this->db->count_all_results();
+    }
+
+    public function get_latest_vacancy($table)
+    {
+        // return $this->db->query("SELECT * FROM $table WHERE kode_pt='3' ORDER BY ID DESC LIMIT 1");
+        $this->db->select('job_title');
+        $this->db->order_by('id', 'DESC');
+        $this->db->limit(1);
+        return $this->db->get($table);
+    }
+
+    public function get_total_apply($table)
+    {
+        // $this->db->select('*');
+        $this->db->from($table);
+        // $this->db->where('kode_pt', $kode);
+        return $this->db->count_all_results();
+    }
 }

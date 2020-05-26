@@ -879,4 +879,49 @@ class Dashboard extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Update Data</div>');
         redirect('backend/dashboard/user_profile');
     }
+
+    public function total_vacancy()
+    {
+        // $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->Backend_user_model->get_total_data('tbl_vacancy'));
+    }
+
+    public function latest_vacancy()
+    {
+        // $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->Backend_user_model->get_latest_vacancy('tbl_vacancy')->row_array());
+    }
+
+    public function total_apply()
+    {
+        // $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->Backend_user_model->get_total_apply('tbl_apply'));
+    }
+
+    public function total_agenda()
+    {
+        // $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->Backend_user_model->get_total_data('tbl_agenda'));
+    }
+
+    public function total_perusahaan()
+    {
+        // $kode = $this->input->post('kode');
+        // $data = array(
+        //     'kode_pt' => $kode
+        // );
+        echo json_encode($this->Backend_user_model->get_total_data('mst_company'));
+    }
 }

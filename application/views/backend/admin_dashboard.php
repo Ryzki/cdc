@@ -84,7 +84,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Perusahaan</h5>
-                                    <span class="h2 font-weight-bold mb-0">49,65%</span>
+                                    <span class="h2 font-weight-bold mb-0" id="total_perusahaan">-</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -93,8 +93,8 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                                <span class="text-nowrap">Since last month</span>
+                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
+                                <span class="text-nowrap">All we have connection</span>
                             </p>
                         </div>
                     </div>
@@ -166,16 +166,17 @@
         $(document).ready(function() {
             get_total_vacancy()
             get_latest_vacancy()
-            get_total_agenda()
             get_total_apply()
+            get_total_agenda()
+            get_total_perusahaan()
         })
 
         function get_total_vacancy() {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/total_vacancy_company') ?>",
+                url: "<?= base_url('backend/dashboard/total_vacancy') ?>",
                 data: {
-                    kode: "<?= $data_company['kode'] ?>"
+                    kode: ""
                 },
                 dataType: 'json',
                 success: function(data) {
@@ -188,9 +189,9 @@
         function get_latest_vacancy() {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/latest_vacancy') ?>",
+                url: "<?= base_url('backend/dashboard/latest_vacancy') ?>",
                 data: {
-                    kode: "<?= $data_company['kode'] ?>"
+                    kode: ""
                 },
                 dataType: 'json',
                 success: function(data) {
@@ -203,9 +204,9 @@
         function get_total_apply() {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/total_apply') ?>",
+                url: "<?= base_url('backend/dashboard/total_apply') ?>",
                 data: {
-                    kode: "<?= $data_company['kode'] ?>"
+                    kode: ""
                 },
                 dataType: 'json',
                 success: function(data) {
@@ -215,32 +216,32 @@
             });
         }
 
-        function get_apply_this_month() {
-            $.ajax({
-                type: "POST",
-                url: "<?= base_url('backend/company/appy_this_month') ?>",
-                data: {
-                    kode: "<?= $data_company['kode'] ?>"
-                },
-                dataType: 'json',
-                success: function(data) {
-                    console.log(data)
-                    $("#total_apply").html(data);
-                }
-            });
-        }
-
         function get_total_agenda() {
             $.ajax({
                 type: "POST",
-                url: "<?= base_url('backend/company/total_agenda') ?>",
+                url: "<?= base_url('backend/dashboard/total_agenda') ?>",
                 data: {
-                    kode: "<?= $data_company['kode'] ?>"
+                    kode: ""
                 },
                 dataType: 'json',
                 success: function(data) {
                     console.log(data)
                     $("#total_agenda").html(data);
+                }
+            });
+        }
+
+        function get_total_perusahaan() {
+            $.ajax({
+                type: "POST",
+                url: "<?= base_url('backend/dashboard/total_perusahaan') ?>",
+                data: {
+                    kode: ""
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data)
+                    $("#total_perusahaan").html(data);
                 }
             });
         }
