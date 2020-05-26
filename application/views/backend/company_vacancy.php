@@ -52,7 +52,7 @@
                                 <tr class="text-center row<?= $data->id ?>">
                                     <td><?= $i ?></td>
                                     <td><?= $data->job_title ?></td>
-                                    <td><?= $data->due_date ?></td>
+                                    <td><?= $this->scm->tgl($data->due_date) ?></td>
                                     <td><?= $data->position ?></td>
                                     <td><?= $data->location ?></td>
                                     <td><?= $data->salary ?></td>

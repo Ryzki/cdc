@@ -48,8 +48,8 @@
                         <tr class="text-center row<?= $data->id ?>">
                             <td><?= $i ?></td>
                             <td><?= $data->title ?></td>
-                            <td><?= $data->date_input ?></td>
-                            <td><?= $data->time_1 . " - " . $data->time_2 ?></td>
+                            <td><?= $this->scm->tglDetil($data->date_input) ?></td>
+                            <td><?= $this->scm->tglDetil($data->time_1) . " - " . $this->scm->tglDetil($data->time_2) ?></td>
                             <td><?= $data->location ?></td>
                             <td><button type="button" id="" class="btn btn-sm btn-danger" onclick="delete_agenda('<?= $data->id ?>')"><i class="fa fa-trash"></i></button> <button data-target="#modalInfo" data-toggle="modal" type="button" id="" class="btn btn-sm btn-primary" onclick="view_agenda('<?= $data->id ?>')"><i class="fa fa-info"></i></button></td>
                         </tr>

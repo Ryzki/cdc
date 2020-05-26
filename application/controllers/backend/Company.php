@@ -71,6 +71,7 @@ class Company extends CI_Controller
             $data['data_vacancy'] = $this->Company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
             $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             // var_dump($data['data_vacancy']);
+            $this->load->library('scm');
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
             $this->load->view('backend/Company_vacancy');
@@ -92,6 +93,8 @@ class Company extends CI_Controller
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_agenda'] = $this->Company_model->get_data_by_kode($where, 'tbl_agenda')->result();
             $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
+            $this->load->library('scm');
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
             $this->load->view('backend/Company_agenda');
