@@ -199,6 +199,11 @@
                   <h5>Daftar Konselor PPK Unikama</h5>
                 </div>
                 <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-12 vcenter">
+                      Untuk dapat memperoleh layanan konseling karir dari PPK Unikama, anda dapat datang langsung ke kantor PPK ubukama atau anda dapat melakukan konseling online dengan konselor yang dapat anda pilih. Anda dapat menghubungi konselor tersebut ke alamat email dibawah ini untuk membuat janji terlebih dahulu dan merencanakan penyelenggaraan konseling online.
+                    </div>
+                  </div>
                   <table class="table table-hover table-flush">
                     <!-- <thead>
                       <tr>
