@@ -108,13 +108,14 @@
     <div class="card mb-4">
         <!-- Card header -->
         <div class="card-header">
-            <h3 class="mb-0"><span>Company Profile Of <?= strtoupper($nama_company) ?></span> <span class="float-right">Tanggal Daftar : <?= substr($data_company['date_input'], 0, 10) ?></span></h3>
+
+            <h3 class="mb-0"><span>Company Profile Of <?= strtoupper($nama_company) ?></span> <span class="float-right">Tanggal Daftar : <?= $this->scm->tgl(substr($data_company['date_input'], 0, 10)) ?></span></h3>
         </div>
         <!-- Card body -->
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-3 text-center">
-                    <img src="<?= base_url('assets') ?>/images/<?= $image['image'] ?>" alt="">
+                    <img src="<?= base_url('assets') ?>/images/user_company/<?= empty($image['image']) ? 'no_image.jpg' : ''; ?>" alt="">
                 </div>
                 <div class="col-sm-9">
                     <div class="row py-3 align-items-center">

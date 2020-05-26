@@ -24,6 +24,9 @@ class Company extends CI_Controller
             );
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
+            $this->load->library('scm');
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/company_dashboard');
@@ -44,6 +47,7 @@ class Company extends CI_Controller
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['data_company'] = $this->Company_model->get_data_by_kode($where, 'mst_company')->row_array();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
 
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
@@ -65,6 +69,7 @@ class Company extends CI_Controller
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_vacancy'] = $this->Company_model->get_data_by_kode($where, 'tbl_vacancy')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             // var_dump($data['data_vacancy']);
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
@@ -86,6 +91,7 @@ class Company extends CI_Controller
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where, 'mst_company')->row_array();
             $data['data_agenda'] = $this->Company_model->get_data_by_kode($where, 'tbl_agenda')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_Company');
             $this->load->view('backend/Company_agenda');
@@ -108,6 +114,7 @@ class Company extends CI_Controller
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply($kode_pt, 'tbl_apply')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             // var_dump($data['datas']);
             // die;
             $this->load->view('backend/header', $data);
@@ -143,6 +150,7 @@ class Company extends CI_Controller
             $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
             $data['image'] = $this->Company_model->get_image($where_img, 'mst_company')->row_array();
             $data['datas'] = $this->Company_model->get_data_apply_per_status($kode_pt, $status, 'tbl_apply')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
             $this->load->view('backend/Company_result_apply');
