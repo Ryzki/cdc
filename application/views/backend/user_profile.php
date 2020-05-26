@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-sm-3 text-center">
                         <?= $this->session->flashdata('message_image') ?>
-                        <?php echo form_open_multipart('backend/company/upload_image'); ?>
+                        <?php echo form_open_multipart('backend/dashboard/upload_image_user'); ?>
                         <img src="<?= base_url('assets') ?>/images/user/<?= $dt->image ?>" alt="" class="rounded img-fluid">
                         <div class="custom-file mt-1">
                             <input type="file" class="custom-file-input float-left" name="upload_image" id="customFileLang" lang="en">
@@ -41,13 +41,14 @@
                     </div>
                     <div class="col-sm-9">
                         <?= $this->session->flashdata('message') ?>
-                        <form action="<?= base_url('backend/company/edit_profile') ?>" method="POST">
+                        <form action="<?= base_url('backend/dashboard/editProfile') ?>" method="POST">
                             <div class="row py-3 align-items-center">
                                 <div class="col-sm-2 pl-5">
                                     <small class="text-uppercase text-muted font-weight-bold">Nama</small>
                                 </div>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama" value="<?= $dt->nama ?>">
+                                    <input type="hidden" class="form-control" name="id" value="<?= $dt->id ?>">
                                     <!-- <h4 class="mb-0"><?= $dt->nama ?></h4> -->
                                 </div>
                             </div>
@@ -56,7 +57,7 @@
                                     <small class="text-uppercase text-muted font-weight-bold">Username</small>
                                 </div>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jenis" value="<?= $dt->username ?>">
+                                    <input type="text" class="form-control" name="username" value="<?= $dt->username ?>">
                                     <!-- <h4 class="mb-0">Jenis Company</h4> -->
                                 </div>
                             </div>

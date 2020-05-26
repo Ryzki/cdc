@@ -169,4 +169,10 @@ class Backend_user_model extends CI_Model
             redirect('backend/dashboard/user');
         }
     }
+
+    public function update_upload($username, $data_update)
+    {
+        $this->db->where('username', $username);
+        $this->db->update('user', $data_update);
+    }
 }

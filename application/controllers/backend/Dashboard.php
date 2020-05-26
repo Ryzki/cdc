@@ -68,6 +68,33 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function upload_image_user()
+    {
+
+        $config['upload_path']          = './assets/images/user';
+        $config['allowed_types']        = 'jpg|png|jpeg';
+        $config['file_name']            = $this->session->userdata('username');
+        $config['max_size']             = 1000;
+        $config['overwrite']            = true;
+
+        $config['max_width']            = 500;
+        $config['max_height']           = 500;
+
+        $this->load->library('upload', $config);
+        if ($this->upload->do_upload('upload_image')) {
+            $data_update = array(
+                'image' => $this->upload->data('file_name'),
+            );
+            $this->Backend_user_model->update_upload($this->session->userdata('username'), $data_update);
+            $this->session->set_flashdata('message_image', '<div class="alert alert-info text-center" role="alert">Success Update Image</div>');
+            $this->user_profile();
+        } else {
+            $error = array('error' => $this->upload->display_errors());
+            $this->session->set_flashdata('message_image', '<div class="alert alert-danger text-center" role="alert">Error Upload File!, ' . $error['error'] . '</div>');
+            $this->user_profile();
+        }
+    }
+
     public function profile()
     {
         if (!isset($this->session->userdata['username'])) {
@@ -830,5 +857,26 @@ class Dashboard extends CI_Controller
     {
         $this->session->sess_destroy();
         redirect('backend/dashboard');
+    }
+
+    public function editProfile()
+    {
+        $id = $this->input->post('id');
+        $nama = $this->input->post('nama');
+        $username = $this->input->post('username');
+        $email = $this->input->post('email');
+        $deskripsi = $this->input->post('deskripsi');
+
+        $where = array('id' => $id);
+        $data = array(
+            'nama' => $nama,
+            'username' => $username,
+            'email' => $email,
+            'deskripsi' => $deskripsi,
+        );
+
+        $update = $this->Backend_user_model->update_data($where, $data, 'user');
+        $this->session->set_flashdata('message', '<div class="alert alert-info text-center" role="alert">Success Update Data</div>');
+        redirect('backend/dashboard/user_profile');
     }
 }

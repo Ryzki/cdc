@@ -147,10 +147,11 @@
                         </div>
                         <div class="row py-3">
                             <div class="col-sm-2 pl-5">
-                                <small class="text-uppercase text-muted font-weight-bold">Level</small>
+                                <small class="text-uppercase text-muted font-weight-bold">Deskripsi</small>
                             </div>
                             <div class="col-sm-10 align-items-center">
-                                <h4 class="mb-0"><?= $dt->level ?></h4>
+                                <textarea name="deskripsi" id="" cols="30" rows="10" class="form-control"><?= $dt->deskripsi ?></textarea>
+                                <!-- <h4 class="mb-0">I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</h4> -->
                             </div>
                         </div>
                     </div>
