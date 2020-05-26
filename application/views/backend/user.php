@@ -68,7 +68,7 @@
                                             <span class="text-muted"><?= $us->level ?></span>
                                         </td>
                                         <td class="table-actions">
-                                            <a href="deleteUser/<?= $us->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus Konselor">
+                                            <a href="deleteUser/<?= $us->id ?>" class="table-action table-action-delete" data-toggle="tooltip" data-original-title="Hapus User">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </td>
@@ -100,8 +100,16 @@
                 <div class="modal-body">
                     <?php echo form_open_multipart('backend/dashboard/tambah_user'); ?>
                     <div class="form-group">
+                        <label>Nama</label>
+                        <input type="text" name="nama" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <label>Username</label>
-                        <input type="email" name="username" class="form-control">
+                        <input type="text" name="username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>email</label>
+                        <input type="email" name="email" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Password</label>

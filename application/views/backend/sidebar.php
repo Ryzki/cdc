@@ -30,7 +30,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('backend/dashboard/profile') ?>">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/admin') ?>">
                                 <i class="ni ni-shop text-red"></i>
                                 <span class="nav-link-text">Dashboards</span>
                             </a>
@@ -281,7 +281,7 @@
                                 <div class="dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome!</h6>
                                 </div>
-                                <a href="#!" class="dropdown-item">
+                                <a href="user_profile" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
                                     <span>My profile</span>
                                 </a>

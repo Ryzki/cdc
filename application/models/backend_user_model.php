@@ -33,7 +33,7 @@ class Backend_user_model extends CI_Model
                     'image' => $userdata['image'],
                 ];
                 $this->session->set_userdata($sess_data);
-                redirect('backend/dashboard/profile');
+                redirect('backend/dashboard/admin');
             }
         }
 
@@ -134,7 +134,9 @@ class Backend_user_model extends CI_Model
 
         $this->load->library('upload', $config);
 
+        $nama = $this->input->post('nama');
         $username = $this->input->post('username');
+        $email = $this->input->post('email');
         $password1 = $this->input->post('password1');
         $password2 = $this->input->post('password2');
 
@@ -154,10 +156,11 @@ class Backend_user_model extends CI_Model
 
 
         $data = array(
+            'nama' => $nama,
             'username' => $username,
             'password' => password_hash($password1, PASSWORD_DEFAULT),
             'image' => $temp_filename,
-            'email' => $username
+            'email' => $email
         );
         $this->db->insert('user', $data);
         if (!$this->upload->do_upload('user')) {

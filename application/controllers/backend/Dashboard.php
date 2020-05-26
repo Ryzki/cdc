@@ -22,6 +22,52 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function admin()
+    {
+        if ($this->session->userdata('logged_in')) {
+            // $sess = $this->session->userdata();
+            $data['title'] = 'Dashboard Admin | PPK UNIKAMA';
+            // $data['nama_company'] = $this->session->userdata('nama');
+            // $data['data_company'] = $this->session->userdata();
+            // $data['session'] = $this->session->userdata();
+            $where = array(
+                'username' => $this->session->userdata('username')
+            );
+            $data['detail'] = $this->Backend_user_model->tampil_data_aksi($where, 'user')->result();
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
+            $this->load->library('scm');
+            $this->load->view('backend/header', $data);
+            $this->load->view('backend/sidebar');
+            $this->load->view('backend/admin_dashboard');
+            $this->load->view('backend/footer');
+        } else {
+            redirect(base_url('backend/dashboard/login'));
+        }
+    }
+
+    public function user_profile()
+    {
+        if ($this->session->userdata('logged_in')) {
+            $data['title'] = 'User Profile | PPK UNIKAMA';
+            // $data['nama_company'] = $this->session->userdata('nama');
+            $where = array(
+                'username' => $this->session->userdata('username')
+            );
+            $data['detail'] = $this->Backend_user_model->tampil_data_aksi($where, 'user')->result();
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
+            $this->load->view('backend/header', $data);
+            $this->load->view('backend/sidebar');
+            $this->load->view('backend/user_profile');
+            $this->load->view('backend/footer');
+        } else {
+            redirect(base_url('backend/dashboard/login'));
+        }
+    }
+
     public function profile()
     {
         if (!isset($this->session->userdata['username'])) {

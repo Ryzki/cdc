@@ -47,9 +47,9 @@
                                 <div class="form-group mb-3">
                                     <div class="input-group input-group-merge input-group-alternative">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                            <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                                         </div>
-                                        <input class="form-control" name="username" placeholder="agus@gmail.com" type="email">
+                                        <input class="form-control" name="username" placeholder="bening14" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
