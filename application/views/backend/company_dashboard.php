@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
+                                <span class="text-success mr-2" id="status_apply"></span>
                                 <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                                <span class="text-success mr-2"><i class="fa fa-arrow-down"></i> </span>
+                                <span class="text-success mr-2" id="status_agenda"></span>
                                 <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
@@ -208,8 +208,15 @@
                 },
                 dataType: 'json',
                 success: function(data) {
-                    console.log('total_apply' + data)
-                    $("#total_apply").html(data);
+                    console.log('total_apply' + data.total)
+                    $("#total_apply").html(data.total);
+                    if (data.font == '0') {
+                        $("#status_apply").html('-');
+                    } else if (data.font == '+') {
+                        $("#status_apply").html('<i class="fa fa-arrow-up"></i> ' + data.selisih);
+                    } else if (data.font == '-') {
+                        $("#status_apply").html('<i class="fa fa-arrow-down"></i> ' + data.selisih);
+                    }
                 }
             });
         }
@@ -238,8 +245,15 @@
                 },
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data)
-                    $("#total_agenda").html(data);
+                    console.log('total_agenda' + data.total)
+                    $("#total_agenda").html(data.total);
+                    if (data.font == '0') {
+                        $("#status_agenda").html('-');
+                    } else if (data.font == '+') {
+                        $("#status_agenda").html('<i class="fa fa-arrow-up"></i> ' + data.selisih);
+                    } else if (data.font == '-') {
+                        $("#status_agenda").html('<i class="fa fa-arrow-down"></i> ' + data.selisih);
+                    }
                 }
             });
         }

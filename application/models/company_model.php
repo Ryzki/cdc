@@ -101,6 +101,24 @@ class Company_model extends CI_Model
         return $this->db->delete($table, $data);
     }
 
+    public function get_total_agenda_last_month($data, $table)
+    {
+        // $this->db->get_where($table, $data);
+        $this->db->where('kode_pt', $data);
+        $this->db->where('MONTH(date_input)', (date('m') - 1));
+        $this->db->from($table);
+        return $this->db->count_all_results();
+    }
+
+    public function get_total_agenda_this_month($data, $table)
+    {
+        // $this->db->get_where($table, $data);
+        $this->db->where('kode_pt', $data);
+        $this->db->where('MONTH(date_input)', date('m'));
+        $this->db->from($table);
+        return $this->db->count_all_results();
+    }
+
     public function get_total_data($data, $table)
     {
         // $this->db->get_where($table, $data);

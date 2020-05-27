@@ -283,16 +283,19 @@ class Company extends CI_Controller
     public function total_apply()
     {
         $kode = $this->input->post('kode');
+        // $kode = 'CP3';
         // $data = array(
         //     'kode_pt' => $kode
         // );
-        $selisih = $this->Company_model->get_total_apply_last_month() - $this->Company_model->get_total_apply_this_month();
+        $last_month = $this->Company_model->get_total_apply_last_month($kode, 'tbl_apply');
+        $this_month = $this->Company_model->get_total_apply_this_month($kode, 'tbl_apply');
+        $selisih = $this_month - $last_month;
         if ($selisih == 0) {
-            $font = '-';
+            $font = '0';
         } elseif ($selisih > 0) {
-            $font = '<i class="fa fa-arrow-up"></i>';
+            $font = '+';
         } elseif ($selisih < 0) {
-            $font = '<i class="fa fa-arrow-down"></i>';
+            $font = '-';
         }
 
         $data = array(
@@ -315,10 +318,28 @@ class Company extends CI_Controller
     public function total_agenda()
     {
         $kode = $this->input->post('kode');
+        // $kode = 'CP3';
         // $data = array(
         //     'kode_pt' => $kode
         // );
-        echo json_encode($this->Company_model->get_total_data($kode, 'tbl_agenda'));
+        $last_month = $this->Company_model->get_total_agenda_last_month($kode, 'tbl_agenda');
+        $this_month = $this->Company_model->get_total_agenda_this_month($kode, 'tbl_agenda');
+        $selisih = $this_month - $last_month;
+        if ($selisih == 0) {
+            $font = '0';
+        } elseif ($selisih > 0) {
+            $font = '+';
+        } elseif ($selisih < 0) {
+            $font = '-';
+        }
+
+        $data = array(
+            'total' => $this->Company_model->get_total_apply($kode, 'tbl_agenda'),
+            'selisih' => $selisih,
+            'font' => $font
+        );
+
+        echo json_encode($data);
     }
 
     public function decision()

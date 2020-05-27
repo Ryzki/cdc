@@ -81,7 +81,7 @@
     }
 
     .header-nav:hover .menuzord-menu>li:not(.active)>a {
-        color: #FFF !important;
+        /* color: #FFF !important; */
     }
 
     .header.header-floating .sticky-wrapper.is-sticky .header-nav.navbar-sticky {
@@ -89,7 +89,7 @@
     }
 
     .header.header-floating .sticky-wrapper .header-nav.navbar-sticky .menuzord-menu>li>a {
-        color: #FFF;
+        /* color: #FFF; */
     }
 
     .header.header-floating .sticky-wrapper:not(.is-sticky) .header-nav.navbar-sticky .menuzord-menu>li:not(.active):not(:hover)>a {
