@@ -59,16 +59,21 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
-                        <?php
-                        foreach ($logo as $lg) {
-                        ?>
-                            <nav id="menuzord-right" class="menuzord orange no-bg"><a class="menuzord-brand pull-left flip mb-15" href="#"><img src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt=""></a>
-                            <?php
-                        }
-                            ?>
-                            <ul class="menuzord-menu">
-                                <li class="active"><a href="<?= base_url() ?>">Home</a>
+                        <nav id="menuzord-right" class="menuzord default no-bg">
+                            <a class="menuzord-brand switchable-logo pull-left flip mb-15" href="#">
+                                <?php
+                                foreach ($logo as $lg) {
+                                ?>
+                                    <img class="logo-default" src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt="">
+                                    <img class="logo-scrolled-to-fixed" src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" alt="">
+                                <?php
+                                }
+                                ?>
+                            </a>
+                            <ul class="menuzord-menu" style="color: #888">
+                                <li class="active"><a href="#home">Home</a>
                                 </li>
+
                                 <?php foreach ($menu as $mn) { ?>
                                     <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
@@ -84,10 +89,12 @@
                                         } ?>
                             </li>
                         <?php  } ?>
+
+
                         <li class=""><a href="<?= base_url('tracer') ?>" class="button-trace">Tracer Study</a>
                         </li>
                             </ul>
-                            </nav>
+                        </nav>
                     </div>
                 </div>
             </div>

@@ -84,6 +84,8 @@ class Landing extends CI_Controller
 			$this->load->view('landing-page/header_blog', $data);
 			$this->load->view('landing-page/jobdetil');
 			$this->load->view('landing-page/footer');
+		} else {
+			redirect(base_url());
 		}
 	}
 
@@ -101,6 +103,8 @@ class Landing extends CI_Controller
 			$this->load->view('landing-page/header_blog', $data);
 			$this->load->view('landing-page/detail_agenda');
 			$this->load->view('landing-page/footer');
+		} else {
+			redirect(base_url());
 		}
 	}
 
