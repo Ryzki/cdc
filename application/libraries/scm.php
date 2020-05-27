@@ -79,4 +79,30 @@ class scm
     {
         return $time = substr($time, 11, 8);
     }
+
+    function version()
+    {
+
+        // $folder = 'http://solusiciptamedia.com/version/cdc/version.txt';
+        // $newfolder = 'temp/version.txt';
+
+        // if (copy($folder, $newfolder))
+        //     return TRUE;
+        // else
+        //     return FALSE;
+
+        $file = fopen('http://solusiciptamedia.com/version/cdc/version.txt', 'r');
+        if (!$file) {
+            die('File tidak ada');
+        }
+        # lakukan perulangan selama feof bernilai false
+        while (!feof($file)) {
+            $data[] = fgets($file);
+        }
+        foreach ($data as $key) {
+            echo $key . '<br>';
+        }
+        # tutup file agar ia dihapus dari memory
+        fclose($file);
+    }
 }

@@ -47,6 +47,34 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function version()
+    {
+        if ($this->session->userdata('logged_in')) {
+            // $sess = $this->session->userdata();
+            $data['title'] = 'Dashboard Admin | PPK UNIKAMA';
+            // $data['nama_company'] = $this->session->userdata('nama');
+            // $data['data_company'] = $this->session->userdata();
+            // $data['session'] = $this->session->userdata();
+
+            //cek versi dari database
+            $data['version'] = $this->Backend_user_model->tampil_data('version')->row_array();
+            $where = array(
+                'username' => $this->session->userdata('username')
+            );
+            $data['detail'] = $this->Backend_user_model->tampil_data_aksi($where, 'user')->result();
+            $data['logo'] = $this->Backend_user_model->tampil_data('tbl_logo')->result();
+            $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
+
+            $this->load->library('scm');
+            $this->load->view('backend/header', $data);
+            $this->load->view('backend/sidebar');
+            $this->load->view('backend/version');
+            $this->load->view('backend/footer');
+        } else {
+            redirect(base_url('backend/dashboard/login'));
+        }
+    }
+
     public function user_profile()
     {
         if ($this->session->userdata('logged_in')) {

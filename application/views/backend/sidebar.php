@@ -209,6 +209,12 @@
                                 <span class="nav-link-text">Users</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('backend/dashboard/version') ?>">
+                                <i class="ni ni-key-25 text-black"></i>
+                                <span class="nav-link-text">Version</span>
+                            </a>
+                        </li>
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">
