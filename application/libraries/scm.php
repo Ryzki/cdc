@@ -92,7 +92,7 @@ class scm
         }
         # tutup file agar ia dihapus dari memory
         fclose($file);
-        #kembalikan data
+        # kembalikan data
         return $new = trim($data[0]);
     }
     function upgradeVersion()
@@ -112,10 +112,14 @@ class scm
         }
         # lakukan perulangan selama feof bernilai false
         while (!feof($file)) {
-            $data[] = fgets($file);
-        }
-        foreach ($data as $key) {
-            echo $key . '<br>';
+            $a = trim(fgets($file));
+            $data = explode("-", $a);
+            if ($data[1] <> "version") {
+                //copykan file
+                $folder = 'http://solusiciptamedia.com/version/cdc/update/' . $data[0];
+                $newfolder = 'temp/' . $data[0];
+                copy($folder, $newfolder);
+            }
         }
         # tutup file agar ia dihapus dari memory
         fclose($file);

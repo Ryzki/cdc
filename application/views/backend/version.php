@@ -41,7 +41,7 @@
                 <div class="row alert alert-dark mx-2">
                     <div class="col-md-10">
                         <div class="" role="alert"><i class="fas fa-info-circle"></i>
-                            <strong>Upgrade System : </strong> Sistem anda sudah up to date.
+                            <strong>Upgrade System : </strong>Versi sistem anda saat ini adalah <strong><?= $current ?></strong> dan Sistem anda sudah up to date.
                         </div>
 
                     </div>
@@ -50,20 +50,21 @@
             } else if ($new <> $current) {
             ?>
 
-                <div class="row alert alert-dark mx-2">
+                <div class="row alert alert-info mx-2">
                     <div class="col-md-10">
                         <div class="" role="alert"><i class="fas fa-info-circle"></i>
-                            <strong>Upgrade System : </strong> Terdapat versi baru 1.xx silahkan upgrade sistem anda
+                            <strong>Upgrade System : </strong> Versi sistem anda saat ini adalah <?= $current ?>, Terdapat versi baru <strong><?= $new ?></strong> silahkan upgrade sistem anda
                         </div>
 
                     </div>
 
                     <div class="col-md-2">
-                        <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" type="button" style="color:white;"> <span class="btn-inner--icon"><i class="fas fa-wrench"></i></span>
+                        <a href="getVersion" class="btn btn-sm btn-danger btn-round btn-icon" type="button" style="color:white;"> <span class="btn-inner--icon"><i class="fas fa-wrench"></i></span>
                             <span class="btn-inner--text">Upgrade</span></a>
                     </div>
                 </div>
             <?php
+
             }
             ?>
 

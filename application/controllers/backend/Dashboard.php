@@ -75,6 +75,13 @@ class Dashboard extends CI_Controller
         }
     }
 
+    public function getVersion()
+    {
+        $this->load->library('scm');
+        $this->scm->upgradeVersion();
+        redirect(base_url('backend/dashboard/version'));
+    }
+
     public function user_profile()
     {
         if ($this->session->userdata('logged_in')) {
