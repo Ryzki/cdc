@@ -53,7 +53,7 @@ class Company extends CI_Controller
 
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
-            $this->load->view('backend/Company_profile');
+            $this->load->view('backend/company_profile');
             $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));
@@ -77,7 +77,7 @@ class Company extends CI_Controller
             $this->load->library('scm');
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
-            $this->load->view('backend/Company_vacancy');
+            $this->load->view('backend/company_vacancy');
             $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));
@@ -101,7 +101,7 @@ class Company extends CI_Controller
             $this->load->library('scm');
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
-            $this->load->view('backend/Company_agenda');
+            $this->load->view('backend/company_agenda');
             $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));
@@ -162,7 +162,7 @@ class Company extends CI_Controller
             $data['footer'] = $this->Backend_user_model->tampil_data('tbl_footer')->result();
             $this->load->view('backend/header', $data);
             $this->load->view('backend/sidebar_company');
-            $this->load->view('backend/Company_result_apply');
+            $this->load->view('backend/company_result_apply');
             $this->load->view('backend/footer_company');
         } else {
             redirect(base_url('login/perusahaan'));
@@ -185,7 +185,7 @@ class Company extends CI_Controller
                 'location' => $this->input->post('location'),
             );
             $this->Company_model->insert_data($data, 'tbl_vacancy');
-            redirect(base_url('backend/Company/Company_vacancy'));
+            redirect(base_url('backend/Company/company_vacancy'));
         } else {
             redirect(base_url('login/perusahaan'));
         }
