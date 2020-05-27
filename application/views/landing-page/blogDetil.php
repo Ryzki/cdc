@@ -14,7 +14,7 @@
               <div class="blog-posts single-post">
                 <article class="post clearfix mb-0">
                   <div class="entry-header">
-                    <div class="post-thumb thumb"> <img src="images/bg/bg3.jpg" alt="" class="img-responsive img-fullwidth"> </div>
+                    <!-- <div class="post-thumb thumb"> <img src="images/bg/gabung.jpg" alt="" class="img-responsive img-fullwidth"> </div> -->
                   </div>
                   <div class="entry-content">
                     <div class="entry-meta media no-bg no-border mt-15 pb-20">
