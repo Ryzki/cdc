@@ -7,7 +7,7 @@
                 <?php
                 foreach ($logo as $lg) {
                 ?>
-                    <a class="navbar-brand" href="../dashboards/dashboard.html">
+                    <a class="navbar-brand" href="#">
                         <img src="<?= base_url('assets/') ?>images/logo/<?= $lg->logo ?>" class="navbar-brand-img" alt="...">
                     </a>
                 <?php
