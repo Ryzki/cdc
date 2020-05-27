@@ -118,7 +118,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-3 text-center">
-                        <img src="<?= base_url('assets') ?>/images/user_company/<?= empty($dt->image) ? 'no_image.jpg' : $dt->image; ?>" alt="">
+                        <img src="<?= base_url('assets') ?>/images/user_company/<?= empty($dt->image) ? 'no_image.jpg' : $dt->image; ?>" class="img-fluid" alt="" style="width: auto;">
                     </div>
                     <div class="col-sm-9">
                         <div class="row py-3 align-items-center">

@@ -268,8 +268,8 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <div class="media align-items-center">
-                                        <span class="avatar avatar-sm rounded-circle">
-                                            <img alt="<?= empty($image['image']) ? 'kosong' : 'isi'; ?>" src="<?= base_url('assets') ?>/images/user_company/<?= empty($image['image']) ? 'no_image.jpg' : $image['image']; ?>">
+                                        <span class="avatar avatar-sm rounded-circle" style="align-items: normal;">
+                                            <img alt="<?= empty($image['image']) ? 'kosong' : 'isi'; ?>" src="<?= base_url('assets') ?>/images/user_company/<?= empty($image['image']) ? 'no_image.jpg' : $image['image']; ?>" class="">
                                         </span>
                                         <div class="media-body  ml-2  d-none d-lg-block">
                                             <span class="mb-0 text-sm  font-weight-bold"><?= strtoupper($dt->nama_pt) ?></span>

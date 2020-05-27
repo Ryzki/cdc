@@ -258,7 +258,7 @@
                       <div class="row">
                         <div class="col-sm-4 pr-0 pr-sm-15">
                           <div class="thumb p-15">
-                            <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/<?= $v->image ?>" alt="...">
+                            <img class="img-fullwidth" src="<?= base_url('assets/') ?>images/user_company/<?= $v->image ?>" alt="...">
                           </div>
                         </div>
                         <div class="col-sm-4 pl-0 pl-sm-15">
