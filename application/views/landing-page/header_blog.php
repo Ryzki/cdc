@@ -71,14 +71,13 @@
                                 ?>
                             </a>
                             <ul class="menuzord-menu" style="color: #888">
-                                <li class="active"><a href="#home">Home</a>
+                                <li class="active"><a href="<?= base_url() ?>">Home</a>
                                 </li>
 
                                 <?php foreach ($menu as $mn) { ?>
-                                    <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>
+                                    <li class=""><a href="<?= base_url($mn->link)  ?>"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
                                         <?php $aaa = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
-                                        var_dump($aaa);
                                         if (!empty($aaa)) {
                                             echo '<ul class="dropdown">';
                                             foreach ($aaa as $sbm) {
@@ -87,7 +86,9 @@
                                     <li><a href="<?= base_url($e) ?>"><?= $d ?></a></li>
                             <?php }
                                             echo '</ul>';
-                                        } ?>
+                                        }
+                                        // var_dump($aaa); 
+                            ?>
                             </li>
                         <?php  } ?>
 
