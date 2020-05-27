@@ -78,6 +78,7 @@
                                     <li class=""><a href="<?= $mn->link ?>"><?= $mn->menu ?></a>
                                         <!-- Buat kondisi apakah ada Submenu -->
                                         <?php $aaa = $this->db->get_where('tbl_submenu', ['menu' => $mn->menu])->result();
+                                        var_dump($aaa);
                                         if (!empty($aaa)) {
                                             echo '<ul class="dropdown">';
                                             foreach ($aaa as $sbm) {
