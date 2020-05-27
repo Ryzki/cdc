@@ -43,9 +43,10 @@
                 <ul class="nav nav-pills mb-5">
                     <?php
                     $r = "";
+                    $min_data = $this->db->query('select min(id) as min from tbl_galeri_menu')->row_array();
                     foreach ($galeri as $gr) {
                     ?>
-                        <li class=""> <a href="#tab-<?= $gr->id ?>" class="btn btn-primary mx-2" data-toggle="tab"> <?= $gr->menu ?></a> </li>
+                        <li class=""> <a href="#tab-<?= $gr->id ?>" class="btn btn-secondary mx-2" data-toggle="tab"> <?= $gr->menu ?></a> </li>
                     <?php
                     }
                     ?>
@@ -57,7 +58,7 @@
                 foreach ($galeri as $gr) {
                     $tab = $gr->id;
                 ?>
-                    <div class="tab-pane fade active in" id="tab-<?= $tab ?>">
+                    <div class="tab-pane fade <?= ($min_data['min'] == $tab) ? "active show" : "" ?> in" id="tab-<?= $tab ?>">
                         <div class="row">
                             <?php $aaa = $this->db->get_where('tbl_galeri_gb', ['menu' => $tab])->result();
                             foreach ($aaa as $gal) {
@@ -194,6 +195,6 @@
                     <button type="submit" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
                 </div>
-                </>
             </div>
         </div>
+    </div>
