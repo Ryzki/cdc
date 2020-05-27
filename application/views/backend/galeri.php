@@ -46,7 +46,7 @@
                     $min_data = $this->db->query('select min(id) as min from tbl_galeri_menu')->row_array();
                     foreach ($galeri as $gr) {
                     ?>
-                        <li class=""> <a href="#tab-<?= $gr->id ?>" class="btn btn-secondary mx-2" data-toggle="tab"> <?= $gr->menu ?></a> </li>
+                        <li class=""> <a href="#tab-<?= $gr->id ?>" class="btn btn-primary <?= ($min_data['min'] == $gr->id) ? "active" : "" ?> mx-2" data-toggle="tab"> <?= $gr->menu ?></a> </li>
                     <?php
                     }
                     ?>
