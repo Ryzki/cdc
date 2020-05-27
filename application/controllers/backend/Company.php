@@ -349,8 +349,8 @@ class Company extends CI_Controller
         $config['max_size']             = 1000;
         $config['overwrite']            = true;
 
-        $config['max_width']            = 500;
-        $config['max_height']           = 500;
+        $config['max_width']            = 1000;
+        $config['max_height']           = 1000;
 
         $this->load->library('upload', $config);
         if ($this->upload->do_upload('upload_image')) {
