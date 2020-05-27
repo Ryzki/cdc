@@ -35,3 +35,4 @@ tracer dikti.xlsx
 tracer dikti.xlsx
 *.xlsx
 application/config/database.php
+application/config/config.php
