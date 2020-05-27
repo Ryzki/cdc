@@ -1,6 +1,6 @@
 <?php
 
-class Scm
+class scm
 {
     function tgl($tgl)
     {
