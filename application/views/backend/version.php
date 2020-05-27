@@ -33,21 +33,39 @@
             <!-- Form groups used in grid -->
             <?php
             $current = $version['version'];
-            $this->scm->version();
+            $new = $this->scm->getVersion();
+
+
+            if ($new == $current) {
             ?>
-            <div class="row alert alert-dark mx-2">
-                <div class="col-md-10">
-                    <div class="" role="alert"><i class="fas fa-info-circle"></i>
-                        <strong>Upgrade System : </strong> Terdapat versi baru 1.xx silahkan upgrade sistem anda
+                <div class="row alert alert-dark mx-2">
+                    <div class="col-md-10">
+                        <div class="" role="alert"><i class="fas fa-info-circle"></i>
+                            <strong>Upgrade System : </strong> Sistem anda sudah up to date.
+                        </div>
+
+                    </div>
+                </div>
+            <?php
+            } else if ($new <> $current) {
+            ?>
+
+                <div class="row alert alert-dark mx-2">
+                    <div class="col-md-10">
+                        <div class="" role="alert"><i class="fas fa-info-circle"></i>
+                            <strong>Upgrade System : </strong> Terdapat versi baru 1.xx silahkan upgrade sistem anda
+                        </div>
+
                     </div>
 
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" type="button" style="color:white;"> <span class="btn-inner--icon"><i class="fas fa-wrench"></i></span>
+                            <span class="btn-inner--text">Upgrade</span></a>
+                    </div>
                 </div>
-
-                <div class="col-md-2">
-                    <a href="#" class="btn btn-sm btn-danger btn-round btn-icon" type="button" style="color:white;"> <span class="btn-inner--icon"><i class="fas fa-wrench"></i></span>
-                        <span class="btn-inner--text">Upgrade</span></a>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
 
         </div>
     </div>

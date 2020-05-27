@@ -80,7 +80,22 @@ class scm
         return $time = substr($time, 11, 8);
     }
 
-    function version()
+    function getVersion()
+    {
+        $file = fopen('http://solusiciptamedia.com/version/cdc/version.txt', 'r');
+        if (!$file) {
+            die('File tidak ada');
+        }
+        # lakukan perulangan selama feof bernilai false
+        while (!feof($file)) {
+            $data[] = fgets($file);
+        }
+        # tutup file agar ia dihapus dari memory
+        fclose($file);
+        #kembalikan data
+        return $new = trim($data[0]);
+    }
+    function upgradeVersion()
     {
 
         // $folder = 'http://solusiciptamedia.com/version/cdc/version.txt';
