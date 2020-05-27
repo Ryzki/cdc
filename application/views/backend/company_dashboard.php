@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-sm">
-                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> </span>
+                                <span class="text-success mr-2"><i class="fa fa-arrow-down"></i> </span>
                                 <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
@@ -194,7 +194,7 @@
                 dataType: 'json',
                 success: function(data) {
                     console.log(data.job_title)
-                    $("#latest_vacancy").html("Latest vacancy : " + data.job_title);
+                    $("#latest_vacancy").html("Latest : " + data.job_title);
                 }
             });
         }

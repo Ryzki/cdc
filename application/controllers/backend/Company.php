@@ -286,7 +286,21 @@ class Company extends CI_Controller
         // $data = array(
         //     'kode_pt' => $kode
         // );
-        echo json_encode($this->Company_model->get_total_apply($kode, 'tbl_apply'));
+        $selisih = $this->Company_model->get_total_apply_last_month() - $this->Company_model->get_total_apply_this_month();
+        if ($selisih == 0) {
+            $font = '-';
+        } elseif ($selisih > 0) {
+            $font = '<i class="fa fa-arrow-up"></i>';
+        } elseif ($selisih < 0) {
+            $font = '<i class="fa fa-arrow-down"></i>';
+        }
+
+        $data = array(
+            'total' => $this->Company_model->get_total_apply($kode, 'tbl_apply'),
+            'selisih' => $selisih,
+            'font' => $font
+        );
+        echo json_encode($data);
     }
 
     public function apply_this_month()

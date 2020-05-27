@@ -109,6 +109,24 @@ class Company_model extends CI_Model
         return $this->db->count_all_results();
     }
 
+    public function get_total_apply_last_month($kode, $table)
+    {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->where('kode_pt', $kode);
+        $this->db->where('MONTH(date_apply)', (date('m') - 1));
+        return $this->db->count_all_results();
+    }
+
+    public function get_total_apply_this_month($kode, $table)
+    {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->where('kode_pt', $kode);
+        $this->db->where('MONTH(date_apply)', date('m'));
+        return $this->db->count_all_results();
+    }
+
     public function get_total_apply($kode, $table)
     {
         $this->db->select('*');
